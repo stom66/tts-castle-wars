@@ -4,8 +4,8 @@ function onLoad()
     --]]
     deckLock = false
     deckObj  = false
-    owner    = "blue"
-    if self.getGUID()~="blu007" then owner = "red" end
+    owner    = "Blue"
+    if self.getGUID()~="blu007" then owner = "Red" end
     drawButtons()
 end
 
@@ -32,7 +32,7 @@ function checkDeck(obj, clickee)
     --check cast objects for first Deck found and pass it to global
     for k,obj in ipairs(objs) do
         if obj.hit_object.tag=="Deck" then
-            Global.call("checkDeck", {owner = owner, obj = obj.hit_object})
+            Global.call("checkDeck", {player = owner, obj = obj.hit_object})
             log("Passed deck "..obj.hit_object.getGUID().." to Global checkDeck()")
             foundDeck = true
             break
@@ -67,7 +67,7 @@ function unlockDeck()
     if not deckLock then return false end
     if deckObj then
         Global.call("unlockDeck", {
-            owner = owner:lower()
+            owner = owner
         })
         deckLock = false
         drawButtons()
