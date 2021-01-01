@@ -7,6 +7,10 @@ function onLoad()
     owner    = "Blue"
     if self.getGUID()~="blu007" then owner = "Red" end
     drawButtons()
+
+
+    --for testing only, automatically lock the deck 1 second after loading the game
+    Wait.time(checkDeck, 1)
 end
 
 function checkDeck(obj, clickee)
@@ -40,7 +44,7 @@ function checkDeck(obj, clickee)
     end
 
     --warn user if no deck found
-    if not foundDeck then 
+    if not foundDeck and clickee then 
         broadcastToColor("You must place a deck in the zone to check", clickee, "Red")
     end
 end
