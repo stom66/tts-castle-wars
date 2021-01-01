@@ -1,6 +1,12 @@
+--[[
+    This function returns the data for all the cards used by the game. 
+    Indexes must match the card IDs as they appear in the save file.
 
+    Costs are in alphabetical order, eg {bricks, crystals, swords}
+     - {0, 0, 5} = 5 swords
+     - {10, 0, 0} = 10 bricks
+]]
 function getCardData()
-    --get the data and actions for all cards
     local t = {}
     t[214] = {
         name = "Wall",
