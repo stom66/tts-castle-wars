@@ -1,8 +1,11 @@
 --[[
-    This file contains the various player actions, eg fucntion for performing actions the player can perform directly
+    This file contains the various player actions, eg actions the player can perform directly
 
     This includes
-    - Card context menu actions
+    - Playing Cards
+    - Discarding Cards
+    
+    It also includes some hand management functions, such as dealing fresh cards to the player
 
 ]]
 
@@ -18,14 +21,25 @@ function trigger_playCard(player_color)
 
         If checks pass, pass it on to the player_playCard function
     ]]
+
     --check the player actually has a deck    
     if not data[player_color].deck_obj then
-        broadcastToColor("You must have a valid locked deck to discard a card", player_color, "Red")
+        broadcastToColor("You must have a valid locked deck to play a card", player_color, "Red")
         return false
     end
 
     --get the objects they have selected
     local objs = Player[player_color].getSelectedObjects()
+
+    --if they have no objects selected then check for object they're hovering over
+    if #objs < 1 then
+        objs = {Player[player_color].getHoverObject()}
+    end
+
+    --check we have at least 1 object before continuing
+    if #objs < 1 then
+        return false
+    end
 
     --reject multiple cards
     if #objs > 1 or #objs < 1 then  
@@ -49,7 +63,7 @@ function trigger_playCard(player_color)
     player_playCard(objs[1], player_color)
 end
 
-function trigger_discardCard(player_color, objs)
+function trigger_discardCard(player_color)
     --check the player actually has a deck    
     if not data[player_color].deck_obj then
         broadcastToColor("You must have a valid locked deck to discard a card", player_color, "Red")
@@ -59,6 +73,18 @@ function trigger_discardCard(player_color, objs)
     if Turns.turn_color != player_color or data[player_color].action_taken then
         --not their turn, return card to thei hand and warn them
         broadcastToColor(lang.not_your_turn, player_color, "Orange")
+        return false
+    end
+    
+    local objs = Player[player_color].getSelectedObjects()
+
+    --if they have no objects selected then check for object they're hovering over
+    if #objs < 1 then
+        objs = {Player[player_color].getHoverObject()}
+    end
+
+    --check we have at least 1 object before continuing
+    if #objs < 1 then
         return false
     end
 
@@ -90,11 +116,6 @@ function trigger_discardCard(player_color, objs)
             card_addToDeck(card, data[player_color].deck_obj)
         end
     end
-    
-    --shuffle the deck
-    Wait.time(function()
-        data[player_color].deck_obj.randomize()
-    end, 1.5)
 end
 
 
@@ -135,7 +156,7 @@ function player_playCard(card, player_color)
     if not playerCanAffordCard(player_color, cardId) then
         --alert the user
         broadcastToColor(lang.cant_afford_card, player_color, "Red")
-        
+
         --return the card to their hand
         card.deal(1, player_color)
 
@@ -155,18 +176,24 @@ function player_playCard(card, player_color)
     _G["card_"..cards[cardId].action](player_color, value, bypass)
 
     -- Deal a new card from the deck
-    local deck = data[player_color].deck_obj
-    deck.deal(1, player_color)
+    player_dealCards(player_color, 1)
     
     -- Put the played card back in the deck
     card_addToDeck(card, deck)
 
     -- Trigger the next player's turn
-    Wait.frames(triggerNextTurn, 10)
-    
-    Wait.time(function()
-        scaleCardsInHand(player_color)
-        data[player_color].deck_obj.randomize()
-    end, 1.5)
+    Wait.frames(turn_next, 10)
 
+end
+
+function player_dealCards(player_color, count)
+    local deck = data[player_color].deck_obj
+    for i=1, count do
+        Wait.time(function()
+            deck.deal(1, player_color)
+        end, i * data.deal_interval)
+    end
+    Wait.time(function()
+        cards_updateScales(player_color)
+    end, (count * data.deal_interval)+1)
 end

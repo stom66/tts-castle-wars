@@ -38,7 +38,7 @@ function checkDeck(obj, clickee)
     local size    = self.getBounds().size
           size.y  = 4
     local objs    = Physics.cast({
-        origin    = self.getPosition() + vector(0, size.y/2, 0),
+        origin    = self.getPosition():add(Vector(0, size.y/2, 0)),
         type      = 3,
         size      = size,
         direction = {0, 1, 0}
@@ -73,9 +73,8 @@ function lockDeck(t)
     drawButtons()
 
     --move the deck to the center of the pad
-    local target_pos = self.getPosition()
-    target_pos.y = target_pos.y + (deckObj.getBounds().size.y / 2)
-    deckObj.setRotation(self.getRotation() + vector(180, 180, 0))
+    local target_pos = self.getPosition():add(Vector(0, deckObj.getBounds().size.y / 2, 0))
+    deckObj.setRotation(self.getRotation():add(Vector(180, 180, 0)))
     deckObj.setPositionSmooth(target_pos)
 end
 
@@ -119,7 +118,7 @@ function drawButtons()
         btn.click_function = "unlockDeck"
     end
     self.createButton(btn)
-    
+
     btn.label          = "New Deck"
     btn.width          = 780
     btn.position[1]    = 0.55
@@ -154,11 +153,11 @@ end
 
 function spawnNewDeck(i, player_color)
     print("Spawning new deck "..decks.names[i].." for player "..player_color)
-    
+
     --spawn a copy of the full deck
     local stock_deck       = getObjectFromGUID("deck01")
-    local deck_position    = self.getPosition() + (self.getTransformRight() * -4) + (self.getTransformUp() * 10)
-    local deck_rotation    = self.getRotation() + vector(180, 180, 0)
+    local deck_position    = self.getPosition():add(self.getTransformRight() * -4):add(self.getTransformUp() * 10)
+    local deck_rotation    = self.getRotation():add(Vector(180, 180, 0))
     local deck             = stock_deck.clone({
         position           = deck_position,
         rotation           = deck_rotation,

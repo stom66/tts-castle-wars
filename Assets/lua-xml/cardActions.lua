@@ -1,7 +1,66 @@
 --[[
+    Card  functions
+
+    Some general utilities for dealing with cards
+--]]
+
+function card_getID(obj)
+    -- return the CardID value for any card, or false if not a card
+    return obj.getData().CardID or false
+end
+function card_getName(id)
+    --get the name of a card from it's ID. References the global card table
+    return cards[id].name or "Unknown Card"
+end
+
+function card_addToDeck(card, deck)
+    --[[ 
+        puts a card in a specified deck
+        expects both params to be obj references
+     --]]
+
+    if data.debug then log("Attempting to putObject "..card.getGUID().." into deck "..deck.getGUID()) end
+
+    --unlock the deck
+    deck.interactable = true
+    deck.setLock(false)
+
+    --put the object back in the deck after 1 frame
+    Wait.frames(function()
+        deck.putObject(card)
+    end, 1)
+    
+    --re-lock the deck after another frame
+    Wait.frames(function()
+        deck.interactable = false
+        deck.setLock(true)
+    end, 2)
+
+    --shuffle the deck
+    Wait.time(function()
+        deck.randomize()
+    end, 1.1)
+end
+
+
+function cards_updateScales(player_color)
+    local cards = Player[player_color].getHandObjects()
+    for _,card in ipairs(cards) do
+        if playerCanAffordCard(player_color, card_getID(card)) then
+            card.setScale({1, 1, 1})
+        else
+            card.setScale({0.75, 1, 0.75})
+        end
+    end
+end
+
+
+--[[
     Card actions
 
+    These are the actual actions triggered by the cards when they're played
  --]]
+
 function card_addBuff(player, value)
     data[player]["buff_"..value] = true
 end

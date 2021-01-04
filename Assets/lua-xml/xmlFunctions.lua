@@ -3,7 +3,7 @@
 --]]
 
 
-function updateXml(player_color)
+function xml_update(player_color)
     local prefix = player_color:lower()
     log("Updating XML for player "..prefix)
     
