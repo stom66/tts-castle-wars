@@ -37,14 +37,10 @@ function defaultPlayerData(player)
         turn           = false, --don't think this get used anymore
         deck_valid     = false, --used to check if the player has a valid deck and trigger the game start
         discards       = 0,     --counter for discards performed in a turn
-        cardGUIDs      = {},    --
-        action_taken   = false, --
-        all_produce    = false, --
+        action_taken   = false, --simple flag to prevent playing multiple cards
+        all_produce    = false, --flag to denote resource production buffs
     }
 end
-
-
-
 
 function playerCanAffordCard(player_color, cardId)
     --[[

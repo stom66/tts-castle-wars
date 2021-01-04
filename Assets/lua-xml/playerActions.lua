@@ -4,11 +4,10 @@
     This includes
     - Playing Cards
     - Discarding Cards
-    
+
     It also includes some hand management functions, such as dealing fresh cards to the player
 
 ]]
-
 
 
 function trigger_playCard(player_color)
@@ -22,7 +21,7 @@ function trigger_playCard(player_color)
         If checks pass, pass it on to the player_playCard function
     ]]
 
-    --check the player actually has a deck    
+    --check the player actually has a deck
     if not data[player_color].deck_obj then
         broadcastToColor("You must have a valid locked deck to play a card", player_color, "Red")
         return false
@@ -42,7 +41,7 @@ function trigger_playCard(player_color)
     end
 
     --reject multiple cards
-    if #objs > 1 or #objs < 1 then  
+    if #objs > 1 or #objs < 1 then
         broadcastToColor(lang.cant_play_multiple_cards, player_color)
         return false
     end
@@ -53,7 +52,7 @@ function trigger_playCard(player_color)
         return false
     end
 
-    --ensure the player owns the card 
+    --ensure the player owns the card
     if not handzone_containsObject(objs[1], player_color) then
         broadcastToColor(lang.card_not_in_hand, player_color)
         return false
@@ -64,18 +63,18 @@ function trigger_playCard(player_color)
 end
 
 function trigger_discardCard(player_color)
-    --check the player actually has a deck    
+    --check the player actually has a deck
     if not data[player_color].deck_obj then
         broadcastToColor("You must have a valid locked deck to discard a card", player_color, "Red")
         return false
     end
-    
-    if Turns.turn_color != player_color or data[player_color].action_taken then
+
+    if Turns.turn_color ~= player_color or data[player_color].action_taken then
         --not their turn, return card to thei hand and warn them
         broadcastToColor(lang.not_your_turn, player_color, "Orange")
         return false
     end
-    
+
     local objs = Player[player_color].getSelectedObjects()
 
     --if they have no objects selected then check for object they're hovering over
@@ -94,17 +93,17 @@ function trigger_discardCard(player_color)
         broadcastToColor(lang.max_discards_reached, player_color)
         return false
     end
-    
+
     --loop through each of the objects and check it's suitable
     for _,card in ipairs(objs) do
-        
+
         --reject non-card objects
         if card.tag~="Card" then
             broadcastToColor(lang.cant_play_non_card, player_color)
             return false
         end
 
-        --ensure the player owns the card 
+        --ensure the player owns the card
         if not handzone_containsObject(card, player_color) then
             broadcastToColor(lang.card_not_in_hand, player_color)
             return false
@@ -125,10 +124,9 @@ function player_playCard(card, player_color)
         Triggerd by a player dropping a card into their scriptingzone play areas
         or by them right clicking on a card and choosing "Play Card"
     --]]
-    
-    log("Checkin player turn")
+
     -- Check it's the player's turn
-    if Turns.turn_color != player_color or data[player_color].action_taken then
+    if Turns.turn_color ~= player_color or data[player_color].action_taken then
         --not their turn, return card to thei hand and warn them
         card.deal(1, player_color)
         broadcastToColor(lang.not_your_turn, player_color, "Orange")
@@ -177,7 +175,7 @@ function player_playCard(card, player_color)
 
     -- Deal a new card from the deck
     player_dealCards(player_color, 1)
-    
+
     -- Put the played card back in the deck
     card_addToDeck(card, deck)
 
