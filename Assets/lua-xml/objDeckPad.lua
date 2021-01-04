@@ -197,4 +197,4 @@ end
 
 
 
-require("CastleWars/Assets/lua-xml/getDeckData")
+require("CastleWars/Assets/lua-xml/deckData")
