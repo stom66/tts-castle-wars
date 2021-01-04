@@ -2,15 +2,26 @@ function onLoad()
     --[[
         This script doesn't do much except draw some buttons and call the checkDeck function in Global
     --]]
-    deckLock = false
-    deckObj  = false
-    owner    = "Blue"
+    deckLock     = false
+    deckObj      = false
+    owner        = "Blue"
+    showDeckMenu = false
+    cards        = {}
     if self.getGUID()~="blu007" then owner = "Red" end
     drawButtons()
 
+    Wait.frames(function()
+        cards = Global.getTable("cards")
+        log("Got card data with "..table.count(cards).." cards")
+    end, 5)
+
+    decks = getDeckData()
+
 
     --for testing only, automatically lock the deck 1 second after loading the game
-    Wait.time(checkDeck, 1)
+    Wait.time(function()
+        spawnNewDeck(1, owner)
+    end, 1)
 end
 
 function checkDeck(obj, clickee)
@@ -60,6 +71,12 @@ function lockDeck(t)
     deckLock = true
     deckObj = t.obj
     drawButtons()
+
+    --move the deck to the center of the pad
+    local target_pos = self.getPosition()
+    target_pos.y = target_pos.y + (deckObj.getBounds().size.y / 2)
+    deckObj.setRotation(self.getRotation() + vector(180, 180, 0))
+    deckObj.setPositionSmooth(target_pos)
 end
 
 function unlockDeck()
@@ -89,22 +106,95 @@ function drawButtons()
         function_owner = self,
         click_function = "checkDeck",
         label          = "Lock",
-        position       = {-0.7, 0.05, 1.8},
+        position       = {-0.775, 0.05, 1.8},
         width          = 520,
         height         = 220,
-        font_size      = 160,
+        font_size      = 150,
         color          = {0.3, 0.3, 0.3},
-        font_color     = {1, 1, 1},
+        font_color     = {0.75, 0.75, 0.75},
     }
-    if not deckLock then
+    if deckLock then
         btn.font_color, btn.color = btn.color, btn.font_color
+        btn.label          = "Unlock"
+        btn.click_function = "unlockDeck"
     end
     self.createButton(btn)
     
-    btn.label          = "Unlock"
-    btn.click_function = "unlockDeck"
-    btn.width          = 640
-    btn.position[1]    = 0.6
-    btn.font_color, btn.color = btn.color, btn.font_color
+    btn.label          = "New Deck"
+    btn.width          = 780
+    btn.position[1]    = 0.55
+    btn.click_function = "newDeckMenu"
+    if deckLock then
+        btn.font_color, btn.color = btn.color, btn.font_color
+    end
     self.createButton(btn)
+
+
+    if showDeckMenu then
+        btn.position[1] = 2.5
+        for i,v in ipairs(decks.names) do
+            btn.position[3]    = 2.3 - (i*0.5)
+            btn.click_function = "newDeck_"..i
+            btn.label          = v
+            self.createButton(btn)
+
+            _G["newDeck_"..i] = function(obj, player_color, id)
+                showDeckMenu = false
+                drawButtons()
+                spawnNewDeck(i, player_color)
+            end
+        end
+    end
 end
+
+function newDeckMenu()
+    showDeckMenu = not showDeckMenu
+    drawButtons()
+end
+
+function spawnNewDeck(i, player_color)
+    print("Spawning new deck "..decks.names[i].." for player "..player_color)
+    
+    --spawn a copy of the full deck
+    local stock_deck       = getObjectFromGUID("deck01")
+    local deck_position    = self.getPosition() + (self.getTransformRight() * -4) + (self.getTransformUp() * 10)
+    local deck_rotation    = self.getRotation() + vector(180, 180, 0)
+    local deck             = stock_deck.clone({
+        position           = deck_position,
+        rotation           = deck_rotation,
+        snap_to_grid       = false,
+    })
+    deck.setLock(false)
+
+    --make a new table of cardIDs with the number to be removed
+    local toRemove = {}
+    for k,v in pairs(decks.cards) do
+        toRemove[k] = 5 - v[i]
+    end
+
+
+    --remove the cards above from the new deck
+    for _,v in ipairs(deck.getData().ContainedObjects) do
+        if toRemove[v.CardID] and toRemove[v.CardID] > 0 then
+            toRemove[v.CardID] = toRemove[v.CardID] - 1
+            deck.takeObject({
+                position          = {0, 5, 0},
+                smooth            = false,
+                guid              = v.GUID,
+                callback_function = function(obj)
+                    obj.destruct()
+                end,
+            })
+        end
+    end
+end
+
+function table.count(t)
+    local c = 0
+    for _,_ in pairs(t) do c = c + 1 end
+    return c
+end
+
+
+
+require("CastleWars/Assets/lua-xml/getDeckData")
