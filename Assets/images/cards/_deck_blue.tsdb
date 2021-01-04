@@ -1,0 +1,27 @@
+# Save File
+cardsx=5
+cardsy=4
+card-width=1000
+card-height=1343
+zoom=0.15
+background-color=-16777216
+0_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\add_bricks.png
+1_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\add_crystals.png
+2_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\add_weapons.png
+3_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\all_crystals.png
+4_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\bribe_mage.png
+0_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\conjure_wall.png
+1_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\hail_storm.png
+2_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\lightning.png
+3_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\mage.png
+4_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\magic_bricks.png
+0_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\magic_defence.png
+1_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\magic_weapons.png
+2_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\pixies.png
+3_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\quake.png
+4_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\remove_bricks.png
+0_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\remove_crystals.png
+1_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\remove_weapons.png
+2_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\backs\\crystals_blue.png
+3_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\backs\\crystals_blue.png
+4_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\backs\\crystals_blue.png

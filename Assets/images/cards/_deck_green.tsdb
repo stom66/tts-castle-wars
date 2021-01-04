@@ -1,0 +1,23 @@
+# Save File
+cardsx=4
+cardsy=4
+card-width=1000
+card-height=1343
+zoom=0.1
+background-color=-16777216
+0_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\all_bricks.png
+1_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\babylon.png
+2_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\battering_ram.png
+3_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\bribe_builder.png
+0_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\builder.png
+1_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\catapult.png
+2_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\fence.png
+3_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\house.png
+0_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\large_wall.png
+1_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\reverse.png
+2_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\school.png
+3_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\tavern.png
+0_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\tower.png
+1_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\wain.png
+2_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\wall.png
+3_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\backs\\bricks_green.png

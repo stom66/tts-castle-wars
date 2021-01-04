@@ -1,0 +1,23 @@
+# Save File
+cardsx=4
+cardsy=4
+card-width=1000
+card-height=1343
+zoom=0.15
+background-color=-16777216
+0_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\all_weapons.png
+1_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\ambush.png
+2_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\archer.png
+3_0=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\bomb.png
+0_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\bribe_recruit.png
+1_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\cannon.png
+2_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\fire_archer.png
+3_1=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\guards.png
+0_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\knight.png
+1_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\platoon.png
+2_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\protect_resources.png
+3_2=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\recruit.png
+0_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\roadblock.png
+1_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\sabotage.png
+2_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\thief.png
+3_3=T\:\\projects\\tts stuff\\CastleWars\\Assets\\images\\cards\\backs\\swords_red.png
