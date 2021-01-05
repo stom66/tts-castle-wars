@@ -21,25 +21,19 @@ function card_addToDeck(card, deck)
 
     if data.debug then log("Attempting to putObject "..card.getGUID().." into deck "..deck.getGUID()) end
 
-    --unlock the deck
+    --unlock the deck and return the card
     deck.interactable = true
     deck.setLock(false)
-
-    --put the object back in the deck after 1 frame
-    Wait.frames(function()
-        deck.putObject(card)
-    end, 1)
+    deck.putObject(card)
+    deck.shuffle()
     
     --re-lock the deck after another frame
-    Wait.frames(function()
+    --Wait.frames(function()
         deck.interactable = false
         deck.setLock(true)
-    end, 2)
+    --end, 1)
 
     --shuffle the deck
-    Wait.time(function()
-        deck.randomize()
-    end, 1.1)
 end
 
 
@@ -78,13 +72,13 @@ end
 function card_allProduce(player, value)
     local target = player
     if value == "none" then
-        target = otherPlayer(player)
+        target = playerOpponent(player)
     end
     data[target].all_produce = value
 end
 
 function card_attack(player, damage, bypass_wall)
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
 
     --check for attack buffs
     if data[player].buff_attack then
@@ -138,7 +132,7 @@ end
 function card_curse(player, value)
     --remove 1 of everything from the opponents and grant it to the player
     --applies to everything: resources, workers, castle and wall
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
 
     --steal workers
     card_stealWorker(player, {1, 1, 1})
@@ -158,7 +152,7 @@ end
 
 function card_removeBuff(player, value)
     --removes a buff from the other player
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
     if value=="all" then
         card_removeBuff(player, "build")
         card_removeBuff(player, "defence")
@@ -170,9 +164,16 @@ function card_removeBuff(player, value)
 end
 
 function card_removeResource(player, value)
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
 
-    --check for building buffs
+    --you can't steal more than the other player has, so adjust values accordingly
+    value = {
+        math.min(value[1], data[target].bricks),
+        math.min(value[2], data[target].crystals),
+        math.min(value[3], data[target].swords),
+    }
+
+    --check for the "protect resources" buff
     if data[target].buff_resources then
         value = {0, 0, 0}
         data[target].buff_resources = false
@@ -180,6 +181,9 @@ function card_removeResource(player, value)
 
     --remove resources from the opponent
     removeResources(target, value)
+
+    --add them to the player
+    addResources(player, value)
 end
 
 function card_sabotage(player, value)
@@ -190,14 +194,14 @@ function card_stealWorker(player, value)
     card_addWorker(player, value)
 
     --remove players workers from target, leaving a minimum of 1
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
     data[target].builders = math.max(1, data[target].builders - value[1])
     data[target].mages    = math.max(1, data[target].mages - value[2])
     data[target].soldiers = math.max(1, data[target].soldiers - value[3])
 end
 
 function card_thief(player, value)
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
 
     --add 6 of each resource, or however many the oponent has, whichever is smaller
     card_addResource(player, {
@@ -216,7 +220,7 @@ function card_wain(player, value)
     updateCastleHeight(player)
 
     --lower oponent castle
-    local target = otherPlayer(player)
+    local target = playerOpponent(player)
     card_attack(target, 6, true)
     updateCastleHeight(target)
 end

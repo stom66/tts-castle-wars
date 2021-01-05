@@ -2,21 +2,15 @@ function onLoad()
     --[[
         This script doesn't do much except draw some buttons and call the checkDeck function in Global
     --]]
+    cards        = Global.getTable("cards")
     deckLock     = false
     deckObj      = false
+    decks        = getDeckData()
     owner        = "Blue"
     showDeckMenu = false
-    cards        = {}
+
     if self.getGUID()~="blu007" then owner = "Red" end
     drawButtons()
-
-    Wait.frames(function()
-        cards = Global.getTable("cards")
-        log("Got card data with "..table.count(cards).." cards")
-    end, 5)
-
-    decks = getDeckData()
-
 
     --for testing only, automatically lock the deck 1 second after loading the game
     Wait.time(function()
@@ -26,7 +20,7 @@ end
 
 function checkDeck(obj, clickee)
     --[[
-        Main function. Called whenever a user clicks the onboard "Lock" button. 
+        Main function. Called whenever a user clicks the onboard "Lock" button.
         Checks for a deck object sitting on its face (heh) and calls the checkDeck function in Global
         to see if it's a legit deck. If it passes, Global will trigger the lockDeck function on this object.
     --]]
@@ -55,7 +49,7 @@ function checkDeck(obj, clickee)
     end
 
     --warn user if no deck found
-    if not foundDeck and clickee then 
+    if not foundDeck and clickee then
         broadcastToColor("You must place a deck in the zone to check", clickee, "Red")
     end
 end

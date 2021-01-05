@@ -41,6 +41,8 @@ end
 function xml_resToColor(all_produce, resource)
     if all_produce == resource or all_produce == "all" then
         return ("#e19a02")
+    elseif all_produce == "none" then
+        return ("#333333")
     else
         return ("#ffffff")
     end

@@ -12,6 +12,7 @@ function game_stop()
 end
 
 function game_end()
+    --work out who won and lost
     local winner, loser
     if data.Blue.castle >= 100 or data.Red.castle < 1 then
         winner, loser = "Blue", "Red"
@@ -19,8 +20,31 @@ function game_end()
         winner, loser = "Red", "Blue"
     end
 
-    broadcastToColor(lang.game_won, winner, "Green")
-    broadcastToColor(lang.game_lost, loser, "red")
+    --update game state
+    data.game_state = "ended"
+    Turns.enable = false
+
+    --send messages
+    if Player[winner].seated then 
+        broadcastToColor(lang.game_won, winner, "Green")
+    else
+        print(winner..": "..lang.game_won)
+    end
+    if Player[loser].seated then 
+        broadcastToColor(lang.game_lost, loser, "Red")
+    else
+        print(loser..": "..lang.game_lost)
+    end
+
+    --return all cards in hand to decks and unlock decks
+    player_returnCardsToDeck("Red")
+    player_returnCardsToDeck("Blue")
+
+    --Trigger unlockDeck
+    Wait.time(function()
+        data.Blue.deck_pad_obj.call("unlockDeck")
+        data.Red.deck_pad_obj.call("unlockDeck")
+    end, 2)
 end
 
 

@@ -9,7 +9,11 @@ function turn_next()
         Move turn to next player manually, emulates clicking "End Turn" button
         Triggers the stock TTS event onplayerTurn
         Triggered by player_playCard, which is triggered by the playzone, scripting buttons, and the context menu
+        Exits if the game_state is not "active", eg the game has been won or lost
     --]]
+    if data.game_state ~= "active" then return false end
+
+    --manually advance to the next players turn
     Turns.turn_color = playerOpponent(Turns.turn_color)
 end
 
@@ -18,7 +22,11 @@ function onPlayerTurn(player)
         Stock TTS API Event
     --]]
     turn_start(player.color)
-    turn_end(playerOpponent(player.color))
+    if data.turn_count > 1 then
+        Wait.time(function()
+            turn_end(playerOpponent(player.color))
+        end, 1)
+    end
 end
 
 
