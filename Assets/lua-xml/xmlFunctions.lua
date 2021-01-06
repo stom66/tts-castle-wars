@@ -2,11 +2,24 @@
     Xml UI Management
 --]]
 
+function xml_updateCastleHeight(player, value, id)
+    data.Blue.castle = tonumber(value)
+    log("Updating castle to height "..value)
+    updateCastleHeight("Blue")
+end
+function xml_updateWallHeight(player, value, id)
+    data.Blue.wall = tonumber(value)
+    log("Updating wall to height "..value)
+    updateWallHeight("Blue")
+end
+
+
+
 
 function xml_update(player_color)
     local prefix = player_color:lower()
     log("Updating XML for player "..prefix)
-    
+
     --Basic stats
     UI.setAttribute(prefix.."_builders", "text", tostring(data[player_color].builders))
     UI.setAttribute(prefix.."_bricks",   "text", tostring(data[player_color].bricks))
