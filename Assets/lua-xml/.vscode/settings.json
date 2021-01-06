@@ -1,0 +1,133 @@
+{
+    "Lua.diagnostics.globals": [
+        "AssetBundle",
+        "Book",
+        "Browser",
+        "Clock",
+        "Color",
+        "Component",
+        "Counter",
+        "Grid",
+        "JSON",
+        "Lighting",
+        "MusicPlayer",
+        "Notes",
+        "Physics",
+        "Player",
+        "RPGFigurine",
+        "TextTool",
+        "Time",
+        "Timer",
+        "Turns",
+        "UI",
+        "Vector",
+        "Wait",
+        "WebRequest",
+        "broadcastToColor",
+        "filterObjectEnterContainer",
+        "onChat",
+        "onExternalMessage",
+        "onFixedUpdate",
+        "onLoad",
+        "onObjectCollisionEnter",
+        "onObjectCollisionExit",
+        "onObjectCollisionStay",
+        "onObjectDestroy",
+        "onObjectDrop",
+        "onObjectEnterScriptingZone",
+        "onObjectEnterContainer",
+        "onObjectFlick",
+        "onObjectHover",
+        "onObjectLeaveScriptingZone",
+        "onObjectLeaveContainer",
+        "onObjectLoopingEffect",
+        "onObjectNumberTyped",
+        "onObjectPageChange",
+        "onObjectPeek",
+        "onObjectPickUp",
+        "onObjectRandomize",
+        "onObjectSearchEnd",
+        "onObjectSearchStart",
+        "onObjectSpawn",
+        "onObjectTriggerEffect",
+        "onPlayerChangeColor",
+        "onPlayerChangeTeam",
+        "onPlayerConnect",
+        "onPlayerDisconnect",
+        "onPlayerTurn",
+        "onSave",
+        "onScriptingButtonDown",
+        "onScriptingButtonUp",
+        "onUpdate",
+        "filterObjectEnter",
+        "onCollisionEnter",
+        "onCollisionExit",
+        "onCollisionStay",
+        "onDestroy",
+        "onDrop",
+        "onFlick",
+        "onHover",
+        "onNumberTyped",
+        "onPageChange",
+        "onPeek",
+        "onPickUp",
+        "onRandomize",
+        "onSearchEnd",
+        "onSearchStart"
+    ],
+    "files.exclude": {
+        "**/**.meta": true
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
