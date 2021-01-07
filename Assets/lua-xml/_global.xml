@@ -1,0 +1,290 @@
+<Defaults>
+
+<!-- Help Window-->
+<Mask class         = "mask_help"
+    width           = "600"
+    preferredWidth  = "600"
+    height          = "450"
+    preferredHeight = "450"
+    rectAlignment   = "MiddleCenter"
+    image           = "mask_section"
+    />
+    <Panel class="panel_help"
+        color = "#cccccc"
+        />
+
+
+<!-- Player Panels-->   
+    <!-- Masks -->
+    <Mask class         = "mask_panel"
+        image           = "mask_panel"
+        width           = "200"
+        preferredWidth  = "200"
+        height          = "695"
+        preferredHeight = "695"
+        allowDragging   = "true"
+        scale = "0.75 0.75 0.75"
+        returnToOriginalPositionWhenReleased = "false"
+        />
+        <Mask class       = "mask_blue"
+            rectAlignment = "UpperLeft"
+            offsetXY      = "100 -100"
+            />
+        <Mask class       = "mask_red"
+            rectAlignment = "UpperRight"
+            offsetXY      = "-20 -100"
+            />
+
+    <Mask 
+        class           = "mask_section"
+        image           = "mask_section"
+        preferredWidth  = "180"
+        preferredHeight = "135"
+        minWidth        = "180"
+        minHeight       = "135"
+        />
+
+
+    <!-- Main VerticalLayout containing all the resource sections -->
+    <VerticalLayout
+        class                  = "playerPanel"
+        spacing                = "0"
+        padding                = "10 10 10 10"
+        childForceExpandWidth  = "false"
+        childForceExpandHeight = "false"
+        width                  = "200"
+        preferredWidth         = "200"
+        height                 = "695"
+        preferredHeight        = "695"
+        />
+        <VerticalLayout class="playerPanel_blue"
+            color    = "rgba(0, 0.45, 0.71, 0.1)"
+            />
+        <VerticalLayout class="playerPanel_red"  
+            color    = "rgba(0.85, 0.2, 0.3, 0.1)"  
+            />
+
+    <HorizontalLayout
+        childForceExpandWidth  = "false"
+        childForceExpandHeight = "false" />
+
+
+    <!-- Resource sections -->
+    <VerticalLayout class = "section"
+        width             = "180"
+        preferredWidth    = "180"
+        minWidth          = "180"
+        height            = "135"
+        preferredHeight   = "135"
+        minHeight         = "135"
+        spacing           = "5"
+        padding           = "15 15 5 5"
+        />
+        <VerticalLayout class="bg_red"   color="#9a1527" />
+        <VerticalLayout class="bg_green" color="#004f2d" />
+        <VerticalLayout class="bg_blue"  color="#003b73" />
+        <VerticalLayout class="bg_black" color="Black" />
+        <VerticalLayout class="bg_gold"  color="#e19a02" />
+
+        <!-- Text/Stats in sections -->
+        <Text class         = "section>@HorizontalLayout:@Text"
+            alignment       = "MiddleCenter"
+            color           = "White"
+            fontStyle       = "Bold"
+            fontSize        = "40"
+            width           = "80"
+            preferredWidth  = "80"
+            height          = "60"
+            preferredHeight = "60"
+            backgroundColor = "Black"
+            />
+
+        <!-- Images in sections -->
+        <Image 
+            class           = "section>@HorizontalLayout:@Image"
+            preserveAspect  = "true"
+            width           = "70"
+            preferredWidth  = "70"
+            height          = "60"
+            preferredHeight = "60"
+            />
+</Defaults>
+
+<Mask class="mask_help" active="false">
+    <Panel class="panel_help">
+        <Text>
+            Smooth as an android's bottom, eh, Data? I recommend you don't fire until you're within 
+            40,000 kilometers. This should be interesting. I will obey your orders. I will serve this 
+            ship as First Officer. And in an attack against the Enterprise, I will die with this crew. 
+            
+            But I will not break my oath of loyalty to Starfleet. Yes, absolutely, I do indeed concur, 
+            wholeheartedly! In all trust, there is the possibility for betrayal.
+        </Text>
+    </Panel>
+</Mask>
+
+
+<Panel 
+    height = "100"
+    width = "300"
+    color = "#333333"
+    rectAlignment = "LowerCenter"
+    allowDragging   = "true"
+    returnToOriginalPositionWhenReleased = "false"
+>
+    <VerticalLayout>
+        <Slider onValueChanged="xml_updateCastleHeight" minValue="0" maxValue="100" wholeNumbers="true"></Slider>
+        <Slider onValueChanged="xml_updateWallHeight" minValue="0" maxValue="100" wholeNumbers="true"></Slider>
+    </VerticalLayout>
+</Panel>
+
+
+
+
+<Mask class="mask_panel mask_blue" active="true">
+    <VerticalLayout class="playerPanel playerPanel_blue">
+        <!-- Builders and Bricks -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_green">
+                <HorizontalLayout>
+                    <Image image="icon_builders"></Image>
+                    <Text id="blue_builders" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="blue_icon_bricks" image="icon_bricks"></Image>
+                    <Text id="blue_bricks" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Soldiers and Swords -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_red">
+                <HorizontalLayout>
+                    <Image image="icon_soldiers"></Image>
+                    <Text id="blue_soldiers" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="blue_icon_swords" image="icon_swords"></Image>
+                    <Text id="blue_swords" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Mages and Crystals -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_blue">
+                <HorizontalLayout>
+                    <Image image="icon_wizards"></Image>
+                    <Text id="blue_mages" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="blue_icon_crystals" image="icon_crystals"></Image>
+                    <Text id="blue_crystals" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Castle and Wall -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_black">
+                <HorizontalLayout>
+                    <Image image="icon_wall"></Image>
+                    <Text id="blue_wall" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image image="icon_castle"></Image>
+                    <Text id="blue_castle" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Buffs -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_gold">
+                <HorizontalLayout>
+                    <Image id="blue_buff_build" image="icon_bricks" color="#333333" />
+                    <Image id="blue_buff_attack" image="icon_swords" color="#333333" />
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="blue_buff_resources" image="icon_chest" color="#333333" />
+                    <Image id="blue_buff_defence" image="icon_shield" color="#333333" />
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+    </VerticalLayout>
+</Mask>
+
+<Mask class="mask_panel mask_red" active="true">
+    <VerticalLayout class="playerPanel playerPanel_red">
+        <!-- Builders and Bricks -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_green">
+                <HorizontalLayout>
+                    <Image image="icon_builders"></Image>
+                    <Text id="red_builders" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="red_icon_bricks" image="icon_bricks"></Image>
+                    <Text id="red_bricks" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Soldiers and Swords -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_red">
+                <HorizontalLayout>
+                    <Image image="icon_soldiers"></Image>
+                    <Text id="red_soldiers" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="red_icon_swords" image="icon_swords"></Image>
+                    <Text id="red_swords" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Mages and Crystals -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_blue">
+                <HorizontalLayout>
+                    <Image image="icon_wizards"></Image>
+                    <Text id="red_mages" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="red_icon_crystals" image="icon_crystals"></Image>
+                    <Text id="red_crystals" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Castle and Wall -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_black">
+                <HorizontalLayout>
+                    <Image image="icon_wall"></Image>
+                    <Text id="red_wall" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image image="icon_castle"></Image>
+                    <Text id="red_castle" text="2"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+
+        <!-- Buffs -->
+        <Mask class="mask_section">
+            <VerticalLayout class="section bg_gold">
+                <HorizontalLayout>
+                    <Image id="red_buff_build" image="icon_bricks" color="#333333" />
+                    <Image id="red_buff_attack" image="icon_swords" color="#333333" />
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="red_buff_resources" image="icon_chest" color="#333333" />
+                    <Image id="red_buff_defence" image="icon_shield" color="#333333" />
+                </HorizontalLayout>
+            </VerticalLayout>
+        </Mask>
+    </VerticalLayout>
+</Mask>
