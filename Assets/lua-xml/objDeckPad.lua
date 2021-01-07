@@ -8,6 +8,7 @@ function onLoad()
     decks        = getDeckData()
     owner        = "Blue"
     showDeckMenu = false
+    debug        = Global.getTable("data").debug
 
     if self.getGUID()~="blu007" then owner = "Red" end
     drawButtons()
@@ -25,6 +26,12 @@ function checkDeck(obj, clickee)
         to see if it's a legit deck. If it passes, Global will trigger the lockDeck function on this object.
     --]]
 
+    --check if the action was performed by the right user
+    if clickee ~= owner and not debug then
+        broadcastToColor("Only player "..owner.." can control their deck!", clickee, "Red")
+        return false
+    end
+
     --simple flag
     local foundDeck = false
 
@@ -35,7 +42,8 @@ function checkDeck(obj, clickee)
         origin    = self.getPosition():add(Vector(0, size.y/2, 0)),
         type      = 3,
         size      = size,
-        direction = {0, 1, 0}
+        direction = {0, 1, 0},
+        debug     = debug
     })
 
     --check cast objects for first Deck found and pass it to global

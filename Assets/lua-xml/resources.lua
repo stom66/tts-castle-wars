@@ -19,9 +19,6 @@ function removeResources(player_color, resources)
 end
 
 
-
-
-
 function updateBuildingHeights(player_color)
     updateWallHeight(player_color)
     updateCastleHeight(player_color)
@@ -33,17 +30,36 @@ function updateWallHeight(player_color)
         TODO: Also triggers the wall animation (particle effects)
     --]]
 
-    local height     = data[player_color].wall
-    local increment  = 0.15
-    local min_height = 5
+    local wall_increment  = 0.15
+    local wall_min_height = 5
+    local wall_position   = data[player_color].wall_obj.getPosition()
+    local gate_position   = data[player_color].gate_obj.getPosition()
 
-    local position = data[player_color].wall_obj.getPosition()
-    if height < 1 then
-        position:setAt("y", -1)
+    --store the old height for checking changes
+    local old_y_pos = wall_position.y
+
+    --if no wall then hide it, otherwise move it to height + min_height
+    if data[player_color].wall < 1 then
+        wall_position:setAt("y", -1)
+        gate_position:setAt("y", -1)
     else
-        position:setAt("y", min_height + (height * increment))
+        wall_position:setAt("y", wall_min_height + (data[player_color].wall * wall_increment))
+        gate_position:setAt("y", 4)
     end
-    data[player_color].wall_obj.setPositionSmooth(position)
+
+    --move the wall and gate to the new heights
+    data[player_color].wall_obj.setPositionSmooth(wall_position)
+    data[player_color].gate_obj.setPositionSmooth(gate_position)
+
+    --now compare the old height to new height and play the right animation
+    local new_y_pos = wall_position.y
+    if new_y_pos > old_y_pos then
+        --going up
+        data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(1)
+    else
+        --going down
+        data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(0)
+    end
 end
 
 function updateCastleHeight(player_color)

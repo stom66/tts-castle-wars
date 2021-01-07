@@ -3,7 +3,12 @@ guid: 352e4528e53f71d419d236f222976006
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fade
+    second: {fileID: 2100000, guid: 72946466eb6891e4b8f9b4a09a51b69a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Blends/table/tex.png.meta
 guid: 797a41e718e19a94a991df55972f71d5
-=======
-guid: c3917e08aae2f064fa0643ec6f871871
->>>>>>> origin/master:Assets/images/cards/backs/crystals_blue.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -64,7 +60,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -75,7 +71,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1

@@ -82,3 +82,6 @@ require("CastleWars/Assets/lua-xml/turnActions")
 
 require("CastleWars/Assets/lua-xml/xmlFunctions")
 require("CastleWars/Assets/lua-xml/zoneActions")
+
+--utility stuff
+require("CastleWars/Assets/lua-xml/math")

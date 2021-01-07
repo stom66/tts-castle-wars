@@ -8,9 +8,15 @@ function turn_next()
     --[[
         Move turn to next player manually, emulates clicking "End Turn" button
         Triggers the stock TTS event onplayerTurn
-        Triggered by player_playCard, which is triggered by the playzone, scripting buttons, and the context menu
-        Exits if the game_state is not "active", eg the game has been won or lost
+
+        Triggered by:
+            - player_playCard
+                - a card entering the playzone
+                - scripting buttons
+                - card context menu action
     --]]
+
+    --abort if the game isn't in progress
     if data.game_state ~= "active" then return false end
 
     --manually advance to the next players turn
@@ -20,8 +26,21 @@ end
 function onPlayerTurn(player)
     --[[
         Stock TTS API Event
+
+        Triggerd by either:
+            - the player clicking "End Turn"
+            - the above function turn_next()
     --]]
+
+    --abort if the game isn't in progress
+    if data.game_state ~= "active" then return false end
+
+    -- Trigger the "turn_start" for the current player
     turn_start(player.color)
+
+    -- Trigger "turn end" for the previous player if appropriate
+    -- Needs a delay to allow the played card enough time to return to the deck
+    -- Otherwise causes conflicts and cards to not re-enter the deck properly
     if data.turn_count > 1 then
         Wait.time(function()
             turn_end(playerOpponent(player.color))
@@ -39,49 +58,53 @@ function turn_start(player_color)
             - triggers an update to the XML UI of both players
     --]]
 
+    --abort if the game isn't in progress
+    if data.game_state ~= "active" then return false end
+
     --increment turn count
     data.turn_count = data.turn_count + 1
 
-    --increment resources after each player's first turen
+    --increment resources, but only after each player's first turen
     if data.turn_count > 2 then
         local inc = {
-            bricks   = data[player_color].builders, 
-            crystals = data[player_color].mages, 
+            bricks   = data[player_color].builders,
+            crystals = data[player_color].mages,
             swords   = data[player_color].soldiers
         }
 
         -- is there a productions buff enabled?
         if data[player_color].all_produce then
-            log("Buff active: "..tostring(data[player_color].all_produce))
+
             local total_production = inc.bricks + inc.crystals + inc.swords
 
-            -- buff all doubles everything
             if data[player_color].all_produce == "all" then
+                -- buff "all" doubles everything
                 inc.bricks   = inc.bricks * 2
                 inc.crystals = inc.crystals * 2
                 inc.swords   = inc.swords * 2
-            else --other buffs put all production toward something
-                inc.bricks   = 0
-                inc.crystals = 0
-                inc.swords   = 0
+            else
+                --other buffs put all production toward something or "none"
+                --set buffs to 0, pre-empting buff "none"
+                inc.bricks, inc.crystals, inc.swords = 0, 0, 0
 
-                if data[player_color].all_produce == "bricks" then
-                    inc.bricks = total_production
-                elseif data[player_color].all_produce == "crystals" then
-                    inc.crystals = total_production
-                elseif data[player_color].all_produce == "swords" then
-                    inc.swords = total_production
-                end                
-                --its also possible that all_produce is "none", in which case they all stay at 0
+                --check if the buff exists as a key in the table of increments
+                --if it does, set that key to be equal to the total_production
+                if inc[data[player_color].all_produce] then
+                    inc[data[player_color].all_produce] = total_production
+                end
             end
 
+            --de-activate the buff for future turns
             data[player_color].all_produce = false
         end
 
         -- increment resources by the determined amounts
-        data[player_color].bricks   = data[player_color].bricks + inc.bricks
-        data[player_color].crystals = data[player_color].crystals + inc.crystals
-        data[player_color].swords   = data[player_color].swords + inc.swords
+        addResources(player_color, {
+            inc.bricks,
+            inc.crystals,
+            inc.swords
+        })
+
     end
 
     --update card scales

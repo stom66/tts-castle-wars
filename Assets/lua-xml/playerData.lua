@@ -7,16 +7,21 @@ function defaultPlayerData(player)
     local prefix = string.sub(player, 1, 3):lower()
     return {
         --object references
-        castle_base_obj  = getObjectFromGUID(prefix.."001"),
-        castle_tower_obj = getObjectFromGUID(prefix.."011"),
-        wall_obj         = getObjectFromGUID(prefix.."002"),
-        barracks_obj     = getObjectFromGUID(prefix.."003"),
-        lodge_obj        = getObjectFromGUID(prefix.."004"),
-        tower_obj        = getObjectFromGUID(prefix.."005"),
-        gate_obj         = getObjectFromGUID(prefix.."006"),
-        deck_pad_obj     = getObjectFromGUID(prefix.."007"),
-        zone_obj         = getObjectFromGUID(prefix.."008"),
-        deck_obj         = nil, --set by the checkDeck function
+        castle_base_obj    = getObjectFromGUID(prefix.."001"),
+        wall_obj           = getObjectFromGUID(prefix.."002"),
+        barracks_obj       = getObjectFromGUID(prefix.."003"),
+        lodge_obj          = getObjectFromGUID(prefix.."004"),
+        tower_obj          = getObjectFromGUID(prefix.."005"),
+        gate_obj           = getObjectFromGUID(prefix.."006"),
+        deck_pad_obj       = getObjectFromGUID(prefix.."007"),
+        zone_obj           = getObjectFromGUID(prefix.."008"),
+        play_pad_obj       = getObjectFromGUID(prefix.."009"),
+        castle_tower_obj   = getObjectFromGUID(prefix.."010"),
+        flag1_obj          = getObjectFromGUID(prefix.."011"),
+        flag2_obj          = getObjectFromGUID(prefix.."012"),
+        effects_wall_obj   = getObjectFromGUID(prefix.."013"),
+        effects_castle_obj = getObjectFromGUID(prefix.."014"),
+        deck_obj           = nil, --set by the checkDeck function
 
         --buff booleans
         buff_attack    = false,
