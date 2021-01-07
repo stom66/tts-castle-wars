@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/images/cards/backs/swords_red.png.meta
+guid: 67593bff62bf68949a79adc4f04496e9
+=======
 guid: 3c56e54fa5ce723418dd24ef1a187695
+>>>>>>> origin/master:Assets/Store/Multistory Dungeons/Textures/Atlas_Props_01_Emission.psd.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

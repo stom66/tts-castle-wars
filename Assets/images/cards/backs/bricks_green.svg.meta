@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: f103404b8aa4cc74c938dfa75222fdb8
+<<<<<<< HEAD:Assets/images/cards/backs/bricks_green.svg.meta
+guid: 5ef692ff2f595dd4fb54de28f97cde3e
+=======
+guid: c7155b5b675739344ae88b04f168d323
+folderAsset: yes
+>>>>>>> origin/master:Assets/Materials/Materials.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

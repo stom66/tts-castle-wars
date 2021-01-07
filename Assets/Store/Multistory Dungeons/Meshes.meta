@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/images/cards/backs/swords_red.svg.meta
+guid: c9dcc0daac50da6429b8feae9eae71bc
+=======
 guid: d4fb6dd6402bb6c4ea2bd5ce2ad0450a
 folderAsset: yes
+>>>>>>> origin/master:Assets/Store/Multistory Dungeons/Meshes.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

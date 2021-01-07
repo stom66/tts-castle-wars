@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/images/cards/backs/special_gold.svg.meta
+guid: 18ee724fe795c014ba551d78f2c60517
+=======
 guid: def19d84c3c017d4fbd4ebe8a8a43e48
 folderAsset: yes
+>>>>>>> origin/master:Assets/Store/Multistory Dungeons.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

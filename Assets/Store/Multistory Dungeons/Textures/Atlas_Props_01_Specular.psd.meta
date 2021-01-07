@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/images/play-pad-2.png.meta
+guid: e04acaabd0a208f47813c8e6e63c38c3
+=======
 guid: 7bc1cd134a773e84fb7ba6662c2d795e
+>>>>>>> origin/master:Assets/Store/Multistory Dungeons/Textures/Atlas_Props_01_Specular.psd.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

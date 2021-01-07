@@ -6,12 +6,17 @@
 --]]
 
 function game_stop()
-    Turns.enable = false
+    Turns.enable    = false
     data.game_state = "stopped"
     broadcastToAll(lang.game_stopped, "Yellow")
 end
 
 function game_end()
+
+    --update game state
+    data.game_state = "ended"
+    Turns.enable    = false
+
     --work out who won and lost
     local winner, loser
     if data.Blue.castle >= 100 or data.Red.castle < 1 then
@@ -19,10 +24,6 @@ function game_end()
     elseif data.Red.castle >= 100 or data.Blue.castle < 1 then
         winner, loser = "Red", "Blue"
     end
-
-    --update game state
-    data.game_state = "ended"
-    Turns.enable = false
 
     --send messages
     if Player[winner].seated then 
@@ -56,6 +57,9 @@ function game_countdown()
 
     if data.Red.valid_deck and data.Blue.valid_deck then
 
+        --update the game state
+        data.game_state = "countdown"
+
         --print the various remaining time messages
         for i=1,data.delay_before_start do
             Wait.time(function()
@@ -81,15 +85,15 @@ end
 
 function game_start()
 
+    --update the game state
+    data.game_state = "active"
+
     --Setup the player turns
     Turns.type   = 2
     Turns.order  = {
         "Blue", "Red"
     }
     Turns.enable = true
-
-    --update the game state
-    data.game_state = "active"
 
     --Set the buildings to the right heights
     updateBuildingHeights("Blue")
