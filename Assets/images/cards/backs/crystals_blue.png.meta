@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/images/cards/backs/crystals_blue.png.meta
 guid: 75bd200a7df6a6c48902ea541ce03b79
+=======
+guid: 5f9965d6127e835439c9fe953bbc5e43
+>>>>>>> origin/master:Assets/images/cards/backs/swords_red.png.meta
+=======
+guid: c3917e08aae2f064fa0643ec6f871871
+>>>>>>> origin/master
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

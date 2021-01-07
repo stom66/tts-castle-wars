@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Blends/table/tex.png.meta
 guid: 797a41e718e19a94a991df55972f71d5
+=======
+guid: c3917e08aae2f064fa0643ec6f871871
+>>>>>>> origin/master:Assets/images/cards/backs/crystals_blue.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

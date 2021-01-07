@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/images/deck-pad.xcf.meta
 guid: 92c705cac9616564c90c0c837c684799
+=======
+guid: 2a88753938fdd354e93b7bff29420ae3
+folderAsset: yes
+>>>>>>> origin/master:Assets/Store/Multistory Dungeons/Meshes/Materials.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

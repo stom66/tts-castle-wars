@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/images/cards/backs/swords_red.png.meta
 guid: 67593bff62bf68949a79adc4f04496e9
+=======
+guid: 3c56e54fa5ce723418dd24ef1a187695
+>>>>>>> origin/master:Assets/Store/Multistory Dungeons/Textures/Atlas_Props_01_Emission.psd.meta
+=======
+guid: 5f9965d6127e835439c9fe953bbc5e43
+>>>>>>> origin/master
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -27,7 +35,11 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
+<<<<<<< HEAD
+  textureFormat: -1
+=======
   textureFormat: 1
+>>>>>>> origin/master
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
@@ -60,7 +72,33 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 512
+=======
     maxTextureSize: 2048
+>>>>>>> origin/master
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -83,8 +121,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
   spritePackingTag: 
+<<<<<<< HEAD
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+=======
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
+>>>>>>> origin/master
   userData: 
   assetBundleName: 
   assetBundleVariant: 
