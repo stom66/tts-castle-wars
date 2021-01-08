@@ -123,12 +123,11 @@
     </Panel>
 </Mask>
 
-
 <Panel 
     height = "100"
     width = "300"
     color = "#333333"
-    rectAlignment = "LowerCenter"
+    rectAlignment = "UpperCenter"
     allowDragging   = "true"
     returnToOriginalPositionWhenReleased = "false"
 >
@@ -137,7 +136,6 @@
         <Slider onValueChanged="xml_updateWallHeight" minValue="0" maxValue="100" wholeNumbers="true"></Slider>
     </VerticalLayout>
 </Panel>
-
 
 
 

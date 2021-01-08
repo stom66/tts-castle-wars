@@ -19,8 +19,9 @@ function defaultPlayerData(player)
         castle_tower_obj   = getObjectFromGUID(prefix.."010"),
         flag1_obj          = getObjectFromGUID(prefix.."011"),
         flag2_obj          = getObjectFromGUID(prefix.."012"),
-        effects_wall_obj   = getObjectFromGUID(prefix.."013"),
-        effects_castle_obj = getObjectFromGUID(prefix.."014"),
+        effects_obj        = getObjectFromGUID(prefix.."013"),
+        effects_wall_obj   = getObjectFromGUID(prefix.."014"),
+        effects_castle_obj = getObjectFromGUID(prefix.."015"),
         deck_obj           = nil, --set by the checkDeck function
 
         --buff booleans

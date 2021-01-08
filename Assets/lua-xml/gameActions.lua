@@ -84,7 +84,6 @@ function game_countdown()
 end
 
 function game_start()
-
     --update the game state
     data.game_state = "active"
 

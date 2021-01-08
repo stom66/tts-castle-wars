@@ -115,7 +115,7 @@ function card_buildCastle(player, value)
         data[player].buff_build = false
     end
     data[player].castle = data[player].castle + value
-    updateCastleHeight(player)
+    updateBuildingHeights(player)
 end
 
 function card_buildWall(player, value)
@@ -126,7 +126,7 @@ function card_buildWall(player, value)
     end
 
     data[player].wall = data[player].wall + value
-    updateWallHeight(player)
+    updateBuildingHeights(player)
 end
 
 function card_curse(player, value)

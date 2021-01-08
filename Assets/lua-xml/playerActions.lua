@@ -231,8 +231,8 @@ function player_playCard(card, player_color)
     local bypass = cards[cardId].bypass or false
     _G["card_"..cards[cardId].action](player_color, value, bypass)
 
-    -- Deal a new card from the deck
-    --player_dealCards(player_color, 1) --covered by turn_end
+    -- Trigger the animation for the card
+    triggerEffect(player_color, cards[cardId].name)
 
     -- Put the played card back in the deck
     card_addToDeck(card, data[player_color].deck_obj)

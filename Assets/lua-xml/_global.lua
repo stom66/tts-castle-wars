@@ -10,12 +10,15 @@ function onLoad()
         turn_count           = 0,         --primarily used to determine if resources should be increased
         debug                = true,      --controls visibility of casts and toggles logging
     }
+    
     data.Blue = defaultPlayerData("Blue")
     data.Red  = defaultPlayerData("Red")
+
 
     zoneWaits = {} --empty table, used for scripting zone wait conditions
 
     cards = getCardData() --info on cards, functions, costs, etc
+
 
     lang = {
         too_many_duplicate_cards = function(s) return "You have too many '"..s.."' cards. The maximum is "..data.max_card_duplicates end,
@@ -35,6 +38,7 @@ function onLoad()
         game_won                 = "Congratulations! You have won the game!",
         game_lost                = "Oh no! You have been defeated!",
     }
+
 
     xml_update("Blue")
     xml_update("Red")
@@ -69,12 +73,15 @@ end
 --[[
     Requires the main game files
 --]]
+
 require("CastleWars/Assets/lua-xml/playerActions")
 require("CastleWars/Assets/lua-xml/playerData")
 
 require("CastleWars/Assets/lua-xml/cardActions")
 require("CastleWars/Assets/lua-xml/cardData")
 require("CastleWars/Assets/lua-xml/deckActions")
+
+require("CastleWars/Assets/lua-xml/effects")
 
 require("CastleWars/Assets/lua-xml/gameActions")
 require("CastleWars/Assets/lua-xml/resources")

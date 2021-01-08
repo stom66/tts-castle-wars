@@ -19,6 +19,7 @@ function onLoad()
     end, 1)
 end
 
+
 function checkDeck(obj, clickee)
     --[[
         Main function. Called whenever a user clicks the onboard "Lock" button.
@@ -158,7 +159,10 @@ function spawnNewDeck(i, player_color)
 
     --spawn a copy of the full deck
     local stock_deck       = getObjectFromGUID("deck01")
-    local deck_position    = self.getPosition():add(self.getTransformRight() * -4):add(self.getTransformUp() * 10)
+    local deck_position    = self.getPosition():add(self.getTransformUp() * 10)
+    if not debug then
+        deck_position:add(self.getTransformRight() * -4)
+    end
     local deck_rotation    = self.getRotation():add(Vector(180, 180, 0))
     local deck             = stock_deck.clone({
         position           = deck_position,
