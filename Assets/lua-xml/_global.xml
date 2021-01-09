@@ -123,6 +123,7 @@
     </Panel>
 </Mask>
 
+<!-- 
 <Panel 
     height = "100"
     width = "300"
@@ -136,7 +137,7 @@
         <Slider onValueChanged="xml_updateWallHeight" minValue="0" maxValue="100" wholeNumbers="true"></Slider>
     </VerticalLayout>
 </Panel>
-
+-->
 
 
 <Mask class="mask_panel mask_blue" active="true">

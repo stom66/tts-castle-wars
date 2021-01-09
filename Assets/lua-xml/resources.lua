@@ -19,12 +19,12 @@ function removeResources(player_color, resources)
 end
 
 
-function updateBuildingHeights(player_color)
-    updateWallHeight(player_color)
-    updateCastleHeight(player_color)
+function updateBuildingHeights(player_color, delay, skip_animation)
+    updateWallHeight(player_color, delay, skip_animation)
+    updateCastleHeight(player_color, delay, skip_animation)
 end
 
-function updateWallHeight(player_color)
+function updateWallHeight(player_color, delay, skip_animation)
     --[[
         Updates the wall's position based on the current size
         TODO: Also triggers the wall animation (particle effects)
@@ -33,6 +33,7 @@ function updateWallHeight(player_color)
     local wall_min_height = 5
     local wall_position   = data[player_color].wall_obj.getPosition()
     local gate_position   = data[player_color].gate_obj.getPosition()
+          delay           = tonumber(delay) or 0
 
     --store the old height for checking changes
     local old_y_pos = math.round(wall_position.y, 2)
@@ -48,58 +49,83 @@ function updateWallHeight(player_color)
         scaleEffects(playerOpponent(player_color), 1)
     end
 
-    --move the wall and gate to the new heights
-    data[player_color].wall_obj.setPositionSmooth(wall_position)
-    data[player_color].gate_obj.setPositionSmooth(gate_position)
 
-
-    --now compare the old height to new height and play the right animation
-    local new_y_pos = math.round(wall_position.y, 2)
-    log("old: new = "..old_y_pos..": "..new_y_pos)
-    if new_y_pos > old_y_pos then
-        --going up
-        data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(1)
-    elseif new_y_pos < old_y_pos then
-        --going down
-        data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(0)
-    end
+    --move the wall and gate to the new heights, after delay if provided
+    Wait.time(function()
+        --compare the old height to new height and play the right animation
+        if not skip_animation then
+            local new_y_pos = math.round(wall_position.y, 2)
+            if new_y_pos > old_y_pos then
+                --going up
+                data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(1)
+            elseif new_y_pos < old_y_pos then
+                --going down
+                data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(0)
+            end
+        end
+        Wait.time(function()
+            --set the position of the base and tower after 1 second, to allow 
+            --first part of above animation to play
+            data[player_color].wall_obj.setPositionSmooth(wall_position)
+            data[player_color].gate_obj.setPositionSmooth(gate_position)
+        end, 1)
+    end, delay or 0)
 end
 
-function updateCastleHeight(player_color)
-    if data[player_color].castle >= 100 or data[player_color].castle < 1 then
+function updateCastleHeight(player_color, delay, skip_animation)
+    --local reference to castle height
+    local height = data[player_color].castle
+          delay  = tonumber(delay) or 0
+
+    --check for win/loss criteria
+    if height >= 100 or height < 1 then
         game_end()
-        return false
     end
 
-    local height = data[player_color].castle
+    --define table of possible heights for the base & tower
+    local base_steps  = {0, 10.5, 15, 17}
+    local tower_steps = {6.75, 7.5, 10, 10}
+    local tower_inc   = 0.25
+    local tower_max   = 64
 
-    --table of possible heights for the base & tower
-    local base_steps = {0, 10.5, 15, 17}
-    local tower_steps = {6.75, 7.5, 10, 9}
-
-    --height at which to move between height steps
+    --height at which to move between the above height steps
     local step_interval = 10
 
-    --work out which height to use from the table
-    local index = math.min(math.ceil((height+1)/step_interval), #base_steps)
-          index = math.min(index, #base_steps)
-          index = math.max(index, 1)
+    --work out which min-height to use from the tables
+    local index = math.ceil((height+1)/step_interval)
+          index = math.range(index, 1, #base_steps)
 
-    --work out new base position and move to it
+    --get the current base and tower position
     local base_position = data[player_color].castle_base_obj.getPosition()
-    base_position:setAt("y", base_steps[index])
-    data[player_color].castle_base_obj.setPositionSmooth(base_position)
-
-    --work out height for the tower
-    local tower_inc    = 0.25
-    local tower_max    = 64
-    local tower_height = tower_steps[index] + (height*tower_inc)
-
-    --work out target position
     local tower_position = data[player_color].castle_tower_obj.getPosition()
-    tower_position.y     = math.min(tower_height, tower_max)
 
-    --move tower to right height
-    data[player_color].castle_tower_obj.setPositionSmooth(tower_position)
+    --store the old height for checking changes
+    local old_y_pos = math.round(tower_position.y, 2)
 
+    --work out new base and tower positions
+    base_position:setAt("y", base_steps[index])
+    tower_position:setAt("y", math.min(tower_steps[index] + (height*tower_inc), tower_max))
+
+    --move the base and tower to the new heights, after delay if provided
+    Wait.time(function()
+        --work out the new height for checking changes
+        local new_y_pos = math.round(tower_position.y, 2)
+
+        --compare the old height to new height and play the right animation
+        if not skip_animation then
+            log("Castle height old/new: "..old_y_pos.." / "..new_y_pos)
+            if new_y_pos > old_y_pos then  --going up
+                data[player_color].effects_castle_obj.AssetBundle.playTriggerEffect(1)
+            elseif new_y_pos < old_y_pos then  --going down
+                data[player_color].effects_castle_obj.AssetBundle.playTriggerEffect(0)
+            end
+        end
+
+        Wait.time(function()
+            --set the position of the base and tower after 1 second, to allow 
+            --first part of above animation to play
+            data[player_color].castle_base_obj.setPositionSmooth(base_position)
+            data[player_color].castle_tower_obj.setPositionSmooth(tower_position)
+        end, 1)
+    end, delay)
 end

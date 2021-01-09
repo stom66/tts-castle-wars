@@ -24,9 +24,9 @@ function trigger_playCard(player_color)
     --check the player actually has a deck
     if not data[player_color].deck_obj then
         if Player[player_color].seated then
-            broadcastToColor("You must have a valid locked deck to play a card", player_color, "Red")
+            broadcastToColor(lang.deck_not_locked, player_color, "Red")
         else
-            print(player_color..": You must have a valid locked deck to play a card")
+            print(player_color..lang.deck_not_locked)
         end
         return false
     end
@@ -83,9 +83,9 @@ function trigger_discardCard(player_color)
     --check the player actually has a deck
     if not data[player_color].deck_obj then
         if Player[player_color].seated then
-            broadcastToColor("You must have a valid locked deck to discard a card", player_color, "Red")
+            broadcastToColor(lang.deck_not_locked2, player_color, "Red")
         else
-            print(player_color..": You must have a valid locked deck to discard a card")
+            print(player_color..lang.deck_not_locked2)
         end
         return false
     end
@@ -196,12 +196,12 @@ function player_playCard(card, player_color)
     -- Get the CardID
     local cardId = card_getID(card)
     if not cards[cardId] then
-        broadcastToAll("Unknown card played! ID "..cardId, "Red")
+        broadcastToAll(lang.card_unknown(cardId), "Red")
         return false
     end
 
     -- Check the player can afford it
-    if not playerCanAffordCard(player_color, cardId) then
+    if not player_canAffordCard(player_color, cardId) then
         --alert the user
         if Player[player_color].seated then
             broadcastToColor(lang.cant_afford_card, player_color, "Red")
@@ -221,15 +221,16 @@ function player_playCard(card, player_color)
 
     -- Player played a valid card
     if Player[player_color].seated then
-        broadcastToAll(Player[player_color].steam_name.." played card "..cards[cardId].name, player_color)
+        broadcastToAll(lang.card_played(Player[player_color].steam_name, cards[cardId].name), player_color)
     else
-        print(player_color.." played card "..cards[cardId].name)
+        print(lang.card_played(Player[player_color].steam_name, cards[cardId].name))
     end
 
     -- Trigger the cards action
-    local value = cards[cardId].value or 0
+    local value  = cards[cardId].value or 0
     local bypass = cards[cardId].bypass or false
-    _G["card_"..cards[cardId].action](player_color, value, bypass)
+    local delay  = cards[cardId].delay or 0
+    _G["card_"..cards[cardId].action](player_color, value, bypass, delay)
 
     -- Trigger the animation for the card
     triggerEffect(player_color, cards[cardId].name)
@@ -237,9 +238,10 @@ function player_playCard(card, player_color)
     -- Put the played card back in the deck
     card_addToDeck(card, data[player_color].deck_obj)
 
-    -- Trigger the next player's turn
-    Wait.time(turn_next, 1.5)
-
+    -- Trigger the next player's turn, unless the sabotage card was played
+    if cards[cardId].action ~= "sabotage" then
+        Wait.time(turn_next, 1.5)
+    end
 end
 
 function player_dealCards(player_color, count)
@@ -258,5 +260,25 @@ function player_returnCardsToDeck(player_color)
     local deck = data[player_color].deck_obj
     for _,card in ipairs(Player[player_color].getHandObjects()) do
         card_addToDeck(card, deck)
+    end
+end
+
+
+function player_checkCardsInHand(player_color)
+    --[[
+        Checks the player has the right amount of cards in their hand and deals replacements if any are missing
+    --]]
+
+    --check we actually have a player seated
+    if not Player[player_color].seated then return false end
+
+    --get the number of objects in hand and work out the difference
+    local hand_objs = Player[player_color].getHandObjects()
+    local missing = data.max_cards_in_hand - #hand_objs
+    if missing > 0 then
+        log("Player hand "..player_color.." is missing "..missing.." cards")
+        player_dealCards(player_color, missing)
+    elseif missing < 0 then
+        log("Player hand "..player_color.." has "..math.abs(missing).." extra cards!")
     end
 end

@@ -8,6 +8,14 @@
     data[player].valid_deck = false
     data[player].deck_obj.setLock(false)
     data[player].deck_obj.interactable = true
+
+    if data.game_state == "active" then
+        game_stop()
+        player_returnCardsToDeck("Blue")
+        player_returnCardsToDeck("Red")
+    elseif data.game_state == "ended" then
+
+    end
 end
 
 

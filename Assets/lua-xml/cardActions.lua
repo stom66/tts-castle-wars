@@ -8,13 +8,14 @@ function card_getID(obj)
     -- return the CardID value for any card, or false if not a card
     return obj.getData().CardID or false
 end
+
 function card_getName(id)
     --get the name of a card from it's ID. References the global card table
     return cards[id].name or "Unknown Card"
 end
 
 function card_addToDeck(card, deck)
-    --[[ 
+    --[[
         puts a card in a specified deck
         expects both params to be obj references
      --]]
@@ -26,7 +27,7 @@ function card_addToDeck(card, deck)
     deck.setLock(false)
     deck.putObject(card)
     deck.shuffle()
-    
+
     --re-lock the deck after another frame
     --Wait.frames(function()
         deck.interactable = false
@@ -36,11 +37,24 @@ function card_addToDeck(card, deck)
     --shuffle the deck
 end
 
-
 function cards_updateScales(player_color)
+    --[[
+        Updates the scales of cards in the player hands based on if the player can 
+        afford to play them or not
+    --]]
+
+    --Check we've got a player in the seat
+    if not Player[player_color].seated then
+        log("Can't invoke method cards_updateScales for non-existant player "..player_color)
+        return false
+    end
+
+    --Get a table of all cards in the players hand
     local cards = Player[player_color].getHandObjects()
+
+    --Loop though, adjusting scale of each card in hand
     for _,card in ipairs(cards) do
-        if playerCanAffordCard(player_color, card_getID(card)) then
+        if player_canAffordCard(player_color, card_getID(card)) then
             card.setScale({1, 1, 1})
         else
             card.setScale({0.75, 1, 0.75})
@@ -50,9 +64,11 @@ end
 
 
 --[[
-    Card actions
+    Card game actions
 
-    These are the actual actions triggered by the cards when they're played
+    These are the actual actions triggered by the cards when they're played, eg attacks, 
+    construction, buffs, etc
+
  --]]
 
 function card_addBuff(player, value)
@@ -77,7 +93,7 @@ function card_allProduce(player, value)
     data[target].all_produce = value
 end
 
-function card_attack(player, damage, bypass_wall)
+function card_attack(player, damage, bypass_wall, delay)
     local target = playerOpponent(player)
 
     --check for attack buffs
@@ -85,7 +101,7 @@ function card_attack(player, damage, bypass_wall)
         damage = damage * 2
         data[player].buff_attack = false
     end
-    
+
     --check for defence buffs
     if data[target].buff_defence then
         damage = 0
@@ -100,33 +116,36 @@ function card_attack(player, damage, bypass_wall)
         else
             damage = 0
         end
-        updateWallHeight(target)
+        updateWallHeight(target, delay)
     end
     if damage > 0 then
-        data[target].castle = data[target].castle - damage
-        updateCastleHeight(target)
+        data[target].castle = math.max(0, data[target].castle - damage)
+        Wait.time(function()
+            updateCastleHeight(target)
+        end, delay or 0)
     end
 end
 
-function card_buildCastle(player, value)
+function card_buildCastle(player, value, bypass, delay)
     --check for building buffs
     if data[player].buff_build then
         value = value * 2
         data[player].buff_build = false
     end
     data[player].castle = data[player].castle + value
-    updateBuildingHeights(player)
+    updateBuildingHeights(player, delay, bypass)
 end
 
-function card_buildWall(player, value)
+function card_buildWall(player, value, bypass, delay)
     --check for building buffs
     if data[player].buff_build then
         value = value * 2
         data[player].buff_build = false
     end
 
+    --update the value and trigger the wall move
     data[player].wall = data[player].wall + value
-    updateBuildingHeights(player)
+    updateBuildingHeights(player, delay, bypass)
 end
 
 function card_curse(player, value)
@@ -186,8 +205,103 @@ function card_removeResource(player, value)
     addResources(player, value)
 end
 
-function card_sabotage(player, value)
+function card_sabotage(player_color, value)
+
+    --take all cards from targets hand and move them to behind our player's hand
+    local target = playerOpponent(player_color)
+
+    --Check we've got a player in the seat
+    if not Player[player_color].seated then
+        log("Can't invoke method card_sabotage for non-existant player "..player_color)
+        return false
+    end
+    if not Player[target].seated then
+        log("Can't invoke method card_sabotage for non-existant player "..target)
+        return false
+    end
+
+    --get a table of all the cards in the targets handzone and loop through them
+    local cards = Player[target].getHandObjects()
+    for _,card in ipairs(cards) do
+
+        --add a reference to the card GUID in the player data
+        table.insert(data[player_color].discard_objs, card.getGUID())
+
+        --move the card to the other side of the table and rotate it
+        local pos = card.getPosition()
+        pos:setAt("x", pos.x * -1.16):setAt("z", pos.z * -1)
+        card.setPosition(pos)
+        card.setRotation(card.getRotation():add(Vector(0, 180, 0)))
+
+        --create a button on the card to trigger a discard
+        card.createButton({
+            click_function = "card_sabotage_discard",
+            label          = "DISCARD",
+            position       = {0, 0.1, 1.85},
+            width          = 1000,
+            height         = 300,
+            fontSize       = 280,
+            hover_color    = {0.2, 0.2, 0.2},
+            color          = {0.1, 0.1, 0.1},
+            font_color     = {1, 1, 1},
+        })
+    end
+
+    --move the player camera to look at the choice of cards to discard
+    local hand_pos = Player[player_color].getHandTransform()
+    Player[player_color].lookAt({
+        position = hand_pos.position * 1.16,
+        pitch    = 45,
+        yaw      = hand_pos.rotation.y,
+        distance = 20,
+    })
+
+    --message the players to explain what's going on
+    broadcastToColor(lang.discard_wait_for_player, target, "Red")
+    broadcastToColor(lang.discard_choose_card, player_color, "Green")
 end
+
+    function card_sabotage_discard(obj, player, alt_click)
+        --the function triggered by clicking the "Discard" button on a card
+        local target = playerOpponent(player)
+
+        --check if the right player is trying to discard
+        if not table.contains(data[player].discard_objs, obj.getGUID()) then
+            if table.contains(data[target].discard_objs, obj.getGUID()) then
+                player, target = target, player
+            else
+               print("There was an error, the card you are trying to discard is not registered to anyone!") 
+            end
+        end
+
+        --loop through the objects stored in the discard_objs table
+        local card_guids = data[player].discard_objs
+        for _,g in ipairs(card_guids) do
+
+            --create a local reference to the card object
+            local card = getObjectFromGUID(g)
+
+            --remove the buttons from it
+            card.clearButtons()
+
+            --if the card is the one that was clicked then return it to the target players deck
+            if g == obj.getGUID() then
+               card_addToDeck(card, data[target].deck_obj)
+            else --otherwise return it to their hand
+                card.deal(1, target)
+            end
+        end
+
+        --reset the table of discard_objs
+        data[player].discard_objs = {}
+
+        --deal a single replacement card to the target
+        player_dealCards(target, 1)
+
+        --trigger the next turn
+        Wait.time(turn_next, 1.5)
+    end
+
 
 function card_stealWorker(player, value)
     --add workers to player
@@ -221,6 +335,6 @@ function card_wain(player, value)
 
     --lower oponent castle
     local target = playerOpponent(player)
-    card_attack(target, 6, true)
+    card_attack(player, 6, true)
     updateCastleHeight(target)
 end

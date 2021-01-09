@@ -44,7 +44,7 @@ function onPlayerTurn(player)
     if data.turn_count > 1 then
         Wait.time(function()
             turn_end(playerOpponent(player.color))
-        end, 1)
+        end, 1.5)
     end
 end
 
@@ -128,9 +128,5 @@ function turn_end(player_color)
     data[player_color].action_taken = false
     data[player_color].discards = 0
 
-    --check the player has the right amount of cards in their hand
-    local hand_objs = Player[player_color].getHandObjects()
-    if #hand_objs < data.max_cards_in_hand then
-        player_dealCards(player_color, data.max_cards_in_hand - #hand_objs)
-    end
+    player_checkCardsInHand(player_color)
 end

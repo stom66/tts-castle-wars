@@ -10,35 +10,15 @@ function onLoad()
         turn_count           = 0,         --primarily used to determine if resources should be increased
         debug                = true,      --controls visibility of casts and toggles logging
     }
-    
-    data.Blue = defaultPlayerData("Blue")
-    data.Red  = defaultPlayerData("Red")
 
+    data.Blue = player_defaultData("Blue")
+    data.Red  = player_defaultData("Red")
 
     zoneWaits = {} --empty table, used for scripting zone wait conditions
 
-    cards = getCardData() --info on cards, functions, costs, etc
+    cards = card_getDataTable() --info on cards, functions, costs, etc
 
-
-    lang = {
-        too_many_duplicate_cards = function(s) return "You have too many '"..s.."' cards. The maximum is "..data.max_card_duplicates end,
-        deck_too_large           = "Deck is too large! Max size is "..data.max_cards_in_deck,
-        deck_valid               = "Your deck is ready and loaded!",
-        not_your_turn            = "It is not your turn! Wait for the other player to finish their turn",
-        cant_afford_card         = "You cannot afford to use that card!",
-        cant_play_multiple_cards = "You can only play one card at a time, please select a single card",
-        cant_play_non_card       = "You can't play an object that isn't a card",
-        cant_play_after_discard  = "You can't play a card in the same turn as discarding cards",
-        max_discards_reached     = "You can only discard "..data.max_discard_per_turn.." cards per turn",
-        card_not_in_hand         = "That card does not belong to you!",
-        game_starts_in           = function(i) return "Game is starting in "..i.."..." end,
-        game_start_cancelled     = "Game start cancelled",
-        game_started             = "The game has begun!",
-        game_stopped             = "The game has been stopped.",
-        game_won                 = "Congratulations! You have won the game!",
-        game_lost                = "Oh no! You have been defeated!",
-    }
-
+    lang = lang_getStrings()
 
     xml_update("Blue")
     xml_update("Red")
@@ -73,6 +53,7 @@ end
 --[[
     Requires the main game files
 --]]
+require("CastleWars/Assets/lua-xml/lang")
 
 require("CastleWars/Assets/lua-xml/playerActions")
 require("CastleWars/Assets/lua-xml/playerData")
@@ -92,3 +73,4 @@ require("CastleWars/Assets/lua-xml/zoneActions")
 
 --utility stuff
 require("CastleWars/Assets/lua-xml/math")
+require("CastleWars/Assets/lua-xml/table")

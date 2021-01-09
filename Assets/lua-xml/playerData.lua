@@ -3,7 +3,7 @@
     Default data sets for players, as well as some basic player functions
 --]]
 
-function defaultPlayerData(player)
+function player_defaultData(player)
     local prefix = string.sub(player, 1, 3):lower()
     return {
         --object references
@@ -23,6 +23,7 @@ function defaultPlayerData(player)
         effects_wall_obj   = getObjectFromGUID(prefix.."014"),
         effects_castle_obj = getObjectFromGUID(prefix.."015"),
         deck_obj           = nil, --set by the checkDeck function
+        discard_objs       = {}, --table of cards potentially being discarded by sabotage
 
         --buff booleans
         buff_attack    = false,
@@ -49,15 +50,15 @@ function defaultPlayerData(player)
     }
 end
 
-function playerCanAffordCard(player_color, cardId)
+function player_canAffordCard(player_color, cardId)
     --[[
         Check if the player can afford the card
         Does not check the [4]th value - wall - as this is only used by the Reverse card which works even if you dont have a wall
     --]]
     if data.debug then
-        log("Checking if player "..player_color.." can afford card "..cardId)
-        log("Player has: "..data[player_color].bricks.." bricks, "..data[player_color].crystals.." crystals, "..data[player_color].swords.." swords")
-        log("Card costs: "..cards[cardId].cost[1].." bricks, ".. cards[cardId].cost[2].." crystals, ".. cards[cardId].cost[3].." swords")
+        --log("Checking if player "..player_color.." can afford card "..cardId)
+        --log("Player has: "..data[player_color].bricks.." bricks, "..data[player_color].crystals.." crystals, "..data[player_color].swords.." swords")
+        --log("Card costs: "..cards[cardId].cost[1].." bricks, ".. cards[cardId].cost[2].." crystals, ".. cards[cardId].cost[3].." swords")
     end
 
     if data[player_color].bricks < cards[cardId].cost[1]

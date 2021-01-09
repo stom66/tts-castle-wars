@@ -6,7 +6,7 @@
      - {0, 0, 5, 0} = 5 swords
      - {10, 0, 0, 0} = 10 bricks
 ]]
-function getCardData()
+function card_getDataTable()
     local t = {}
     t[148900]  = {
         name   = "Add Bricks",
@@ -61,19 +61,22 @@ function getCardData()
         name   = "Babylon",
         cost   = {28, 0, 0, 0},
         action = "buildCastle",
+        delay  = 0,
         value  = 30
     }
     t[149102]  = {
         name   = "Battering Ram",
         cost   = {7, 0, 0, 0},
         action = "attack",
-        value  = 9
+        value  = 9,
+        delay  = 4.1
     }
     t[149003]  = {
         name   = "Bomb",
         cost   = {0, 0, 14, 0},
         action = "attack",
-        value  = 18
+        value  = 18,
+        delay  = 3.5
     }
     t[149103]  = {
         name   = "Bribe Builder",
@@ -103,24 +106,29 @@ function getCardData()
         name   = "Cannon",
         cost   = {0, 0, 16, 0},
         action = "attack",
-        value  = 20
+        value  = 20,
+        delay  = 0.75
     }
     t[149105]  = {
         name   = "Catapult",
         cost   = {10, 0, 0, 0},
         action = "attack",
-        value  = 12
+        value  = 12,
+        delay  = 1.5
     }
     t[149200]  = {
         name   = "Comet Strike",
         cost   = {20, 10, 0, 0},
         action = "attack",
-        value  = 30
+        value  = 30,
+        delay  = 3.5
     }
     t[148905]  = {
         name   = "Conjure Wall",
         cost   = {0, 14, 0, 0},
         action = "buildWall",
+        bypass = true,
+        delay  = 2,
         value  = 20
     }
     t[149201]  = {
@@ -139,60 +147,71 @@ function getCardData()
         name   = "Dragon",
         cost   = {20, 20, 0, 0},
         action = "attack",
-        value  = 38
+        value  = 38,
+        delay  = 3.5
     }
     t[149106]  = {
         name   = "Fence",
         cost   = {5, 0, 0, 0},
         action = "buildWall",
+        delay  = 2,
         value  = 9
     }
     t[149006]  = {
         name   = "Fire Archer",
         cost   = {0, 0, 3, 0},
         action = "attack",
-        value  = 5
+        value  = 5,
+        delay  = 2.1
     }
     t[149204]  = {
         name   = "Giant Snowball",
         cost   = {6, 6, 0, 0},
         action = "attack",
-        value  = 12
+        value  = 12,
+        delay  = 3.5
     }
     t[149007]  = {
         name   = "Guards",
         cost   = {0, 0, 7, 0},
         action = "buildWall",
+        delay  = 2,
+        bypass = true,
         value  = 12
     }
     t[148906]  = {
         name   = "Hail Storm",
         cost   = {0, 14, 0, 0},
         action = "attack",
-        value  = 18
+        value  = 18,
+        delay  = 3.5
     }
     t[149107]  = {
         name   = "House",
         cost   = {5, 0, 0, 0},
         action = "buildCastle",
+        delay  = 0,
         value  = 5
     }
     t[149008]  = {
         name   = "Knight",
         cost   = {0, 0, 10, 0},
         action = "attack",
+        delay  = 3.5,
         value  = 12
     }
     t[149108]  = {
         name   = "Large Wall",
         cost   = {14, 0, 0, 0},
         action = "buildWall",
+        delay  = 2,
         value  = 20
     }
     t[148907]  = {
         name   = "Lightning",
         cost   = {0, 20, 0, 0},
         action = "attack",
+        delay  = 3.5,
         value  = 22
     }
     t[148908]  = {
@@ -223,12 +242,15 @@ function getCardData()
         name   = "Pixies",
         cost   = {0, 18, 0, 0},
         action = "buildCastle",
+        delay  = 0,
+        bypass = true,
         value  = 22
     }
     t[149009]  = {
         name   = "Platoon",
         cost   = {0, 0, 7, 0},
         action = "attack",
+        delay  = 4.25,
         value  = 9
     }
     t[149010]  = {
@@ -241,12 +263,14 @@ function getCardData()
         name   = "Quake",
         cost   = {0, 24, 0, 0},
         action = "attack",
+        delay  = 3.5,
         value  = 27
     }
     t[149205]  = {
         name   = "Ram Attack",
         cost   = {4, 0, 4, 0},
         action = "attack",
+        delay  = 3.5,
         value  = 8
     }
     t[149011]  = {
@@ -283,6 +307,7 @@ function getCardData()
         name   = "Reverse",
         cost   = {3, 0, 0, 4},
         action = "buildCastle",
+        delay  = 0,
         value  = 8
     }
     t[149207]  = {
@@ -313,6 +338,7 @@ function getCardData()
         name   = "Tavern",
         cost   = {12, 0, 0, 0},
         action = "buildCastle",
+        delay  = 0,
         value  = 15
     }
     t[149014]  = {
@@ -325,12 +351,14 @@ function getCardData()
         name   = "Tower",
         cost   = {10, 0, 0, 0},
         action = "buildCastle",
+        delay  = 0,
         value  = 10
     }
     t[149208]  = {
         name   = "Trojan Horse",
         cost   = {14, 0, 20, 0},
         action = "attack",
+        delay  = 3.5,
         bypass = true,
         value  = 28
     }
@@ -344,6 +372,7 @@ function getCardData()
         name   = "Wall",
         cost   = {4, 0, 0, 0},
         action = "buildWall",
+        delay  = 2,
         value  = 6
     }
     return t

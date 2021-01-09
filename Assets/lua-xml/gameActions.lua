@@ -95,8 +95,8 @@ function game_start()
     Turns.enable = true
 
     --Set the buildings to the right heights
-    updateBuildingHeights("Blue")
-    updateBuildingHeights("Red")
+    updateBuildingHeights("Blue", 0, true)
+    updateBuildingHeights("Red", 0, true)
 
     --Shuffle both players decks cards to players
     data.Blue.deck_obj.randomize()

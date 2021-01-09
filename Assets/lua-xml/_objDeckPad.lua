@@ -9,14 +9,21 @@ function onLoad()
     owner        = "Blue"
     showDeckMenu = false
     debug        = Global.getTable("data").debug
+    lang         = {
+        deck_not_in_zone = "You must place a deck in the zone to check",
+        deck_not_yours   = function(c) return "Only player "..c.." can control their deck!" end,
+
+    }
 
     if self.getGUID()~="blu007" then owner = "Red" end
     drawButtons()
 
     --for testing only, automatically lock the deck 1 second after loading the game
-    Wait.time(function()
-        spawnNewDeck(1, owner)
-    end, 1)
+    if debug then
+        Wait.time(function()
+            spawnNewDeck(1, owner)
+        end, 1)
+    end
 end
 
 
@@ -29,7 +36,7 @@ function checkDeck(obj, clickee)
 
     --check if the action was performed by the right user
     if clickee ~= owner and not debug then
-        broadcastToColor("Only player "..owner.." can control their deck!", clickee, "Red")
+        broadcastToColor(lang.deck_not_yours(clickee), clickee, "Red")
         return false
     end
 
@@ -59,7 +66,7 @@ function checkDeck(obj, clickee)
 
     --warn user if no deck found
     if not foundDeck and clickee then
-        broadcastToColor("You must place a deck in the zone to check", clickee, "Red")
+        broadcastToColor(lang.deck_not_in_zone, clickee, "Red")
     end
 end
 
@@ -194,12 +201,5 @@ function spawnNewDeck(i, player_color)
     end
 end
 
-function table.count(t)
-    local c = 0
-    for _,_ in pairs(t) do c = c + 1 end
-    return c
-end
-
-
-
 require("CastleWars/Assets/lua-xml/deckData")
+require("CastleWars/Assets/lua-xml/table")

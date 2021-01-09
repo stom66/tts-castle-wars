@@ -17,12 +17,27 @@ end
 
 function triggerEffect(player_color, name)
     --function to play a trigger effect by it's name rather than by it's index.
+    --also looks at target wall height and will play a trigger with a _castle or _wall
+    --suffix depending on what's appropriate
     --returns true if found, false if not found
-    local name = name:lower():gsub(" ", "_")
-    local obj = data[player_color].effects_obj
+          name     = name:lower():gsub(" ", "_")
+    local assBun   = data[player_color].effects_obj.AssetBundle
+    local target   = playerOpponent(player_color)
+    local triggers = assBun.getTriggerEffects()
 
     log("Attempting to play trigger effect: "..name)
-    playTriggerByName(obj, name)
+
+    --loop through the list of possible triggers, searching for a name/name+suffix match
+    for _,v in ipairs(triggers) do
+        if v.name == name or
+        (v.name == name.."_castle" and data[target].wall < 1) or
+        (v.name == name.."_wall" and data[target].wall > 0) then
+            assBun.playTriggerEffect(v.index)
+            return true
+        end
+    end
+
+    return false
 end
 
 function scaleEffects(player_color, scale)
