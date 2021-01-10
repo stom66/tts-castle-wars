@@ -22,6 +22,7 @@ function player_defaultData(player)
         effects_obj        = getObjectFromGUID(prefix.."013"),
         effects_wall_obj   = getObjectFromGUID(prefix.."014"),
         effects_castle_obj = getObjectFromGUID(prefix.."015"),
+        handzone_obj       = getObjectFromGUID(prefix.."016"),
         deck_obj           = nil, --set by the checkDeck function
         discard_objs       = {}, --table of cards potentially being discarded by sabotage
 

@@ -258,7 +258,8 @@ end
 
 function player_returnCardsToDeck(player_color)
     local deck = data[player_color].deck_obj
-    for _,card in ipairs(Player[player_color].getHandObjects()) do
+    local cards = data[player_color].handzone_obj.getObjects()
+    for _,card in ipairs(cards) do
         card_addToDeck(card, deck)
     end
 end
@@ -273,7 +274,7 @@ function player_checkCardsInHand(player_color)
     if not Player[player_color].seated then return false end
 
     --get the number of objects in hand and work out the difference
-    local hand_objs = Player[player_color].getHandObjects()
+    local hand_objs = data[player_color].handzone_obj.getObjects()
     local missing = data.max_cards_in_hand - #hand_objs
     if missing > 0 then
         log("Player hand "..player_color.." is missing "..missing.." cards")
