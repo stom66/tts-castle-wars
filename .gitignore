@@ -5,6 +5,7 @@
 [Oo]bj/
 [Bb]uild
 /[Ll]ibrary/
+/wiki/
 /Assets/Editor
 sysinfo.txt
 *.stackdump
