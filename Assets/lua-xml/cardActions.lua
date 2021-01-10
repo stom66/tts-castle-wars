@@ -43,14 +43,8 @@ function cards_updateScales(player_color)
         afford to play them or not
     --]]
 
-    --Check we've got a player in the seat
-    if not Player[player_color].seated then
-        log("Can't invoke method cards_updateScales for non-existant player "..player_color)
-        return false
-    end
-
     --Get a table of all cards in the players hand
-    local cards = Player[player_color].getHandObjects()
+    local cards = data[player_color].handzone_obj.getObjects()
 
     --Loop though, adjusting scale of each card in hand
     for _,card in ipairs(cards) do
@@ -221,7 +215,7 @@ function card_sabotage(player_color, value)
     end
 
     --get a table of all the cards in the targets handzone and loop through them
-    local cards = Player[target].getHandObjects()
+    local cards = data[target].handzone_obj.getObjects()
     for _,card in ipairs(cards) do
 
         --add a reference to the card GUID in the player data

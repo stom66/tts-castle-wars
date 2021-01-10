@@ -49,9 +49,9 @@ function zone_containsObject(obj, zone)
     return false
 end
 
-function handzone_containsObject(obj, player)
+function handzone_containsObject(obj, player_color)
     --checks if an object is present in a zone
-    local zoneContents = Player[player].getHandObjects()
+    local zoneContents = data[player_color].handzone_obj.getObjects()
     if #zoneContents < 1 then return false end
     for _,zobj in ipairs(zoneContents) do
         if zobj==obj then return true end
