@@ -166,7 +166,7 @@ function spawnNewDeck(i, player_color)
 
     --spawn a copy of the full deck
     local stock_deck       = getObjectFromGUID("deck01")
-    local deck_position    = self.getPosition():add(self.getTransformUp() * 10)
+    local deck_position    = self.getPosition():add(self.getTransformUp() * 15)
     if not debug then
         deck_position:add(self.getTransformRight() * -4)
     end
