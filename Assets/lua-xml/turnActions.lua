@@ -124,6 +124,9 @@ function turn_end(player_color)
         Deals replacement cards for the previous player if they have insufficient cards
     --]]
 
+    --abort if the game isn't in progress
+    if data.game_state ~= "active" then return false end
+
     --reset discard count and action_taken flag
     data[player_color].action_taken = false
     data[player_color].discards = 0

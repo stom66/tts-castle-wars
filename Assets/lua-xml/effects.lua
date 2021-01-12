@@ -21,6 +21,7 @@ function triggerEffect(player_color, name)
     --suffix depending on what's appropriate
     --returns true if found, false if not found
           name     = name:lower():gsub(" ", "_")
+    log("triggering effect: "..name)
     local assBun   = data[player_color].effects_obj.AssetBundle
     local target   = playerOpponent(player_color)
     local triggers = assBun.getTriggerEffects()
@@ -32,6 +33,7 @@ function triggerEffect(player_color, name)
         if v.name == name or
         (v.name == name.."_castle" and data[target].wall < 1) or
         (v.name == name.."_wall" and data[target].wall > 0) then
+            log("Playing trigger: "..v.name)
             assBun.playTriggerEffect(v.index)
             return true
         end

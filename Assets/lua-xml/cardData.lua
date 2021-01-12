@@ -244,7 +244,7 @@ function card_getDataTable()
         name   = "Pixies",
         cost   = {0, 18, 0, 0},
         action = "buildCastle",
-        delay  = 0,
+        delay  = 1.0,
         bypass = true,
         value  = 22
     }
@@ -252,7 +252,7 @@ function card_getDataTable()
         name   = "Platoon",
         cost   = {0, 0, 7, 0},
         action = "attack",
-        delay  = 5.25,
+        delay  = 5.5,
         value  = 9
     }
     t[149010]  = {
@@ -265,7 +265,7 @@ function card_getDataTable()
         name   = "Quake",
         cost   = {0, 24, 0, 0},
         action = "attack",
-        delay  = 3.5,
+        delay  = 1.0,
         value  = 27
     }
     t[149205]  = {

@@ -43,6 +43,9 @@ function cards_updateScales(player_color)
         afford to play them or not
     --]]
 
+    --abort if the game isn't in progress
+    if data.game_state ~= "active" then return false end
+
     --Get a table of all cards in the players hand
     local cards = data[player_color].handzone_obj.getObjects()
 
