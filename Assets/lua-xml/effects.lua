@@ -39,24 +39,3 @@ function triggerEffect(player_color, name)
 
     return false
 end
-
-function scaleEffects(player_color, scale)
-    --scales the effects bundle
-
-    local obj = data[player_color].effects_obj
-    obj.setScale({scale, scale, scale})
-
-    --sets it in the right position
-    local position = obj.getPosition()
-    if scale > 1 then
-        position:setAt("x", 6)
-    else
-        position:setAt("x", 0)
-    end
-
-    if player_color=="Blue" then
-        position:setAt("x", position.x * -1)
-    end
-
-    obj.setPosition(position)
-end

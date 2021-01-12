@@ -46,12 +46,18 @@ function cards_updateScales(player_color)
     --Get a table of all cards in the players hand
     local cards = data[player_color].handzone_obj.getObjects()
 
+    --log("cards_updateScales for player "..player_color.." found "..#cards.." cards in hand")
+    --log(cards)
+
     --Loop though, adjusting scale of each card in hand
     for _,card in ipairs(cards) do
-        if player_canAffordCard(player_color, card_getID(card)) then
-            card.setScale({1, 1, 1})
-        else
-            card.setScale({0.75, 1, 0.75})
+        local cardId = card_getID(card)
+        if cardId then
+            if player_canAffordCard(player_color, cardId) then
+                card.setScale({1, 1, 1})
+            else
+                card.setScale({0.75, 1, 0.75})
+            end
         end
     end
 end

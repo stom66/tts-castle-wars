@@ -62,6 +62,8 @@ function player_canAffordCard(player_color, cardId)
         --log("Card costs: "..cards[cardId].cost[1].." bricks, ".. cards[cardId].cost[2].." crystals, ".. cards[cardId].cost[3].." swords")
     end
 
+    log("Checking if player "..player_color.." can afford card "..cardId)
+
     if data[player_color].bricks < cards[cardId].cost[1]
     or data[player_color].crystals < cards[cardId].cost[2]
     or data[player_color].swords < cards[cardId].cost[3] then

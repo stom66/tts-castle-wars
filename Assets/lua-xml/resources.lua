@@ -42,11 +42,9 @@ function updateWallHeight(player_color, delay, skip_animation)
     if data[player_color].wall < 1 then
         wall_position:setAt("y", -1)
         gate_position:setAt("y", -1)
-        scaleEffects(playerOpponent(player_color), 1.5)
     else
         wall_position:setAt("y", wall_min_height + (data[player_color].wall * wall_increment))
         gate_position:setAt("y", 4)
-        scaleEffects(playerOpponent(player_color), 1)
     end
 
 
