@@ -21,7 +21,7 @@ function onLoad()
     --for testing only, automatically lock the deck 1 second after loading the game
     if debug then
         Wait.time(function()
-            spawnNewDeck(1, owner)
+            spawnNewDeck(2, owner)
         end, 1)
     end
 end

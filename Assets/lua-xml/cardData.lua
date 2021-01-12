@@ -49,6 +49,7 @@ function card_getDataTable()
         cost   = {0, 0, 20, 0},
         action = "attack",
         bypass = true,
+        delay  = 6.0,
         value  = 15
     }
     t[149002]  = {
@@ -56,7 +57,7 @@ function card_getDataTable()
         cost   = {0, 0, 1, 0},
         action = "attack",
         value  = 2,
-        delay  = 2.1
+        delay  = 1.8
     }
     t[149101]  = {
         name   = "Babylon",
@@ -77,7 +78,7 @@ function card_getDataTable()
         cost   = {0, 0, 14, 0},
         action = "attack",
         value  = 18,
-        delay  = 3.5
+        delay  = 2.75
     }
     t[149103]  = {
         name   = "Bribe Builder",
@@ -108,7 +109,7 @@ function card_getDataTable()
         cost   = {0, 0, 16, 0},
         action = "attack",
         value  = 20,
-        delay  = 1
+        delay  = 1.25
     }
     t[149105]  = {
         name   = "Catapult",
@@ -149,7 +150,7 @@ function card_getDataTable()
         cost   = {20, 20, 0, 0},
         action = "attack",
         value  = 38,
-        delay  = 3.5
+        delay  = 6.25
     }
     t[149106]  = {
         name   = "Fence",
@@ -170,13 +171,13 @@ function card_getDataTable()
         cost   = {6, 6, 0, 0},
         action = "attack",
         value  = 12,
-        delay  = 3.5
+        delay  = 2.0
     }
     t[149007]  = {
         name   = "Guards",
         cost   = {0, 0, 7, 0},
         action = "buildWall",
-        delay  = 1,
+        delay  = 0.75,
         bypass = true,
         value  = 12
     }
@@ -251,7 +252,7 @@ function card_getDataTable()
         name   = "Platoon",
         cost   = {0, 0, 7, 0},
         action = "attack",
-        delay  = 5,
+        delay  = 5.25,
         value  = 9
     }
     t[149010]  = {
@@ -369,7 +370,8 @@ function card_getDataTable()
         cost   = {10, 0, 0, 0},
         action = "wain",
         bypass = true,
-        value  = 6
+        value  = 6,
+        delay  = 4.5,
     }
     t[149114]  = {
         name   = "Wall",
