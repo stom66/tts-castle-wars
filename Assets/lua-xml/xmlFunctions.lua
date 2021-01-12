@@ -20,26 +20,61 @@ function xml_update(player_color)
     local prefix = player_color:lower()
     log("Updating XML for player "..prefix)
 
-    --Basic stats
-    UI.setAttribute(prefix.."_builders", "text", tostring(data[player_color].builders))
-    UI.setAttribute(prefix.."_bricks",   "text", tostring(data[player_color].bricks))
-    UI.setAttribute(prefix.."_soldiers", "text", tostring(data[player_color].soldiers))
-    UI.setAttribute(prefix.."_swords",   "text", tostring(data[player_color].swords))
-    UI.setAttribute(prefix.."_mages",    "text", tostring(data[player_color].mages))
-    UI.setAttribute(prefix.."_crystals", "text", tostring(data[player_color].crystals))
-    UI.setAttribute(prefix.."_wall",     "text", tostring(data[player_color].wall))
-    UI.setAttribute(prefix.."_castle",   "text", tostring(data[player_color].castle))
+    --decalre a table of stats to read and change
+    local stats = {
+        "builders", "bricks",
+        "soldiers", "swords",
+        "mages",    "crystals",
+        "wall",     "castle",
+    }
 
-    --Buff icons
+    --Get ther current values of the stats so we can compare the new values and look for changes
+    local values = {}
+    for _,v in ipairs(stats) do
+        values[v] = tonumber(UI.getAttribute(prefix.."_"..v, "text"))
+    end
+    log("XML values:")
+    log(values)
+
+    --Update basic stats
+    for _,v in ipairs(stats) do
+        UI.setAttribute(prefix.."_"..v, "text", tostring(data[player_color][v]))
+    end
+
+    --Update buff icons
     local buffs = {"attack", "build", "defence", "resources"}
     for _,buff in ipairs(buffs) do
         UI.setAttribute(prefix.."_buff_"..buff, "color", xml_buffToColor(data[player_color]["buff_"..buff]))
     end
 
-    --Resource Icons (all_produce)
+    --Update resource Icons (all_produce)
     local resources = {"bricks", "crystals", "swords"}
     for _,resource in ipairs(resources) do
         UI.setAttribute(prefix.."_icon_"..resource, "color", xml_resToColor(data[player_color].all_produce, resource))
+    end
+
+    --Check for differences in values and show value in the change column
+    for _,v in ipairs(stats) do
+        if v~=values[v] then
+            --A value has changed!
+            local diff = data[player_color][v] - values[v]
+
+            --build the string
+            if diff > 0 then
+                diff = "+"..diff
+            end
+
+            --update the element and trigger the show animation
+            UI.setAttribute(prefix.."_"..v.."_change", "text", diff)
+            UI.show(prefix.."_"..v.."_change")
+
+            --hide the element after a few seconds delay
+            Wait.time(function()
+                UI.hide(prefix.."_"..v.."_change")
+            end, 2)
+        else
+        
+        end
     end
 end
 
