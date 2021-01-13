@@ -152,7 +152,7 @@ Transform:
   - {fileID: 431606298471927509}
   - {fileID: 4904295202043889161}
   - {fileID: 8002403437740673391}
-  - {fileID: 5687449833965955816}
+  - {fileID: 134826364210845887}
   - {fileID: 8704162587244585549}
   - {fileID: 8238041099675703325}
   - {fileID: 4868503094784924546}
@@ -430,7 +430,7 @@ MonoBehaviour:
     Duration: 8
   - Name: knight_wall
     GameObjects:
-    - gameObject: {fileID: 2510019563518372369}
+    - gameObject: {fileID: 134826364210845886}
     Particles: []
     Sound:
       Audio: {fileID: 0}
@@ -441,7 +441,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 0}
       StateName: 
-    Duration: 8
+    Duration: 6
   - Name: pixies
     GameObjects:
     - gameObject: {fileID: 7213110410961784835}
@@ -916,7 +916,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 0}
       StateName: 
-    Duration: 8
+    Duration: 6
   - Name: platoon_castle
     GameObjects:
     - gameObject: {fileID: 8094454754756765102}
@@ -4204,13 +4204,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 199aaf2962ef938448d44caf1e3095f6, type: 3}
---- !u!4 &5687449833965955816 stripped
+--- !u!4 &134826364210845887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7221352468935374198, guid: 199aaf2962ef938448d44caf1e3095f6,
     type: 3}
   m_PrefabInstance: {fileID: 7343570070811798985}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2510019563518372369 stripped
+--- !u!1 &134826364210845886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7221352468935374199, guid: 199aaf2962ef938448d44caf1e3095f6,
     type: 3}

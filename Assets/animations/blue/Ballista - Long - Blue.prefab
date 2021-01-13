@@ -98,7 +98,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -224,7 +224,7 @@ Animator:
   m_GameObject: {fileID: 4448549491207243922}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2dfc7e76293c2fe4393a1903174931ea, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6501c06d7ac2e6b42bcedfb352f745af, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4c4071bd4ff738047aa2f64f87bd5bd0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
