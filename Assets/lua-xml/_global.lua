@@ -53,24 +53,24 @@ end
 --[[
     Requires the main game files
 --]]
-require("CastleWars/Assets/lua-xml/lang")
+require("tts-castle-wars/Assets/lua-xml/lang")
 
-require("CastleWars/Assets/lua-xml/playerActions")
-require("CastleWars/Assets/lua-xml/playerData")
+require("tts-castle-wars/Assets/lua-xml/playerActions")
+require("tts-castle-wars/Assets/lua-xml/playerData")
 
-require("CastleWars/Assets/lua-xml/cardActions")
-require("CastleWars/Assets/lua-xml/cardData")
-require("CastleWars/Assets/lua-xml/deckActions")
+require("tts-castle-wars/Assets/lua-xml/cardActions")
+require("tts-castle-wars/Assets/lua-xml/cardData")
+require("tts-castle-wars/Assets/lua-xml/deckActions")
 
-require("CastleWars/Assets/lua-xml/effects")
+require("tts-castle-wars/Assets/lua-xml/effects")
 
-require("CastleWars/Assets/lua-xml/gameActions")
-require("CastleWars/Assets/lua-xml/resources")
-require("CastleWars/Assets/lua-xml/turnActions")
+require("tts-castle-wars/Assets/lua-xml/gameActions")
+require("tts-castle-wars/Assets/lua-xml/resources")
+require("tts-castle-wars/Assets/lua-xml/turnActions")
 
-require("CastleWars/Assets/lua-xml/xmlFunctions")
-require("CastleWars/Assets/lua-xml/zoneActions")
+require("tts-castle-wars/Assets/lua-xml/xmlFunctions")
+require("tts-castle-wars/Assets/lua-xml/zoneActions")
 
 --utility stuff
-require("CastleWars/Assets/lua-xml/math")
-require("CastleWars/Assets/lua-xml/table")
+require("tts-castle-wars/Assets/lua-xml/math")
+require("tts-castle-wars/Assets/lua-xml/table")
