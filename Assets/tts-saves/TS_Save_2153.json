@@ -1,0 +1,6184 @@
+{
+  "SaveName": "Deck Only",
+  "GameMode": "Castle Wars",
+  "Date": "1/13/2021 2:07:34 AM",
+  "Gravity": 0.5,
+  "PlayArea": 0.5,
+  "GameType": "",
+  "GameComplexity": "",
+  "Tags": [],
+  "Table": "Table_Custom_Square",
+  "TableURL": "https://i.imgur.com/x0jBFAA.png",
+  "Sky": "Sky_Museum",
+  "SkyURL": "https://i.imgur.com/H7HXE9d.jpg",
+  "Note": "",
+  "Rules": "",
+  "Grid": {
+    "Type": 0,
+    "Lines": false,
+    "Color": {
+      "r": 0.28194043,
+      "g": 0.3140761,
+      "b": 0.355852455
+    },
+    "Opacity": 0.75,
+    "ThickLines": false,
+    "Snapping": false,
+    "Offset": false,
+    "BothSnapping": true,
+    "xSize": 2.0,
+    "ySize": 2.0,
+    "PosOffset": {
+      "x": 0.0,
+      "y": 1.0,
+      "z": 0.0
+    }
+  },
+  "Lighting": {
+    "LightIntensity": 0.54,
+    "LightColor": {
+      "r": 1.0,
+      "g": 0.9804,
+      "b": 0.8902
+    },
+    "AmbientIntensity": 1.3,
+    "AmbientType": 0,
+    "AmbientSkyColor": {
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.5
+    },
+    "AmbientEquatorColor": {
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.5
+    },
+    "AmbientGroundColor": {
+      "r": 0.5,
+      "g": 0.5,
+      "b": 0.5
+    },
+    "ReflectionIntensity": 1.0,
+    "LutIndex": 0,
+    "LutContribution": 1.0
+  },
+  "Hands": {
+    "Enable": true,
+    "DisableUnused": false,
+    "Hiding": 0,
+    "HandTransforms": [
+      {
+        "Color": "Red",
+        "Transform": {
+          "posX": -9.482677,
+          "posY": 2.97771716,
+          "posZ": -28.566576,
+          "rotX": 0.0,
+          "rotY": 0.0,
+          "rotZ": 0.0,
+          "scaleX": 9.482673,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.55600476
+        }
+      },
+      {
+        "Color": "Yellow",
+        "Transform": {
+          "posX": -28.6376839,
+          "posY": 2.97771716,
+          "posZ": 9.48268,
+          "rotX": 0.0,
+          "rotY": 90.0,
+          "rotZ": 0.0,
+          "scaleX": 9.48819,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.558828
+        }
+      },
+      {
+        "Color": "Purple",
+        "Transform": {
+          "posX": 28.5665646,
+          "posY": 2.97771716,
+          "posZ": 9.48268,
+          "rotX": 0.0,
+          "rotY": 270.0,
+          "rotZ": 0.0,
+          "scaleX": 9.48819,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.558828
+        }
+      },
+      {
+        "Color": "Blue",
+        "Transform": {
+          "posX": 11.8414936,
+          "posY": 2.97771716,
+          "posZ": 28.6732559,
+          "rotX": 0.0,
+          "rotY": 179.8,
+          "rotZ": 0.0,
+          "scaleX": 9.490307,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.55861449
+        }
+      },
+      {
+        "Color": "White",
+        "Transform": {
+          "posX": 9.482677,
+          "posY": 2.97771716,
+          "posZ": -28.60213,
+          "rotX": 0.0,
+          "rotY": 0.0,
+          "rotZ": 0.0,
+          "scaleX": 9.482673,
+          "scaleY": 6.697391,
+          "scaleZ": 3.55600476
+        }
+      },
+      {
+        "Color": "Green",
+        "Transform": {
+          "posX": -10.3242645,
+          "posY": 2.97771716,
+          "posZ": 28.6732559,
+          "rotX": 0.0,
+          "rotY": 180.0,
+          "rotZ": 0.0,
+          "scaleX": 9.482673,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.55600476
+        }
+      },
+      {
+        "Color": "Pink",
+        "Transform": {
+          "posX": 28.5665646,
+          "posY": 2.97771716,
+          "posZ": -9.399705,
+          "rotX": 0.0,
+          "rotY": 270.0,
+          "rotZ": 0.0,
+          "scaleX": 9.48819,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.558828
+        }
+      },
+      {
+        "Color": "Orange",
+        "Transform": {
+          "posX": -28.6021252,
+          "posY": 2.97771716,
+          "posZ": -9.672333,
+          "rotX": 0.0,
+          "rotY": 90.0,
+          "rotZ": 0.0,
+          "scaleX": 9.48819,
+          "scaleY": 6.6973877,
+          "scaleZ": 3.558828
+        }
+      }
+    ]
+  },
+  "Turns": {
+    "Enable": false,
+    "Type": 0,
+    "TurnOrder": [],
+    "Reverse": false,
+    "SkipEmpty": false,
+    "DisableInteractions": false,
+    "PassTurns": true,
+    "TurnColor": ""
+  },
+  "TabStates": {
+    "0": {
+      "title": "Rules",
+      "body": "",
+      "color": "Grey",
+      "visibleColor": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5
+      },
+      "id": 0
+    },
+    "1": {
+      "title": "White",
+      "body": "",
+      "color": "White",
+      "visibleColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "id": 1
+    },
+    "2": {
+      "title": "Brown",
+      "body": "",
+      "color": "Brown",
+      "visibleColor": {
+        "r": 0.443,
+        "g": 0.231,
+        "b": 0.09
+      },
+      "id": 2
+    },
+    "3": {
+      "title": "Red",
+      "body": "",
+      "color": "Red",
+      "visibleColor": {
+        "r": 0.856,
+        "g": 0.1,
+        "b": 0.094
+      },
+      "id": 3
+    },
+    "4": {
+      "title": "Orange",
+      "body": "",
+      "color": "Orange",
+      "visibleColor": {
+        "r": 0.956,
+        "g": 0.392,
+        "b": 0.113
+      },
+      "id": 4
+    },
+    "5": {
+      "title": "Yellow",
+      "body": "",
+      "color": "Yellow",
+      "visibleColor": {
+        "r": 0.905,
+        "g": 0.898,
+        "b": 0.172
+      },
+      "id": 5
+    },
+    "6": {
+      "title": "Green",
+      "body": "",
+      "color": "Green",
+      "visibleColor": {
+        "r": 0.192,
+        "g": 0.701,
+        "b": 0.168
+      },
+      "id": 6
+    },
+    "7": {
+      "title": "Blue",
+      "body": "",
+      "color": "Blue",
+      "visibleColor": {
+        "r": 0.118,
+        "g": 0.53,
+        "b": 1.0
+      },
+      "id": 7
+    },
+    "8": {
+      "title": "Teal",
+      "body": "",
+      "color": "Teal",
+      "visibleColor": {
+        "r": 0.129,
+        "g": 0.694,
+        "b": 0.607
+      },
+      "id": 8
+    },
+    "9": {
+      "title": "Purple",
+      "body": "",
+      "color": "Purple",
+      "visibleColor": {
+        "r": 0.627,
+        "g": 0.125,
+        "b": 0.941
+      },
+      "id": 9
+    },
+    "10": {
+      "title": "Pink",
+      "body": "",
+      "color": "Pink",
+      "visibleColor": {
+        "r": 0.96,
+        "g": 0.439,
+        "b": 0.807
+      },
+      "id": 10
+    },
+    "11": {
+      "title": "Black",
+      "body": "",
+      "color": "Black",
+      "visibleColor": {
+        "r": 0.25,
+        "g": 0.25,
+        "b": 0.25
+      },
+      "id": 11
+    }
+  },
+  "DecalPallet": [],
+  "ObjectStates": [
+    {
+      "Name": "Deck",
+      "Transform": {
+        "posX": 28.0,
+        "posY": 1.33127677,
+        "posZ": -5.78861958E-11,
+        "rotX": -9.7103765E-09,
+        "rotY": 0.00155439577,
+        "rotZ": -2.2356032E-07,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": false,
+      "SidewaysCard": false,
+      "DeckIDs": [
+        150316,
+        150315,
+        150314,
+        150313,
+        150312,
+        150311,
+        150310,
+        150309,
+        150308,
+        150307,
+        150306,
+        150305,
+        150304,
+        150303,
+        150302,
+        150301,
+        150300,
+        150414,
+        150413,
+        150412,
+        150411,
+        150410,
+        150409,
+        150408,
+        150407,
+        150406,
+        150405,
+        150404,
+        150403,
+        150402,
+        150401,
+        150400,
+        150514,
+        150513,
+        150512,
+        150511,
+        150510,
+        150509,
+        150508,
+        150507,
+        150506,
+        150505,
+        150504,
+        150503,
+        150502,
+        150501,
+        150500,
+        150608,
+        150607,
+        150606,
+        150605,
+        150604,
+        150603,
+        150602,
+        150601,
+        150600
+      ],
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        },
+        "1504": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        },
+        "1505": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        },
+        "1506": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ContainedObjects": [
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 23.00009,
+            "posY": 0.9735998,
+            "posZ": -13.0000057,
+            "rotX": 6.482426E-05,
+            "rotY": -0.00136241084,
+            "rotZ": -0.000149631931,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Remove Weapons",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150316,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "b6cfd8"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 20.9996853,
+            "posY": 0.9891099,
+            "posZ": -12.9999809,
+            "rotX": 0.000150504566,
+            "rotY": 0.001309522,
+            "rotZ": 0.779208064,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Remove Crystals",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150315,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "b74f74"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 18.9999657,
+            "posY": 0.9891004,
+            "posZ": -13.0000143,
+            "rotX": -2.19422436E-05,
+            "rotY": 0.000544447161,
+            "rotZ": 0.778270841,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Remove Bricks",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150314,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "2f9ce8"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 16.9999619,
+            "posY": 0.9891142,
+            "posZ": -12.999999,
+            "rotX": 0.000170214058,
+            "rotY": 0.0015178771,
+            "rotZ": 0.779475033,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Pixies",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150313,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "eda65a"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 14.9999361,
+            "posY": 0.9891023,
+            "posZ": -12.9999943,
+            "rotX": 8.34342354E-05,
+            "rotY": 0.0004991106,
+            "rotZ": 0.778912067,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Quake",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150312,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "030aca"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 12.999959,
+            "posY": 0.9891134,
+            "posZ": -13.0000029,
+            "rotX": 7.739075E-05,
+            "rotY": -0.000327580579,
+            "rotZ": 0.7794517,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Magic Weapons",
+          "Description": "Doubles the damage of your next attack",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150311,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "17370c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 10.9999352,
+            "posY": 0.989103436,
+            "posZ": -12.9999828,
+            "rotX": 9.0431844E-05,
+            "rotY": 0.0009955101,
+            "rotZ": 0.778784,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Magic Defence",
+          "Description": "Negates all damage from the next incoming attack",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150310,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "869d4c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 9.00004,
+            "posY": 0.9891152,
+            "posZ": -12.9999752,
+            "rotX": 7.4967E-05,
+            "rotY": 0.0004788006,
+            "rotZ": 0.779303968,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Magic Bricks",
+          "Description": "Doubles the size of your next Castle or Wall construction card",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150309,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "624c44"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 7.00004864,
+            "posY": 0.9891014,
+            "posZ": -12.9999781,
+            "rotX": 4.22466946E-05,
+            "rotY": 0.000610511866,
+            "rotZ": 0.778658032,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Mage",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150308,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "d6c0e8"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 5.000022,
+            "posY": 0.989112,
+            "posZ": -12.9999876,
+            "rotX": 0.000106228508,
+            "rotY": -0.000259641034,
+            "rotZ": 0.779404938,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Lightning",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150307,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "c462ab"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 2.99994183,
+            "posY": 0.98909,
+            "posZ": -12.9999809,
+            "rotX": 0.00011754578,
+            "rotY": 0.000207669349,
+            "rotZ": 0.7781064,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Hail Storm",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150306,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "b8cd02"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 1.00010192,
+            "posY": 1.004593,
+            "posZ": -12.9999838,
+            "rotX": -9.487086E-05,
+            "rotY": -0.0006993657,
+            "rotZ": -0.0003573163,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Conjure Wall",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150305,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "76427b"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -1.00001156,
+            "posY": 0.989101946,
+            "posZ": -12.9999781,
+            "rotX": -0.000110018031,
+            "rotY": 0.0010348506,
+            "rotZ": 359.221252,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Bribe Mage",
+          "Description": "Steal a single opponents Mage",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150304,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "804a42"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -3.00031734,
+            "posY": 0.989113,
+            "posZ": -13.0000029,
+            "rotX": -1.5117168E-05,
+            "rotY": 0.00184341567,
+            "rotZ": 359.220367,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "All Crystals",
+          "Description": "This card costs 1 crystal to use and will instruct all of your units to produce crystals on your next turn.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150303,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "59276e"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -5.000412,
+            "posY": 0.9890965,
+            "posZ": -12.9999371,
+            "rotX": -9.337038E-05,
+            "rotY": -0.000314486068,
+            "rotZ": 359.221863,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Add Weapons",
+          "Description": "This card costs 5 crystals to use and will grant you 8 weapons.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150302,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "b7ce98"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -7.000502,
+            "posY": 0.9891029,
+            "posZ": -12.9999924,
+            "rotX": -0.000101015758,
+            "rotY": 0.000639499631,
+            "rotZ": 359.221039,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Add Crystals",
+          "Description": "This card costs 5 crystals to use and will grant you 8 crystals",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150301,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "d3c622"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -9.000767,
+            "posY": 0.973607838,
+            "posZ": -13.0000181,
+            "rotX": 4.599975E-06,
+            "rotY": 0.00199301,
+            "rotZ": -0.000266895047,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Add Bricks",
+          "Description": "This card costs 5 crystals to use and will grant you 8 bricks.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150300,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1489": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+              "NumWidth": 5,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "464a54"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 22.9999886,
+            "posY": 0.973597348,
+            "posZ": -3.00000882,
+            "rotX": 7.33442357E-05,
+            "rotY": -0.000229966929,
+            "rotZ": -0.000419470074,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Thief",
+          "Description": "This card allows you to steal up to 6 crystals, weapons and bricks from your opponent.\n\nYou can not take more resources than your opponent has available.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150414,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "123d85"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 20.9998817,
+            "posY": 0.9891006,
+            "posZ": -2.99999833,
+            "rotX": 6.620974E-05,
+            "rotY": 0.00158305967,
+            "rotZ": 0.7785717,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Sabotage",
+          "Description": "This card costs 10 weapons to use and will allow you to discard 1 of your opponent's cards.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150413,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "e6bb94"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 18.9999084,
+            "posY": 0.989112258,
+            "posZ": -3.00003028,
+            "rotX": 6.270403E-05,
+            "rotY": -0.0008161332,
+            "rotZ": 0.77950114,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Roadblock",
+          "Description": "This card costs 8 weapons to use and will prevent your opponent from gaining resources on their next turn.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150412,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "72c1a3"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 16.99982,
+            "posY": 0.9891029,
+            "posZ": -3.000009,
+            "rotX": 0.000116300056,
+            "rotY": -0.001385355,
+            "rotZ": 0.7791287,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Recruit",
+          "Description": "This card costs 8 weapons to use and will increase your recruits by 1. Each recruit grants you a weapon every turn.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150411,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "0e023d"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 14.999567,
+            "posY": 0.9891157,
+            "posZ": -2.99998379,
+            "rotX": 0.000112827642,
+            "rotY": 0.0008745684,
+            "rotZ": 0.779638946,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Protect Resources",
+          "Description": "Protects your resources (bricks, crystals & swords) from the next resource-reducing attack.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150410,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "37d77b"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 12.99974,
+            "posY": 0.9891089,
+            "posZ": -2.999961,
+            "rotX": -1.65565816E-05,
+            "rotY": -0.00133251364,
+            "rotZ": 0.7786627,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Platoon",
+          "Description": "This card costs 7 weapons to use and will deal 9 points of damage to your opponent.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150409,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "d1d97b"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 10.9998617,
+            "posY": 0.9891234,
+            "posZ": -2.99998951,
+            "rotX": 0.0001448536,
+            "rotY": 0.00200379058,
+            "rotZ": 0.7798513,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Knight",
+          "Description": "This card costs 10 weapon to use and will deal 12 points of damage to your opponent.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150408,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "8482d6"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 8.999765,
+            "posY": 0.9891036,
+            "posZ": -2.99998665,
+            "rotX": -3.642544E-05,
+            "rotY": -0.000261127629,
+            "rotZ": 0.778220952,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Guards",
+          "Description": "This card costs 7 weapons to use and will increase your wall by 12 height.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150407,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "b493e3"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 6.999829,
+            "posY": 0.989121437,
+            "posZ": -3.00000048,
+            "rotX": 0.000121276244,
+            "rotY": 0.000352150848,
+            "rotZ": 0.779829,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Fire Archer",
+          "Description": "This card costs 3 weapon to use and will deal 5 points of damage to your opponent.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150406,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "d17a58"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 4.999861,
+            "posY": 0.9891022,
+            "posZ": -2.99999714,
+            "rotX": 4.2061085E-05,
+            "rotY": -0.000148222112,
+            "rotZ": 0.778443158,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Cannon",
+          "Description": "This card costs 16 weapon to use and will deal 20 points of damage to your opponent.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150405,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "d31826"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 2.99988866,
+            "posY": 0.9891166,
+            "posZ": -3.00000048,
+            "rotX": 0.000117080788,
+            "rotY": -0.000384276558,
+            "rotZ": 0.77951473,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Bribe Recruit",
+          "Description": "This card allows you to bribe one of your opponent's recruits and make him work for you.\n\nNote: The player will always have at least 1 of every worker type.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150404,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "216c87"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 0.9998996,
+            "posY": 0.9891039,
+            "posZ": -2.9999826,
+            "rotX": -3.55857228E-05,
+            "rotY": -0.0003633264,
+            "rotZ": 0.778276145,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Bomb",
+          "Description": "This card costs 14 weapon to use and will deal 18 points of damage to your opponent.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150403,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "f8142d"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -1.00013268,
+            "posY": 0.9891183,
+            "posZ": -2.99999619,
+            "rotX": 0.000142012388,
+            "rotY": 0.0007509088,
+            "rotZ": 0.780240834,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Archer",
+          "Description": "This card costs 1 weapon to use and will deal 2 points of damage to your opponent.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150402,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "d7e9d9"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -3.000187,
+            "posY": 0.989103138,
+            "posZ": -2.99999762,
+            "rotX": 9.731554E-06,
+            "rotY": -0.000409706117,
+            "rotZ": 0.778472245,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Ambush",
+          "Description": "This card costs 20 weapons to use and will deal 15 points of direct damage to your opponent's castle.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150401,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "a8a29e"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -5.0001545,
+            "posY": 0.9891182,
+            "posZ": -2.999984,
+            "rotX": 7.343668E-07,
+            "rotY": 0.0006900502,
+            "rotZ": 0.779426754,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "All Weapons",
+          "Description": "This card costs 1 weapon to use and will instruct all of your units to produce weapons on your next turn.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150400,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1490": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "6f91f2"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 23.0030556,
+            "posY": 0.973597646,
+            "posZ": 6.999694,
+            "rotX": 7.88367E-05,
+            "rotY": -0.000467846665,
+            "rotZ": -0.000358698744,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Wall",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150514,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "a773b8"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 21.00284,
+            "posY": 0.9891007,
+            "posZ": 6.999715,
+            "rotX": 3.657224E-05,
+            "rotY": -3.463163E-05,
+            "rotZ": 0.7786111,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Wain",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150513,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "e3d13c"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 19.0031567,
+            "posY": 0.989115,
+            "posZ": 6.99969053,
+            "rotX": 7.64415E-05,
+            "rotY": -0.000480605668,
+            "rotZ": 0.7794818,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Tower",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150512,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "5f8d72"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 17.0029278,
+            "posY": 0.9891023,
+            "posZ": 6.999679,
+            "rotX": 6.996807E-05,
+            "rotY": -0.00119908107,
+            "rotZ": 0.779059947,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Tavern",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150511,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "244db8"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 15.00265,
+            "posY": 0.9891137,
+            "posZ": 6.99971867,
+            "rotX": 7.431254E-05,
+            "rotY": 0.0008827997,
+            "rotZ": 0.779580057,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "School",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150510,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "f1f3ea"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 13.0027628,
+            "posY": 0.989106536,
+            "posZ": 6.99973,
+            "rotX": 7.590344E-05,
+            "rotY": -0.000278449064,
+            "rotZ": 0.7788168,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Reverse",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150509,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "36d56d"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 11.0027418,
+            "posY": 0.9891234,
+            "posZ": 6.99972725,
+            "rotX": 0.000121452991,
+            "rotY": -0.000236568128,
+            "rotZ": 0.7797936,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Large Wall",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150508,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "4ad46a"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 9.00286,
+            "posY": 0.9891055,
+            "posZ": 6.99972439,
+            "rotX": -3.675485E-05,
+            "rotY": -0.000444195874,
+            "rotZ": 0.7781666,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "House",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150507,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "2acd22"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 7.00290728,
+            "posY": 0.989122868,
+            "posZ": 6.99970531,
+            "rotX": 9.564982E-05,
+            "rotY": 0.000427521125,
+            "rotZ": 0.7799759,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Fence",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150506,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "4453ff"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 5.00293541,
+            "posY": 0.9890999,
+            "posZ": 6.99970961,
+            "rotX": 9.32915354E-05,
+            "rotY": -2.91399E-05,
+            "rotZ": 0.778414,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Catapult",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150505,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "2adae4"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 3.002807,
+            "posY": 0.989112258,
+            "posZ": 6.99970675,
+            "rotX": 7.988531E-05,
+            "rotY": 0.000334275828,
+            "rotZ": 0.7791363,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Builder",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150504,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "4a5cdd"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 1.00308263,
+            "posY": 1.00460076,
+            "posZ": 6.99969864,
+            "rotX": -1.54847021E-05,
+            "rotY": -0.0005750347,
+            "rotZ": 0.0007635501,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Bribe Builder",
+          "Description": "Steal a single opponents Builder",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150503,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "14c42f"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -0.997098744,
+            "posY": 0.9890872,
+            "posZ": 6.9997,
+            "rotX": -0.000184117729,
+            "rotY": -0.000221163646,
+            "rotZ": 359.222046,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Battering Ram",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150502,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "0cdf44"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -2.9972527,
+            "posY": 0.9891034,
+            "posZ": 6.99966764,
+            "rotX": -0.00014196003,
+            "rotY": 0.0025846404,
+            "rotZ": 359.221222,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Babylon",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150501,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "2f9658"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.99758244,
+            "posY": 0.9736064,
+            "posZ": 6.99971771,
+            "rotX": -1.75180844E-06,
+            "rotY": 0.00134753913,
+            "rotZ": -2.25154927E-05,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "All Bricks",
+          "Description": "This card costs 1 brick to use and will instruct all of your units to produce bricks on your next turn.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150500,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1491": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "585c06"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 23.0028858,
+            "posY": 0.973596,
+            "posZ": 16.995842,
+            "rotX": 9.832845E-05,
+            "rotY": 359.989258,
+            "rotZ": -0.000207056233,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Trojan Horse",
+          "Description": "The old tricks are the best, ignore the neigh-sayers!",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150608,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "5cc880"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 21.0026417,
+            "posY": 0.989094436,
+            "posZ": 16.9958725,
+            "rotX": 3.128007E-05,
+            "rotY": 359.992,
+            "rotZ": 0.778340459,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Reward Workers",
+          "Description": "Doubles all production on your next turn.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150607,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "de0848"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 19.0027351,
+            "posY": 0.989111841,
+            "posZ": 16.99583,
+            "rotX": 0.0001220847,
+            "rotY": 359.989349,
+            "rotZ": 0.779625952,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Remove Resources",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150606,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "99d8f4"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 17.002697,
+            "posY": 0.989097238,
+            "posZ": 16.9958839,
+            "rotX": 3.611049E-05,
+            "rotY": 359.992,
+            "rotZ": 0.77842325,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Ram Attack",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150605,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "fae3bd"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 15.0027246,
+            "posY": 0.9891104,
+            "posZ": 16.9958572,
+            "rotX": 9.700064E-05,
+            "rotY": 359.990234,
+            "rotZ": 0.7795536,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Giant Snowball",
+          "Description": "It's really rather huge.",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150604,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "9a6a2f"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 13.0027752,
+            "posY": 0.989097953,
+            "posZ": 16.995863,
+            "rotX": 5.84740519E-05,
+            "rotY": 359.990723,
+            "rotZ": 0.778709531,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Dragon",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150603,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "8e7210"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 11.0027523,
+            "posY": 0.9891089,
+            "posZ": 16.9958649,
+            "rotX": 6.11683863E-05,
+            "rotY": 359.9908,
+            "rotZ": 0.7792638,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Dispel",
+          "Description": "Remove all Magic Effects belonging to your opponent",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150602,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "a1f13d"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 9.002891,
+            "posY": 0.9891019,
+            "posZ": 16.9958649,
+            "rotX": 3.96157629E-05,
+            "rotY": 359.9907,
+            "rotZ": 0.778939962,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Curse",
+          "Description": "Transfers 1 of everything from your opponent! ",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150601,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "39bf3b"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 7.002695,
+            "posY": 0.9891102,
+            "posZ": 16.9958839,
+            "rotX": -1.8391321E-06,
+            "rotY": 359.991,
+            "rotZ": 0.7791876,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Comet Strike",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 150600,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "1492": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+              "NumWidth": 4,
+              "NumHeight": 3,
+              "BackIsHidden": false,
+              "UniqueBack": false,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "GUID": "895af6"
+        }
+      ],
+      "GUID": "16307e"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 20.9999542,
+        "posY": 0.9735969,
+        "posZ": 8.999975,
+        "rotX": 9.59824247E-05,
+        "rotY": 359.988434,
+        "rotZ": -0.000137140029,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Comet Strike",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150200,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "895af6"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 18.9996643,
+        "posY": 0.9890951,
+        "posZ": 9.000004,
+        "rotX": 4.90111051E-05,
+        "rotY": 359.9902,
+        "rotZ": 0.778478146,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Curse",
+      "Description": "Transfers 1 of everything from your opponent! ",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150201,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "39bf3b"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 16.9998817,
+        "posY": 0.9891108,
+        "posZ": 8.999997,
+        "rotX": 8.982104E-05,
+        "rotY": 359.990082,
+        "rotZ": 0.7793999,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Dispel",
+      "Description": "Remove all Magic Effects belonging to your opponent",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150202,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "a1f13d"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 14.9997377,
+        "posY": 0.9890977,
+        "posZ": 9.000004,
+        "rotX": 5.4535416E-05,
+        "rotY": 359.990356,
+        "rotZ": 0.7786458,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Dragon",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150203,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "8e7210"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 12.9998236,
+        "posY": 0.98911,
+        "posZ": 9.0,
+        "rotX": 8.329205E-05,
+        "rotY": 359.989838,
+        "rotZ": 0.7793927,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Giant Snowball",
+      "Description": "It's really rather huge.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150204,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "9a6a2f"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 10.9998541,
+        "posY": 0.989098668,
+        "posZ": 9.000007,
+        "rotX": 5.43624556E-05,
+        "rotY": 359.990082,
+        "rotZ": 0.7786994,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Ram Attack",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150205,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "fae3bd"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 8.999804,
+        "posY": 0.989109159,
+        "posZ": 9.0,
+        "rotX": 6.860588E-05,
+        "rotY": 359.989624,
+        "rotZ": 0.779309869,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Remove Resources",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150206,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "99d8f4"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 6.999953,
+        "posY": 0.9891016,
+        "posZ": 9.000001,
+        "rotX": 4.24547361E-05,
+        "rotY": 359.9897,
+        "rotZ": 0.778932333,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Reward Workers",
+      "Description": "Doubles all production on your next turn.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150207,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "de0848"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 4.999759,
+        "posY": 0.9891102,
+        "posZ": 9.000022,
+        "rotX": -2.846859E-06,
+        "rotY": 359.990082,
+        "rotZ": 0.7791861,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Trojan Horse",
+      "Description": "The old tricks are the best, ignore the neigh-sayers!",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150208,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1502": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138662245/59D379CCB07C9C19987884E811ACC92509CFDE4E/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118121/B3AB514EFC6175CBFAF241E798B4D1ED1EC71981/",
+          "NumWidth": 4,
+          "NumHeight": 3,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "5cc880"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 20.9999714,
+        "posY": 0.9735978,
+        "posZ": 2.999988,
+        "rotX": 7.51947E-05,
+        "rotY": -0.001035633,
+        "rotZ": -0.000349521724,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "All Bricks",
+      "Description": "This card costs 1 brick to use and will instruct all of your units to produce bricks on your next turn.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150100,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "585c06"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 18.9997635,
+        "posY": 0.9891013,
+        "posZ": 3.000007,
+        "rotX": 4.336465E-05,
+        "rotY": 0.00037556875,
+        "rotZ": 0.778690159,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Babylon",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150101,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "2f9658"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 17.0000515,
+        "posY": 0.9891178,
+        "posZ": 2.99994755,
+        "rotX": 9.055556E-05,
+        "rotY": -0.002187432,
+        "rotZ": 0.7797192,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Battering Ram",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150102,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "0cdf44"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 14.9999809,
+        "posY": 0.989103258,
+        "posZ": 2.99999762,
+        "rotX": 7.716642E-05,
+        "rotY": -0.000543246744,
+        "rotZ": 0.7789465,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Bribe Builder",
+      "Description": "Steal a single opponents Builder",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150103,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "14c42f"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 12.9995518,
+        "posY": 0.9891164,
+        "posZ": 3.0000093,
+        "rotX": 0.00014033138,
+        "rotY": 0.0007399188,
+        "rotZ": 0.7797504,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Builder",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150104,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "4a5cdd"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 10.99972,
+        "posY": 0.9891087,
+        "posZ": 3.00003481,
+        "rotX": 3.53043743E-06,
+        "rotY": -0.001455285,
+        "rotZ": 0.7787607,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Catapult",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150105,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "2adae4"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 8.999635,
+        "posY": 0.9891223,
+        "posZ": 3.00001287,
+        "rotX": 0.000141980185,
+        "rotY": -0.0001937422,
+        "rotZ": 0.7798264,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Fence",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150106,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "4453ff"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 6.99977827,
+        "posY": 0.989104569,
+        "posZ": 3.000014,
+        "rotX": -5.521192E-05,
+        "rotY": -0.000812997,
+        "rotZ": 0.7782006,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "House",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150107,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "2acd22"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 4.99982548,
+        "posY": 0.9891207,
+        "posZ": 3.0,
+        "rotX": 0.000108618777,
+        "rotY": -0.0001415332,
+        "rotZ": 0.7797663,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Large Wall",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150108,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "4ad46a"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 2.99986124,
+        "posY": 0.98910296,
+        "posZ": 3.00000334,
+        "rotX": 6.232175E-05,
+        "rotY": -0.0005859809,
+        "rotZ": 0.7784791,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Reverse",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150109,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "36d56d"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 0.9998857,
+        "posY": 0.9891166,
+        "posZ": 2.99999928,
+        "rotX": 0.000116521973,
+        "rotY": -0.000663273153,
+        "rotZ": 0.779515862,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "School",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150110,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "f1f3ea"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -1.0000484,
+        "posY": 0.9891042,
+        "posZ": 3.0000186,
+        "rotX": -3.356919E-05,
+        "rotY": -0.0006942736,
+        "rotZ": 0.7782904,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Tavern",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150111,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "244db8"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -3.00016642,
+        "posY": 0.9891169,
+        "posZ": 3.000005,
+        "rotX": 0.0001226856,
+        "rotY": 0.000225423209,
+        "rotZ": 0.7801585,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Tower",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150112,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "5f8d72"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -5.00020266,
+        "posY": 0.989103258,
+        "posZ": 3.00000143,
+        "rotX": 2.98275281E-05,
+        "rotY": -0.000958018645,
+        "rotZ": 0.778492033,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Wain",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150113,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "e3d13c"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -7.000154,
+        "posY": 0.989118338,
+        "posZ": 3.00001574,
+        "rotX": 9.864361E-07,
+        "rotY": 0.000230432153,
+        "rotZ": 0.779435,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Wall",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150114,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1501": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602315/29BAC95FD99029BD8D625AE81FAFA85C0F0CEA9F/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050116930/41656702C38A088CBE7BB61D5F90595791E970E4/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "a773b8"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 20.99996,
+        "posY": 0.973598242,
+        "posZ": -3.00001979,
+        "rotX": 6.655203E-05,
+        "rotY": -0.000763314543,
+        "rotZ": -0.000429343519,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "All Weapons",
+      "Description": "This card costs 1 weapon to use and will instruct all of your units to produce weapons on your next turn.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150000,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "6f91f2"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 18.9997978,
+        "posY": 0.98909986,
+        "posZ": -2.99999666,
+        "rotX": 4.72244E-05,
+        "rotY": 0.0005773256,
+        "rotZ": 0.778636634,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Ambush",
+      "Description": "This card costs 20 weapons to use and will deal 15 points of direct damage to your opponent's castle.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150001,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "a8a29e"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 16.99992,
+        "posY": 0.9891118,
+        "posZ": -3.000047,
+        "rotX": 6.7996305E-05,
+        "rotY": -0.000923030544,
+        "rotZ": 0.779204249,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Archer",
+      "Description": "This card costs 1 weapon to use and will deal 2 points of damage to your opponent.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150002,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "d7e9d9"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 14.9999113,
+        "posY": 0.9891001,
+        "posZ": -3.0000174,
+        "rotX": 5.62385358E-05,
+        "rotY": -0.00113595673,
+        "rotZ": 0.7786361,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Bomb",
+      "Description": "This card costs 14 weapon to use and will deal 18 points of damage to your opponent.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150003,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "f8142d"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 12.9995861,
+        "posY": 0.9891082,
+        "posZ": -2.999979,
+        "rotX": 6.84876E-05,
+        "rotY": 0.0001871713,
+        "rotZ": 0.779021859,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Bribe Recruit",
+      "Description": "This card allows you to bribe one of your opponent's recruits and make him work for you.\n\nNote: The player will always have at least 1 of every worker type.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150004,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "216c87"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 10.9996586,
+        "posY": 0.9891001,
+        "posZ": -2.99999356,
+        "rotX": 5.48759781E-05,
+        "rotY": -0.000388830085,
+        "rotZ": 0.7786315,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Cannon",
+      "Description": "This card costs 16 weapon to use and will deal 20 points of damage to your opponent.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150005,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "d31826"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 8.999696,
+        "posY": 0.9891109,
+        "posZ": -2.99997449,
+        "rotX": 7.219787E-05,
+        "rotY": -0.00127129466,
+        "rotZ": 0.779159844,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Fire Archer",
+      "Description": "This card costs 3 weapon to use and will deal 5 points of damage to your opponent.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150006,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "d17a58"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 6.99972534,
+        "posY": 0.989101,
+        "posZ": -3.00000238,
+        "rotX": 5.02808725E-05,
+        "rotY": 4.87043144E-06,
+        "rotZ": 0.7786854,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Guards",
+      "Description": "This card costs 7 weapons to use and will increase your wall by 12 height.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150007,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "b493e3"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 4.999866,
+        "posY": 0.989116132,
+        "posZ": -3.00000477,
+        "rotX": 0.0001947786,
+        "rotY": -0.000607241935,
+        "rotZ": 0.7792543,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Knight",
+      "Description": "This card costs 10 weapon to use and will deal 12 points of damage to your opponent.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150008,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "8482d6"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 3.003699,
+        "posY": 0.9891266,
+        "posZ": -2.99448943,
+        "rotX": -3.65277956E-05,
+        "rotY": 0.1831177,
+        "rotZ": 0.7800961,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Platoon",
+      "Description": "This card costs 7 weapons to use and will deal 9 points of damage to your opponent.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150009,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "d1d97b"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 1.006605,
+        "posY": 0.989130735,
+        "posZ": -2.92455125,
+        "rotX": -0.000272253441,
+        "rotY": 0.2839648,
+        "rotZ": 0.780611932,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Protect Resources",
+      "Description": "Protects your resources (bricks, crystals & swords) from the next resource-reducing attack.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150010,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "37d77b"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -1.00519156,
+        "posY": 0.9890218,
+        "posZ": -2.93895483,
+        "rotX": 0.000318244536,
+        "rotY": 359.6674,
+        "rotZ": 0.774346352,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Recruit",
+      "Description": "This card costs 8 weapons to use and will increase your recruits by 1. Each recruit grants you a weapon every turn.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150011,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "0e023d"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -3.00150371,
+        "posY": 0.98913753,
+        "posZ": -2.987442,
+        "rotX": 0.000231703671,
+        "rotY": 359.5958,
+        "rotZ": 0.7802803,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Roadblock",
+      "Description": "This card costs 8 weapons to use and will prevent your opponent from gaining resources on their next turn.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150012,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "72c1a3"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -5.0003233,
+        "posY": 0.9891183,
+        "posZ": -2.99957776,
+        "rotX": -5.15050524E-05,
+        "rotY": 359.886566,
+        "rotZ": 0.7796994,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Sabotage",
+      "Description": "This card costs 10 weapons to use and will allow you to discard 1 of your opponent's cards.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150013,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "e6bb94"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -7.000146,
+        "posY": 0.989112,
+        "posZ": -3.00009274,
+        "rotX": -5.774811E-05,
+        "rotY": 359.990967,
+        "rotZ": 0.779390156,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Thief",
+      "Description": "This card allows you to steal up to 6 crystals, weapons and bricks from your opponent.\n\nYou can not take more resources than your opponent has available.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150014,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1500": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138602875/C97CBCD1FF7CA50DEAA3F5ECD9916171538A10F7/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050118540/2F32B3623F4313ACF708C7876237AE27A4CE1D33/",
+          "NumWidth": 4,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "123d85"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -11.0001917,
+        "posY": 0.9736048,
+        "posZ": -9.00007248,
+        "rotX": -2.31494212E-07,
+        "rotY": 4.219844E-05,
+        "rotZ": -3.870299E-06,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Remove Weapons",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150316,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "b6cfd8"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -9.000284,
+        "posY": 1.00081873,
+        "posZ": -8.999976,
+        "rotX": 0.0001440073,
+        "rotY": 1.81276755E-05,
+        "rotZ": -0.0002888942,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Remove Crystals",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150315,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "b74f74"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -7.000175,
+        "posY": 0.9736039,
+        "posZ": -8.999932,
+        "rotX": 8.863475E-06,
+        "rotY": -4.843619E-05,
+        "rotZ": -5.9371876E-05,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Remove Bricks",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150314,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "2f9ce8"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -5.00008345,
+        "posY": 1.00268579,
+        "posZ": -9.000046,
+        "rotX": 0.000148241292,
+        "rotY": -0.000134117916,
+        "rotZ": 0.0953673646,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Pixies",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150313,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "eda65a"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -3.00020528,
+        "posY": 0.98909384,
+        "posZ": -9.000096,
+        "rotX": 0.000119015625,
+        "rotY": 0.00273569231,
+        "rotZ": 0.7783454,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Quake",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150312,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "030aca"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": -0.999782,
+        "posY": 0.9735977,
+        "posZ": -8.999956,
+        "rotX": 7.571974E-05,
+        "rotY": -0.000114359529,
+        "rotZ": -0.000470738771,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Magic Weapons",
+      "Description": "Doubles the damage of your next attack",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150311,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "17370c"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 0.9999926,
+        "posY": 1.00078642,
+        "posZ": -9.000003,
+        "rotX": 0.000118496137,
+        "rotY": 0.000144622449,
+        "rotZ": 5.41304471E-05,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Magic Defence",
+      "Description": "Negates all damage from the next incoming attack",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150310,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "869d4c"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 3.00001144,
+        "posY": 0.973599136,
+        "posZ": -8.99996948,
+        "rotX": 5.964896E-05,
+        "rotY": -3.33509779E-05,
+        "rotZ": -0.0003708267,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Magic Bricks",
+      "Description": "Doubles the size of your next Castle or Wall construction card",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150309,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "624c44"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 5.00001669,
+        "posY": 1.0007875,
+        "posZ": -9.000009,
+        "rotX": 7.931966E-05,
+        "rotY": 359.985779,
+        "rotZ": 3.92088732E-05,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Mage",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150308,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "d6c0e8"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 7.000011,
+        "posY": 0.9735991,
+        "posZ": -9.000005,
+        "rotX": 5.80351079E-05,
+        "rotY": 359.985626,
+        "rotZ": -0.000369583344,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Lightning",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150307,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "c462ab"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 8.999988,
+        "posY": 1.00083935,
+        "posZ": -9.000012,
+        "rotX": 3.34573378E-05,
+        "rotY": 359.989441,
+        "rotZ": 0.00166705763,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Hail Storm",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150306,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "b8cd02"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 10.9999943,
+        "posY": 0.973610938,
+        "posZ": -9.000005,
+        "rotX": -5.287988E-05,
+        "rotY": 359.9894,
+        "rotZ": 0.000371877133,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Conjure Wall",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150305,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "76427b"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 13.000001,
+        "posY": 0.9890812,
+        "posZ": -9.000003,
+        "rotX": -0.000147394458,
+        "rotY": 359.9859,
+        "rotZ": 359.222321,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Bribe Mage",
+      "Description": "Steal a single opponents Mage",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150304,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "804a42"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 15.0000257,
+        "posY": 1.00267863,
+        "posZ": -8.999998,
+        "rotX": -5.75775775E-05,
+        "rotY": 359.985657,
+        "rotZ": 359.905121,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "All Crystals",
+      "Description": "This card costs 1 crystal to use and will instruct all of your units to produce crystals on your next turn.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150303,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "59276e"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 17.00001,
+        "posY": 0.9736038,
+        "posZ": -8.999993,
+        "rotX": 1.59560368E-05,
+        "rotY": 359.989746,
+        "rotZ": -7.90006961E-05,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Add Weapons",
+      "Description": "This card costs 5 crystals to use and will grant you 8 weapons.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150302,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "b7ce98"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 19.0000248,
+        "posY": 1.00078166,
+        "posZ": -8.999997,
+        "rotX": -4.75937159E-05,
+        "rotY": 359.985962,
+        "rotZ": 0.000392498245,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Add Bricks",
+      "Description": "This card costs 5 crystals to use and will grant you 8 bricks.",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150300,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "464a54"
+    },
+    {
+      "Name": "Card",
+      "Transform": {
+        "posX": 21.0000057,
+        "posY": 0.9735991,
+        "posZ": -8.999998,
+        "rotX": 5.77658975E-05,
+        "rotY": 359.9859,
+        "rotZ": -0.000374834839,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Add Crystals",
+      "Description": "This card costs 5 crystals to use and will grant you 8 crystals",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": true,
+      "CardID": 150301,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "1503": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1654476625138661727/000EBD2241C2B00DAD58E2B524A21F5990D7BDD2/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1654476512050117424/A67771396174436588074B351429996BEF1FCEF1/",
+          "NumWidth": 5,
+          "NumHeight": 4,
+          "BackIsHidden": false,
+          "UniqueBack": false,
+          "Type": 0
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "GUID": "d3c622"
+    }
+  ],
+  "LuaScript": "--none\r\nfunction onLoad()\r\n    data = {\r\n        Blue = {\r\n            name, descdescription\r\n        },\r\n        Red = {\r\n            name, desc\r\n        },\r\n    }\r\nend\r\nfunction onScriptingButtonDown(index, player)\r\n    if index==1 then\r\n        data[player].name = Player[player].getHoverObject().getName()\r\n        data[player].desc = Player[player].getHoverObject().getDescription()\r\n        broadcastToColor(\"Copied\", player, \"Green\")\r\n    elseif index == 2 then\r\n        Player[player].getHoverObject().setName(data[player].name)\r\n        Player[player].getHoverObject().setDescription(data[player].desc)\r\n        broadcastToColor(\"Pasted\", player, \"Blue\")\r\n    end\r\n    if index==3 then\r\n        local deck = Player[player].getHoverObject()\r\n        if deck.tag~=\"Deck\" then return false else end\r\n        for i=1, #deck.getObjects() do\r\n            deck.takeObject({\r\n                position = deck.getPosition() + (self.getTransformRight() * i * 2 * -1)\r\n            })\r\n        end\r\n    end\r\nend",
+  "LuaScriptState": "",
+  "XmlUI": "<!-- -->",
+  "VersionNumber": "v12.4.3"
+}
