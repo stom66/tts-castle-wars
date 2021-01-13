@@ -201,5 +201,5 @@ function spawnNewDeck(i, player_color)
     end
 end
 
-require("CastleWars/Assets/lua-xml/deckData")
-require("CastleWars/Assets/lua-xml/table")
+require("tts-castle-wars/Assets/lua-xml/deckData")
+require("tts-castle-wars/Assets/lua-xml/table")
