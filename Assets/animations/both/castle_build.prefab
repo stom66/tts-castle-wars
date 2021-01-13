@@ -4861,7 +4861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6181733801765749420}
   m_Layer: 0
-  m_Name: Castle Build - Blue
+  m_Name: castle_build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5032,8 +5032,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2.8
-      minScalar: 1
+      scalar: 4
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
