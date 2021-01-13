@@ -903,7 +903,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: knights_castle
+  - Name: knight_castle
     GameObjects:
     - gameObject: {fileID: 1509802924679324340}
     Particles: []
