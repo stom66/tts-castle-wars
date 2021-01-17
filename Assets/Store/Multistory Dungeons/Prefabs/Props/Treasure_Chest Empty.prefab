@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &989564569204218545
+--- !u!1 &523390784955019677
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 989564569204389585}
-  - component: {fileID: 989564569200965297}
-  - component: {fileID: 989564569201953009}
+  - component: {fileID: 523390784954916349}
+  - component: {fileID: 523390784952016285}
+  - component: {fileID: 523390784953017309}
   m_Layer: 0
   m_Name: Treasure_Chest_lid_01
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
   m_IsActive: 1
---- !u!4 &989564569204389585
+--- !u!4 &523390784954916349
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989564569204218545}
+  m_GameObject: {fileID: 523390784955019677}
   m_LocalRotation: {x: 0.88552475, y: 0, z: 0, w: 0.46459225}
   m_LocalPosition: {x: 0, y: 0.4396999, z: 0.34570312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 989564569204389587}
+  m_Father: {fileID: 523390784954916351}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &989564569200965297
+--- !u!33 &523390784952016285
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989564569204218545}
+  m_GameObject: {fileID: 523390784955019677}
   m_Mesh: {fileID: 4300000, guid: cb11488eaf6dc2f44a1388ac6ea18ff8, type: 3}
---- !u!23 &989564569201953009
+--- !u!23 &523390784953017309
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989564569204218545}
+  m_GameObject: {fileID: 523390784955019677}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,7 +77,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &989564569204218547
+--- !u!1 &523390784955019679
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,38 +85,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 989564569204389587}
-  - component: {fileID: 989564569201953011}
-  - component: {fileID: 989564569200965299}
+  - component: {fileID: 523390784954916351}
+  - component: {fileID: 523390784953017311}
+  - component: {fileID: 523390784952016287}
   m_Layer: 0
-  m_Name: Treasure_Chest_Base_02
+  m_Name: Treasure_Chest Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
   m_IsActive: 1
---- !u!4 &989564569204389587
+--- !u!4 &523390784954916351
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989564569204218547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.344633, y: 7.884, z: -11.778719}
+  m_GameObject: {fileID: 523390784955019679}
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: -10.5, y: 9.288, z: -15.438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 989564569204389585}
+  - {fileID: 523390784954916349}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &989564569201953011
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!23 &523390784953017311
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989564569204218547}
+  m_GameObject: {fileID: 523390784955019679}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -147,11 +147,11 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &989564569200965299
+--- !u!33 &523390784952016287
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989564569204218547}
-  m_Mesh: {fileID: 4300000, guid: 574cb8f69702c6f41b43dc4bcaca471b, type: 3}
+  m_GameObject: {fileID: 523390784955019679}
+  m_Mesh: {fileID: -2432090755550338912, guid: 7c6240c8710780e4694cece0bdaa7db4, type: 3}
