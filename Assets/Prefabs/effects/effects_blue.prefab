@@ -322,7 +322,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: remove_bricks
+  - Name: REPLACE ME
     GameObjects:
     - gameObject: {fileID: 0}
     Particles: []
@@ -336,7 +336,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: remove_crystals
+  - Name: REPLACE ME
     GameObjects:
     - gameObject: {fileID: 0}
     Particles: []
