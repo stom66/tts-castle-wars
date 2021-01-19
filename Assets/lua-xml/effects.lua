@@ -21,19 +21,17 @@ function triggerEffect(player_color, name)
     --suffix depending on what's appropriate
     --returns true if found, false if not found
           name     = name:lower():gsub(" ", "_")
-    log("triggering effect: "..name)
     local assBun   = data[player_color].effects_obj.AssetBundle
     local target   = playerOpponent(player_color)
-    local triggers = assBun.getTriggerEffects()
 
-    log("Attempting to play trigger effect: "..name)
+    log("Attempting to find trigger effect: "..name)
 
     --loop through the list of possible triggers, searching for a name/name+suffix match
-    for _,v in ipairs(triggers) do
+    for _,v in ipairs(assBun.getTriggerEffects()) do
         if v.name == name or
         (v.name == name.."_castle" and data[target].wall < 1) or
         (v.name == name.."_wall" and data[target].wall > 0) then
-            log("Playing trigger: "..v.name)
+            log("Found trigger: "..v.name..", playing")
             assBun.playTriggerEffect(v.index)
             return true
         end

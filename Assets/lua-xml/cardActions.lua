@@ -188,13 +188,6 @@ end
 function card_removeResource(player, value)
     local target = playerOpponent(player)
 
-    --you can't steal more than the other player has, so adjust values accordingly
-    value = {
-        math.min(value[1], data[target].bricks),
-        math.min(value[2], data[target].crystals),
-        math.min(value[3], data[target].swords),
-    }
-
     --check for the "protect resources" buff
     if data[target].buff_resources then
         value = {0, 0, 0}
@@ -205,7 +198,7 @@ function card_removeResource(player, value)
     removeResources(target, value)
 
     --add them to the player
-    addResources(player, value)
+    --addResources(player, value)
 end
 
 function card_sabotage(player_color, value)
@@ -319,7 +312,7 @@ end
 
 function card_thief(player, value)
     local target = playerOpponent(player)
-
+    
     --add 6 of each resource, or however many the oponent has, whichever is smaller
     card_addResource(player, {
         math.min(6, data[target].bricks),

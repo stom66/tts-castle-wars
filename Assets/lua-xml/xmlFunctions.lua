@@ -3,24 +3,37 @@
 --]]
 
 function xml_updateCastleHeight(player, value, id)
+    --[[
+        DEV FEATURE
+        Only used when the XML slider inputs are enabled to allow manually changing the castle height
+    --]]
     data.Blue.castle = tonumber(value)
     log("Updating castle to height "..value)
     updateCastleHeight("Blue")
 end
+
 function xml_updateWallHeight(player, value, id)
+    --[[
+        DEV FEATURE
+        Only used when the XML slider inputs are enabled to allow manually changing the wall height
+    --]]
     data.Blue.wall = tonumber(value)
     log("Updating wall to height "..value)
     updateWallHeight("Blue")
 end
 
-
-
-
 function xml_update(player_color)
-    local prefix = player_color:lower()
-    log("Updating XML for player "..prefix)
+    --[[
+        Called at the start of every turn for both players
+        Loops through each of the player's stats shown in the XML panels and updates their values
+        Any values that change trigger the 
 
-    --decalre a table of stats to read and change
+    --]]
+
+    --work out element id prefix
+    local prefix = player_color:lower()
+
+    --define list of stats to change
     local stats = {
         "builders", "bricks",
         "soldiers", "swords",
@@ -28,13 +41,13 @@ function xml_update(player_color)
         "wall",     "castle",
     }
 
-    --Get ther current values of the stats so we can compare the new values and look for changes
+    --blank table to store current stat values in, used for checking if differences need to be shown
     local values = {}
+
+    --record current values of the stats so we can compare the new values and look for changes
     for _,v in ipairs(stats) do
         values[v] = tonumber(UI.getAttribute(prefix.."_"..v, "text"))
     end
-    log("XML values:")
-    log(values)
 
     --Update basic stats
     for _,v in ipairs(stats) do
@@ -55,7 +68,7 @@ function xml_update(player_color)
 
     --Check for differences in values and show value in the change column
     for _,v in ipairs(stats) do
-        if v~=values[v] then
+        if data[player_color][v]~=values[v] then
             --A value has changed!
             local diff = data[player_color][v] - values[v]
 
@@ -71,9 +84,7 @@ function xml_update(player_color)
             --hide the element after a few seconds delay
             Wait.time(function()
                 UI.hide(prefix.."_"..v.."_change")
-            end, 2)
-        else
-        
+            end, 6)
         end
     end
 end

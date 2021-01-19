@@ -361,7 +361,7 @@ function card_getDataTable()
         name   = "Trojan Horse",
         cost   = {14, 0, 20, 0},
         action = "attack",
-        delay  = 3.5,
+        delay  = 7.0,
         bypass = true,
         value  = 28
     }

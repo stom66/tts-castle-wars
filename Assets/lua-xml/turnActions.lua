@@ -39,12 +39,8 @@ function onPlayerTurn(player)
     turn_start(player.color)
 
     -- Trigger "turn end" for the previous player if appropriate
-    -- Needs a delay to allow the played card enough time to return to the deck
-    -- Otherwise causes conflicts and cards to not re-enter the deck properly
     if data.turn_count > 1 then
-        Wait.time(function()
-            turn_end(playerOpponent(player.color))
-        end, 1.5)
+        turn_end(playerOpponent(player.color))
     end
 end
 
@@ -63,6 +59,7 @@ function turn_start(player_color)
 
     --increment turn count
     data.turn_count = data.turn_count + 1
+    log("Turn "..data.turn_count.." has started")
 
     --increment resources, but only after each player's first turen
     if data.turn_count > 2 then
@@ -94,8 +91,11 @@ function turn_start(player_color)
                 end
             end
 
-            --de-activate the buff for future turns
-            data[player_color].all_produce = false
+            --de-activate the buff for future turns, except the "none" buff which is disabled on turn_end to 
+            --prevent the roadblock animation being de-activated immediately
+            if data[player_color].all_produce ~= "none" then
+                data[player_color].all_produce = false
+            end
         end
 
         -- increment resources by the determined amounts
@@ -112,7 +112,6 @@ function turn_start(player_color)
 
     --update the xml
     xml_update(player_color)
-    xml_update(playerOpponent(player_color))
 end
 
 function turn_end(player_color)
@@ -131,5 +130,18 @@ function turn_end(player_color)
     data[player_color].action_taken = false
     data[player_color].discards = 0
 
-    player_checkCardsInHand(player_color)
+    --if the player has a buff "none", eg roadblock is in action, trigger the removal of the roadblock animation and clear their buff
+    if data[player_color].all_produce == "none" then
+        triggerEffect(playerOpponent(player_color), "roadblock_off")
+        data[player_color].all_produce = false
+    end
+
+    --update the xml
+    xml_update(player_color)
+
+    -- Needs a delay to allow the played card enough time to return to the deck
+    -- Otherwise causes conflicts and cards to not re-enter the deck properly
+    Wait.time(function()
+        player_checkCardsInHand(player_color)
+    end, 1.5)
 end

@@ -60,6 +60,14 @@ function game_countdown()
         --update the game state
         data.game_state = "countdown"
 
+        --reset the player data
+        --data.Blue = player_defaultData("Blue")
+        --data.Red  = player_defaultData("Red")
+
+        --Shuffle both players decks cards to players
+        data.Blue.deck_obj.randomize()
+        data.Red.deck_obj.randomize()
+
         --print the various remaining time messages
         for i=1,data.delay_before_start do
             Wait.time(function()
@@ -84,12 +92,16 @@ function game_countdown()
 end
 
 function game_start()
+
     --update the game state
     data.game_state = "active"
 
+    --set the basic game stats
+    data.turn_count = 0
+
     --Setup the player turns
-    Turns.type   = 2
-    Turns.order  = {
+    Turns.type  = 2
+    Turns.order = {
         "Blue", "Red"
     }
     Turns.enable = true
@@ -97,10 +109,6 @@ function game_start()
     --Set the buildings to the right heights
     updateBuildingHeights("Blue", 0, true)
     updateBuildingHeights("Red", 0, true)
-
-    --Shuffle both players decks cards to players
-    data.Blue.deck_obj.randomize()
-    data.Red.deck_obj.randomize()
 
     --Deal cads after one second delay to allow shuffling
     player_dealCards("Blue", data.max_cards_in_hand)

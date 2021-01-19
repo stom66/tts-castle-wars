@@ -65,11 +65,12 @@
                 preferredHeight = "135"
                 />
                 <Text
-                    class         = "scorePanel>@HorizontalLayout>@Text"
-                    fontSize      = "32"
-                    fontStyle     = "Bold"
-                    showAnimation = "FadeIn"
-                    hideAnimation = "FadeOut"
+                    class             = "scorePanel>@HorizontalLayout>@Text"
+                    fontSize          = "32"
+                    fontStyle         = "Bold"
+                    showAnimation     = "FadeIn"
+                    hideAnimation     = "FadeOut"
+                    animationDuration = "1.0"
                     />
 
     <!-- Masks -->

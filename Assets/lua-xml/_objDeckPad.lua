@@ -121,6 +121,7 @@ function drawButtons()
         font_size      = 150,
         color          = {0.3, 0.3, 0.3},
         font_color     = {0.75, 0.75, 0.75},
+        alignment      = 2,
     }
     if deckLock then
         btn.font_color, btn.color = btn.color, btn.font_color
@@ -140,7 +141,8 @@ function drawButtons()
 
 
     if showDeckMenu then
-        btn.position[1] = 2.5
+        btn.position[1] = 2.75
+        btn.width       = 900
         for i,v in ipairs(decks.names) do
             btn.position[3]    = 2.3 - (i*0.5)
             btn.click_function = "newDeck_"..i
