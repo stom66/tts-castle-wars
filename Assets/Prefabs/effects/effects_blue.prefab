@@ -210,7 +210,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: ram_wall
+  - Name: ram_attack_wall
     GameObjects:
     - gameObject: {fileID: 8950491743215087261}
     Particles: []
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 1503236427486525473}
       StateName: Roadblock
-    Duration: 10
+    Duration: 11
   - Name: roadblock_off
     GameObjects:
     - gameObject: {fileID: 1503236426724216015}
@@ -1062,7 +1062,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 1503236427486525473}
       StateName: Roadblock Remote
-    Duration: 10
+    Duration: 11
 --- !u!1001 &128906655374488593
 PrefabInstance:
   m_ObjectHideFlags: 0
