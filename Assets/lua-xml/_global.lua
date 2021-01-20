@@ -30,23 +30,24 @@ function onLoad(saved_data)
     --wait for save_data to load and parse before triggering the XML update
     Wait.condition(
         function()
+            --update the XML with the various stats and buffs
             xml_update("Blue")
             xml_update("Red")
+
+            --draw Buttons on player's deck pads
+            deckpad_drawButtons("Blue")
+            deckpad_drawButtons("Red")
+
+            --during debug, automatically spawn a deck for each player 1 second after loading the game
+            if data.debug then
+                Wait.time(function()
+                    if not data.Blue.deck_obj then deck_spawnDeck(3, "Blue") end
+                    if not data.Red.deck_obj then deck_spawnDeck(3, "Red") end
+                end, 1)
+            end
         end,
         function() return not data.loading end
     )
-
-    --for testing only, automatically spawn a deck for each player 1 second after loading the game
-    if data.debug then
-        Wait.time(function()
-            if not data.Blue.deck_obj then deck_spawnDeck(3, "Blue") end
-            if not data.Red.deck_obj then deck_spawnDeck(3, "Red") end
-        end, 1)
-    end
-
-    --draw Buttons on player's deck pads
-    deckpad_drawButtons("Blue")
-    deckpad_drawButtons("Red")
 end
 
 --[[
@@ -83,6 +84,7 @@ require("tts-castle-wars/Assets/lua-xml/saveData")
 require("tts-castle-wars/Assets/lua-xml/debug")
 
 require("tts-castle-wars/Assets/lua-xml/lang")
+require("tts-castle-wars/Assets/lua-xml/broadcast")
 
 require("tts-castle-wars/Assets/lua-xml/playerActions")
 require("tts-castle-wars/Assets/lua-xml/playerData")

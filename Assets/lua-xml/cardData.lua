@@ -5,6 +5,16 @@
     Costs are in alphabetical order, eg {bricks, crystals, swords, wall}
      - {0, 0, 5, 0} = 5 swords
      - {10, 0, 0, 0} = 10 bricks
+
+     Actions are valid function names found in cardActions.lua
+
+    Value is dependent on the input expected by the function.
+    Possible values:
+     * Table of resource to add
+     * Attack damage
+     * Levels to raise castle/wall
+     * A valid buff name
+
 ]]
 function card_getDataTable()
     local t = {}
@@ -156,7 +166,7 @@ function card_getDataTable()
         name   = "Fence",
         cost   = {5, 0, 0, 0},
         action = "buildWall",
-        delay  = 2,
+        delay  = 1,
         value  = 9
     }
     t[149006]  = {

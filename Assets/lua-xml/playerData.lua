@@ -35,12 +35,12 @@ function player_defaultStats()
         },
 
         --gameplay data
-        deck_valid     = false, --used to check if the player has a valid deck and trigger the game start
+        --deck_valid     = false, --used to check if the player has a valid deck and trigger the game start
         action_taken   = false, --simple flag to prevent playing multiple cards
         all_produce    = false, --flag to denote resource production buffs
 
         --discard data
-        discard_objs   = {}, --table of cards potentially being discarded by sabotage
+        discard_obj_guids   = {}, --table of cards potentially being discarded by sabotage
         discards       = 0,  --counter for discards performed in a turn
     }
 end

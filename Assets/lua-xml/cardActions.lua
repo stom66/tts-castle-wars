@@ -118,6 +118,7 @@ function card_attack(player, damage, bypass_wall, delay)
         data[target].buff.defence = false
     end
 
+    --delay the actual damage being dealt to give the
     if data[target].wall > 0 and not bypass_wall then
         data[target].wall = data[target].wall - damage
         if data[target].wall < 0 then
@@ -215,11 +216,11 @@ function card_sabotage(player_color, value)
 
     --Check we've got a player in the seat
     if not Player[player_color].seated then
-        log("Can't invoke method card_sabotage for non-existant player "..player_color)
+        print("Can't invoke method card_sabotage for non-existant player "..player_color)
         return false
     end
     if not Player[target].seated then
-        log("Can't invoke method card_sabotage for non-existant player "..target)
+        print("Can't invoke method card_sabotage for non-existant player "..target)
         return false
     end
 
@@ -228,7 +229,7 @@ function card_sabotage(player_color, value)
     for _,card in ipairs(cards) do
 
         --add a reference to the card GUID in the player data
-        table.insert(data[player_color].discard_objs, card.getGUID())
+        table.insert(data[player_color].discard_obj_guids, card.getGUID())
 
         --move the card to the other side of the table and rotate it
         local pos = card.getPosition()
@@ -260,8 +261,8 @@ function card_sabotage(player_color, value)
     })
 
     --message the players to explain what's going on
-    broadcastToColor(lang.discard_wait_for_player, target, "Red")
-    broadcastToColor(lang.discard_choose_card, player_color, "Green")
+    bToColor(lang.discard_wait_for_player, target, "Red")
+    bToColor(lang.discard_choose_card, player_color, "Green")
 end
 
     function card_sabotage_discard(obj, player, alt_click)
@@ -269,16 +270,16 @@ end
         local target = playerOpponent(player)
 
         --check if the right player is trying to discard
-        if not table.contains(data[player].discard_objs, obj.getGUID()) then
-            if table.contains(data[target].discard_objs, obj.getGUID()) then
+        if not table.contains(data[player].discard_obj_guids, obj.getGUID()) then
+            if table.contains(data[target].discard_obj_guids, obj.getGUID()) then
                 player, target = target, player
             else
-               print("There was an error, the card you are trying to discard is not registered to anyone!") 
+               print("There was an error, the card you are trying to discard is not registered to anyone!")
             end
         end
 
-        --loop through the objects stored in the discard_objs table
-        local card_guids = data[player].discard_objs
+        --loop through the objects stored in the discard_obj_guids table
+        local card_guids = data[player].discard_obj_guids
         for _,g in ipairs(card_guids) do
 
             --create a local reference to the card object
@@ -295,8 +296,8 @@ end
             end
         end
 
-        --reset the table of discard_objs
-        data[player].discard_objs = {}
+        --reset the table of discard_obj_guids
+        data[player].discard_obj_guids = {}
 
         --deal a single replacement card to the target
         player_dealCards(target, 1)
@@ -318,9 +319,9 @@ function card_stealWorker(player, value)
 end
 
 function card_thief(player, value)
-    local target = playerOpponent(player)
-    
     --add 6 of each resource, or however many the oponent has, whichever is smaller
+    local target = playerOpponent(player)
+
     card_addResource(player, {
         math.min(6, data[target].bricks),
         math.min(6, data[target].crystals),
@@ -332,12 +333,12 @@ function card_thief(player, value)
 end
 
 function card_wain(player, value)
-    --build our castle
-    card_buildCastle(player, 6)
-    updateCastleHeight(player)
-
     --lower oponent castle
     local target = playerOpponent(player)
     card_attack(player, 6, true)
     updateCastleHeight(target)
+
+    --build our castle
+    card_buildCastle(player, 6)
+    updateCastleHeight(player)
 end

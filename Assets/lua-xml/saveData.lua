@@ -68,7 +68,7 @@ function saveData_parsePlayerData(data)
     local t = {}
     for key,value in pairs(data) do
         if type(value) == "string" then
-            t[key] = getObjectFromGUID(vale)
+            t[key] = getObjectFromGUID(value)
         else
             t[key] = value
         end

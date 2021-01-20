@@ -71,6 +71,12 @@ function updateWallHeight(player_color, delay, skip_animation)
 end
 
 function updateCastleHeight(player_color, delay, skip_animation)
+    --[[
+        This function sets the poition of the castle_base and athe castle_tower_obj
+        It uses a series of breakpoints for minimum height for both objects and raises/lowers the
+        parts according to the data for each players' wall and castle levels
+    --]]
+    
     --local reference to castle height
     local height = data[player_color].castle
           delay  = tonumber(delay) or 0

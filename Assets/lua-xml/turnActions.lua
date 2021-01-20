@@ -33,9 +33,11 @@ function onPlayerTurn(player)
     --]]
 
     --stop the next_turn from triggering if there's not a valid players turn being taken
-    if not player.color or player.color == "" then 
-        print("A player unlocked their deck! Aborting.")
-        game_stop()
+    if not player.color or player.color == "" then
+        if data.game_state ~= "ended" then
+            print("A player unlocked their deck! Aborting.")
+            game_stop()
+        end
         return false
     end
 

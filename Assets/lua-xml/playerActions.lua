@@ -23,11 +23,7 @@ function trigger_playCard(player_color)
 
     --check the player actually has a deck
     if not data[player_color].deck_obj then
-        if Player[player_color].seated then
-            broadcastToColor(lang.deck_not_locked, player_color, "Red")
-        else
-            print(player_color..lang.deck_not_locked)
-        end
+        bToColor(lang.deck_not_locked, player_color, "Red")
         return false
     end
 
@@ -46,31 +42,19 @@ function trigger_playCard(player_color)
 
     --reject multiple cards
     if #objs > 1 or #objs < 1 then
-        if Player[player_color].seated then
-            broadcastToColor(lang.cant_play_multiple_cards, player_color)
-        else
-            print(player_color..": "..lang.cant_play_multiple_cards)
-        end
+        bToColor(lang.cant_play_multiple_cards, player_color, "Red")
         return false
     end
 
     --reject non-card objects
     if objs[1].tag~="Card" then
-        if Player[player_color].seated then
-            broadcastToColor(lang.cant_play_non_card, player_color)
-        else
-            print(player_color..": "..lang.cant_play_non_card)
-        end
+        bToColor(lang.cant_play_non_card, player_color, "Red")
         return false
     end
 
     --ensure the player owns the card
     if not handzone_containsObject(objs[1], player_color) then
-        if Player[player_color].seated then
-            broadcastToColor(lang.card_not_in_hand, player_color)
-        else
-            print(player_color..": "..lang.card_not_in_hand)
-        end
+        bToColor(lang.card_not_in_hand, player_color, "Red")
         return false
     end
 
@@ -82,21 +66,12 @@ end
 function trigger_discardCard(player_color)
     --check the player actually has a deck
     if not data[player_color].deck_obj then
-        if Player[player_color].seated then
-            broadcastToColor(lang.deck_not_locked2, player_color, "Red")
-        else
-            print(player_color..lang.deck_not_locked2)
-        end
-        return false
+        bToColor(lang.deck_not_locked2, player_color, "Red")
     end
 
     if Turns.turn_color ~= player_color or data[player_color].action_taken then
         --not their turn, return card to their hand and warn them
-        if Player[player_color].seated then
-            broadcastToColor(lang.not_your_turn, player_color, "Orange")
-        else
-            print(player_color..": "..lang.not_your_turn)
-        end
+        bToColor(lang.not_your_turn, player_color)
         return false
     end
 
@@ -115,11 +90,7 @@ function trigger_discardCard(player_color)
     --check we're not going to exceed the max number of discards per turn
     if #objs > data.max_discard_per_turn
     or (data[player_color].discards + #objs) > data.max_discard_per_turn then
-        if Player[player_color].seated then
-            broadcastToColor(lang.max_discards_reached, player_color)
-        else
-            print(player_color..": "..lang.max_discards_reached)
-        end
+        bToColor(lang.max_discards_reached, player_color, "Red")
         return false
     end
 
@@ -128,21 +99,13 @@ function trigger_discardCard(player_color)
 
         --reject non-card objects
         if card.tag~="Card" then
-            if Player[player_color].seated then
-                broadcastToColor(lang.cant_play_non_card, player_color)
-            else
-                print(player_color..": "..lang.cant_play_non_card)
-            end
+            bToColor(lang.cant_play_non_card, player_color, "Red")
             return false
         end
 
         --ensure the player owns the card
         if not handzone_containsObject(card, player_color) then
-            if Player[player_color].seated then
-                broadcastToColor(lang.card_not_in_hand, player_color)
-            else
-                print(player_color..": "..lang.card_not_in_hand)
-            end
+            bToColor(lang.card_not_in_hand, player_color, "Red")
             return false
         end
 
@@ -171,11 +134,7 @@ function player_playCard(card, player_color)
     if Turns.turn_color ~= player_color or data[player_color].action_taken then
         --not their turn, return card to thei hand and warn them
         card.deal(1, player_color)
-        if Player[player_color].seated then
-            broadcastToColor(lang.not_your_turn, player_color, "Orange")
-        else
-            print(player_color..": "..lang.not_your_turn)
-        end
+        bToColor(lang.not_your_turn, player_color, "Orange")
         return false
     else
         -- It is their turn, so set action_taken flag to true to prevent playing multiple cards at once
@@ -184,11 +143,7 @@ function player_playCard(card, player_color)
 
     -- Check the player hasn't discarded cards this round
     if data[player_color].discards > 0 then
-        if Player[player_color].seated then
-            broadcastToColor(lang.cant_play_after_discard, player_color, "Red")
-        else
-            print(player_color..": "..lang.cant_play_after_discard)
-        end
+        bToColor(lang.cant_play_after_discard, player_color, "Red")
         data[player_color].action_taken = false
         return false
     end
@@ -203,11 +158,7 @@ function player_playCard(card, player_color)
     -- Check the player can afford it
     if not player_canAffordCard(player_color, cardId) then
         --alert the user
-        if Player[player_color].seated then
-            broadcastToColor(lang.cant_afford_card, player_color, "Red")
-        else
-            print(player_color..": "..lang.cant_afford_card)
-        end
+        bToColor(lang.cant_afford_card, player_color, "Red")
 
         --return the card to their hand
         card.deal(1, player_color)
@@ -226,25 +177,28 @@ function player_playCard(card, player_color)
         print(lang.card_played(Player[player_color].steam_name, cards[cardId].name))
     end
 
+    -- Trigger the animation for the card
+    triggerEffect(player_color, cards[cardId].name)
+
     -- Trigger the cards action
     local value  = cards[cardId].value or 0
     local bypass = cards[cardId].bypass or false
-    local delay  = cards[cardId].delay or 0
+    local delay  = tonumber(cards[cardId].delay) or 0
     _G["card_"..cards[cardId].action](player_color, value, bypass, delay)
-
-    -- Trigger the animation for the card
-    triggerEffect(player_color, cards[cardId].name)
 
     -- Put the played card back in the deck
     card_addToDeck(card, data[player_color].deck_obj)
 
     -- Trigger the next player's turn, unless the sabotage card was played
     if cards[cardId].action ~= "sabotage" then
-        Wait.time(turn_next, 1.5)
+        Wait.time(turn_next, (delay + 1.5))
     end
 end
 
 function player_dealCards(player_color, count)
+    --check we got a valid player_color
+    if not player_color or player_color == "" then return false end
+
     local deck = data[player_color].deck_obj
     for i=1, count do
         Wait.time(function()
@@ -257,6 +211,9 @@ function player_dealCards(player_color, count)
 end
 
 function player_returnCardsToDeck(player_color)
+    --check we got a valid player_color
+    if not player_color or player_color == "" then return false end
+    
     local deck = data[player_color].deck_obj
     local cards = data[player_color].handzone_obj.getObjects()
     for _,card in ipairs(cards) do
@@ -270,12 +227,17 @@ function player_checkCardsInHand(player_color)
         Checks the player has the right amount of cards in their hand and deals replacements if any are missing
     --]]
 
+    --check we got a valid player_color
+    if not player_color or player_color == "" then return false end
+
     --check we actually have a player seated
     if not Player[player_color].seated then return false end
 
+    --check the game is in progress
+    if data.game_state ~= "active" then return false end
+
     --get the number of objects in hand and work out the difference
     local hand_objs = data[player_color].handzone_obj.getObjects()
-    log(hand_objs)
 
     local missing = data.max_cards_in_hand - #hand_objs
     if missing > 0 then

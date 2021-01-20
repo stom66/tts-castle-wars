@@ -31,7 +31,10 @@ function triggerEffect(player_color, name)
         if v.name == name or
         (v.name == name.."_castle" and data[target].wall < 1) or
         (v.name == name.."_wall" and data[target].wall > 0) then
-            log("Found trigger: "..v.name..", playing")
+            if data.debug then 
+                log("Found trigger: "..v.name..", playing")
+            end
+ 
             assBun.playTriggerEffect(v.index)
             return true
         end

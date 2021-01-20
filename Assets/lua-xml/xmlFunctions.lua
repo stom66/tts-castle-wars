@@ -56,7 +56,7 @@ function xml_update(player_color)
     end
 
     --Update buff icons
-    for buff,value in ipairs(data[player_color].buff) do
+    for buff,value in pairs(data[player_color].buff) do
         UI.setAttribute(prefix.."_buff_"..buff, "color", xml_buffToColor(value))
     end
 

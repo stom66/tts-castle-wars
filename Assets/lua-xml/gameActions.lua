@@ -6,9 +6,8 @@
 --]]
 
 function game_stop()
-    Turns.enable    = false
-    data.game_state = "stopped"
     broadcastToAll(lang.game_stopped, "Yellow")
+    game_end()
 end
 
 function game_end()
@@ -26,15 +25,17 @@ function game_end()
     end
 
     --send messages
-    if Player[winner].seated then 
-        broadcastToColor(lang.game_won, winner, "Green")
-    else
-        print(winner..": "..lang.game_won)
-    end
-    if Player[loser].seated then 
-        broadcastToColor(lang.game_lost, loser, "Red")
-    else
-        print(loser..": "..lang.game_lost)
+    if winner and loser then
+        if Player[winner].seated then
+            broadcastToColor(lang.game_won, winner, "Green")
+        else
+            print(winner..": "..lang.game_won)
+        end
+        if Player[loser].seated then
+            broadcastToColor(lang.game_lost, loser, "Red")
+        else
+            print(loser..": "..lang.game_lost)
+        end
     end
 
     --return all cards in hand to decks and unlock decks
@@ -51,7 +52,7 @@ end
 
 function game_countdown()
     --[[
-        Start the countdown that will end with the game beginning. 
+        Start the countdown that will end with the game beginning.
         Relies on both users having a valid deck locked in.
     ]]
 
@@ -61,8 +62,8 @@ function game_countdown()
         data.game_state = "countdown"
 
         --reset the player data
-        --data.Blue = player_defaultData("Blue")
-        --data.Red  = player_defaultData("Red")
+        data.Blue = table.merge(data.Blue, player_defaultStats())
+        data.Red  = table.merge(data.Red, player_defaultStats())
 
         --Shuffle both players decks cards to players
         data.Blue.deck_obj.randomize()
@@ -106,12 +107,16 @@ function game_start()
     }
     Turns.enable = true
 
-    --Set the buildings to the right heights
-    updateBuildingHeights("Blue", 0, true)
-    updateBuildingHeights("Red", 0, true)
+    --for both Blue and Red:
+    for _,player_color in ipairs(Turns.order) do
+        --Set the buildings to the right heights
+        updateBuildingHeights(player_color, 0, true)
 
-    --Deal cads after one second delay to allow shuffling
-    player_dealCards("Blue", data.max_cards_in_hand)
-    player_dealCards("Red", data.max_cards_in_hand)
+        --Deal cards 
+        player_checkCardsInHand(player_color)
+
+        --Update the player's XML
+        xml_update(player_color)
+    end
 end
 

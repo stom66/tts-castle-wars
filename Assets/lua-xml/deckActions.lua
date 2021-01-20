@@ -134,11 +134,7 @@ function deck_checkDeck(obj, player_color)
     --read and count cards in the deck
     local cards = obj.getData().ContainedObjects
     if #cards > data.max_cards_in_deck then
-        if Player[player_color].seated then
-            broadcastToColor(lang.deck_too_large, player_color, "Red")
-        else
-            print(lang.deck_too_large)
-        end
+        bToColor(lang.deck_too_large, player_color, "Red")
         return false
     end
 
@@ -153,11 +149,7 @@ function deck_checkDeck(obj, player_color)
             cardCount[cardId] = 1
         end
         if cardCount[cardId] > data.max_card_duplicates then
-            if Player[player_color].seated then
-                broadcastToColor(lang.too_many_duplicate_cards(card_getName(cardId)), player_color, "Red")
-            else
-                print(lang.too_many_duplicate_cards(card_getName(cardId)))
-            end
+            bToColor(lang.too_many_duplicate_cards(card_getName(cardId)), player_color, "Red")
             return false
         end
     end
@@ -166,11 +158,7 @@ function deck_checkDeck(obj, player_color)
     data[player_color].deck_valid = true
 
     --alert the user, or print to chat
-    if Player[player_color].seated then
-        broadcastToColor(lang.deck_valid, player_color, "Green")
-    else
-        print(player_color..": "..lang.deck_valid)
-    end
+    bToColor(lang.deck_valid, player_color, "Green")
 
     --call "lockDeck" on their deck_pad
     deck_lockDeck(player_color, obj)
