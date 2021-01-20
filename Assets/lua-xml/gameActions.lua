@@ -43,8 +43,8 @@ function game_end()
 
     --Trigger unlockDeck
     Wait.time(function()
-        data.Blue.deck_pad_obj.call("unlockDeck")
-        data.Red.deck_pad_obj.call("unlockDeck")
+        deck_unlockDeck(nil, "Blue")
+        deck_unlockDeck(nil, "Red")
     end, 2)
 end
 
@@ -55,7 +55,7 @@ function game_countdown()
         Relies on both users having a valid deck locked in.
     ]]
 
-    if data.Red.valid_deck and data.Blue.valid_deck then
+    if data.Red.deck_valid and data.Blue.deck_valid then
 
         --update the game state
         data.game_state = "countdown"
@@ -71,7 +71,7 @@ function game_countdown()
         --print the various remaining time messages
         for i=1,data.delay_before_start do
             Wait.time(function()
-                if data.Red.valid_deck and data.Blue.valid_deck then
+                if data.Red.deck_valid and data.Blue.deck_valid then
                     broadcastToAll(lang.game_starts_in(i), "Orange")
                 else
                     broadcastToAll(lang.game_start_cancelled, "Yellow")
@@ -81,7 +81,7 @@ function game_countdown()
 
         --print the start of game message and trigger the first round
         Wait.time(function()
-            if data.Red.valid_deck and data.Blue.valid_deck then
+            if data.Red.deck_valid and data.Blue.deck_valid then
                 broadcastToAll(lang.game_started, "Green")
                 game_start()
             else

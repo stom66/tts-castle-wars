@@ -1,12 +1,13 @@
---[[
-    This function returns the data for all the spawnable decks
-    Indexes must match the card IDs as they appear in the save file.
-]]
-function getDeckData()
-    names = {
+function deck_getDataTable()
+    --[[
+        This function returns the data for all the spawnable decks
+        Indexes must match the card IDs as they appear in the save file.
+    --]]
+    
+    local names = {
         "Stock", "Full", "Stock Plus"
     }
-    cards = {}
+    local cards = {}
     cards[148900] = {4, 5, 4}
     cards[148901] = {4, 5, 4}
     cards[148902] = {5, 5, 5}

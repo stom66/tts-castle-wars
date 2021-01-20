@@ -44,10 +44,17 @@ function cards_updateScales(player_color)
     --]]
 
     --abort if the game isn't in progress
-    if data.game_state ~= "active" then return false end
+    if data.game_state ~= "active" or player_color=="" then return false end
 
     --Get a table of all cards in the players hand
+
+    if data.debug then
+        log("cards_updateScales: "..player_color)
+        log("handzone GUID: "..data[player_color].handzone_obj.getGUID())
+    end
     local cards = data[player_color].handzone_obj.getObjects()
+
+
 
     --log("cards_updateScales for player "..player_color.." found "..#cards.." cards in hand")
     --log(cards)
@@ -75,7 +82,7 @@ end
  --]]
 
 function card_addBuff(player, value)
-    data[player]["buff_"..value] = true
+    data[player].buff[value] = true
 end
 
 function card_addResource(player, value)
@@ -100,15 +107,15 @@ function card_attack(player, damage, bypass_wall, delay)
     local target = playerOpponent(player)
 
     --check for attack buffs
-    if data[player].buff_attack then
+    if data[player].buff.attack then
         damage = damage * 2
-        data[player].buff_attack = false
+        data[player].buff.attack = false
     end
 
     --check for defence buffs
-    if data[target].buff_defence then
+    if data[target].buff.defence then
         damage = 0
-        data[target].buff_defence = false
+        data[target].buff.defence = false
     end
 
     if data[target].wall > 0 and not bypass_wall then
@@ -131,9 +138,9 @@ end
 
 function card_buildCastle(player, value, bypass, delay)
     --check for building buffs
-    if data[player].buff_build then
+    if data[player].buff.build then
         value = value * 2
-        data[player].buff_build = false
+        data[player].buff.build = false
     end
     data[player].castle = data[player].castle + value
     updateBuildingHeights(player, delay, bypass)
@@ -141,9 +148,9 @@ end
 
 function card_buildWall(player, value, bypass, delay)
     --check for building buffs
-    if data[player].buff_build then
+    if data[player].buff.build then
         value = value * 2
-        data[player].buff_build = false
+        data[player].buff.build = false
     end
 
     --update the value and trigger the wall move
@@ -181,7 +188,7 @@ function card_removeBuff(player, value)
         card_removeBuff(player, "attack")
         card_removeBuff(player, "resources")
     else
-        data[target]["buff_"..value] = false
+        data[target].buff[value] = false
     end
 end
 
@@ -189,9 +196,9 @@ function card_removeResource(player, value)
     local target = playerOpponent(player)
 
     --check for the "protect resources" buff
-    if data[target].buff_resources then
+    if data[target].buff.resources then
         value = {0, 0, 0}
-        data[target].buff_resources = false
+        data[target].buff.resources = false
     end
 
     --remove resources from the opponent

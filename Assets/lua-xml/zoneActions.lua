@@ -5,29 +5,28 @@
 
 function onObjectEnterScriptingZone(zone, obj)
     --get the zone owner
-    local zone_guid = zone.getGUID()
-    local owner = zone_getOwner(zone.guid)
+    local wait_id = zone.getGUID()..obj.getGUID()
+    local owner   = zone_getOwner(zone.guid)
 
     --ignore zones that don't belong to anyone (can't really happen unless someone messes with a zone, but ok)
     if not owner then return false end
 
     --ignore anything that isn't a card
     if obj and obj.tag=="Card" then
-        zoneWaits[zone_guid] = Wait.condition(
+        zoneWaits[wait_id] = Wait.condition(
             function() 
-                if zone_containsObject(obj, zone) then
-                    player_playCard(obj, owner)
-                end
+                player_playCard(obj, owner)
             end,
             function() return obj.resting end)
     end
 end
 
 function onObjectLeaveScriptingZone(zone, obj)
-    local zone_guid = zone.getGUID()
-    if zoneWaits[zone_guid] then 
+    local wait_id = zone.getGUID()..obj.getGUID()
+
+    if zoneWaits[wait_id] then 
         if data.debug then log("Cancelling current wait") end
-        Wait.stop(zoneWaits[zone_guid])
+        Wait.stop(zoneWaits[wait_id])
     end
 end
 

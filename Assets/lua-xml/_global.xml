@@ -71,6 +71,7 @@
                     showAnimation     = "FadeIn"
                     hideAnimation     = "FadeOut"
                     animationDuration = "1.0"
+                    active            = "false"
                     />
 
     <!-- Masks -->
@@ -210,11 +211,11 @@
                 <VerticalLayout class="section bg_green">
                     <HorizontalLayout>
                         <Image image="icon_builders"></Image>
-                        <Text id="blue_builders" text="0"></Text>
+                        <Text id="blue_builders" text="2"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image id="blue_icon_bricks" image="icon_bricks"></Image>
-                        <Text id="blue_bricks" text="0"></Text>
+                        <Text id="blue_bricks" text="5"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -224,11 +225,11 @@
                 <VerticalLayout class="section bg_red">
                     <HorizontalLayout>
                         <Image image="icon_soldiers"></Image>
-                        <Text id="blue_soldiers" text="0"></Text>
+                        <Text id="blue_soldiers" text="2"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image id="blue_icon_swords" image="icon_swords"></Image>
-                        <Text id="blue_swords" text="0"></Text>
+                        <Text id="blue_swords" text="5"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -238,11 +239,11 @@
                 <VerticalLayout class="section bg_blue">
                     <HorizontalLayout>
                         <Image image="icon_wizards"></Image>
-                        <Text id="blue_mages" text="0"></Text>
+                        <Text id="blue_mages" text="2"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image id="blue_icon_crystals" image="icon_crystals"></Image>
-                        <Text id="blue_crystals" text="0"></Text>
+                        <Text id="blue_crystals" text="5"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -252,11 +253,11 @@
                 <VerticalLayout class="section bg_black">
                     <HorizontalLayout>
                         <Image image="icon_wall"></Image>
-                        <Text id="blue_wall" text="0"></Text>
+                        <Text id="blue_wall" text="10"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image image="icon_castle"></Image>
-                        <Text id="blue_castle" text="0"></Text>
+                        <Text id="blue_castle" text="30"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -296,11 +297,11 @@
                 <VerticalLayout class="section bg_green">
                     <HorizontalLayout>
                         <Image image="icon_builders"></Image>
-                        <Text id="red_builders" text="0"></Text>
+                        <Text id="red_builders" text="2"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image id="red_icon_bricks" image="icon_bricks"></Image>
-                        <Text id="red_bricks" text="0"></Text>
+                        <Text id="red_bricks" text="5"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -310,11 +311,11 @@
                 <VerticalLayout class="section bg_red">
                     <HorizontalLayout>
                         <Image image="icon_soldiers"></Image>
-                        <Text id="red_soldiers" text="0"></Text>
+                        <Text id="red_soldiers" text="2"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image id="red_icon_swords" image="icon_swords"></Image>
-                        <Text id="red_swords" text="0"></Text>
+                        <Text id="red_swords" text="5"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -324,11 +325,11 @@
                 <VerticalLayout class="section bg_blue">
                     <HorizontalLayout>
                         <Image image="icon_wizards"></Image>
-                        <Text id="red_mages" text="0"></Text>
+                        <Text id="red_mages" text="2"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image id="red_icon_crystals" image="icon_crystals"></Image>
-                        <Text id="red_crystals" text="0"></Text>
+                        <Text id="red_crystals" text="5"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>
@@ -338,11 +339,11 @@
                 <VerticalLayout class="section bg_black">
                     <HorizontalLayout>
                         <Image image="icon_wall"></Image>
-                        <Text id="red_wall" text="0"></Text>
+                        <Text id="red_wall" text="10"></Text>
                     </HorizontalLayout>
                     <HorizontalLayout>
                         <Image image="icon_castle"></Image>
-                        <Text id="red_castle" text="0"></Text>
+                        <Text id="red_castle" text="30"></Text>
                     </HorizontalLayout>
                 </VerticalLayout>
             </Mask>

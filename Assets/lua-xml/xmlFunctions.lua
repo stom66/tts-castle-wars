@@ -26,9 +26,10 @@ function xml_update(player_color)
     --[[
         Called at the start of every turn for both players
         Loops through each of the player's stats shown in the XML panels and updates their values
-        Any values that change trigger the 
-
+        Any values that have changed trigger the difference to be shown
     --]]
+
+    if data.debug then log("xml_update triggered for player "..player_color) end
 
     --work out element id prefix
     local prefix = player_color:lower()
@@ -55,9 +56,8 @@ function xml_update(player_color)
     end
 
     --Update buff icons
-    local buffs = {"attack", "build", "defence", "resources"}
-    for _,buff in ipairs(buffs) do
-        UI.setAttribute(prefix.."_buff_"..buff, "color", xml_buffToColor(data[player_color]["buff_"..buff]))
+    for buff,value in ipairs(data[player_color].buff) do
+        UI.setAttribute(prefix.."_buff_"..buff, "color", xml_buffToColor(value))
     end
 
     --Update resource Icons (all_produce)
