@@ -17,7 +17,9 @@ function onObjectEnterScriptingZone(zone, obj)
             function() 
                 player_playCard(obj, owner)
             end,
-            function() return obj.resting end)
+            function() 
+                return (obj.resting and not obj.held_by_color)
+            end)
     end
 end
 

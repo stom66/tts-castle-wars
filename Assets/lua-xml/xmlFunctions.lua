@@ -8,8 +8,9 @@ function xml_updateCastleHeight(player, value, id)
         Only used when the XML slider inputs are enabled to allow manually changing the castle height
     --]]
     data.Blue.castle = tonumber(value)
-    log("Updating castle to height "..value)
     updateCastleHeight("Blue")
+
+    if data.debug then log("Updating castle to height "..value) end
 end
 
 function xml_updateWallHeight(player, value, id)
@@ -18,8 +19,9 @@ function xml_updateWallHeight(player, value, id)
         Only used when the XML slider inputs are enabled to allow manually changing the wall height
     --]]
     data.Blue.wall = tonumber(value)
-    log("Updating wall to height "..value)
     updateWallHeight("Blue")
+
+    if data.debug then log("Updating wall to height "..value) end
 end
 
 function xml_update(player_color)
@@ -29,7 +31,7 @@ function xml_update(player_color)
         Any values that have changed trigger the difference to be shown
     --]]
 
-    if data.debug then log("xml_update triggered for player "..player_color) end
+    if data.debug then log("xml_update("..player_color..")") end
 
     --work out element id prefix
     local prefix = player_color:lower()

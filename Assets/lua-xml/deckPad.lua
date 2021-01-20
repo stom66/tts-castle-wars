@@ -95,7 +95,9 @@ function deckpad_findDeck(obj, clickee)
 
     --work out the deck pads owner
     local owner = deckpad_getOwner(obj)
-    log("Deck pad owner: "..owner)
+    if data.debug then
+        log("deckpad_findDeck("..obj.getGUID()..", "..clickee..")")
+    end
 
     --check if the action was performed by the right user, or if we're in debug
     if clickee ~= owner and not debug then

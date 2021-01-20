@@ -23,6 +23,7 @@ function lang_getStrings()
         game_won                 = "Congratulations! You have won the game!",
         max_discards_reached     = "You can only discard "..data.max_discard_per_turn.." cards per turn",
         not_your_turn            = "It is not your turn! Wait for the other player to finish their turn",
+        player_discarded_cards   = function(p, i) return Player[p].steam_name.." discarded "..i.." cards" end,
         too_many_duplicate_cards = function(s) return "You have too many '"..s.."' cards. The maximum is "..data.max_card_duplicates end,
     }
 end

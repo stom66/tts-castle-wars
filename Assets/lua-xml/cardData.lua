@@ -133,7 +133,7 @@ function card_getDataTable()
         cost   = {20, 10, 0, 0},
         action = "attack",
         value  = 30,
-        delay  = 3.5
+        delay  = 3.0
     }
     t[148905]  = {
         name   = "Conjure Wall",
@@ -279,7 +279,7 @@ function card_getDataTable()
         value  = 27
     }
     t[149205]  = {
-        name   = "Ram Attack",
+        name   = "Ballista",
         cost   = {4, 0, 4, 0},
         action = "attack",
         delay  = 3.5,

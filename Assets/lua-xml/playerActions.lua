@@ -241,9 +241,9 @@ function player_checkCardsInHand(player_color)
 
     local missing = data.max_cards_in_hand - #hand_objs
     if missing > 0 then
-        log("Player hand "..player_color.." is missing "..missing.." cards")
+        if data.debug then log("player_checkCardsInHand("..player_color.."): is missing "..missing.." cards") end
         player_dealCards(player_color, missing)
     elseif missing < 0 then
-        log("Player hand "..player_color.." has "..math.abs(missing).." extra cards!")
+        if data.debug then log("player_checkCardsInHand("..player_color.."): has "..math.abs(missing).." extra cards!") end
     end
 end

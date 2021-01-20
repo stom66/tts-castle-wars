@@ -76,7 +76,7 @@ function updateCastleHeight(player_color, delay, skip_animation)
         It uses a series of breakpoints for minimum height for both objects and raises/lowers the
         parts according to the data for each players' wall and castle levels
     --]]
-    
+
     --local reference to castle height
     local height = data[player_color].castle
           delay  = tonumber(delay) or 0
@@ -117,11 +117,14 @@ function updateCastleHeight(player_color, delay, skip_animation)
 
         --compare the old height to new height and play the right animation
         if not skip_animation then
-            log("Castle height old/new: "..old_y_pos.." / "..new_y_pos)
             if new_y_pos > old_y_pos then  --going up
                 data[player_color].effects_castle_obj.AssetBundle.playTriggerEffect(1)
             elseif new_y_pos < old_y_pos then  --going down
                 data[player_color].effects_castle_obj.AssetBundle.playTriggerEffect(0)
+            end
+
+            if data.debug then 
+                log("updateCastleHeight("..player_color..", "..delay..", "..tostring(skip_animation).."): Castle height changed "..old_y_pos.." to "..new_y_pos) 
             end
         end
 

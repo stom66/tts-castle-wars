@@ -35,7 +35,6 @@ function player_defaultStats()
         },
 
         --gameplay data
-        --deck_valid     = false, --used to check if the player has a valid deck and trigger the game start
         action_taken   = false, --simple flag to prevent playing multiple cards
         all_produce    = false, --flag to denote resource production buffs
 
@@ -91,8 +90,6 @@ function player_canAffordCard(player_color, cardId)
         --log("Card costs: "..cards[cardId].cost[1].." bricks, ".. cards[cardId].cost[2].." crystals, ".. cards[cardId].cost[3].." swords")
         --log("Checking if player "..player_color.." can afford card "..cardId)
     end
-
-
 
     if data[player_color].bricks < cards[cardId].cost[1]
     or data[player_color].crystals < cards[cardId].cost[2]

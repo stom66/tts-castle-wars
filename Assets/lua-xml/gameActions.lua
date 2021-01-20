@@ -26,16 +26,13 @@ function game_end()
 
     --send messages
     if winner and loser then
-        if Player[winner].seated then
-            broadcastToColor(lang.game_won, winner, "Green")
-        else
-            print(winner..": "..lang.game_won)
-        end
-        if Player[loser].seated then
-            broadcastToColor(lang.game_lost, loser, "Red")
-        else
-            print(loser..": "..lang.game_lost)
-        end
+        --second alert to players
+        bToColor(lang.game_won, winner, "Green")
+        bToColor(lang.game_lost, winner, "Red")
+
+        --trigger the animations
+        triggerEffect(winner, "won")
+        triggerEffect(loser, "lost")
     end
 
     --return all cards in hand to decks and unlock decks

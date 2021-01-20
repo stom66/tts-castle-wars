@@ -20,7 +20,7 @@ function card_addToDeck(card, deck)
         expects both params to be obj references
      --]]
 
-    if data.debug then log("Attempting to putObject "..card.getGUID().." into deck "..deck.getGUID()) end
+    if data.debug then log("card_addToDeck(): returning card "..card.getGUID().." to deck "..deck.getGUID()) end
 
     --unlock the deck and return the card
     deck.interactable = true
@@ -47,17 +47,7 @@ function cards_updateScales(player_color)
     if data.game_state ~= "active" or player_color=="" then return false end
 
     --Get a table of all cards in the players hand
-
-    if data.debug then
-        log("cards_updateScales: "..player_color)
-        log("handzone GUID: "..data[player_color].handzone_obj.getGUID())
-    end
     local cards = data[player_color].handzone_obj.getObjects()
-
-
-
-    --log("cards_updateScales for player "..player_color.." found "..#cards.." cards in hand")
-    --log(cards)
 
     --Loop though, adjusting scale of each card in hand
     for _,card in ipairs(cards) do

@@ -42,12 +42,11 @@ function loadSave(saved_data)
         Checks it for validity and recreates object references from GUIDs
     --]]
 
-    local json = JSON.decode(saved_data)
-
     if data.debug then
-        log("loadSave triggered with data:")
-        log(json)
+        log("loadSave() triggered with data: "..saved_data)
     end
+
+    local json = JSON.decode(saved_data)
 
     if json then
         if json.game_state then data.game_state = json.game_state end
@@ -55,7 +54,6 @@ function loadSave(saved_data)
 
         if json.Blue then data.Blue = saveData_parsePlayerData(json.Blue) end
         if json.Red then data.Red   = saveData_parsePlayerData(json.Red) end
-
     end
 
     data.loading = false

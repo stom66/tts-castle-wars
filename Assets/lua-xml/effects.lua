@@ -24,17 +24,14 @@ function triggerEffect(player_color, name)
     local assBun   = data[player_color].effects_obj.AssetBundle
     local target   = playerOpponent(player_color)
 
-    log("Attempting to find trigger effect: "..name)
+    if data.debug then log("triggerEffect("..player_color..", "..name..")") end
 
     --loop through the list of possible triggers, searching for a name/name+suffix match
     for _,v in ipairs(assBun.getTriggerEffects()) do
         if v.name == name or
         (v.name == name.."_castle" and data[target].wall < 1) or
         (v.name == name.."_wall" and data[target].wall > 0) then
-            if data.debug then 
-                log("Found trigger: "..v.name..", playing")
-            end
- 
+            if data.debug then log("triggerEffect(): Found suitable trigger trigger: "..v.name) end
             assBun.playTriggerEffect(v.index)
             return true
         end

@@ -68,7 +68,7 @@ function turn_start(player_color)
 
     --increment turn count
     data.turn_count = data.turn_count + 1
-    log("Turn "..data.turn_count.." has started")
+    if data.debug then log("turn_start("..player_color.."): turn "..data.turn_count.." has started") end
 
     --increment resources, but only after each player's first turen
     if data.turn_count > 2 then
@@ -134,6 +134,11 @@ function turn_end(player_color)
 
     --abort if the game isn't in progress
     if data.game_state ~= "active" then return false end
+
+    --if the previous player discarded cards then broadcast that
+    if data[player_color].discards > 0 then
+        bToAll(lang.player_discarded_cards(player_color, data[player_color].discards), player_color)
+    end
 
     --reset discard count and action_taken flag
     data[player_color].action_taken = false

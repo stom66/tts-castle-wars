@@ -45,7 +45,7 @@ function deck_unlockDeck(obj, player_color, alt_click)
     if not data[player_color].deck_locked then return false end
 
     if data.game_state == "active" then
-        if data.debug then log("Player "..player_color.." unlocked their deck. Stoping the game") end
+        if data.debug then log("deck_unlockDeck(): Player "..player_color.." unlocked their deck. Triggering game_stop()") end
         game_stop()
     end
 
@@ -73,7 +73,7 @@ function deck_spawnDeck(i, player_color)
         Then we cycle through that cloned deck and remove the cards needed to match the requested deck
     --]]
 
-    if data.debug then log("Spawning new deck "..decks.names[i].." for player "..player_color) end
+    if data.debug then log("deck_spawnDeck("..decks.names[i]..", "..player_color..")") end
 
     --get a reference to the deckpad obj
     local obj = data[player_color].deck_pad_obj
@@ -134,6 +134,7 @@ function deck_checkDeck(obj, player_color)
     --read and count cards in the deck
     local cards = obj.getData().ContainedObjects
     if #cards > data.max_cards_in_deck then
+        if data.debug then log("deck_checkDeck("..#cards..", "..player_color.."): failed, too many cards") end
         bToColor(lang.deck_too_large, player_color, "Red")
         return false
     end
@@ -149,10 +150,12 @@ function deck_checkDeck(obj, player_color)
             cardCount[cardId] = 1
         end
         if cardCount[cardId] > data.max_card_duplicates then
+            if data.debug then log("deck_checkDeck("..#cards..", "..player_color.."): failed, too many duplicated of Card ID: "..cardId.." "..card_getName(cardId)) end
             bToColor(lang.too_many_duplicate_cards(card_getName(cardId)), player_color, "Red")
             return false
         end
     end
+    if data.debug then log("deck_checkDeck("..#cards..", "..player_color.."): valid") end
 
     --if we reach this point it's a valid deck
     data[player_color].deck_valid = true
