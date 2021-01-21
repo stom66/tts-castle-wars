@@ -1061,7 +1061,7 @@ MonoBehaviour:
       AnimationName: 
     Animator:
       AnimatorComponent: {fileID: 1503236427486525473}
-      StateName: Roadblock Remote
+      StateName: Roadblock Remove
     Duration: 11
 --- !u!1001 &128906655374488593
 PrefabInstance:
@@ -2818,22 +2818,22 @@ PrefabInstance:
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029504295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
@@ -2848,7 +2848,7 @@ PrefabInstance:
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180.00002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 461631267575980815, guid: e9657162edd527841936b7e14773fab5,
         type: 3}
@@ -4199,22 +4199,22 @@ PrefabInstance:
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029504295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
@@ -4229,7 +4229,7 @@ PrefabInstance:
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180.00002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1864229402680381773, guid: a2b4c45d6e0fb6b45beb3d2b3736e0fa,
         type: 3}
