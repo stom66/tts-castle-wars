@@ -223,7 +223,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 0}
       StateName: 
-    Duration: 8
+    Duration: 6
   - Name: bomb_wall
     GameObjects:
     - gameObject: {fileID: 3933212448503656945}
