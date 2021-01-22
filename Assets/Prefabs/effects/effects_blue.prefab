@@ -210,7 +210,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: ram_attack_wall
+  - Name: ballista_wall
     GameObjects:
     - gameObject: {fileID: 8950491743215087261}
     Particles: []
@@ -825,7 +825,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: ram_castle
+  - Name: ballista_castle
     GameObjects:
     - gameObject: {fileID: 6530205864800791914}
     Particles: []
@@ -1007,7 +1007,7 @@ MonoBehaviour:
       AnimatorComponent: {fileID: 0}
       StateName: 
     Duration: 8
-  - Name: magic_defense
+  - Name: magic_defence
     GameObjects:
     - gameObject: {fileID: 566578649493766290}
     Particles: []
