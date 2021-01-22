@@ -171,11 +171,7 @@ function player_playCard(card, player_color)
     end
 
     -- Player played a valid card
-    if Player[player_color].seated then
-        broadcastToAll(lang.card_played(Player[player_color].steam_name, cards[cardId].name), player_color)
-    else
-        print(lang.card_played(Player[player_color].steam_name, cards[cardId].name))
-    end
+    bToAll(lang.card_played(Player[player_color].steam_name, cards[cardId].name), player_color)
 
     -- Trigger the animation for the card
     triggerEffect(player_color, cards[cardId].name)
@@ -213,7 +209,7 @@ end
 function player_returnCardsToDeck(player_color)
     --check we got a valid player_color
     if not player_color or player_color == "" then return false end
-    
+
     local deck = data[player_color].deck_obj
     local cards = data[player_color].handzone_obj.getObjects()
     for _,card in ipairs(cards) do

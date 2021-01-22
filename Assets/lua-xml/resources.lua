@@ -27,13 +27,13 @@ end
 function updateWallHeight(player_color, delay, skip_animation)
     --[[
         Updates the wall's position based on the current size
-        TODO: Also triggers the wall animation (particle effects)
+        Also updates the gate position if the height has changed from/to 0
     --]]
+          delay           = tonumber(delay) or 0
     local wall_increment  = 0.15
     local wall_min_height = 5
     local wall_position   = data[player_color].wall_obj.getPosition()
     local gate_position   = data[player_color].gate_obj.getPosition()
-          delay           = tonumber(delay) or 0
 
     --store the old height for checking changes
     local old_y_pos = math.round(wall_position.y, 2)
@@ -46,7 +46,6 @@ function updateWallHeight(player_color, delay, skip_animation)
         wall_position:setAt("y", wall_min_height + (data[player_color].wall * wall_increment))
         gate_position:setAt("y", 4)
     end
-
 
     --move the wall and gate to the new heights, after delay if provided
     Wait.time(function()
@@ -62,8 +61,7 @@ function updateWallHeight(player_color, delay, skip_animation)
             end
         end
         Wait.time(function()
-            --set the position of the base and tower after 1 second, to allow 
-            --first part of above animation to play
+            --set the position of the base and tower after 1 second, to allow first part of above animation to play
             data[player_color].wall_obj.setPositionSmooth(wall_position)
             data[player_color].gate_obj.setPositionSmooth(gate_position)
         end, 1)
@@ -80,11 +78,6 @@ function updateCastleHeight(player_color, delay, skip_animation)
     --local reference to castle height
     local height = data[player_color].castle
           delay  = tonumber(delay) or 0
-
-    --check for win/loss criteria
-    if height >= 100 or height < 1 then
-        game_end()
-    end
 
     --define table of possible heights for the base & tower
     local base_steps  = {0, 10.5, 15, 17}
@@ -123,16 +116,21 @@ function updateCastleHeight(player_color, delay, skip_animation)
                 data[player_color].effects_castle_obj.AssetBundle.playTriggerEffect(0)
             end
 
-            if data.debug then 
-                log("updateCastleHeight("..player_color..", "..delay..", "..tostring(skip_animation).."): Castle height changed "..old_y_pos.." to "..new_y_pos) 
+            if data.debug then
+                log("updateCastleHeight("..player_color..", "..delay..", "..tostring(skip_animation).."): Castle height changed "..old_y_pos.." to "..new_y_pos)
             end
         end
 
         Wait.time(function()
-            --set the position of the base and tower after 1 second, to allow 
+            --set the position of the base and tower after 1 second, to allow
             --first part of above animation to play
             data[player_color].castle_base_obj.setPositionSmooth(base_position)
             data[player_color].castle_tower_obj.setPositionSmooth(tower_position)
         end, 1)
     end, delay)
+
+    --check for win/loss criteria
+    if height >= 100 or height < 1 then
+        game_end()
+    end
 end
