@@ -6,4 +6,4 @@ This project should be loaded into Unity and contains the various assets, cards 
 
 For more information on how to play please see the wiki:
 
-## (Visit the Wiki)[https://bitbucket.org/searangerstom/tts-castle-wars/wiki/
+## [Visit the Wiki](https://bitbucket.org/searangerstom/tts-castle-wars/wiki/)
