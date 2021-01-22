@@ -390,5 +390,7 @@ function card_getDataTable()
         delay  = 0.25,
         value  = 6
     }
+
+    if data.debug then log("card_getDataTable(): returned "..#t.." results", nil, "info") end
     return t
 end

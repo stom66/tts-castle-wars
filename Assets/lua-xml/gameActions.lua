@@ -6,11 +6,13 @@
 --]]
 
 function game_stop()
+    if data.debug then log("game_stop()") end
     broadcastToAll(lang.game_stopped, "Yellow")
     game_end()
 end
 
 function game_end()
+    if data.debug then log("game_end()") end
 
     --update game state
     data.game_state = "ended"
@@ -28,7 +30,7 @@ function game_end()
     if winner and loser then
         --second alert to players
         bToColor(lang.game_won, winner, "Green")
-        bToColor(lang.game_lost, winner, "Red")
+        bToColor(lang.game_lost, loser, "Red")
 
         --trigger the animations
         triggerEffect(winner, "won")

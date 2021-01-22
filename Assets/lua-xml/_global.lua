@@ -106,5 +106,6 @@ require("tts-castle-wars/Assets/lua-xml/xmlFunctions")
 require("tts-castle-wars/Assets/lua-xml/zoneActions")
 
 --utility stuff
+require("tts-castle-wars/Assets/lua-xml/obj")
 require("tts-castle-wars/Assets/lua-xml/math")
 require("tts-castle-wars/Assets/lua-xml/table")

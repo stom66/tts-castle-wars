@@ -1,14 +1,40 @@
 function checkForDebug()
-    --[[ 
-        Simple function to enable debug and logging when a dev is hosting the game 
+    --[[
+        Simple function to enable debug and logging when a dev is hosting the game
     --]]
+
     for _,color in ipairs(getSeatedPlayers()) do
-        local player = Player[color]
-        if (tonumber(player.steam_id) == 76561198007319873 and player.host) or --stom
-           (tonumber(player.steam_id) == 76561198445295410 and player.host) then --searanger
+        local sid = tonumber(Player[color].steam_id)
+
+        --loop thorugh seated players, comparing Steam IDs, looking for either of the devs
+        if Player[color].host and (sid == 76561198007319873 or sid == 76561198445295410) then
+
+            --enable debug mode
             data.debug = true
-            broadcastToAll("Dev detected. Debug enabled.", "Green")
+
+            --set some logging styles
+            setLogStyles()
+
+            --alert the players that debug is enabled
+            bToAll("Dev detected. Debug enabled.", "Green")
             return
         end
     end
 end
+
+function setLogStyles()
+    --table of logging styles
+    local styles = {
+        --tag, tint, prefix, postfix
+        {"error", "Orange"},
+        {"info",  "Teal"},
+        {"Red",   "Red"},
+        {"Blue",  "Blue"},
+    }
+    for _,v in ipairs(styles) do
+        logStyle(v[1], v[2], v[3], v[4])
+    end
+
+    log("setLogStyles(): enabled", nil, "info")
+end
+

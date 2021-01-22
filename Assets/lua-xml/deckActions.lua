@@ -10,6 +10,8 @@ function deck_lockDeck(player_color, obj)
         Sets deck_locked to true and updates the deck_obj ref
     --]]
 
+    if data.debug then log("deck_lockDeck("..player_color..", "..obj.getGUID()..")", nil, "info") end
+
     --ignore if the deck is already locked
     if data[player_color].deck_locked then return false end
 
@@ -38,14 +40,14 @@ function deck_unlockDeck(obj, player_color, alt_click)
 
     --determine who owns the deckpad that was clicked
     if obj then
-        player_color = deckpad_getOwner(obj)
+        player_color = obj_getOwner(obj)
     end
 
     --check the deck was locked. if not, abort. shouldn't happen but eh, what do i know?
     if not data[player_color].deck_locked then return false end
 
     if data.game_state == "active" then
-        if data.debug then log("deck_unlockDeck(): Player "..player_color.." unlocked their deck. Triggering game_stop()") end
+        if data.debug then log("deck_unlockDeck(): Player "..player_color.." unlocked their deck. Triggering game_stop()", nil, "info") end
         game_stop()
     end
 
@@ -61,7 +63,10 @@ function deck_unlockDeck(obj, player_color, alt_click)
         data[player_color].deck_obj.setLock(false)
         data[player_color].deck_obj.interactable = true
         deckpad_drawButtons(player_color)
+
+        if data.debug then log("deck_unlockDeck("..obj.getGUID()..", "..player_color..") unlocked", nil, "info") end
     else
+        if data.debug then log("deck_unlockDeck("..obj.getGUID()..", "..player_color..") couldn't unlock, no deck_obj", nil, "error") end
         print("Can't unlock deck for owner "..player_color..", no deck_obj registered")
     end
 end
@@ -73,7 +78,7 @@ function deck_spawnDeck(i, player_color)
         Then we cycle through that cloned deck and remove the cards needed to match the requested deck
     --]]
 
-    if data.debug then log("deck_spawnDeck("..decks.names[i]..", "..player_color..")") end
+    if data.debug then log("deck_spawnDeck("..decks.names[i]..", "..player_color..")", nil, player_color) end
 
     --get a reference to the deckpad obj
     local obj = data[player_color].deck_pad_obj
@@ -131,31 +136,48 @@ function deck_checkDeck(obj, player_color)
         a valid deck results in the round countdown being triggered
     --]]
 
-    --read and count cards in the deck
+    --get table of cards in the decks
     local cards = obj.getData().ContainedObjects
+
+    --check total card in deck doesn't exceed max_cards_in_deck
     if #cards > data.max_cards_in_deck then
-        if data.debug then log("deck_checkDeck("..#cards..", "..player_color.."): failed, too many cards") end
+        --too many cards in the deck, alert and abort
         bToColor(lang.deck_too_large, player_color, "Red")
+
+        if data.debug then
+            log("deck_checkDeck("..#cards..", "..player_color.."): failed, too many cards", nil, player_color)
+        end
         return false
     end
 
     --check counts of individual cards does not exceed max_card_duplicates
     local cardCount = {}
-    local cardId
-    for i,v in ipairs(cards) do
-        cardId = v.CardID
-        if cardCount[cardId] then
-            cardCount[cardId] = cardCount[cardId] + 1
+    local id
+    for _,v in ipairs(cards) do
+        id = v.CardID
+        if cardCount[id] then
+            --if we have an existing count for this id then increment it by one
+            cardCount[id] = cardCount[id] + 1
+
+            --check we don't have too many of this card
+            if cardCount[id] > data.max_card_duplicates then
+                --too many duplicates of one card, alert the user and abort
+                bToColor(lang.too_many_duplicate_cards(card_getName(id)), player_color, "Red")
+
+                if data.debug then
+                    log("deck_checkDeck("..#cards..", "..player_color.."): failed, too many duplicated of Card ID: "..id.." "..card_getName(id), nil, player_color)
+                end
+
+                return false
+            end
         else
-            cardCount[cardId] = 1
-        end
-        if cardCount[cardId] > data.max_card_duplicates then
-            if data.debug then log("deck_checkDeck("..#cards..", "..player_color.."): failed, too many duplicated of Card ID: "..cardId.." "..card_getName(cardId)) end
-            bToColor(lang.too_many_duplicate_cards(card_getName(cardId)), player_color, "Red")
-            return false
+            --we don't have a count yet for this card ID, so intitialise one
+            cardCount[id] = 1
         end
     end
-    if data.debug then log("deck_checkDeck("..#cards..", "..player_color.."): valid") end
+    if data.debug then
+        log("deck_checkDeck("..#cards..", "..player_color.."): valid", nil, player_color)
+    end
 
     --if we reach this point it's a valid deck
     data[player_color].deck_valid = true

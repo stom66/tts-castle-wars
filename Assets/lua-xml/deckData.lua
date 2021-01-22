@@ -3,10 +3,13 @@ function deck_getDataTable()
         This function returns the data for all the spawnable decks
         Indexes must match the card IDs as they appear in the save file.
     --]]
-    
+
+    --define deck names
     local names = {
         "Stock", "Full", "Stock Plus"
     }
+
+    --define card counts for the decks
     local cards = {}
     cards[148900] = {4, 5, 4}
     cards[148901] = {4, 5, 4}
@@ -63,6 +66,11 @@ function deck_getDataTable()
     cards[149112] = {3, 5, 3}
     cards[149208] = {0, 5, 2}
     cards[149113] = {2, 5, 2}
+
+    if data.debug then
+        log("deck_getDataTable(): returned "..#names.." combinations of decks from "..#cards.." cards", nil, "info")
+    end
+
     return {
         names = names,
         cards = cards

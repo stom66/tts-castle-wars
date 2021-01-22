@@ -6,12 +6,18 @@
 --]]
 
 function addResources(player_color, resources)
+    --[[
+        Adds resources to a player's inventory
+    --]]
     data[player_color].bricks   = math.max(0, data[player_color].bricks + resources[1])
     data[player_color].crystals = math.max(0, data[player_color].crystals + resources[2])
     data[player_color].swords   = math.max(0, data[player_color].swords + resources[3])
 end
 
 function removeResources(player_color, resources)
+    --[[
+        Removes resources from a player's inventory
+    --]]
     data[player_color].bricks   = math.max(0, data[player_color].bricks - resources[1])
     data[player_color].crystals = math.max(0, data[player_color].crystals - resources[2])
     data[player_color].swords   = math.max(0, data[player_color].swords - resources[3])
@@ -20,6 +26,9 @@ end
 
 
 function updateBuildingHeights(player_color, delay, skip_animation)
+    --[[
+        Wrapper function to update the height of both the Wall and the Castle, usually triggered by an attack
+    --]]
     updateWallHeight(player_color, delay, skip_animation)
     updateCastleHeight(player_color, delay, skip_animation)
 end
@@ -28,6 +37,8 @@ function updateWallHeight(player_color, delay, skip_animation)
     --[[
         Updates the wall's position based on the current size
         Also updates the gate position if the height has changed from/to 0
+        Stores the current height to compare it to the new height and only 
+        triggers the Wall assetbundle if the value has changed
     --]]
           delay           = tonumber(delay) or 0
     local wall_increment  = 0.15
@@ -49,7 +60,9 @@ function updateWallHeight(player_color, delay, skip_animation)
 
     --move the wall and gate to the new heights, after delay if provided
     Wait.time(function()
-        --compare the old height to new height and play the right animation
+        --compare the old height to new height and play the right animation unless
+        --the animation is being skipped (because of Guards or Conjure Wall, for example)
+
         if not skip_animation then
             local new_y_pos = math.round(wall_position.y, 2)
             if new_y_pos > old_y_pos then
@@ -60,8 +73,9 @@ function updateWallHeight(player_color, delay, skip_animation)
                 data[player_color].effects_wall_obj.AssetBundle.playTriggerEffect(0)
             end
         end
+
+        --set the position of the wall and gate after 1 second, to allow dust part of above animation to play
         Wait.time(function()
-            --set the position of the base and tower after 1 second, to allow first part of above animation to play
             data[player_color].wall_obj.setPositionSmooth(wall_position)
             data[player_color].gate_obj.setPositionSmooth(gate_position)
         end, 1)

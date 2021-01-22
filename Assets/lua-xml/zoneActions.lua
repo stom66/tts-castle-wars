@@ -6,7 +6,7 @@
 function onObjectEnterScriptingZone(zone, obj)
     --get the zone owner
     local wait_id = zone.getGUID()..obj.getGUID()
-    local owner   = zone_getOwner(zone.guid)
+    local owner   = obj_getOwner(zone)
 
     --ignore zones that don't belong to anyone (can't really happen unless someone messes with a zone, but ok)
     if not owner then return false end
@@ -30,14 +30,6 @@ function onObjectLeaveScriptingZone(zone, obj)
         if data.debug then log("Cancelling current wait") end
         Wait.stop(zoneWaits[wait_id])
     end
-end
-
-function zone_getOwner(zone_guid)
-    if zone_guid == data.Blue.zone_obj.getGUID() then
-        return "Blue"
-    elseif zone_guid == data.Red.zone_obj.getGUID() then
-        return "Red"
-    else return false end
 end
 
 function zone_containsObject(obj, zone)

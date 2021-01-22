@@ -20,7 +20,7 @@ function card_addToDeck(card, deck)
         expects both params to be obj references
      --]]
 
-    if data.debug then log("card_addToDeck(): returning card "..card.getGUID().." to deck "..deck.getGUID()) end
+    if data.debug then log("card_addToDeck(): returning card "..card.getGUID().." to deck "..deck.getGUID(), "info") end
 
     --unlock the deck and return the card
     deck.interactable = true
