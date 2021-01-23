@@ -18,3 +18,15 @@ function table.merge(t1, t2)
     end
     return t1
 end
+
+function table.clone(t1)
+    local t2 = {}
+    for k,v in pairs(t1) do
+        if type(v) == "Table" then
+            t2[k] = table.clone(v)
+        else
+            t2[k] = v
+        end
+    end
+    return t2
+end

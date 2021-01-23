@@ -28,8 +28,8 @@ function setLogStyles()
         --tag, tint, prefix, postfix
         {"error", "Orange"},
         {"info",  "Teal"},
-        {"Red",   "Red"},
-        {"Blue",  "Blue"},
+        {"red",   "Red"},
+        {"blue",  "Blue"},
     }
     for _,v in ipairs(styles) do
         logStyle(v[1], v[2], v[3], v[4])

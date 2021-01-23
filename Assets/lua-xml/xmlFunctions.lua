@@ -10,7 +10,9 @@ function xml_updateCastleHeight(player, value, id)
     data.Blue.castle = tonumber(value)
     updateCastleHeight("Blue")
 
-    if data.debug then log("Updating castle to height "..value, "xml_updateCastleHeight", "info") end
+    if data.debug then
+        log("Updating castle to height "..value, "xml_updateCastleHeight", "info")
+    end
 end
 
 function xml_updateWallHeight(player, value, id)
@@ -21,7 +23,9 @@ function xml_updateWallHeight(player, value, id)
     data.Blue.wall = tonumber(value)
     updateWallHeight("Blue")
 
-    if data.debug then log("Updating wall to height "..value, "xml_updateWallHeight", "info") end
+    if data.debug then
+        log("Updating wall to height "..value, "xml_updateWallHeight", "info")
+    end
 end
 
 function xml_update(player_color)
@@ -31,7 +35,9 @@ function xml_update(player_color)
         Any values that have changed trigger the difference to be shown
     --]]
 
-    if data.debug then log("xml_update("..player_color..")", nil, "info") end
+    if data.debug then
+        log("xml_update("..player_color..")", nil, player_color)
+    end
 
     --work out element id prefix
     local prefix = player_color:lower()
@@ -105,6 +111,6 @@ function xml_resToColor(all_produce, resource)
     elseif all_produce == "none" then
         return ("#333333")
     else
-        return ("#ffffff")
+        return ("#eeeeee")
     end
 end

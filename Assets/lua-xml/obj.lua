@@ -2,6 +2,20 @@
     Misc function for dealing with objects
 --]]
 
+
+function onObjectSpawn(obj)
+    --[[
+        Adds suitable context menu items to Cards when they are spawned. 
+        Ignores non-card objects.
+    --]]
+
+    if obj.tag == "Card" then
+        obj.addContextMenuItem("Play Card", trigger_playCard)
+        obj.addContextMenuItem("Discard Card", trigger_discardCard)
+    end
+end
+
+
 function obj_getOwner(obj)
     --[[
         Works out which Player Color owns a particular object, based on it's GUID

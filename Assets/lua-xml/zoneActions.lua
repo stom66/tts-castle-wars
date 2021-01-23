@@ -12,7 +12,7 @@ function onObjectEnterScriptingZone(zone, obj)
     if not owner then return false end
 
     --ignore anything that isn't a card
-    if obj and obj.tag=="Card" then
+    if obj and obj.tag=="Card" and zone==data[owner].playzone_obj then
         zoneWaits[wait_id] = Wait.condition(
             function() 
                 player_playCard(obj, owner)

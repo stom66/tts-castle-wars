@@ -20,7 +20,7 @@ function turn_next()
     if data.game_state ~= "active" then return false end
 
     --manually advance to the next players turn
-    Turns.turn_color = playerOpponent(Turns.turn_color)
+    Turns.turn_color = player_opponent(Turns.turn_color)
 end
 
 function onPlayerTurn(player)
@@ -32,24 +32,24 @@ function onPlayerTurn(player)
             - the above function turn_next()
     --]]
 
+    --abort if the game isn't in progress
+    if data.game_state ~= "active" then return false end
+
     --stop the next_turn from triggering if there's not a valid players turn being taken
     if not player.color or player.color == "" then
-        if data.debug then log("onPlayerTurn(player): player was nil or blank") end
+        if data.debug then log("onPlayerTurn(player): player was nil or blank", nil, "error") end
 
         print("A player unlocked their deck! Aborting.")
         game_stop()
         return false
     end
 
-    --abort if the game isn't in progress
-    if data.game_state ~= "active" then return false end
-
     -- Trigger the "turn_start" for the current player
     turn_start(player.color)
 
     -- Trigger "turn end" for the previous player if appropriate
     if data.turn_count > 1 then
-        turn_end(playerOpponent(player.color))
+        turn_end(player_opponent(player.color))
     end
 end
 
@@ -146,7 +146,7 @@ function turn_end(player_color)
 
     --if the player has a buff "none", eg roadblock is in action, trigger the removal of the roadblock animation and clear their buff
     if data[player_color].all_produce == "none" then
-        triggerEffect(playerOpponent(player_color), "roadblock_off")
+        triggerEffect(player_opponent(player_color), "roadblock_off")
         data[player_color].all_produce = false
     end
 

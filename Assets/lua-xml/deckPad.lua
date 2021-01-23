@@ -58,7 +58,7 @@ function deckpad_drawButtons(player_color)
             btn.label          = v
             obj.createButton(btn)
 
-            _G["deck_spawnDeck_"..player_color..i] = function(obj, player_color, id)
+            _G["deck_spawnDeck_"..player_color..i] = function(obj, clickee, id)
                 data[player_color].show_deck_menu = false
                 deckpad_drawButtons(player_color)
                 deck_spawnDeck(i, player_color)

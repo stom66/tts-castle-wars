@@ -6,8 +6,8 @@ function onSave()
     local save     = {
         game_state = data.game_state,
         turn_count = data.turn_count,
-        Blue       = saveData_readPlayerData("Blue"),
-        Red        = saveData_readPlayerData("Red"),
+        Blue       = saveData_returnPlayerData("Blue"),
+        Red        = saveData_returnPlayerData("Red"),
     }
     local json = JSON.encode(save)
 
@@ -19,7 +19,7 @@ function onSave()
     return json
 end
 
-function saveData_readPlayerData(player_color)
+function saveData_returnPlayerData(player_color)
     --[[
         Reads through the data stored for each player and converts obj references to GUIDs
     --]]

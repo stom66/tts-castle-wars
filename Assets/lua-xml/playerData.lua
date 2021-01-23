@@ -60,7 +60,7 @@ function player_objReferences(player_color)
         tower_obj          = getObjectFromGUID(prefix.."005"),
         gate_obj           = getObjectFromGUID(prefix.."006"),
         deck_pad_obj       = getObjectFromGUID(prefix.."007"),
-        zone_obj           = getObjectFromGUID(prefix.."008"),
+        playzone_obj       = getObjectFromGUID(prefix.."008"),
         play_pad_obj       = getObjectFromGUID(prefix.."009"),
         castle_tower_obj   = getObjectFromGUID(prefix.."010"),
         flag1_obj          = getObjectFromGUID(prefix.."011"),
@@ -100,7 +100,7 @@ function player_canAffordCard(player_color, cardId)
     end
 end
 
-function playerOpponent(player_color)
+function player_opponent(player_color)
     --[[
         Simple function to get the opposite player of the one supplied
     --]]
@@ -109,4 +109,23 @@ function playerOpponent(player_color)
     else
         return "Blue"
     end
+end
+
+function player_isValid(player_color)
+    --[[
+        Simple function to check if the player_color provided is a valid
+        player colour, eg Blue or Red
+    --]]
+    if player_color:lower() == "red" or player_color:lower() == "blue" then
+        return true
+    else
+        return false
+    end
+end
+
+function player_isSeated(player_color)
+    --[[
+        Wrapper function for Player[player_color].seated
+    --]]
+    return Player[player_color].seated
 end

@@ -20,7 +20,9 @@ function card_addToDeck(card, deck)
         expects both params to be obj references
      --]]
 
-    if data.debug then log("card_addToDeck(): returning card "..card.getGUID().." to deck "..deck.getGUID(), "info") end
+    if data.debug then 
+        log("card_addToDeck(): returning card "..card.getGUID().." to deck "..deck.getGUID(), nil, "info") 
+    end
 
     --unlock the deck and return the card
     deck.interactable = true
@@ -88,13 +90,13 @@ end
 function card_allProduce(player, value)
     local target = player
     if value == "none" then
-        target = playerOpponent(player)
+        target = player_opponent(player)
     end
     data[target].all_produce = value
 end
 
 function card_attack(player, damage, bypass_wall, delay)
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
 
     --check for attack buffs
     if data[player].buff.attack then
@@ -152,7 +154,7 @@ end
 function card_curse(player, value)
     --remove 1 of everything from the opponents and grant it to the player
     --applies to everything: resources, workers, castle and wall
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
 
     --steal workers
     card_stealWorker(player, {1, 1, 1})
@@ -172,7 +174,7 @@ end
 
 function card_removeBuff(player, value)
     --removes a buff from the other player
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
     if value=="all" then
         card_removeBuff(player, "build")
         card_removeBuff(player, "defence")
@@ -184,7 +186,7 @@ function card_removeBuff(player, value)
 end
 
 function card_removeResource(player, value)
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
 
     --check for the "protect resources" buff
     if data[target].buff.resources then
@@ -202,7 +204,7 @@ end
 function card_sabotage(player_color, value)
 
     --take all cards from targets hand and move them to behind our player's hand
-    local target = playerOpponent(player_color)
+    local target = player_opponent(player_color)
 
     --Check we've got a player in the seat
     if not Player[player_color].seated then
@@ -257,7 +259,7 @@ end
 
     function card_sabotage_discard(obj, player, alt_click)
         --the function triggered by clicking the "Discard" button on a card
-        local target = playerOpponent(player)
+        local target = player_opponent(player)
 
         --check if the right player is trying to discard
         if not table.contains(data[player].discard_obj_guids, obj.getGUID()) then
@@ -302,7 +304,7 @@ function card_stealWorker(player, value)
     card_addWorker(player, value)
 
     --remove players workers from target, leaving a minimum of 1
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
     data[target].builders = math.max(1, data[target].builders - value[1])
     data[target].mages    = math.max(1, data[target].mages - value[2])
     data[target].soldiers = math.max(1, data[target].soldiers - value[3])
@@ -310,7 +312,7 @@ end
 
 function card_thief(player, value)
     --add 6 of each resource, or however many the oponent has, whichever is smaller
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
 
     card_addResource(player, {
         math.min(6, data[target].bricks),
@@ -324,7 +326,7 @@ end
 
 function card_wain(player, value)
     --lower oponent castle
-    local target = playerOpponent(player)
+    local target = player_opponent(player)
     card_attack(player, 6, true)
     updateCastleHeight(target)
 
