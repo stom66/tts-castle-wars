@@ -10,7 +10,9 @@ function deck_lockDeck(player_color, obj)
         Sets deck_locked to true and updates the deck_obj ref
     --]]
 
-    if data.debug then log("deck_lockDeck("..player_color..", "..obj.getGUID()..")", nil, "info") end
+    if data.debug then
+        log("deck_lockDeck("..player_color..", "..obj.getGUID()..")", nil, player_color)
+    end
 
     --ignore if the deck is already locked
     if data[player_color].deck_locked then return false end
@@ -38,17 +40,24 @@ function deck_unlockDeck(obj, player_color, alt_click)
         Calls global either way to make sure the otehr game important stuff happens
     --]]
 
+    --declare obj_guid for use in debug statment
+    local obj_guid = "NO_GUID"
+
     --determine who owns the deckpad that was clicked
     if obj then
         player_color = obj_getOwner(obj)
+        obj_guid = obj.getGUID()
     end
 
-    --check the deck was locked. if not, abort. shouldn't happen but eh, what do i know?
-    if not data[player_color].deck_locked then return false end
-
-    if data.game_state == "active" then
-        if data.debug then log("deck_unlockDeck(): Player "..player_color.." unlocked their deck. Triggering game_stop()", nil, "info") end
+    --if the game is in progress then stop it
+    if data.game_state == "active" and not alt_click then
+        bToColor(lang.cant_unlock_during_round, player_color, "Orange")
+        return
+    elseif data.game_state == "active" and alt_click then
         game_stop()
+        if data.debug then
+            log("deck_unlockDeck("..obj_guid..", "..player_color.."): Player "..player_color.." deck was unlocked. Triggering game_stop()", nil, player_color)
+        end
     end
 
     --return any cards in the players hand to their deck
@@ -64,9 +73,13 @@ function deck_unlockDeck(obj, player_color, alt_click)
         data[player_color].deck_obj.interactable = true
         deckpad_drawButtons(player_color)
 
-        if data.debug then log("deck_unlockDeck("..obj.getGUID()..", "..player_color..") unlocked", nil, "info") end
+        if data.debug then
+            log("deck_unlockDeck("..obj_guid..", "..player_color..") unlocked", nil, player_color)
+        end
     else
-        if data.debug then log("deck_unlockDeck("..obj.getGUID()..", "..player_color..") couldn't unlock, no deck_obj", nil, "error") end
+        if data.debug then
+            log("deck_unlockDeck("..obj_guid..", "..player_color..") couldn't unlock, no deck_obj", nil, "error")
+        end
         print("Can't unlock deck for owner "..player_color..", no deck_obj registered")
     end
 end
@@ -74,7 +87,7 @@ end
 
 function deck_spawnDeck(i, player_color)
     --[[
-        Spawns a new deck for th eplayer by first cloning the stock deck hidden under the table
+        Spawns a new deck for the player by first cloning the stock deck hidden under the table
         Then we cycle through that cloned deck and remove the cards needed to match the requested deck
     --]]
 

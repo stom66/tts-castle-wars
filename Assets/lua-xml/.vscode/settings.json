@@ -73,7 +73,8 @@
         "onPickUp",
         "onRandomize",
         "onSearchEnd",
-        "onSearchStart"
+        "onSearchStart",
+        "Turns"
     ],
     "files.exclude": {
         "**/**.meta": true

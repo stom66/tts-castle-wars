@@ -6,7 +6,10 @@
 --]]
 
 function game_stop()
-    if data.debug then log("game_stop()", nil, info) end
+    if data.debug then 
+        log("game_stop()", nil, info) 
+    end
+    data.game_state = "stopped"
     broadcastToAll(lang.game_stopped, "Yellow")
     game_end()
 end
@@ -25,11 +28,11 @@ function game_end()
     for _,player in ipairs(players) do
 
         --work out who won and lost
-        if data[player].castle >= 100 or data[playerOpponent(player)].castle < 1 then
+        if data[player].castle >= 100 or data[player_opponent(player)].castle < 1 then
             --this player won!
             bToColor(lang.game_won, player, "Green")
             triggerEffect(player, "win")
-        else
+        elseif data[player_opponent(player)].castle >= 100 or data[player].castle < 1 then
             --this player lost :(
             bToColor(lang.game_lost, player, "Red")
             triggerEffect(player, "lose")
@@ -60,35 +63,44 @@ function game_countdown()
         --update the game state
         data.game_state = "countdown"
 
-        --reset the player data
-        data.Blue = table.merge(data.Blue, player_defaultStats())
-        data.Red  = table.merge(data.Red, player_defaultStats())
+        for _,player_color in ipairs(players) do
+            --reset the player data
+            data[player_color] = table.merge(data[player_color], player_defaultStats())
 
-        --Shuffle both players decks cards to players
-        data.Blue.deck_obj.randomize()
-        data.Red.deck_obj.randomize()
-
-        --print the various remaining time messages
-        for i=1,data.delay_before_start do
-            Wait.time(function()
-                if data.Red.deck_valid and data.Blue.deck_valid then
-                    broadcastToAll(lang.game_starts_in(i), "Orange")
-                else
-                    broadcastToAll(lang.game_start_cancelled, "Yellow")
-                end
-            end, data.delay_before_start-i)
+            --Shuffle both players decks cards to players
+            data[player_color].deck_obj.randomize()
         end
 
-        --print the start of game message and trigger the first round
-        Wait.time(function()
-            if data.Red.deck_valid and data.Blue.deck_valid then
-                broadcastToAll(lang.game_started, "Green")
-                game_start()
-            else
-                broadcastToAll(lang.game_start_cancelled, "Yellow")
-            end
-        end, data.delay_before_start)
+        startLuaCoroutine(Global, "game_countdown_coroutine")
     end
+end
+
+function game_countdown_coroutine()
+    local time_start = Time.time --time the countdown was started
+    local time_end   = time_start + data.delay_before_start --time the countdown should end
+    local time_last  = time_start - 1 --time elapsed since last message
+
+    while Time.time < time_end do
+        time_last = Time.time
+        local time_remaining = math.floor(os.difftime(time_end, time_last-0.1))
+        bToAll(lang.game_starts_in(time_remaining), "Orange")
+
+        while Time.time < time_last + 1 do
+
+            --check both decks are still valid
+            if not data.Red.deck_valid or not data.Blue.deck_valid then
+                bToAll(lang.game_start_cancelled, "Yellow")
+                return 1
+            end
+
+            coroutine.yield(0)
+        end
+
+    end
+
+    bToAll(lang.game_started, "Green")
+    game_start()
+    return 1
 end
 
 function game_start()
@@ -100,18 +112,16 @@ function game_start()
     data.turn_count = 0
 
     --Setup the player turns
-    Turns.type  = 2
-    Turns.order = {
-        "Blue", "Red"
-    }
+    Turns.type   = 2
+    Turns.order  = {"Blue", "Red"}
     Turns.enable = true
 
     --for both Blue and Red:
-    for _,player_color in ipairs(Turns.order) do
+    for _,player_color in ipairs(players) do
         --Set the buildings to the right heights
         updateBuildingHeights(player_color, 0, true)
 
-        --Deal cards 
+        --Deal cards
         player_checkCardsInHand(player_color)
 
         --Update the player's XML
