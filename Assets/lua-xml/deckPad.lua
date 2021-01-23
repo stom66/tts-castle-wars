@@ -69,9 +69,9 @@ end
 
 function deckpad_newDeckMenu(obj, player_color, alt_click)
     -- Toggles the "New Deck" menu which shows the decks possible to spawn
-    local player_color = obj_getOwner(obj)
-    data[player_color].show_deck_menu = not data[player_color].show_deck_menu
-    deckpad_drawButtons(player_color)
+    local owner = obj_getOwner(obj)
+    data[owner].show_deck_menu = not data[owner].show_deck_menu
+    deckpad_drawButtons(owner)
 end
 
 
@@ -85,7 +85,7 @@ function deckpad_findDeck(obj, clickee)
     --work out the deck pads owner
     local owner = obj_getOwner(obj)
     if data.debug then
-        log("deckpad_findDeck("..obj.getGUID()..", "..clickee..")")
+        log("deckpad_findDeck("..obj.getGUID()..", "..clickee..")", nil, owner)
     end
 
     --check if the action was performed by the right user, or if we're in debug
@@ -124,4 +124,3 @@ function deckpad_findDeck(obj, clickee)
     end
 
 end
-

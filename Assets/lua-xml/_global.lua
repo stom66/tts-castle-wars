@@ -10,8 +10,13 @@ function onLoad(saved_data)
         turn_count           = 0,         --primarily used to determine if resources should be increased
         loading              = false,     --loading flag to let game know when to continue with setup
     }
-    data.Blue = player_defaultData("Blue")
-    data.Red  = player_defaultData("Red")
+    players = {
+        "Blue", "Red"
+    }
+
+    for _,player in ipairs(players) do
+        data[player] = player_defaultData(player)
+    end
 
     --check to see if save_data was provided
     if saved_data then

@@ -6,7 +6,7 @@
 --]]
 
 function game_stop()
-    if data.debug then log("game_stop()") end
+    if data.debug then log("game_stop()", nil, info) end
     broadcastToAll(lang.game_stopped, "Yellow")
     game_end()
 end
@@ -14,38 +14,38 @@ end
 function game_end()
     if data.debug then log("game_end()") end
 
+    --define blank vars for winner and loser, assigned in for players loop
+    local winner, loser
+
     --update game state
     data.game_state = "ended"
     Turns.enable    = false
 
-    --work out who won and lost
-    local winner, loser
-    if data.Blue.castle >= 100 or data.Red.castle < 1 then
-        winner, loser = "Blue", "Red"
-    elseif data.Red.castle >= 100 or data.Blue.castle < 1 then
-        winner, loser = "Red", "Blue"
+    --loop through players performing various end-game actions
+    for _,player in ipairs(players) do
+
+        --work out who won and lost
+        if data[player].castle >= 100 or data[playerOpponent(player)].castle < 1 then
+            --this player won!
+            bToColor(lang.game_won, player, "Green")
+            triggerEffect(player, "win")
+        else
+            --this player lost :(
+            bToColor(lang.game_lost, player, "Red")
+            triggerEffect(player, "lose")
+        end
+
+        --update their XML ui
+        xml_update(player)
+
+        --return all cards in hand to decks and unlock decks
+        player_returnCardsToDeck(player)
+
+        --Trigger unlockDeck
+        Wait.time(function()
+            deck_unlockDeck(nil, player)
+        end, 2)
     end
-
-    --send messages
-    if winner and loser then
-        --second alert to players
-        bToColor(lang.game_won, winner, "Green")
-        bToColor(lang.game_lost, loser, "Red")
-
-        --trigger the animations
-        triggerEffect(winner, "won")
-        triggerEffect(loser, "lost")
-    end
-
-    --return all cards in hand to decks and unlock decks
-    player_returnCardsToDeck("Red")
-    player_returnCardsToDeck("Blue")
-
-    --Trigger unlockDeck
-    Wait.time(function()
-        deck_unlockDeck(nil, "Blue")
-        deck_unlockDeck(nil, "Red")
-    end, 2)
 end
 
 

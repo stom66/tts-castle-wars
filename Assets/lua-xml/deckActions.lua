@@ -78,7 +78,9 @@ function deck_spawnDeck(i, player_color)
         Then we cycle through that cloned deck and remove the cards needed to match the requested deck
     --]]
 
-    if data.debug then log("deck_spawnDeck("..decks.names[i]..", "..player_color..")", nil, player_color) end
+    if data.debug then
+        log("deck_spawnDeck("..decks.names[i]..", "..player_color..")", nil, player_color)
+    end
 
     --get a reference to the deckpad obj
     local obj = data[player_color].deck_pad_obj
