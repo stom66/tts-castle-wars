@@ -151,7 +151,7 @@ function card_buildWall(player, value, bypass, delay)
     updateBuildingHeights(player, delay, bypass)
 end
 
-function card_curse(player, value)
+function card_curse(player, value, bypass, delay)
     --remove 1 of everything from the opponents and grant it to the player
     --applies to everything: resources, workers, castle and wall
     local target = player_opponent(player)
@@ -164,11 +164,11 @@ function card_curse(player, value)
     card_addResource(player, {1, 1, 1})
 
     --steal castle height
-    card_buildCastle(player, 1)
-    card_attack(player, 1, true)
+    card_buildCastle(player, 1, bypass, delay)
+    card_attack(player, 1, bypass)
 
     --steal wall (even if they don't have it)
-    card_buildWall(player, 1)
+    card_buildWall(player, 1, bypass, delay)
     card_attack(player, 1)
 end
 
@@ -196,9 +196,6 @@ function card_removeResource(player, value)
 
     --remove resources from the opponent
     removeResources(target, value)
-
-    --add them to the player
-    --addResources(player, value)
 end
 
 function card_sabotage(player_color, value)
@@ -324,13 +321,15 @@ function card_thief(player, value)
     card_removeResource(player, {6, 6, 6})
 end
 
-function card_wain(player, value)
-    --lower oponent castle
-    local target = player_opponent(player)
-    card_attack(player, 6, true)
-    updateCastleHeight(target)
+function card_wain(player, value, bypass, delay)
+    Wait.time(function()
+        --lower oponent castle
+        local target = player_opponent(player)
+        card_attack(player, 6, true)
+        updateCastleHeight(target)
 
-    --build our castle
-    card_buildCastle(player, 6)
-    updateCastleHeight(player)
+        --build our castle
+        card_buildCastle(player, 6)
+        updateCastleHeight(player)
+    end, delay or 0)
 end

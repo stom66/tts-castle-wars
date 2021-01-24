@@ -81,7 +81,7 @@ function card_getDataTable()
         cost   = {7, 0, 0, 0},
         action = "attack",
         value  = 9,
-        delay  = 4.1
+        delay  = 4.75
     }
     t[149003]  = {
         name   = "Bomb",
@@ -126,7 +126,7 @@ function card_getDataTable()
         cost   = {10, 0, 0, 0},
         action = "attack",
         value  = 12,
-        delay  = 1.5
+        delay  = 1.325
     }
     t[149200]  = {
         name   = "Comet Strike",
@@ -147,6 +147,8 @@ function card_getDataTable()
         name   = "Curse",
         cost   = {18, 18, 18, 0},
         action = "curse",
+        delay  = 2,
+        bypass = true,
         value  = 0
     }
     t[149202]  = {
@@ -181,7 +183,7 @@ function card_getDataTable()
         cost   = {6, 6, 0, 0},
         action = "attack",
         value  = 12,
-        delay  = 2.0
+        delay  = 1.75
     }
     t[149007]  = {
         name   = "Guards",
@@ -262,7 +264,7 @@ function card_getDataTable()
         name   = "Platoon",
         cost   = {0, 0, 7, 0},
         action = "attack",
-        delay  = 5.5,
+        delay  = 5.4,
         value  = 9
     }
     t[149010]  = {
@@ -282,7 +284,7 @@ function card_getDataTable()
         name   = "Ballista",
         cost   = {4, 0, 4, 0},
         action = "attack",
-        delay  = 3.5,
+        delay  = 1.15,
         value  = 8
     }
     t[149011]  = {
@@ -295,24 +297,28 @@ function card_getDataTable()
         name   = "Remove Bricks",
         cost   = {0, 5, 0, 0},
         action = "removeResource",
+        delay  = 2,
         value  = {8, 0, 0}
     }
     t[148915]  = {
         name   = "Remove Crystals",
         cost   = {0, 5, 0, 0},
         action = "removeResource",
+        delay  = 2,
         value  = {0, 8, 0}
     }
     t[149206]  = {
         name   = "Remove Resources",
         cost   = {5, 5, 5, 0},
         action = "removeResource",
+        delay  = 2,
         value  = {8, 8, 8}
     }
     t[148916]  = {
         name   = "Remove Weapons",
         cost   = {0, 5, 0, 0},
         action = "removeResource",
+        delay  = 2,
         value  = {0, 0, 8}
     }
     t[149109]  = {
@@ -364,14 +370,14 @@ function card_getDataTable()
         name   = "Tower",
         cost   = {10, 0, 0, 0},
         action = "buildCastle",
-        delay  = 0,
+        delay  = 1.0,
         value  = 10
     }
     t[149208]  = {
         name   = "Trojan Horse",
         cost   = {14, 0, 20, 0},
         action = "attack",
-        delay  = 7.0,
+        delay  = 8.5,
         bypass = true,
         value  = 28
     }
@@ -381,13 +387,13 @@ function card_getDataTable()
         action = "wain",
         bypass = true,
         value  = 6,
-        delay  = 4.5,
+        delay  = 4.4,
     }
     t[149114]  = {
         name   = "Wall",
         cost   = {4, 0, 0, 0},
         action = "buildWall",
-        delay  = 0.25,
+        delay  = 1.5,
         value  = 6
     }
 
