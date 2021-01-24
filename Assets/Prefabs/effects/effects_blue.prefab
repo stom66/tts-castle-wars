@@ -351,7 +351,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 0}
       StateName: 
-    Duration: 8
+    Duration: 30
   - Name: fire_archer_wall
     GameObjects:
     - gameObject: {fileID: 3564206653632269222}
@@ -533,7 +533,7 @@ MonoBehaviour:
     Animator:
       AnimatorComponent: {fileID: 0}
       StateName: 
-    Duration: 5.5
+    Duration: 5
   - Name: wain
     GameObjects:
     - gameObject: {fileID: 7638760150602374339}
@@ -1674,16 +1674,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 2152881912414943739, guid: 07044c9f35ecf83458caeae38eee143c,
-        type: 3}
-      propertyPath: m_Name
-      value: Victory - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152881912414943739, guid: 07044c9f35ecf83458caeae38eee143c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2152881912414943738, guid: 07044c9f35ecf83458caeae38eee143c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1737,6 +1727,16 @@ PrefabInstance:
     - target: {fileID: 2152881912414943738, guid: 07044c9f35ecf83458caeae38eee143c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152881912414943739, guid: 07044c9f35ecf83458caeae38eee143c,
+        type: 3}
+      propertyPath: m_Name
+      value: Victory - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152881912414943739, guid: 07044c9f35ecf83458caeae38eee143c,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2018,16 +2018,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 4606216160634360045, guid: b65fef0e08be1874487ebc79d77ece74,
-        type: 3}
-      propertyPath: m_Name
-      value: All Brick - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 4606216160634360045, guid: b65fef0e08be1874487ebc79d77ece74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4606216160634360044, guid: b65fef0e08be1874487ebc79d77ece74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2081,6 +2071,16 @@ PrefabInstance:
     - target: {fileID: 4606216160634360044, guid: b65fef0e08be1874487ebc79d77ece74,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4606216160634360045, guid: b65fef0e08be1874487ebc79d77ece74,
+        type: 3}
+      propertyPath: m_Name
+      value: All Brick - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4606216160634360045, guid: b65fef0e08be1874487ebc79d77ece74,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2362,16 +2362,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 194502309035326109, guid: 838b49ec406566e4aa34c20a739b1490,
-        type: 3}
-      propertyPath: m_Name
-      value: Curse - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 194502309035326109, guid: 838b49ec406566e4aa34c20a739b1490,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 194502309035326108, guid: 838b49ec406566e4aa34c20a739b1490,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2425,6 +2415,16 @@ PrefabInstance:
     - target: {fileID: 194502309035326108, guid: 838b49ec406566e4aa34c20a739b1490,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194502309035326109, guid: 838b49ec406566e4aa34c20a739b1490,
+        type: 3}
+      propertyPath: m_Name
+      value: Curse - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 194502309035326109, guid: 838b49ec406566e4aa34c20a739b1490,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3394,11 +3394,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 7404796402917356066, guid: bf447bf4d9d122d4da2cc3424763f5de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7404796402917356067, guid: bf447bf4d9d122d4da2cc3424763f5de,
         type: 3}
       propertyPath: m_RootOrder
@@ -3418,6 +3413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404796402917356066, guid: bf447bf4d9d122d4da2cc3424763f5de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635725076689034699, guid: bf447bf4d9d122d4da2cc3424763f5de,
         type: 3}
@@ -3555,16 +3555,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 6483282801862441500, guid: ba3d7e1d31d0b414db44165e44e03365,
-        type: 3}
-      propertyPath: m_Name
-      value: Reverse - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 6483282801862441500, guid: ba3d7e1d31d0b414db44165e44e03365,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6483282801862441501, guid: ba3d7e1d31d0b414db44165e44e03365,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3620,6 +3610,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6483282801862441500, guid: ba3d7e1d31d0b414db44165e44e03365,
+        type: 3}
+      propertyPath: m_Name
+      value: Reverse - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6483282801862441500, guid: ba3d7e1d31d0b414db44165e44e03365,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba3d7e1d31d0b414db44165e44e03365, type: 3}
 --- !u!1 &1151501588212373801 stripped
@@ -3641,16 +3641,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 5520832432056022352, guid: 6dae5eaca1dda9449b1c1291c087429e,
-        type: 3}
-      propertyPath: m_Name
-      value: Roadblock - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520832432056022352, guid: 6dae5eaca1dda9449b1c1291c087429e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5520832432056022353, guid: 6dae5eaca1dda9449b1c1291c087429e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3705,6 +3695,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520832432056022352, guid: 6dae5eaca1dda9449b1c1291c087429e,
+        type: 3}
+      propertyPath: m_Name
+      value: Roadblock - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520832432056022352, guid: 6dae5eaca1dda9449b1c1291c087429e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dae5eaca1dda9449b1c1291c087429e, type: 3}
@@ -3909,16 +3909,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 7707562237580586082, guid: 38fea75107a04e74b80073ec7d734a24,
-        type: 3}
-      propertyPath: m_Name
-      value: Dragon - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707562237580586082, guid: 38fea75107a04e74b80073ec7d734a24,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7707562237580586083, guid: 38fea75107a04e74b80073ec7d734a24,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3972,6 +3962,16 @@ PrefabInstance:
     - target: {fileID: 7707562237580586083, guid: 38fea75107a04e74b80073ec7d734a24,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707562237580586082, guid: 38fea75107a04e74b80073ec7d734a24,
+        type: 3}
+      propertyPath: m_Name
+      value: Dragon - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707562237580586082, guid: 38fea75107a04e74b80073ec7d734a24,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5075769850566095477, guid: 38fea75107a04e74b80073ec7d734a24,
@@ -4242,16 +4242,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 140605141996412391, guid: 02cd02fe6284b5c45b0ee21a71aedd82,
-        type: 3}
-      propertyPath: m_Name
-      value: Pixie - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 140605141996412391, guid: 02cd02fe6284b5c45b0ee21a71aedd82,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 140605141996412390, guid: 02cd02fe6284b5c45b0ee21a71aedd82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4305,6 +4295,16 @@ PrefabInstance:
     - target: {fileID: 140605141996412390, guid: 02cd02fe6284b5c45b0ee21a71aedd82,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 140605141996412391, guid: 02cd02fe6284b5c45b0ee21a71aedd82,
+        type: 3}
+      propertyPath: m_Name
+      value: Pixie - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 140605141996412391, guid: 02cd02fe6284b5c45b0ee21a71aedd82,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4500,16 +4500,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 5065780933222342501, guid: b2d2a854feb21244fb5f19acb37bff56,
-        type: 3}
-      propertyPath: m_Name
-      value: Cannon - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5065780933222342501, guid: b2d2a854feb21244fb5f19acb37bff56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5065780933222342500, guid: b2d2a854feb21244fb5f19acb37bff56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4563,6 +4553,16 @@ PrefabInstance:
     - target: {fileID: 5065780933222342500, guid: b2d2a854feb21244fb5f19acb37bff56,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065780933222342501, guid: b2d2a854feb21244fb5f19acb37bff56,
+        type: 3}
+      propertyPath: m_Name
+      value: Cannon - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065780933222342501, guid: b2d2a854feb21244fb5f19acb37bff56,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4844,16 +4844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 4808040459845925110, guid: 174b150b7e3cc3e4795b84ee3063598f,
-        type: 3}
-      propertyPath: m_Name
-      value: Bribe Builder - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 4808040459845925110, guid: 174b150b7e3cc3e4795b84ee3063598f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4808040459845925111, guid: 174b150b7e3cc3e4795b84ee3063598f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4907,6 +4897,16 @@ PrefabInstance:
     - target: {fileID: 4808040459845925111, guid: 174b150b7e3cc3e4795b84ee3063598f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808040459845925110, guid: 174b150b7e3cc3e4795b84ee3063598f,
+        type: 3}
+      propertyPath: m_Name
+      value: Bribe Builder - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808040459845925110, guid: 174b150b7e3cc3e4795b84ee3063598f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5456,16 +5456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 5767618011926917601, guid: 5b1d050994fed5843a7f1c0e29c4f715,
-        type: 3}
-      propertyPath: m_Name
-      value: Bribe Recruit - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5767618011926917601, guid: 5b1d050994fed5843a7f1c0e29c4f715,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5767618011926917600, guid: 5b1d050994fed5843a7f1c0e29c4f715,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5519,6 +5509,16 @@ PrefabInstance:
     - target: {fileID: 5767618011926917600, guid: 5b1d050994fed5843a7f1c0e29c4f715,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767618011926917601, guid: 5b1d050994fed5843a7f1c0e29c4f715,
+        type: 3}
+      propertyPath: m_Name
+      value: Bribe Recruit - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767618011926917601, guid: 5b1d050994fed5843a7f1c0e29c4f715,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5628,16 +5628,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 6015694130420672715, guid: 522fcd140d2ba6b4eae3ee0e0be9f976,
-        type: 3}
-      propertyPath: m_Name
-      value: Bomb - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 6015694130420672715, guid: 522fcd140d2ba6b4eae3ee0e0be9f976,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6015694130420672714, guid: 522fcd140d2ba6b4eae3ee0e0be9f976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5691,6 +5681,16 @@ PrefabInstance:
     - target: {fileID: 6015694130420672714, guid: 522fcd140d2ba6b4eae3ee0e0be9f976,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015694130420672715, guid: 522fcd140d2ba6b4eae3ee0e0be9f976,
+        type: 3}
+      propertyPath: m_Name
+      value: Bomb - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015694130420672715, guid: 522fcd140d2ba6b4eae3ee0e0be9f976,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6230,16 +6230,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 3530433678334359050, guid: 782af57b3b953394bb611a4f84e014d0,
-        type: 3}
-      propertyPath: m_Name
-      value: All Weapons - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3530433678334359050, guid: 782af57b3b953394bb611a4f84e014d0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3530433678334359051, guid: 782af57b3b953394bb611a4f84e014d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6295,6 +6285,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3530433678334359050, guid: 782af57b3b953394bb611a4f84e014d0,
+        type: 3}
+      propertyPath: m_Name
+      value: All Weapons - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530433678334359050, guid: 782af57b3b953394bb611a4f84e014d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782af57b3b953394bb611a4f84e014d0, type: 3}
 --- !u!4 &5367543914011258896 stripped
@@ -6316,16 +6316,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7343570069834195911}
     m_Modifications:
-    - target: {fileID: 6738493809625814098, guid: bab2697cde53bff47ba1306b968d3a22,
-        type: 3}
-      propertyPath: m_Name
-      value: All Gems - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738493809625814098, guid: bab2697cde53bff47ba1306b968d3a22,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6738493809625814099, guid: bab2697cde53bff47ba1306b968d3a22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6379,6 +6369,16 @@ PrefabInstance:
     - target: {fileID: 6738493809625814099, guid: bab2697cde53bff47ba1306b968d3a22,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738493809625814098, guid: bab2697cde53bff47ba1306b968d3a22,
+        type: 3}
+      propertyPath: m_Name
+      value: All Gems - Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738493809625814098, guid: bab2697cde53bff47ba1306b968d3a22,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
