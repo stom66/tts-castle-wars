@@ -9,7 +9,7 @@ function deckpad_drawButtons(player_color)
     --]]
 
     --get a reference to the deckpad obj
-    local obj = data[player_color].deck_pad_obj
+    local obj = data[player_color].deckzone_obj
 
     --remove the existing buttons
     obj.clearButtons()

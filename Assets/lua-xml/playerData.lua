@@ -59,16 +59,18 @@ function player_objReferences(player_color)
         lodge_obj          = getObjectFromGUID(prefix.."004"),
         tower_obj          = getObjectFromGUID(prefix.."005"),
         gate_obj           = getObjectFromGUID(prefix.."006"),
-        deck_pad_obj       = getObjectFromGUID(prefix.."007"),
-        playzone_obj       = getObjectFromGUID(prefix.."008"),
-        play_pad_obj       = getObjectFromGUID(prefix.."009"),
+        deckzone_obj       = getObjectFromGUID(prefix.."007"),
+        playzone_zone      = getObjectFromGUID(prefix.."008"),
+        playzone_obj       = getObjectFromGUID(prefix.."009"),
         castle_tower_obj   = getObjectFromGUID(prefix.."010"),
         flag1_obj          = getObjectFromGUID(prefix.."011"),
         flag2_obj          = getObjectFromGUID(prefix.."012"),
         effects_obj        = getObjectFromGUID(prefix.."013"),
         effects_wall_obj   = getObjectFromGUID(prefix.."014"),
         effects_castle_obj = getObjectFromGUID(prefix.."015"),
-        handzone_obj       = getObjectFromGUID(prefix.."016")
+        handzone_zone      = getObjectFromGUID(prefix.."016"),
+        discardzone_obj    = getObjectFromGUID(prefix.."017"),
+        discardzone_zone   = getObjectFromGUID(prefix.."018")
     }
 
     --check for an existing deck_obj, in case we're resetting the player data after a completed game
