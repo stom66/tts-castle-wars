@@ -23,10 +23,10 @@ function onLoad(saved_data)
     end
 
     --check to see if save_data was provided
-    if saved_data then
-        data.loading = true
-        loadSave(saved_data)
-    end
+    --if saved_data then
+    --    data.loading = true
+    --    loadSave(saved_data)
+    --end
 
     --wait for save_data to load and parse before triggering the XML update
     Wait.condition(
@@ -68,7 +68,7 @@ end
 --[[
     Requires the main game files
 --]]
-require("tts-castle-wars/Assets/lua-xml/saveData")
+--require("tts-castle-wars/Assets/lua-xml/saveData")
 
 require("tts-castle-wars/Assets/lua-xml/debug")
 
@@ -76,6 +76,7 @@ require("tts-castle-wars/Assets/lua-xml/lang")
 require("tts-castle-wars/Assets/lua-xml/broadcast")
 
 require("tts-castle-wars/Assets/lua-xml/playerActions")
+require("tts-castle-wars/Assets/lua-xml/playerContextActions")
 require("tts-castle-wars/Assets/lua-xml/playerData")
 require("tts-castle-wars/Assets/lua-xml/playerManagement")
 

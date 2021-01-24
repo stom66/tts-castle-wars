@@ -27,7 +27,7 @@ function deck_lockDeck(player_color, obj)
     deckpad_drawButtons(player_color)
 
     --move the deck to the center of the pad
-    local deck_pad = data[player_color].deck_pad_obj
+    local deck_pad = data[player_color].deckzone_obj
 
     obj.setRotation(deck_pad.getRotation():add(Vector(180, 180, 0)))
     obj.setPositionSmooth(deck_pad.getPosition():add(Vector(0, obj.getBounds().size.y / 2, 0)))
@@ -96,7 +96,7 @@ function deck_spawnDeck(i, player_color)
     end
 
     --get a reference to the deckpad obj
-    local obj = data[player_color].deck_pad_obj
+    local obj = data[player_color].deckzone_obj
 
     --get reference to the stock deck
     local stock_deck       = getObjectFromGUID("deck01")
