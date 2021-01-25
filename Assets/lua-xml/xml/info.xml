@@ -1,22 +1,12 @@
 <!--
     This is the info panel which shows when a player first joins the game
 -->
-<Mask id="info" class="mask_help" visibility="Red|Blue|White|Black">
-    <Panel class="panel_help">
-        <Button class="info_close"></Button>
-
-
-        <Text class="info_header">
-            Welcome to Castle Wars!
-        </Text>
-
-        <Text>
-            Smooth as an android's bottom, eh, Data? I recommend you don't fire until you're within 
-            40,000 kilometers. This should be interesting. I will obey your orders. I will serve this 
-            ship as First Officer. And in an attack against the Enterprise, I will die with this crew. 
-            
-            But I will not break my oath of loyalty to Starfleet. Yes, absolutely, I do indeed concur, 
-            wholeheartedly! In all trust, there is the possibility for betrayal.
-        </Text>
+<Mask id="info" class="mask_info" visibility="Red|Blue|White|Black">
+    <Panel class="panel_info">
+        <Image image="img_info"></Image>
+        <Button class="btn_info_close"><Text>x</Text></Button>
+        <Button class="btn_info_wiki"></Button>
+        <Button class="btn_info_tutorial"></Button>
+        <Button class="btn_info_workshop"></Button>
     </Panel>
 </Mask>

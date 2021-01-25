@@ -55,23 +55,27 @@ function xml_update(player_color)
 
     --record current values of the stats so we can compare the new values and look for changes
     for _,v in ipairs(stats) do
-        values[v] = tonumber(UI.getAttribute(prefix.."_"..v, "text"))
+        values[v] = tonumber(UI.getAttribute("ui1_"..prefix.."_"..v, "text"))
+        values[v] = tonumber(UI.getAttribute("ui2_"..prefix.."_"..v, "text"))
     end
 
     --Update basic stats
     for _,v in ipairs(stats) do
-        UI.setAttribute(prefix.."_"..v, "text", tostring(data[player_color][v]))
+        UI.setAttribute("ui1_"..prefix.."_"..v, "text", tostring(data[player_color][v]))
+        UI.setAttribute("ui2_"..prefix.."_"..v, "text", tostring(data[player_color][v]))
     end
 
     --Update buff icons
     for buff,value in pairs(data[player_color].buff) do
-        UI.setAttribute(prefix.."_buff_"..buff, "color", xml_buffToColor(value))
+        UI.setAttribute("ui1_"..prefix.."_buff_"..buff, "color", xml_buffToColor(value))
+        UI.setAttribute("ui2_"..prefix.."_buff_"..buff, "color", xml_buffToColor(value))
     end
 
     --Update resource Icons (all_produce)
     local resources = {"bricks", "crystals", "swords"}
     for _,resource in ipairs(resources) do
-        UI.setAttribute(prefix.."_icon_"..resource, "color", xml_resToColor(data[player_color].all_produce, resource))
+        UI.setAttribute("ui1_"..prefix.."_icon_"..resource, "color", xml_resToColor(data[player_color].all_produce, resource))
+        UI.setAttribute("ui2_"..prefix.."_icon_"..resource, "color", xml_resToColor(data[player_color].all_produce, resource))
     end
 
     --Check for differences in values and show value in the change column
@@ -86,12 +90,15 @@ function xml_update(player_color)
             end
 
             --update the element and trigger the show animation
-            UI.setAttribute(prefix.."_"..v.."_change", "text", diff)
-            UI.show(prefix.."_"..v.."_change")
+            UI.setAttribute("ui1_"..prefix.."_"..v.."_change", "text", diff)
+            UI.setAttribute("ui2_"..prefix.."_"..v.."_change", "text", diff)
+            UI.show("ui1_"..prefix.."_"..v.."_change")
+            UI.show("ui2_"..prefix.."_"..v.."_change")
 
             --hide the element after a few seconds delay
             Wait.time(function()
-                UI.hide(prefix.."_"..v.."_change")
+                UI.hide("ui1_"..prefix.."_"..v.."_change")
+                UI.hide("ui2_"..prefix.."_"..v.."_change")
             end, 6)
         end
     end
@@ -112,5 +119,58 @@ function xml_resToColor(all_produce, resource)
         return ("#333333")
     else
         return ("#eeeeee")
+    end
+end
+
+--[[
+    Show/hide controls for the various panels
+--]]
+
+function xml_showInfo(player, value, id) xml_showElement("info", player.color) end
+function xml_hideInfo(player, value, id) xml_hideElement("info", player.color) end
+
+function xml_showWin(player, value, id) xml_showElement("win", player.color) end
+function xml_hideWin(player, value, id) xml_hideElement("win", player.color) end
+
+function xml_showLose(player, value, id) xml_showElement("lose", player.color) end
+function xml_hideLose(player, value, id) xml_hideElement("lose", player.color) end
+
+
+function xml_hideElement(id, player_color)
+    if data.debug then
+        log("xml_hideElement("..id..", "..player_color..")")
+    end
+
+    local contains = table.contains(data.xml_visibility[id], player_color)
+    if contains then
+        data.xml_visibility[id][contains] = nil
+    end
+    xml_updateVisibility(id, player_color)
+end
+
+function xml_showElement(id, player_color)
+    if data.debug then
+        log("xml_showElement("..id..", "..player_color..")")
+    end
+
+    if not table.contains(data.xml_visibility[id], player_color) then
+        table.insert(data.xml_visibility[id], player_color)
+    end
+    xml_updateVisibility(id, player_color)
+end
+
+function xml_updateVisibility(id)
+    local visible_to
+    if #data.xml_visibility[id] > 0 then
+        visible_to = table.concat(data.xml_visibility[id], "|")
+        UI.setAttribute(id, "active", true)
+        UI.setAttribute(id, "visibility", visible_to)
+    else
+        visible_to = "None"
+        UI.setAttribute(id, "active", false)
+    end
+
+    if data.debug then
+        log("xml_updateVisibility("..id.."): "..visible_to)
     end
 end
