@@ -9,6 +9,11 @@ function onLoad(saved_data)
         max_discard_per_turn = 3,         --self explanatory
         turn_count           = 0,         --primarily used to determine if resources should be increased
         loading              = false,     --loading flag to let game know when to continue with setup
+        xml_visibility       = {
+            info             = {"Red", "Blue", "Black", "White"},
+            win              = {"None"},
+            lose             = {"None"},
+        }
     }
 
     cards     = card_getDataTable() --info on cards, functions, costs, etc

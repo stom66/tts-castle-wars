@@ -1,7 +1,14 @@
+<!--
+
+    Defaults
+
+    This is the main "stylesheet" for the XML UI. 
+-->
+
 <Defaults>
 
-<!-- Help Window-->
-<Mask class         = "mask_help"
+<!-- Info Window-->
+<Mask class         = "mask_info"
     width           = "600"
     preferredWidth  = "600"
     height          = "450"
@@ -9,26 +16,32 @@
     rectAlignment   = "MiddleCenter"
     image           = "mask_section"
     />
-    <Panel class="panel_help"
+    <Panel class="panel_info"
         color = "#cccccc"
         />
-
+    <Button class     = "btn_close_info"
+        onClick       = "xml_hideInfo"
+        width         = "40"
+        height        = "40"
+        rectAlignment = "UpperRight"
+        offsetXY      = "-30 -30"
+        />
 
 <!-- Player Panels-->   
-    <Panel class="player_panel"
+    <Panel class        = "player_panel"
         width           = "300"
         preferredWidth  = "300"
         height          = "695"
         preferredHeight = "695"
         allowDragging   = "true"
-        scale = "0.75 0.75 0.75"
+        scale           = "0.75 0.75 0.75"
         returnToOriginalPositionWhenReleased = "false"
         />
-        <Panel class="player_blue"
+        <Panel class      = "float_left"
             rectAlignment = "UpperLeft"
             offsetXY      = "100 -100"
             />
-        <Panel class="player_red"
+        <Panel class      = "float_right"
             rectAlignment = "UpperRight"
             offsetXY      = "-20 -100"
             />
@@ -43,10 +56,6 @@
         spacing         = "5"
         padding         = "15 15 30 140"
         />
-        <VerticalLayout
-            class         = "scorePanel_blue"
-            rectAlignment = "UpperRight"
-            />
             <Text
                 class = "scorePanel_blue>@HorizontalLayout>@Text"
                 color = "rgba(0, 0.45, 0.71, 1)"
@@ -55,10 +64,7 @@
                 class = "scorePanel_red>@HorizontalLayout>@Text"
                 color = "rgba(0.85, 0.2, 0.3, 1)" 
                 />
-        <VerticalLayout
-            class         = "scorePanel_red"
-            rectAlignment = "UpperLeft"
-            />
+
             <HorizontalLayout
                 class           = "scorePanel>@HorizontalLayout"
                 height          = "135"
