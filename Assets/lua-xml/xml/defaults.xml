@@ -1,0 +1,165 @@
+<Defaults>
+
+<!-- Help Window-->
+<Mask class         = "mask_help"
+    width           = "600"
+    preferredWidth  = "600"
+    height          = "450"
+    preferredHeight = "450"
+    rectAlignment   = "MiddleCenter"
+    image           = "mask_section"
+    />
+    <Panel class="panel_help"
+        color = "#cccccc"
+        />
+
+
+<!-- Player Panels-->   
+    <Panel class="player_panel"
+        width           = "300"
+        preferredWidth  = "300"
+        height          = "695"
+        preferredHeight = "695"
+        allowDragging   = "true"
+        scale = "0.75 0.75 0.75"
+        returnToOriginalPositionWhenReleased = "false"
+        />
+        <Panel class="player_blue"
+            rectAlignment = "UpperLeft"
+            offsetXY      = "100 -100"
+            />
+        <Panel class="player_red"
+            rectAlignment = "UpperRight"
+            offsetXY      = "-20 -100"
+            />
+
+    <!-- Score changes panel-->
+    <VerticalLayout
+        class           = "scorePanel"
+        width           = "100"
+        preferredWidth  = "100"
+        height          = "695"
+        preferredHeight = "695"
+        spacing         = "5"
+        padding         = "15 15 30 140"
+        />
+        <VerticalLayout
+            class         = "scorePanel_blue"
+            rectAlignment = "UpperRight"
+            />
+            <Text
+                class = "scorePanel_blue>@HorizontalLayout>@Text"
+                color = "rgba(0, 0.45, 0.71, 1)"
+                />
+            <Text
+                class = "scorePanel_red>@HorizontalLayout>@Text"
+                color = "rgba(0.85, 0.2, 0.3, 1)" 
+                />
+        <VerticalLayout
+            class         = "scorePanel_red"
+            rectAlignment = "UpperLeft"
+            />
+            <HorizontalLayout
+                class           = "scorePanel>@HorizontalLayout"
+                height          = "135"
+                preferredHeight = "135"
+                />
+                <Text
+                    class             = "scorePanel>@HorizontalLayout>@Text"
+                    fontSize          = "32"
+                    fontStyle         = "Bold"
+                    showAnimation     = "FadeIn"
+                    hideAnimation     = "FadeOut"
+                    animationDuration = "1.0"
+                    active            = "false"
+                    />
+
+    <!-- Masks -->
+    <Mask class         = "mask_panel"
+        image           = "mask_panel"
+        width           = "200"
+        preferredWidth  = "200"
+        height          = "695"
+        preferredHeight = "695"
+        />
+        <Mask class       = "mask_blue"
+            rectAlignment = "UpperLeft"
+            />
+        <Mask class       = "mask_red"
+            rectAlignment = "UpperRight"
+            />
+
+    <Mask 
+        class           = "mask_section"
+        image           = "mask_section"
+        preferredWidth  = "180"
+        preferredHeight = "135"
+        minWidth        = "180"
+        minHeight       = "135"
+        />
+
+
+    <!-- Main VerticalLayout containing all the resource sections -->
+    <VerticalLayout
+        class                  = "playerPanel"
+        spacing                = "0"
+        padding                = "10 10 10 10"
+        childForceExpandWidth  = "false"
+        childForceExpandHeight = "false"
+        width                  = "200"
+        preferredWidth         = "200"
+        height                 = "695"
+        preferredHeight        = "695"
+        />
+        <VerticalLayout class = "playerPanel_blue"
+            color             = "rgba(0, 0.45, 0.71, 0.35)"
+            />
+        <VerticalLayout class = "playerPanel_red"  
+            color             = "rgba(0.85, 0.2, 0.3, 0.35)"  
+            />
+
+    <HorizontalLayout
+        childForceExpandWidth  = "false"
+        childForceExpandHeight = "false" />
+
+
+    <!-- Resource sections -->
+    <VerticalLayout class = "section"
+        width             = "180"
+        preferredWidth    = "180"
+        minWidth          = "180"
+        height            = "135"
+        preferredHeight   = "135"
+        minHeight         = "135"
+        spacing           = "5"
+        padding           = "15 15 5 5"
+        />
+        <VerticalLayout class="bg_red"   color="#9a1527" />
+        <VerticalLayout class="bg_green" color="#004f2d" />
+        <VerticalLayout class="bg_blue"  color="#003b73" />
+        <VerticalLayout class="bg_black" color="Black" />
+        <VerticalLayout class="bg_gold"  color="#e19a02" />
+
+        <!-- Text/Stats in sections -->
+        <Text class         = "section>@HorizontalLayout:@Text"
+            alignment       = "MiddleCenter"
+            color           = "White"
+            fontStyle       = "Bold"
+            fontSize        = "40"
+            width           = "80"
+            preferredWidth  = "80"
+            height          = "60"
+            preferredHeight = "60"
+            backgroundColor = "Black"
+            />
+
+        <!-- Images in sections -->
+        <Image 
+            class           = "section>@HorizontalLayout:@Image"
+            preserveAspect  = "true"
+            width           = "70"
+            preferredWidth  = "70"
+            height          = "60"
+            preferredHeight = "60"
+            />
+</Defaults>
