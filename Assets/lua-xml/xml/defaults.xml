@@ -9,10 +9,10 @@
 
 <!-- Info Window-->
 <Mask class         = "mask_info"
-    width           = "1200"
-    preferredWidth  = "1200"
-    height          = "675"
-    preferredHeight = "675"
+    width           = "600"
+    preferredWidth  = "600"
+    height          = "450"
+    preferredHeight = "450"
     rectAlignment   = "MiddleCenter"
     image           = "mask_info"
     allowDragging   = "true"
