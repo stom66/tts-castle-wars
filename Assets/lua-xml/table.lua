@@ -6,8 +6,8 @@ function table.count(t)
 end
 
 function table.contains(table, value)
-    for _,v in pairs(table) do
-        if value==v then return true end
+    for k,v in pairs(table) do
+        if value==v then return k end
     end
     return false
 end
