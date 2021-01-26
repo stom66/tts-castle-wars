@@ -1,9 +1,11 @@
 <!--
     This is the info panel which shows when a player first joins the game
 -->
+
 <Mask id="info" class="mask_info" visibility="Red|Blue|White|Black">
     <Panel class="panel_info">
         <Image image="img_info"></Image>
+
         <Button class="btn_info_close"><Text>x</Text></Button>
         <Button class="btn_info_wiki"></Button>
         <Button class="btn_info_tutorial"></Button>
