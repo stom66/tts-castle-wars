@@ -94,6 +94,8 @@ require("tts-castle-wars/Assets/lua-xml/deckPad")
 
 require("tts-castle-wars/Assets/lua-xml/effects")
 
+require("tts-castle-wars/Assets/lua-xml/tablet")
+
 require("tts-castle-wars/Assets/lua-xml/gameActions")
 require("tts-castle-wars/Assets/lua-xml/resources")
 require("tts-castle-wars/Assets/lua-xml/turnActions")

@@ -122,6 +122,18 @@ function xml_resToColor(all_produce, resource)
     end
 end
 
+function btn_info_wiki(player, value, id)
+    tablet_showPage("wiki")
+end
+function btn_info_tutorial(player, value, id)
+    tablet_showPage("tutorial")
+end
+function btn_info_workshop(player, value, id)
+    tablet_showPage("workshop")
+end
+
+
+
 --[[
     Show/hide controls for the various panels
 --]]
