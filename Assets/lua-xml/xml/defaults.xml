@@ -22,8 +22,9 @@
         color         = "#cccccc"
         />
     
+    <!--   colors          = "#0d679c|#1F52A7|#00348a|#333333" -->
     <Button class       = "panel_info>@Button"
-        colors          = "#ff0000|#00ff00|#0000ff|#333333"
+        colors          = "#618c2d|#73A23B|#578223|#444444"
         height          = "55"
         preferredHeight = "55"
         width           = "200"
@@ -46,17 +47,17 @@
         icon            = "btn_wiki"
         width           = "180"
         preferredWidth  = "180"
-        offsetXY        = "0 105"
+        offsetXY        = "0 135"
         />
     <Button class       = "btn_info_tutorial"
         onClick         = "tablet_showTutorial"
         icon            = "btn_tutorial"
-        offsetXY        = "-205 105"
+        offsetXY        = "-205 135"
         />
     <Button class       = "btn_info_workshop"
         onClick         = "tablet_showWorkshop"
         icon            = "btn_workshop"
-        offsetXY        = "205 105"
+        offsetXY        = "205 135"
         />
 
 <!-- Player Panels-->   
