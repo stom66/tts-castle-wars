@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ZFS_3D_Pro
-  m_Shader: {fileID: 4800000, guid: c9e994a922c6d9b43bfe84b1c9c9593c, type: 3}
+  m_Shader: {fileID: 4800000, guid: a250a8dc02fd85b4d89b8b3bfde34547, type: 3}
   m_ShaderKeywords: _EDGE_DETECTION_ON _EDGE_OR_CENTER_FRESNEL_ON _FRESNEL_ON _GRADIENT_OR_SOLID_COLOR_ON
     _MAKE_SAME_AS_FRESNEL_ON
   m_LightmapFlags: 4
@@ -21,15 +21,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Gradient_Color:
-        m_Texture: {fileID: 2800000, guid: 571fcc38fa07d134fac762c1112e1810, type: 3}
+        m_Texture: {fileID: 2800000, guid: c7a65cc7097863f439bc7a1a3c433928, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Gradient_Edge_Detection:
-        m_Texture: {fileID: 2800000, guid: a95cd61354f0f794ab21bc0e7e905dbc, type: 3}
+        m_Texture: {fileID: 2800000, guid: b3eeb2b3f729c8b459e894dff245c326, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Gradient_Texture_Decay:
-        m_Texture: {fileID: 2800000, guid: 1afc2415b297bab478597580754713c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: b0e9ee2599f61b04396a5a170fdcbbaf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -37,22 +37,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: f75c9018c32b54142a234f7a281a6215, type: 3}
-        m_Scale: {x: 1, y: 0.3}
+        m_Texture: {fileID: 2800000, guid: 34bca7389a6b4f94e8479a7dc321a312, type: 3}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Brightness: 1
+    - _Brightness: 0.5
     - _Cutoff: 0.5
     - _Decay: 0.05
     - _Decay_V_Coordinate: 0.1
     - _Edge_Detection: 1
-    - _Edge_Detection_Distance: 3
+    - _Edge_Detection_Distance: 1
     - _Edge_Or_Center_Fresnel: 1
     - _Fresnel: 1
-    - _Fresnel_Exponent: 1
+    - _Fresnel_Exponent: 1.25
     - _Gradient_Color_Intensity: 1
     - _Gradient_Or_Solid_Color: 1
-    - _Intensity: 1
+    - _Intensity: 2
     - _Make_Same_As_Fresnel: 1
     - _Pan_Speed: 1
     - _Soft_Texture: 0
