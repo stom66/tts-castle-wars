@@ -123,13 +123,16 @@ function xml_resToColor(all_produce, resource)
 end
 
 function btn_info_wiki(player, value, id)
-    tablet_showPage("wiki")
+    if not player_isValid(player.color) then return false end
+    tablet_goToPage(player.color, "wiki")
 end
 function btn_info_tutorial(player, value, id)
-    tablet_showPage("tutorial")
+    if not player_isValid(player.color) then return false end
+    tablet_goToPage(player.color, "tutorial")
 end
 function btn_info_workshop(player, value, id)
-    tablet_showPage("workshop")
+    if not player_isValid(player.color) then return false end
+    tablet_goToPage(player.color, "workshop")
 end
 
 
@@ -138,6 +141,7 @@ end
     Show/hide controls for the various panels
 --]]
 
+function xml_toggleInfo(player, value, id) xml_toggleElement("info", player.color) end
 function xml_showInfo(player, value, id) xml_showElement("info", player.color) end
 function xml_hideInfo(player, value, id) xml_hideElement("info", player.color) end
 
@@ -147,6 +151,14 @@ function xml_hideWin(player, value, id) xml_hideElement("win", player.color) end
 function xml_showLose(player, value, id) xml_showElement("lose", player.color) end
 function xml_hideLose(player, value, id) xml_hideElement("lose", player.color) end
 
+
+function xml_toggleElement(id, player_color)
+    if table.contains(data.xml_visibility[id], player_color) then
+        xml_hideElement(id, player_color)
+    else
+        xml_showElement(id, player_color)
+    end
+end
 
 function xml_hideElement(id, player_color)
     if data.debug then

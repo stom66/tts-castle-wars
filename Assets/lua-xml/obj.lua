@@ -31,3 +31,12 @@ function obj_getOwner(obj)
         return false
     end
 end
+
+function onObjectDestroy(obj)
+    --[[
+        see if the tablet was removed
+    --]]
+    if obj == data.tablet_obj then
+        data.tablet_obj = nil
+    end
+end

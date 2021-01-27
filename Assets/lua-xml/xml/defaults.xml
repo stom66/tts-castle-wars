@@ -22,16 +22,6 @@
         color         = "#cccccc"
         />
     
-    <!--   colors          = "#0d679c|#1F52A7|#00348a|#333333" -->
-    <Button class       = "panel_info>@Button"
-        colors          = "#618c2d|#73A23B|#578223|#444444"
-        height          = "55"
-        preferredHeight = "55"
-        width           = "200"
-        preferredWidth  = "200"
-        rectAlignment   = "LowerCenter"
-
-        />
     <Button class       = "btn_info_close"
         onClick         = "xml_hideInfo"
         width           = "28"
@@ -42,23 +32,38 @@
         offsetXY        = "-26 -26"
         colors          = "#ffffff00|#cce7ff|#dddddd|#333333"
         />
-    <Button class       = "btn_info_wiki"
-        onClick         = "tablet_showWiki"
-        icon            = "btn_wiki"
-        width           = "180"
-        preferredWidth  = "180"
-        offsetXY        = "0 135"
+
+    <HorizontalLayout 
+        class         = "panel_info>@HorizontalLayout"
+        spacing       = "10"
+        width         = "640"
+        offsetXY      = "0 125"
+        height        = "75"
+        padding       = "10 10 10 10"
+        rectAlignment = "LowerCenter"
         />
-    <Button class       = "btn_info_tutorial"
-        onClick         = "tablet_showTutorial"
-        icon            = "btn_tutorial"
-        offsetXY        = "-205 135"
-        />
-    <Button class       = "btn_info_workshop"
-        onClick         = "tablet_showWorkshop"
-        icon            = "btn_workshop"
-        offsetXY        = "205 135"
-        />
+        <!--   colors          = "#0d679c|#1F52A7|#00348a|#333333" -->
+        <Button class          = "panel_info>@HorizontalLayout>@Button"
+            colors             = "#618c2d|#73A23B|#578223|#444444"
+            preferredHeight    = "55"
+            height             = "55"
+            width              = "220"
+            preferredWidth     = "220"
+            />
+            <Button class       = "btn_info_wiki"
+                onClick         = "tablet_showWiki"
+                icon            = "btn_wiki"
+                width           = "180"
+                preferredWidth  = "180"
+                />
+            <Button class       = "btn_info_tutorial"
+                onClick         = "tablet_showTutorial"
+                icon            = "btn_tutorial"
+                />
+            <Button class       = "btn_info_workshop"
+                onClick         = "tablet_showWorkshop"
+                icon            = "btn_workshop"
+                />
 
 <!-- Player Panels-->   
     <Panel class        = "player_panel"

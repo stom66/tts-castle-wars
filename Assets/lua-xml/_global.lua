@@ -36,6 +36,10 @@ function onLoad(saved_data)
     --wait for save_data to load and parse before triggering the XML update
     Wait.condition(
         function()
+            --show the info_links buttons in the info panel
+            UI.show("info_links")
+
+            --perform actions for each player
             for _,player_color in ipairs(players) do
                 --update the XML with the various stats and buffs
                 xml_update(player_color)

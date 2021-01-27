@@ -108,6 +108,7 @@ function card_attack(player, damage, bypass_wall, delay)
     if data[target].buff.defence then
         damage = 0
         data[target].buff.defence = false
+        triggerEffect(target, "magic_defence_off")
     end
 
     --delay the actual damage being dealt to give the

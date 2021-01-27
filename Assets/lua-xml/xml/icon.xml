@@ -1,0 +1,10 @@
+<Button
+    rectAlignment   = "UpperRight"
+    height          = "60"
+    preferredHeight = "60"
+    width           = "60"
+    preferredWidth  = "60"
+    icon            = "cw_logo"
+    onClick         = "xml_toggleInfo"
+    offsetXY        = "-220 -5"
+></Button>

@@ -3,3 +3,7 @@
 <Include src="tts-castle-wars/Assets/lua-xml/xml/info.xml"/>
 
 <Include src="tts-castle-wars/Assets/lua-xml/xml/playerPanels.xml"/>
+
+<Include src="tts-castle-wars/Assets/lua-xml/xml/icon.xml"/>
+
+<Include src="tts-castle-wars/Assets/lua-xml/xml/win_lose.xml"/>
