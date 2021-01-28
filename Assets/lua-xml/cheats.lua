@@ -34,14 +34,14 @@ cheats = {
     end
 }
 
-function onChat(message, player_color)
-    if not player_isValid(player_color) then return false end
+function onChat(message, player)
+    if not player_isValid(player.color) then return false end
     if message:sub(1, 1) == "!" then
         local params = message:split()
         local command = params[1]:gsub("!", "")
 
         if cheats[command] then
-            cheats[command](player_color, params[2])
+            cheats[command](player.color, params[2])
         end
     end
 end
