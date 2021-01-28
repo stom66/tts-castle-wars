@@ -80,6 +80,7 @@ end
 --require("tts-castle-wars/Assets/lua-xml/saveData")
 
 require("tts-castle-wars/Assets/lua-xml/debug")
+require("tts-castle-wars/Assets/lua-xml/cheats")
 
 require("tts-castle-wars/Assets/lua-xml/lang")
 require("tts-castle-wars/Assets/lua-xml/broadcast")
@@ -110,4 +111,5 @@ require("tts-castle-wars/Assets/lua-xml/zoneActions")
 --utility stuff
 require("tts-castle-wars/Assets/lua-xml/obj")
 require("tts-castle-wars/Assets/lua-xml/math")
+require("tts-castle-wars/Assets/lua-xml/string")
 require("tts-castle-wars/Assets/lua-xml/table")

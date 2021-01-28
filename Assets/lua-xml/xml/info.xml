@@ -4,9 +4,9 @@
 
 <Mask id="info" class="mask_info" visibility="Red|Blue|White|Black">
     <Panel class="panel_info">
-        <Button class="btn_info_close"><Text>x</Text></Button>
         
         <Image image="img_info"></Image>
+        <Button class="btn_info_close"><!--nothing--></Button>
 
         <HorizontalLayout id="info_links" active="false">
             <Button class="btn_info_tutorial"></Button>

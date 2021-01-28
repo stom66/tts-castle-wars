@@ -25,7 +25,7 @@ function tablet_spawnTablet(page, player_color)
 
     local tablet = spawnObject({
         type              = "Tablet",
-        position          = Vector(0, 0, 46),
+        position          = Vector(0, 3, 46),
         rotation          = Vector(45, 0, 0),
         callback_function = function(obj)
             obj.setLock(true)
@@ -53,7 +53,7 @@ function tablet_goToPage(page, player_color)
     else
         data.tablet_obj.Browser.url = pages[page]
         Player[player_color].lookAt({
-            position = Vector(0, 0, 46),
+            position = data.tablet_obj.getPosition(),
             pitch    = 45,
             yaw      = 180,
             distance = 8,

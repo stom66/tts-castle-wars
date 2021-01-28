@@ -30,7 +30,7 @@
         preferredHeight = "28"
         rectAlignment   = "UpperRight"
         offsetXY        = "-26 -26"
-        colors          = "#ffffff00|#cce7ff|#dddddd|#333333"
+        colors          = "#00000000|#cce7ffdd|#ddddddcc|#333333"
         />
 
     <HorizontalLayout 
