@@ -155,7 +155,8 @@ function card_getDataTable()
         name   = "Dispel",
         cost   = {2, 2, 2, 0},
         action = "removeBuff",
-        value  = "all"
+        value  = "all",
+        delay  = 3.5,
     }
     t[149203]  = {
         name   = "Dragon",

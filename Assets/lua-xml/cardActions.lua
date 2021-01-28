@@ -108,7 +108,9 @@ function card_attack(player, damage, bypass_wall, delay)
     if data[target].buff.defence then
         damage = 0
         data[target].buff.defence = false
-        triggerEffect(target, "magic_defence_off")
+        Wait.time(function()
+            triggerEffect(target, "magic_defence_off")
+        end, math.abs((delay or 0) - 0.2))
     end
 
     --delay the actual damage being dealt to give the
@@ -173,9 +175,17 @@ function card_curse(player, value, bypass, delay)
     card_attack(player, 1)
 end
 
-function card_removeBuff(player, value)
+function card_removeBuff(player, value, bypass, delay)
     --removes a buff from the other player
     local target = player_opponent(player)
+
+    --trigger animation if required
+    if (value=="all" or value=="defence") and data[target].buff.defence then
+        Wait.time(function()
+            triggerEffect(target, "magic_defence_off")
+        end, delay or 0)
+    end
+
     if value=="all" then
         card_removeBuff(player, "build")
         card_removeBuff(player, "defence")
@@ -331,6 +341,6 @@ function card_wain(player, value, bypass, delay)
 
         --build our castle
         card_buildCastle(player, 6)
-        updateCastleHeight(player)
+        updateCastleHeight(player, 0, true)
     end, delay or 0)
 end
