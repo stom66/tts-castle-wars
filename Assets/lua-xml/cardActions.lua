@@ -337,10 +337,10 @@ function card_wain(player, value, bypass, delay)
         --lower oponent castle
         local target = player_opponent(player)
         card_attack(player, 6, true)
-        updateCastleHeight(target)
+        --updateCastleHeight(target, 0, true)
 
         --build our castle
-        card_buildCastle(player, 6)
-        updateCastleHeight(player, 0, true)
+        card_buildCastle(player, 6, true)
+        --updateCastleHeight(player, 0, true)
     end, delay or 0)
 end
