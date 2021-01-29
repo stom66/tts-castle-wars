@@ -6,5 +6,7 @@
     preferredWidth  = "60"
     icon            = "cw_logo"
     onClick         = "xml_toggleInfo"
-    offsetXY        = "-220 -5"
+    offsetXY        = "-350 -5"
+    allowDragging   = "true"
+    returnToOriginalPositionWhenReleased = "false"
 ></Button>
