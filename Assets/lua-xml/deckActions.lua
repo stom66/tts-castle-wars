@@ -99,14 +99,14 @@ function deck_spawnDeck(i, player_color)
     local obj = data[player_color].deckzone_obj
 
     --get reference to the stock deck
-    local stock_deck       = getObjectFromGUID("deck01")
+    local stock_deck = getObjectFromGUID("deck01")
 
     --work out position and rotation of the clone deck
-    local deck_position    = obj.getPosition():add(obj.getTransformUp() * 15)
-    if not debug then
+    local deck_position = obj.getPosition():add(obj.getTransformUp() * 15)
+    if not data.debug then
         deck_position:add(obj.getTransformRight() * -4)
     end
-    local deck_rotation    = obj.getRotation():add(Vector(180, 180, 0))
+    local deck_rotation    = obj.getRotation():add(Vector(0, 0, 180))
 
     --spawn a copy of the full deck
     local deck             = stock_deck.clone({
