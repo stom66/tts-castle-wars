@@ -19,7 +19,7 @@ function deckpad_drawButtons(player_color)
         function_owner = Global,
         click_function = "deckpad_findDeck",
         label          = "Lock",
-        position       = {-0.775, 0.05, 1.8},
+        position       = {-0.775, 0.075, 1.775},
         width          = 520,
         height         = 220,
         font_size      = 150,
