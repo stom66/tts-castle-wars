@@ -6,8 +6,8 @@
 --]]
 
 function game_stop()
-    if data.debug then 
-        log("game_stop()", nil, info) 
+    if data.debug then
+        log("game_stop()", nil, info)
     end
     data.game_state = "stopped"
     broadcastToAll(lang.game_stopped, "Yellow")
@@ -38,6 +38,13 @@ function game_end()
             triggerEffect(player, "lose")
         end
 
+        --check if we need to de-activte either the shield or the roadblock
+        if data[player].buff.defence then
+            triggerEffect(player, "magic_defence_off")
+        elseif data[player].all_produce == "none" then
+            triggerEffect(player, "roadblock_off")
+        end
+
         --update their XML ui
         xml_update(player)
 
@@ -63,7 +70,9 @@ function game_countdown()
         --update the game state
         data.game_state = "countdown"
 
+
         for _,player_color in ipairs(players) do
+
             --reset the player data
             data[player_color] = table.merge(data[player_color], player_defaultStats())
 
