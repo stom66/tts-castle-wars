@@ -28,6 +28,28 @@ function xml_updateWallHeight(player, value, id)
     end
 end
 
+function xml_updateNames()
+    --[[
+        Updates the player names shown in the player panels
+    --]]
+    local name_blue, name_red = "Player Blue", "Player Red"
+    if Player["Blue"].seated then
+        name_blue = Player["Blue"].steam_name
+    end
+    if Player["Red"].seated then
+        name_red = Player["Red"].steam_name
+    end
+
+    UI.setAttribute("ui1_blue_playerName", "text", name_blue)
+    UI.setAttribute("ui2_blue_playerName", "text", name_blue)
+    UI.setAttribute("ui1_red_playerName", "text", name_red)
+    UI.setAttribute("ui2_red_playerName", "text", name_red)
+
+    if data.debug then
+        log("Updating XML Player Names to: "..name_blue.." and "..name_red)
+    end
+end
+
 function xml_update(player_color)
     --[[
         Called at the start of every turn for both players
@@ -38,6 +60,9 @@ function xml_update(player_color)
     if data.debug then
         log("xml_update("..player_color..")", nil, player_color)
     end
+
+    --update player names, just in case
+    xml_updateNames()
 
     --work out element id prefix
     local prefix = player_color:lower()

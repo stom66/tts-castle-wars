@@ -60,24 +60,12 @@ function onLoad(saved_data)
     checkForDebug()
 end
 
-
---[[
-    Add scripting key shortcuts
---]]
-function onScriptingButtonDown(index, player_color)
-    if player_isValid(player_color) then
-        if index == 1 then
-            trigger_playCard(player_color)
-        elseif index == 10 then
-            trigger_discardCard(player_color)
-        end
-    end
-end
-
 --[[
     Requires the main game files
 --]]
 --require("tts-castle-wars/Assets/lua-xml/saveData")
+
+require("tts-castle-wars/Assets/lua-xml/_events")
 
 require("tts-castle-wars/Assets/lua-xml/debug")
 require("tts-castle-wars/Assets/lua-xml/cheats")
@@ -88,7 +76,6 @@ require("tts-castle-wars/Assets/lua-xml/broadcast")
 require("tts-castle-wars/Assets/lua-xml/playerActions")
 require("tts-castle-wars/Assets/lua-xml/playerContextActions")
 require("tts-castle-wars/Assets/lua-xml/playerData")
-require("tts-castle-wars/Assets/lua-xml/playerManagement")
 
 require("tts-castle-wars/Assets/lua-xml/cardActions")
 require("tts-castle-wars/Assets/lua-xml/cardData")

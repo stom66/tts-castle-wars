@@ -3,7 +3,7 @@
 --]]
 
 
-function onObjectSpawn(obj)
+function obj_addContextMenuItems(obj)
     --[[
         Adds suitable context menu items to Cards when they are spawned. 
         Ignores non-card objects.

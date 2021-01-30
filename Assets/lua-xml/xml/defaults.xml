@@ -65,12 +65,16 @@
                 icon            = "btn_workshop"
                 />
 
+
+
+
+
 <!-- Player Panels-->   
     <Panel class        = "player_panel"
         width           = "300"
         preferredWidth  = "300"
-        height          = "695"
-        preferredHeight = "695"
+        height          = "720"
+        preferredHeight = "720"
         allowDragging   = "true"
         scale           = "0.75 0.75 0.75"
         returnToOriginalPositionWhenReleased = "false"
@@ -81,7 +85,7 @@
             />
         <Panel class      = "float_right"
             rectAlignment = "UpperRight"
-            offsetXY      = "-20 -100"
+            offsetXY      = "-40 -100"
             />
 
     <!-- Score changes panel-->
@@ -89,10 +93,8 @@
         class           = "scorePanel"
         width           = "100"
         preferredWidth  = "100"
-        height          = "695"
-        preferredHeight = "695"
-        spacing         = "5"
-        padding         = "15 15 30 140"
+        spacing         = "20"
+        padding         = "15 15 95 140"
         />
             <Text
                 class = "scorePanel_blue>@HorizontalLayout>@Text"
@@ -105,8 +107,8 @@
 
             <HorizontalLayout
                 class           = "scorePanel>@HorizontalLayout"
-                height          = "135"
-                preferredHeight = "135"
+                height          = "100"
+                preferredHeight = "100"
                 />
                 <Text
                     class             = "scorePanel>@HorizontalLayout>@Text"
@@ -118,49 +120,30 @@
                     active            = "false"
                     />
 
-    <!-- Masks -->
-    <Mask class         = "mask_panel"
-        image           = "mask_panel"
-        width           = "200"
-        preferredWidth  = "200"
-        height          = "695"
-        preferredHeight = "695"
+    <!-- Player name banner -->
+    <Text class="playerName"
+        rectAlignment        = "UpperLeft"
+        alignment            = "MiddleCenter"
+        minHeight            = "60"
+        height               = "60"
+        preferredHeight      = "60"
+        minWidth             = "240"
+        width                = "240"
+        preferredWidth       = "240"
+        color                = "#eeeeee"
+        resizeTextForBestFit = "true"
         />
-        <Mask class       = "mask_blue"
-            rectAlignment = "UpperLeft"
-            />
-        <Mask class       = "mask_red"
-            rectAlignment = "UpperRight"
-            />
-
-    <Mask 
-        class           = "mask_section"
-        image           = "mask_section"
-        preferredWidth  = "180"
-        preferredHeight = "135"
-        minWidth        = "180"
-        minHeight       = "135"
-        />
-
 
     <!-- Main VerticalLayout containing all the resource sections -->
     <VerticalLayout
         class                  = "playerPanel"
-        spacing                = "0"
-        padding                = "10 10 10 10"
-        childForceExpandWidth  = "false"
+        spacing                = "20"
+        padding                = "10 10 95 10"
+        childForceExpandWidth  = "true"
         childForceExpandHeight = "false"
         width                  = "200"
         preferredWidth         = "200"
-        height                 = "695"
-        preferredHeight        = "695"
         />
-        <VerticalLayout class = "playerPanel_blue"
-            color             = "rgba(0, 0.45, 0.71, 0.5)"
-            />
-        <VerticalLayout class = "playerPanel_red"  
-            color             = "rgba(0.85, 0.2, 0.3, 0.5)"  
-            />
 
     <HorizontalLayout
         childForceExpandWidth  = "false"
@@ -172,9 +155,9 @@
         width             = "180"
         preferredWidth    = "180"
         minWidth          = "180"
-        height            = "135"
-        preferredHeight   = "135"
-        minHeight         = "135"
+        height            = "100"
+        preferredHeight   = "100"
+        minHeight         = "100"
         spacing           = "5"
         padding           = "15 15 5 5"
         />

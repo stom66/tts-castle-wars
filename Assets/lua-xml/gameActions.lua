@@ -41,8 +41,9 @@ function game_end()
         --check if we need to de-activte either the shield or the roadblock
         if data[player].buff.defence then
             triggerEffect(player, "magic_defence_off")
-        elseif data[player].all_produce == "none" then
-            triggerEffect(player, "roadblock_off")
+        end
+        if data[player].all_produce == "none" then
+            triggerEffect(player_opponent(player), "roadblock_off")
         end
 
         --update their XML ui

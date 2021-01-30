@@ -1,80 +1,79 @@
-
-
 <Panel class="player_panel float_left" visibility="Blue|White|Black|Grey">
+    <!-- Panel background image -->
+    <Image 
+        image    = "panel_blue"
+        offsetXY = "-50 0">
+    </Image>
+
+    <!--Player name -->
+    <Text id     = "ui1_blue_playerName" 
+        class    = "playerName" 
+        text     = "Player Blue"
+        offsetXY = "-18 0">
+    </Text>
     <HorizontalLayout>
-        <Mask class="mask_panel mask_blue" active="true">
-            <VerticalLayout class="playerPanel playerPanel_blue">
-                <!-- Builders and Bricks -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_green">
-                        <HorizontalLayout>
-                            <Image image="icon_builders"></Image>
-                            <Text id="ui1_blue_builders" text="2"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_blue_icon_bricks" image="icon_bricks"></Image>
-                            <Text id="ui1_blue_bricks" text="5"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Soldiers and Swords -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_red">
-                        <HorizontalLayout>
-                            <Image image="icon_soldiers"></Image>
-                            <Text id="ui1_blue_soldiers" text="2"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_blue_icon_swords" image="icon_swords"></Image>
-                            <Text id="ui1_blue_swords" text="5"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Mages and Crystals -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_blue">
-                        <HorizontalLayout>
-                            <Image image="icon_wizards"></Image>
-                            <Text id="ui1_blue_mages" text="2"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_blue_icon_crystals" image="icon_crystals"></Image>
-                            <Text id="ui1_blue_crystals" text="5"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Castle and Wall -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_black">
-                        <HorizontalLayout>
-                            <Image image="icon_wall"></Image>
-                            <Text id="ui1_blue_wall" text="10"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image image="icon_castle"></Image>
-                            <Text id="ui1_blue_castle" text="30"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Buffs -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_gold">
-                        <HorizontalLayout>
-                            <Image id="ui1_blue_buff_build" image="icon_bricks" color="#333333" />
-                            <Image id="ui1_blue_buff_attack" image="icon_swords" color="#333333" />
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_blue_buff_resources" image="icon_chest" color="#333333" />
-                            <Image id="ui1_blue_buff_defence" image="icon_shield" color="#333333" />
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
+        <VerticalLayout class="playerPanel">            
+            <!-- Builders and Bricks -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_builders"></Image>
+                    <Text id="ui1_blue_builders" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_blue_icon_bricks" image="icon_bricks"></Image>
+                    <Text id="ui1_blue_bricks" text="5"></Text>
+                </HorizontalLayout>
             </VerticalLayout>
-        </Mask>
+
+            <!-- Soldiers and Swords -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_soldiers"></Image>
+                    <Text id="ui1_blue_soldiers" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_blue_icon_swords" image="icon_swords"></Image>
+                    <Text id="ui1_blue_swords" text="5"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- Mages and Crystals -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_wizards"></Image>
+                    <Text id="ui1_blue_mages" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_blue_icon_crystals" image="icon_crystals"></Image>
+                    <Text id="ui1_blue_crystals" text="5"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- Castle and Wall -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_wall"></Image>
+                    <Text id="ui1_blue_wall" text="10"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image image="icon_castle"></Image>
+                    <Text id="ui1_blue_castle" text="30"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- Buffs -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image id="ui1_blue_buff_build" image="icon_bricks" color="#333333" />
+                    <Image id="ui1_blue_buff_attack" image="icon_swords" color="#333333" />
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_blue_buff_resources" image="icon_chest" color="#333333" />
+                    <Image id="ui1_blue_buff_defence" image="icon_shield" color="#333333" />
+                </HorizontalLayout>
+            </VerticalLayout>
+        </VerticalLayout>
+        <!-- Score change panel -->
         <VerticalLayout class="scorePanel scorePanel_blue">
             <HorizontalLayout><Text id="ui1_blue_builders_change" text="+1"></Text></HorizontalLayout>
             <HorizontalLayout><Text id="ui1_blue_bricks_change" text="+1"></Text></HorizontalLayout>
@@ -89,7 +88,21 @@
 </Panel>
 
 <Panel class="player_panel float_right" visibility="Blue|White|Black|Grey">
+    <!-- Panel background image -->
+    <Image 
+        image    = "panel_red"
+        offsetXY = "50 0">
+    </Image>
+
+    <!--Player name -->
+    <Text id     = "ui1_red_playerName" 
+        class    = "playerName" 
+        text     = "Player Red"
+        offsetXY = "80 0">
+    </Text>
+
     <HorizontalLayout>
+        <!-- Score change panel -->
         <VerticalLayout class="scorePanel scorePanel_red">
             <HorizontalLayout><Text id="ui1_red_builders_change" text="+1"></Text></HorizontalLayout>
             <HorizontalLayout><Text id="ui1_red_bricks_change" text="+1"></Text></HorizontalLayout>
@@ -100,78 +113,67 @@
             <HorizontalLayout><Text id="ui1_red_wall_change" text="+1"></Text></HorizontalLayout>
             <HorizontalLayout><Text id="ui1_red_castle_change" text="+1"></Text></HorizontalLayout>
         </VerticalLayout>
-        <Mask class="mask_panel mask_red" active="true">
-            <VerticalLayout class="playerPanel playerPanel_red">
-                <!-- Builders and Bricks -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_green">
-                        <HorizontalLayout>
-                            <Image image="icon_builders"></Image>
-                            <Text id="ui1_red_builders" text="2"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_red_icon_bricks" image="icon_bricks"></Image>
-                            <Text id="ui1_red_bricks" text="5"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
 
-                <!-- Soldiers and Swords -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_red">
-                        <HorizontalLayout>
-                            <Image image="icon_soldiers"></Image>
-                            <Text id="ui1_red_soldiers" text="2"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_red_icon_swords" image="icon_swords"></Image>
-                            <Text id="ui1_red_swords" text="5"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Mages and Crystals -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_blue">
-                        <HorizontalLayout>
-                            <Image image="icon_wizards"></Image>
-                            <Text id="ui1_red_mages" text="2"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_red_icon_crystals" image="icon_crystals"></Image>
-                            <Text id="ui1_red_crystals" text="5"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Castle and Wall -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_black">
-                        <HorizontalLayout>
-                            <Image image="icon_wall"></Image>
-                            <Text id="ui1_red_wall" text="10"></Text>
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image image="icon_castle"></Image>
-                            <Text id="ui1_red_castle" text="30"></Text>
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
-
-                <!-- Buffs -->
-                <Mask class="mask_section">
-                    <VerticalLayout class="section bg_gold">
-                        <HorizontalLayout>
-                            <Image id="ui1_red_buff_build" image="icon_bricks" color="#333333" />
-                            <Image id="ui1_red_buff_attack" image="icon_swords" color="#333333" />
-                        </HorizontalLayout>
-                        <HorizontalLayout>
-                            <Image id="ui1_red_buff_resources" image="icon_chest" color="#333333" />
-                            <Image id="ui1_red_buff_defence" image="icon_shield" color="#333333" />
-                        </HorizontalLayout>
-                    </VerticalLayout>
-                </Mask>
+        <VerticalLayout class="playerPanel">            
+            <!-- Builders and Bricks -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_builders"></Image>
+                    <Text id="ui1_red_builders" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_red_icon_bricks" image="icon_bricks"></Image>
+                    <Text id="ui1_red_bricks" text="5"></Text>
+                </HorizontalLayout>
             </VerticalLayout>
-        </Mask>
+
+            <!-- Soldiers and Swords -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_soldiers"></Image>
+                    <Text id="ui1_red_soldiers" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_red_icon_swords" image="icon_swords"></Image>
+                    <Text id="ui1_red_swords" text="5"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- Mages and Crystals -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_wizards"></Image>
+                    <Text id="ui1_red_mages" text="2"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_red_icon_crystals" image="icon_crystals"></Image>
+                    <Text id="ui1_red_crystals" text="5"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- Castle and Wall -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image image="icon_wall"></Image>
+                    <Text id="ui1_red_wall" text="10"></Text>
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image image="icon_castle"></Image>
+                    <Text id="ui1_red_castle" text="30"></Text>
+                </HorizontalLayout>
+            </VerticalLayout>
+
+            <!-- Buffs -->
+            <VerticalLayout class="section">
+                <HorizontalLayout>
+                    <Image id="ui1_red_buff_build" image="icon_bricks" color="#333333" />
+                    <Image id="ui1_red_buff_attack" image="icon_swords" color="#333333" />
+                </HorizontalLayout>
+                <HorizontalLayout>
+                    <Image id="ui1_red_buff_resources" image="icon_chest" color="#333333" />
+                    <Image id="ui1_red_buff_defence" image="icon_shield" color="#333333" />
+                </HorizontalLayout>
+            </VerticalLayout>
+        </VerticalLayout>
     </HorizontalLayout>
 </Panel>

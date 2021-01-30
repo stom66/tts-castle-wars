@@ -117,7 +117,9 @@ function turn_start(player_color)
     end
 
     --update card scales
-    cards_updateScales(player_color)
+    if data.turn_count > 1 then
+        cards_updateScales(player_color)
+    end
 
     --update the xml
     xml_update(player_color)

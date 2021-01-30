@@ -24,10 +24,10 @@ function tablet_spawnTablet(page, player_color)
     end
 
     local tablet = spawnObject({
-        type              = "Tablet",
-        position          = Vector(0, 3, 46),
-        rotation          = Vector(45, 0, 0),
-        callback_function = function(obj)
+        type                = "Tablet",
+        position            = Vector(0, 3, 46),
+        rotation            = Vector(45, 0, 0),
+        callback_function   = function(obj)
             obj.setLock(true)
             data.tablet_obj = obj
             tablet_goToPage(page, player_color)
