@@ -145,11 +145,11 @@ function xml_toggleInfo(player, value, id) xml_toggleElement("info", player.colo
 function xml_showInfo(player, value, id) xml_showElement("info", player.color) end
 function xml_hideInfo(player, value, id) xml_hideElement("info", player.color) end
 
-function xml_showWin(player, value, id) xml_showElement("win", player.color) end
-function xml_hideWin(player, value, id) xml_hideElement("win", player.color) end
+function xml_showWinner(player, value, id) xml_showElement("winner", player.color) end
+function xml_hideWinner(player, value, id) xml_hideElement("winner", player.color) end
 
-function xml_showLose(player, value, id) xml_showElement("lose", player.color) end
-function xml_hideLose(player, value, id) xml_hideElement("lose", player.color) end
+function xml_showLoser(player, value, id) xml_showElement("loser", player.color) end
+function xml_hideLoser(player, value, id) xml_hideElement("loser", player.color) end
 
 
 function xml_toggleElement(id, player_color)
