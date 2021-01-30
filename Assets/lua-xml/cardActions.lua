@@ -48,6 +48,9 @@ function cards_updateScales(player_color)
     --abort if the game isn't in progress
     if data.game_state ~= "active" or player_color=="" then return false end
 
+    --set a counter of playable cards
+    local c = 0
+
     --Get a table of all cards in the players hand
     local cards = player_getCardsInHand(player_color)
 
@@ -57,10 +60,16 @@ function cards_updateScales(player_color)
         if cardId then
             if player_canAffordCard(player_color, cardId) then
                 card.setScale({1, 1, 1})
+                c = c + 1
             else
                 card.setScale({0.75, 1, 0.75})
             end
         end
+    end
+
+    --alert the player if they cannot afford to play any cards
+    if c == 0 then
+        bToColor(lang.cant_afford_any_cards, player_color)
     end
 end
 

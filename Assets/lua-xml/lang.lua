@@ -1,6 +1,7 @@
 function lang_getStrings()
     return {
         cant_afford_card         = "You cannot afford to use that card!",
+        cant_afford_any_cards    = "You can't afford to play any cards! Consider discarding some",
         cant_play_after_discard  = "You can't play a card in the same turn as discarding cards",
         cant_play_multiple_cards = "You can only play one card at a time, please select a single card",
         cant_play_non_card       = "You can't play an object that isn't a card",
