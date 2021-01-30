@@ -11,8 +11,8 @@ function onLoad(saved_data)
         loading              = false,     --loading flag to let game know when to continue with setup
         xml_visibility       = {
             info             = {"Red", "Blue", "Black", "White"},
-            win              = {"None"},
-            lose             = {"None"},
+            winner           = {},
+            loser            = {},
         }
     }
 
