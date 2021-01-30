@@ -49,7 +49,7 @@ function cards_updateScales(player_color)
     if data.game_state ~= "active" or player_color=="" then return false end
 
     --Get a table of all cards in the players hand
-    local cards = data[player_color].handzone_zone.getObjects()
+    local cards = player_getCardsInHand(player_color)
 
     --Loop though, adjusting scale of each card in hand
     for _,card in ipairs(cards) do
@@ -225,7 +225,7 @@ function card_sabotage(player_color, value)
     end
 
     --get a table of all the cards in the targets handzone and loop through them
-    local cards = data[target].handzone_zone.getObjects()
+    local cards = player_getCardsInHand(target)
     for _,card in ipairs(cards) do
 
         --add a reference to the card GUID in the player data

@@ -137,7 +137,7 @@ function player_returnCardsToDeck(player_color)
     if not player_color or player_color == "" then return false end
 
     local deck = data[player_color].deck_obj
-    local cards = data[player_color].handzone_zone.getObjects()
+    local cards = player_getCardsInHand(player_color)
     for _,card in ipairs(cards) do
         card_addToDeck(card, deck)
     end
@@ -159,9 +159,9 @@ function player_checkCardsInHand(player_color)
     if data.game_state ~= "active" then return false end
 
     --get the number of objects in hand and work out the difference
-    local hand_objs = data[player_color].handzone_zone.getObjects()
+    local cards = player_getCardsInHand(player_color)
 
-    local missing = data.max_cards_in_hand - #hand_objs
+    local missing = data.max_cards_in_hand - #cards
     if missing > 0 then
         if data.debug then
             log("player_checkCardsInHand("..player_color.."): is missing "..missing.." cards", nil, player_color)
@@ -172,4 +172,18 @@ function player_checkCardsInHand(player_color)
             log("player_checkCardsInHand("..player_color.."): has "..math.abs(missing).." extra cards!", nil, player_color)
         end
     end
+end
+
+function player_getCardsInHand(player_color)
+    --[[
+        returns a table of card objects in the players current hand zone
+    --]]
+    local results = {}
+    local objs = data[player_color].handzone_zone.getObjects()
+    for _,obj in ipairs(objs) do
+        if obj.tag == "Card" then
+            table.insert(results, obj)
+        end
+    end
+    return results
 end

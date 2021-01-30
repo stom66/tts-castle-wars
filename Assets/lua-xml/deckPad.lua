@@ -89,7 +89,7 @@ function deckpad_findDeck(obj, clickee)
     end
 
     --check if the action was performed by the right user, or if we're in debug
-    if clickee ~= owner and not debug then
+    if clickee ~= owner and not data.debug then
         broadcastToColor(lang.deck_not_yours(owner), clickee, "Red")
         return false
     end
