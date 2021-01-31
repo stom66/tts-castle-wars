@@ -137,7 +137,7 @@ function turn_end(player_color)
     --abort if the game isn't in progress
     if data.game_state ~= "active" then return false end
 
-    --if the previous player discarded cards then broadcast that
+    --if the previous turn ended because player discarded cards then broadcast that
     if data[player_color].discards > 0 then
         bToAll(lang.player_discarded_cards(player_color, data[player_color].discards), player_color)
     end

@@ -101,6 +101,13 @@ function card_allProduce(player, value)
     if value == "none" then
         target = player_opponent(player)
     end
+
+    --check if the roadblock_off animation needs to be triggered
+    if data[target].all_produce == "none" then
+        triggerEffect(player_opponent(target), "roadblock_off")
+    end
+
+    --set the buff
     data[target].all_produce = value
 end
 

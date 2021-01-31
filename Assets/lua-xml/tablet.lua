@@ -52,11 +52,13 @@ function tablet_goToPage(page, player_color)
         tablet_spawnTablet(page, player_color)
     else
         data.tablet_obj.Browser.url = pages[page]
-        Player[player_color].lookAt({
-            position = data.tablet_obj.getPosition(),
-            pitch    = 45,
-            yaw      = 180,
-            distance = 8,
-        })
+        if player_color ~= "Grey" then
+            Player[player_color].lookAt({
+                position = data.tablet_obj.getPosition(),
+                pitch    = 45,
+                yaw      = 180,
+                distance = 8,
+            })
+        end
     end
 end

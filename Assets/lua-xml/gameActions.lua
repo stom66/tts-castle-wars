@@ -32,13 +32,19 @@ function game_end()
             --this player won!
             bToColor(lang.game_won, player, "Green")
             triggerEffect(player, "win")
+            Wait.time(function()
+                xml_showWinner({color=player})
+            end, 3)
         elseif data[player_opponent(player)].castle >= 100 or data[player].castle < 1 then
             --this player lost :(
             bToColor(lang.game_lost, player, "Red")
             triggerEffect(player, "lose")
+            Wait.time(function()
+                xml_showLoser({color=player})
+            end, 3)
         end
 
-        --check if we need to de-activte either the shield or the roadblock
+        --check if we need to de-activate either the shield or the roadblock
         if data[player].buff.defence then
             triggerEffect(player, "magic_defence_off")
         end

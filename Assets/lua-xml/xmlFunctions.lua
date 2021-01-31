@@ -192,7 +192,7 @@ function xml_hideElement(id, player_color)
 
     local contains = table.contains(data.xml_visibility[id], player_color)
     if contains then
-        data.xml_visibility[id][contains] = nil
+        table.remove(data.xml_visibility[id], contains)
     end
     xml_updateVisibility(id, player_color)
 end
