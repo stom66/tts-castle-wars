@@ -5,7 +5,7 @@
 layout: page
 ---
 
-![Banner Image]({{ '/assets/img/banner.png' | relative_url }})
+![Banner Image](assets/img/banner.png)
 
 
 <img src="{{ '/assets/img/banner.png' | relative_url }}" />
