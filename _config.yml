@@ -27,9 +27,8 @@ author: searanger & stom
 avatar: assets/img/icon.png
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  Castle Wars is a 2-player card game for Tabletop Simulator. 
+  It's a fully scripted and animated remake of the classic Flash game.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://stom66.github.io'
@@ -86,7 +85,7 @@ theme_mode:   # [light|dark]
 img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
+#avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true

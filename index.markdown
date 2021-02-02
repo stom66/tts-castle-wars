@@ -12,7 +12,7 @@ layout: page
 
 # Castle Wars Wiki
 
-This wiki contains a mixture of information including basic gameplay instructions as well as information on editing the code for the game.
+This wiki contains a mixture of information including basic gameplay instructions, rules, card actions and more.
 
 ## Useful links:
 
