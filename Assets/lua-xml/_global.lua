@@ -58,6 +58,9 @@ function onLoad(saved_data)
 
     --check to see if data.debug should be automatically enabled
     checkForDebug()
+
+    --outline the player hands
+    outlinePlayerHands()
 end
 
 --[[
@@ -94,6 +97,8 @@ require("tts-castle-wars/Assets/lua-xml/turnActions")
 
 require("tts-castle-wars/Assets/lua-xml/xmlFunctions")
 require("tts-castle-wars/Assets/lua-xml/zoneActions")
+
+require("tts-castle-wars/Assets/lua-xml/vlines")
 
 --utility stuff
 require("tts-castle-wars/Assets/lua-xml/obj")
