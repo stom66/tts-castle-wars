@@ -2,7 +2,7 @@ name: 'Automatic build'
 on:
   push:
     branches:
-      - gh-pages
+      - chirpy
     paths-ignore:
       - .gitignore
       - README.md
