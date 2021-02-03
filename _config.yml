@@ -97,7 +97,7 @@ disqus:
 paginate: 10
 
 contact:
-  
+
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -119,7 +119,7 @@ permalink: /posts/:title/
 collections:
   tabs:
     output: true
-    sort_by: order
+    # sort_by: name
 
 
 defaults:
