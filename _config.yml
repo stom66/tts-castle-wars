@@ -88,7 +88,7 @@ img_cdn: ''
 #avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
 
 # boolean type, the global switch for ToC in posts.
-toc: true
+toc: false
 
 disqus:
   comments: false  # boolean type, the global switch for posts comments.

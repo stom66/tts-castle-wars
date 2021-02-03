@@ -16,6 +16,17 @@ permalink: installation
 
 Installing the game is very straightforward. Simply head to the Steam Workshop page and click the Subscribe button. The game will then be available in the Workshop section of the Games window in Tabletop Simulator.
 
+
+<a href="https://store.steampowered.com/app/286160/Tabletop_Simulator/" class="btn btn-primary btn-lg" role="button">
+    <span class="text-white">
+        <i class="fab fa-steam mr-2"></i>
+        <span class="font-weight-bold">
+            Coming Soon!
+        </span>
+    </span>
+</a>
+
+<!--
 <a href="https://store.steampowered.com/app/286160/Tabletop_Simulator/" class="btn btn-primary btn-lg" role="button">
     <span class="text-white">
         <i class="fab fa-steam mr-2"></i>
@@ -24,7 +35,7 @@ Installing the game is very straightforward. Simply head to the Steam Workshop p
         </span>
     </span>
 </a>
-
+-->
 ---
 
 ## Manual install
