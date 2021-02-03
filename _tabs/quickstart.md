@@ -1,9 +1,12 @@
 ---
 title: Quick Start
 layout: page
-icon: fas fa-info
+icon: fas fa-bolt
 order: 1
 ---
+
+<img src="https://raw.githubusercontent.com/stom66/tts-castle-wars/gh-pages/assets/img/banner.png" class="img-fluid" />
+
 ## Quick Start
 
 Castle Wars is a *two-person game*, no more, no less. Players must occupy the Blue and Red seats. 

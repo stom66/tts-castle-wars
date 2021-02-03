@@ -1,14 +1,14 @@
 ---
 title: The UI
 layout: page
-icon: fas fa-info
+icon: fas fa-window-restore
 order: 3
 ---
 # Gameplay Instructions
 
 ## What's what
 
-![Game components](images/components.png "Logo Title Text 1")
+![Game components](/assets/img/components.png "Logo Title Text 1")
 
 ### 1) Castle
 This is your Castle. When it reaches level 100 you win the game! Defend it at all costs, if it reaches level 0 you lose!
@@ -44,7 +44,7 @@ These panels show the current stats for each player. Further information on this
 ## Stats:
 
 
-![Player Stats](images/player_stats.png "Player Stats")
+![Player Stats](/assets/img/player_stats.png "Player Stats")
 
 ---
 

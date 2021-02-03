@@ -1,14 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: page
+title: Home
+icon: fas fa-info
+order: 1
+permalink: index.html
 ---
-
-![Banner Image](assets/img/banner.png)
-
-
-<img src="{{ '/assets/img/banner.png' | relative_url }}" />
+![Banner](/assets/img/banner.png)
 
 # Castle Wars Wiki
 
@@ -24,3 +20,12 @@ This wiki contains a mixture of information including basic gameplay instruction
 * [Assets](assets) - information on the various assets used to create the game
 * [Cards](cards) - details on the various cards used in the game, including their costs and functions
 * [Development](development) - a guide for those wishing to modify the game
+
+
+This wiki is for the Castle Wars remake for Tabletop Simulator.
+
+You will need to own the base game to be able to install and play this mod.
+
+#### How to get the mod:
+
+Head on over the Steam Workshop page and Subscribe to this mod. It should be available straight away in the Workshop section of your Games choices.

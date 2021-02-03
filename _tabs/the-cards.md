@@ -1,7 +1,7 @@
 ---
 title: The Cards
 layout: page
-icon: fas fa-info
+icon: fab fa-buffer
 order: 4
 ---
 
