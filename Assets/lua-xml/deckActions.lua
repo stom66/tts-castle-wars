@@ -165,6 +165,17 @@ function deck_checkDeck(obj, player_color)
         return false
     end
 
+    --check total card in deck meets min_cards_in_deck
+    if #cards < data.min_cards_in_deck then
+        --too many cards in the deck, alert and abort
+        bToColor(lang.deck_too_small, player_color, "Red")
+
+        if data.debug then
+            log("deck_checkDeck("..#cards..", "..player_color.."): failed, too few cards", nil, player_color)
+        end
+        return false
+    end
+
     --check counts of individual cards does not exceed max_card_duplicates
     local cardCount = {}
     local id

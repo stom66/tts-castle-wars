@@ -5,11 +5,13 @@ function onLoad(saved_data)
         game_state           = "pregame", --"pregame", "countdown", "active", "stopped", "finished"
         max_card_duplicates  = 5,         --max number of any one card that can be in a valid deck
         max_cards_in_deck    = 5*56,      --max_card_duplicates * card count
+        min_cards_in_deck    = 10,
         max_cards_in_hand    = 8,         --used for dealing replacement cards on turn_end
         max_discard_per_turn = 3,         --self explanatory
         turn_count           = 0,         --primarily used to determine if resources should be increased
         loading              = false,     --loading flag to let game know when to continue with setup
         xml_visibility       = {
+            deck_builder     = {},
             info             = {"Red", "Blue", "Black", "White"},
             winner           = {},
             loser            = {},
@@ -84,6 +86,7 @@ require("tts-castle-wars/Assets/lua-xml/cardActions")
 require("tts-castle-wars/Assets/lua-xml/cardData")
 
 require("tts-castle-wars/Assets/lua-xml/deckActions")
+require("tts-castle-wars/Assets/lua-xml/deckBuilder")
 require("tts-castle-wars/Assets/lua-xml/deckData")
 require("tts-castle-wars/Assets/lua-xml/deckPad")
 
