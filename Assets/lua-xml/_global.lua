@@ -60,7 +60,7 @@ function onLoad(saved_data)
     checkForDebug()
 
     --outline the player hands
-    outlinePlayerHands()
+    --outlinePlayerHands()
 end
 
 --[[

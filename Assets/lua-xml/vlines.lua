@@ -1,35 +1,45 @@
 
 function outlinePlayerHands()
     local vlines = {}
-    for _,v in ipairs(getSeatedPlayers()) do
-        local hand              = Player[v].getHandTransform()
-        local rot_y             = hand.rotation.y
-        local width_x, height_z = hand.scale.x, hand.scale.z
-        local pos               = hand.position:sub(Vector(0,0, 0))
 
-        table.insert(vlines, vline_capsule(pos, rot_y, width_x, height_z, Color.fromString(v), 0.4))
-        --table.insert(vlines, vline_capsule(pos, rot_y, width_x-0.25, height_z-0.25, Color.fromString(v), 0.25))
+    for k,v in ipairs(Hands.getHands()) do
+        local rot = v.getRotation().y
+        local pos = v.getPosition():setAt("y", 1)
+        local color = Color.fromString(v.getValue())
+        local scale = v.getScale()
+        local scale2 = scale:copy():scale(Vector(1.05, 1, 1.25))
+
+
+        table.insert(vlines, vline_capsule(pos, rot, scale, color, 0.25))
+        table.insert(vlines, vline_capsule(pos, rot, scale2, color, 0.1))
     end
+
     Global.setVectorLines(vlines)
 end
 
-function vline_capsule(pos, rot_y, x, z, color, thickness)
-    local steps = 20
-    local angle = 180/steps
-    local t = {
-        points    = {},
-        color     = color or {1,1,1},
-        thickness = thickness or 0.5,
-        rotation  = {0,0,0},
+function vline_capsule(pos, rot_y, scale, color, thickness)
+    local steps    = 20
+    local angle    = 180/steps
+    local t        = {
+        points     = {},
+        color      = color or {1,1,1},
+        thickness  = thickness or 0.5,
+        rotation   = {0,0,0},
     }
+    local x, z     = scale.x, scale.z
+    local offset_z = Vector(0, 0, z/2):rotateOver("y", rot_y)
+    local offset_x = Vector(x/2, 0, 0):rotateOver("y", rot_y)
+
     for i=0,steps do
-        table.insert(t.points, pos:copy():add(Vector(0, 0, z/2):rotateOver("y", i*angle):add(Vector(x/2, 0, 0))))
+        table.insert(t.points, offset_z:copy():rotateOver("y", i*angle):add(offset_x):add(pos))
     end
+    offset_x:inverse()
+    offset_z:inverse()
     for i=0,steps do
-        table.insert(t.points, pos:copy():add(Vector(0, 0, 0-z/2):rotateOver("y", i*angle):add(Vector(0-(x/2), 0, 0))))
+        table.insert(t.points, offset_z:copy():rotateOver("y", i*angle):add(offset_x):add(pos))
     end
-    
-    table.insert(t.points, pos:add(Vector(x/2, 0, z/2)))
+
+    table.insert(t.points, t.points[1])
 
     return t
 end
