@@ -31,15 +31,15 @@ function game_end()
         if data[player].castle >= 100 or data[player_opponent(player)].castle < 1 then
             --this player won!
             bToColor(lang.game_won, player, "Green")
-            triggerEffect(player, "win")
             Wait.time(function()
+                triggerEffect(player, "win")
                 xml_showWinner({color=player})
             end, 3)
         elseif data[player_opponent(player)].castle >= 100 or data[player].castle < 1 then
             --this player lost :(
             bToColor(lang.game_lost, player, "Red")
-            triggerEffect(player, "lose")
             Wait.time(function()
+                triggerEffect(player, "lose")
                 xml_showLoser({color=player})
             end, 3)
         end
