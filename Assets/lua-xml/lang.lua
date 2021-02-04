@@ -14,6 +14,7 @@ function lang_getStrings()
         deck_not_locked2         = "You must have a valid locked deck to discard a card",
         deck_not_yours           = function(c) return "Only player "..c.." can control their deck!" end,
         deck_too_large           = "Deck is too large! Max size is "..data.max_cards_in_deck,
+        deck_too_small           = "Deck is too small! Minimum size is "..data.min_cards_in_deck,
         deck_valid               = "Your deck is ready and loaded!",
         discard_choose_card      = "Choose one of your opponents cards to discard",
         discard_wait_for_player  = "Oh no! Your deck is being sabotaged! Wait for it...",
