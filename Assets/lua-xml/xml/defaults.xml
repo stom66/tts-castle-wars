@@ -66,7 +66,66 @@
                 />
 <!-- Tooltip styles -->
 
+<!-- Deck Builder -->
+<Panel class      = "deck_builder"
+    rectAlignment = "MiddleCenter"
+    width         = "1000"
+    height        = "600"
+    allowDragging = "true"
+    color         = "#cccccc"
+    padding       = "20 20 20 20"
+    outline       = "#666666"
+    outlineSize   = "2 2"
+    returnToOriginalPositionWhenReleased = "false"
+    />
 
+    <Button class       = "btn_deckBuilder_close"
+        onClick         = "xml_hidedeckBuilder"
+        width           = "28"
+        preferredWidth  = "28"
+        height          = "28"
+        preferredHeight = "28"
+        rectAlignment   = "UpperRight"
+        offsetXY        = "-26 -26"
+        colors          = "#00000000|#cce7ffdd|#ddddddcc|#333333"
+        />
+
+    <Slider class="deck_builder:@Slider"
+        minValue = "0"
+        maxValue = "5"
+        value    = "2"
+        wholeNumbers = "true"
+        onValueChanged = "xml_db_sliderChange"
+        />
+
+    <TableLayout class="deck_builder>@TableLayout"
+        cellBackgroundColor = "none"
+            padding = "5 5 5 5"
+            cellSpacing = "5"
+        />
+        
+        <Cell class = "deck_builder:@Cell"
+            padding = "5 5 5 5"
+            />
+            <Text class   = "deck_builder:@Cell:@Text"
+                color     = "#ffffff" 
+                />
+        <Cell class                    = "deck_builder:bg_blue"
+            dontUseTableCellBackground = "true"
+            color                      = "#03305A" 
+            />
+        <Cell class                    = "deck_builder:bg_red"
+            dontUseTableCellBackground = "true"
+            color                      = "#7E121F" 
+            />
+        <Cell class                    = "deck_builder:bg_green"
+            dontUseTableCellBackground = "true"
+            color                      = "##034123" 
+            />
+        <Cell class                    = "deck_builder:bg_gold"
+            dontUseTableCellBackground = "true"
+            color                      = "#BA7F07" 
+            />
 
 
 

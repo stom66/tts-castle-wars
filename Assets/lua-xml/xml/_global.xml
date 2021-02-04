@@ -7,3 +7,5 @@
 <Include src="tts-castle-wars/Assets/lua-xml/xml/icon.xml"/>
 
 <Include src="tts-castle-wars/Assets/lua-xml/xml/win_lose.xml"/>
+
+<Include src="tts-castle-wars/Assets/lua-xml/xml/deck_builder.xml"/>
