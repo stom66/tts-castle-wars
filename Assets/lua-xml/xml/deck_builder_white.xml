@@ -1,5 +1,9 @@
 <!-- Deck builder panel - white -->
-<Mask id="white_deckBuilder" class="mask_info deck_builder" active="false">
+<Mask id="white_deckBuilder" class="deck_builder" active="false">
+    <Button class="btn_deckBuilder_close">
+        <Text text="Close"></Text>
+    </Button>
+    <Image image="img_deck_builder"></Image>
     <Panel>
         <TableLayout>
             <Row preferredHeight="34">
@@ -15,11 +19,6 @@
                 <Cell>
                     <Button onClick="xml_db_spawnDeck">
                         <Text text="Spawn Deck"></Text>
-                    </Button>
-                </Cell>
-                <Cell>
-                    <Button onClick="xml_toggle_deckBuilder">
-                        <Text text="Close"></Text>
                     </Button>
                 </Cell>
             </Row>

@@ -48,7 +48,7 @@ function onLoad(saved_data)
 
                 --during debug, automatically spawn a deck for each player 1 second after loading the game
                 if data.debug and not data[player_color].deck_obj then
-                    deck_spawnDeck(3, player_color)
+                    deck_spawnDeck(1, player_color)
                 end
             end
         end,

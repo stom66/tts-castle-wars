@@ -1,433 +1,434 @@
 <!-- Deck builder panel - white -->
-<Panel id="black_deckBuilder" class="deck_builder" active="false">
-    <TableLayout>
-        <Row preferredHeight="34">
-            <Cell columnSpan="2">
-                 <Dropdown id="black_dropdown_loadDeck" onValueChanged="xml_db_loadDeck_dropdown">
-                    <Option>Stock Plus</Option>
-                    <Option>Stock</Option>
-                    <Option selected="true">Complete</Option>
-                    <Option>Empty</Option>
-                </Dropdown>
-            </Cell>
-            <Cell columnSpan="4"></Cell>
-            <Cell>
-                <Button onClick="xml_db_spawnDeck">
-                    <Text text="Spawn Deck"></Text>
-                </Button>
-            </Cell>
-            <Cell>
-                <Button onClick="xml_toggle_deckBuilder">
-                    <Text text="Close"></Text>
-                </Button>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Add Bricks"></Text>
-                    <Text text="5" id="black_qty_148900"></Text>
-                    <Slider id="black_slider_148900"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Add Crystals"></Text>
-                    <Text text="5" id="black_qty_148901"></Text>
-                    <Slider id="black_slider_148901"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Add Weapons"></Text>
-                    <Text text="5" id="black_qty_148902"></Text>
-                    <Slider id="black_slider_148902"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="All Crystals"></Text>
-                    <Text text="5" id="black_qty_148903"></Text>
-                    <Slider id="black_slider_148903"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Bribe Mage"></Text>
-                    <Text text="5" id="black_qty_148904"></Text>
-                    <Slider id="black_slider_148904"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Conjure Wall"></Text>
-                    <Text text="5" id="black_qty_148905"></Text>
-                    <Slider id="black_slider_148905"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Hail Storm"></Text>
-                    <Text text="5" id="black_qty_148906"></Text>
-                    <Slider id="black_slider_148906"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Lightning"></Text>
-                    <Text text="5" id="black_qty_148907"></Text>
-                    <Slider id="black_slider_148907"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Mage"></Text>
-                    <Text text="5" id="black_qty_148908"></Text>
-                    <Slider id="black_slider_148908"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Magic Bricks"></Text>
-                    <Text text="5" id="black_qty_148909"></Text>
-                    <Slider id="black_slider_148909"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Magic Defence"></Text>
-                    <Text text="5" id="black_qty_148910"></Text>
-                    <Slider id="black_slider_148910"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Magic Weapons"></Text>
-                    <Text text="5" id="black_qty_148911"></Text>
-                    <Slider id="black_slider_148911"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Pixies"></Text>
-                    <Text text="5" id="black_qty_148912"></Text>
-                    <Slider id="black_slider_148912"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Quake"></Text>
-                    <Text text="5" id="black_qty_148913"></Text>
-                    <Slider id="black_slider_148913"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Remove Bricks"></Text>
-                    <Text text="5" id="black_qty_148914"></Text>
-                    <Slider id="black_slider_148914"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Remove Crystals"></Text>
-                    <Text text="5" id="black_qty_148915"></Text>
-                    <Slider id="black_slider_148915"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_blue">
-                    <Text text="Remove Weapons"></Text>
-                    <Text text="5" id="black_qty_148916"></Text>
-                    <Slider id="black_slider_148916"></Slider>
-                </VerticalLayout>
-            </Cell>
+<Mask id="black_deckBuilder" class="deck_builder" active="false">
+    <Button class="btn_deckBuilder_close">
+        <Text text="Close"></Text>
+    </Button>
+    <Image image="img_deck_builder"></Image>
+    <Panel>
+        <TableLayout>
+            <Row preferredHeight="34">
+                <Cell columnSpan="2">
+                    <Dropdown id="black_dropdown_loadDeck" onValueChanged="xml_db_loadDeck_dropdown">
+                        <Option>Stock Plus</Option>
+                        <Option>Stock</Option>
+                        <Option selected="true">Complete</Option>
+                        <Option>Empty</Option>
+                    </Dropdown>
+                </Cell>
+                <Cell columnSpan="4"></Cell>
+                <Cell>
+                    <Button onClick="xml_db_spawnDeck">
+                        <Text text="Spawn Deck"></Text>
+                    </Button>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Add Bricks"></Text>
+                        <Text text="5" id="black_qty_148900"></Text>
+                        <Slider id="black_slider_148900"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Add Crystals"></Text>
+                        <Text text="5" id="black_qty_148901"></Text>
+                        <Slider id="black_slider_148901"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Add Weapons"></Text>
+                        <Text text="5" id="black_qty_148902"></Text>
+                        <Slider id="black_slider_148902"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="All Crystals"></Text>
+                        <Text text="5" id="black_qty_148903"></Text>
+                        <Slider id="black_slider_148903"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Bribe Mage"></Text>
+                        <Text text="5" id="black_qty_148904"></Text>
+                        <Slider id="black_slider_148904"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Conjure Wall"></Text>
+                        <Text text="5" id="black_qty_148905"></Text>
+                        <Slider id="black_slider_148905"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Hail Storm"></Text>
+                        <Text text="5" id="black_qty_148906"></Text>
+                        <Slider id="black_slider_148906"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Lightning"></Text>
+                        <Text text="5" id="black_qty_148907"></Text>
+                        <Slider id="black_slider_148907"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Mage"></Text>
+                        <Text text="5" id="black_qty_148908"></Text>
+                        <Slider id="black_slider_148908"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Magic Bricks"></Text>
+                        <Text text="5" id="black_qty_148909"></Text>
+                        <Slider id="black_slider_148909"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Magic Defence"></Text>
+                        <Text text="5" id="black_qty_148910"></Text>
+                        <Slider id="black_slider_148910"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Magic Weapons"></Text>
+                        <Text text="5" id="black_qty_148911"></Text>
+                        <Slider id="black_slider_148911"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Pixies"></Text>
+                        <Text text="5" id="black_qty_148912"></Text>
+                        <Slider id="black_slider_148912"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Quake"></Text>
+                        <Text text="5" id="black_qty_148913"></Text>
+                        <Slider id="black_slider_148913"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Remove Bricks"></Text>
+                        <Text text="5" id="black_qty_148914"></Text>
+                        <Slider id="black_slider_148914"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Remove Crystals"></Text>
+                        <Text text="5" id="black_qty_148915"></Text>
+                        <Slider id="black_slider_148915"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_blue">
+                        <Text text="Remove Weapons"></Text>
+                        <Text text="5" id="black_qty_148916"></Text>
+                        <Slider id="black_slider_148916"></Slider>
+                    </VerticalLayout>
+                </Cell>
 
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="All Bricks"></Text>
-                    <Text text="5" id="black_qty_149100"></Text>
-                    <Slider id="black_slider_149100"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Babylon"></Text>
-                    <Text text="5" id="black_qty_149101"></Text>
-                    <Slider id="black_slider_149101"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Catapult"></Text>
-                    <Text text="5" id="black_qty_149105"></Text>
-                    <Slider id="black_slider_149105"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Battering Ram"></Text>
-                    <Text text="5" id="black_qty_149102"></Text>
-                    <Slider id="black_slider_149102"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Bribe Builder"></Text>
-                    <Text text="5" id="black_qty_149103"></Text>
-                    <Slider id="black_slider_149103"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Builder"></Text>
-                    <Text text="5" id="black_qty_149104"></Text>
-                    <Slider id="black_slider_149104"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Fence"></Text>
-                    <Text text="5" id="black_qty_149106"></Text>
-                    <Slider id="black_slider_149106"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="House"></Text>
-                    <Text text="5" id="black_qty_149107"></Text>
-                    <Slider id="black_slider_149107"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Large Wall"></Text>
-                    <Text text="5" id="black_qty_149108"></Text>
-                    <Slider id="black_slider_149108"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Reverse"></Text>
-                    <Text text="5" id="black_qty_149109"></Text>
-                    <Slider id="black_slider_149109"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="School"></Text>
-                    <Text text="5" id="black_qty_149110"></Text>
-                    <Slider id="black_slider_149110"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Tavern"></Text>
-                    <Text text="5" id="black_qty_149111"></Text>
-                    <Slider id="black_slider_149111"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Tower"></Text>
-                    <Text text="5" id="black_qty_149112"></Text>
-                    <Slider id="black_slider_149112"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Wain"></Text>
-                    <Text text="5" id="black_qty_149113"></Text>
-                    <Slider id="black_slider_149113"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_green">
-                    <Text text="Wall"></Text>
-                    <Text text="5" id="black_qty_149114"></Text>
-                    <Slider id="black_slider_149114"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="All Weapons"></Text>
-                    <Text text="5" id="black_qty_149000"></Text>
-                    <Slider id="black_slider_149000"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Ambush"></Text>
-                    <Text text="5" id="black_qty_149001"></Text>
-                    <Slider id="black_slider_149001"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Archer"></Text>
-                    <Text text="5" id="black_qty_149002"></Text>
-                    <Slider id="black_slider_149002"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Cannon"></Text>
-                    <Text text="5" id="black_qty_149005"></Text>
-                    <Slider id="black_slider_149005"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Bomb"></Text>
-                    <Text text="5" id="black_qty_149003"></Text>
-                    <Slider id="black_slider_149003"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Bribe Soldier"></Text>
-                    <Text text="5" id="black_qty_149004"></Text>
-                    <Slider id="black_slider_149004"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Fire Archer"></Text>
-                    <Text text="5" id="black_qty_149006"></Text>
-                    <Slider id="black_slider_149006"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Guards"></Text>
-                    <Text text="5" id="black_qty_149007"></Text>
-                    <Slider id="black_slider_149007"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Knight"></Text>
-                    <Text text="5" id="black_qty_149008"></Text>
-                    <Slider id="black_slider_149008"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Platoon"></Text>
-                    <Text text="5" id="black_qty_149009"></Text>
-                    <Slider id="black_slider_149009"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Protect Resources"></Text>
-                    <Text text="5" id="black_qty_149010"></Text>
-                    <Slider id="black_slider_149010"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Recruit"></Text>
-                    <Text text="5" id="black_qty_149011"></Text>
-                    <Slider id="black_slider_149011"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Roadblock"></Text>
-                    <Text text="5" id="black_qty_149012"></Text>
-                    <Slider id="black_slider_149012"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Sabotage"></Text>
-                    <Text text="5" id="black_qty_149013"></Text>
-                    <Slider id="black_slider_149013"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_red">
-                    <Text text="Thief"></Text>
-                    <Text text="5" id="black_qty_149014"></Text>
-                    <Slider id="black_slider_149014"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Curse"></Text>
-                    <Text text="5" id="black_qty_149201"></Text>
-                    <Slider id="black_slider_149201"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-        <Row>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Ballista"></Text>
-                    <Text text="5" id="black_qty_149205"></Text>
-                    <Slider id="black_slider_149205"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Comet Strike"></Text>
-                    <Text text="5" id="black_qty_149200"></Text>
-                    <Slider id="black_slider_149200"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Dispel"></Text>
-                    <Text text="5" id="black_qty_149202"></Text>
-                    <Slider id="black_slider_149202"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Dragon"></Text>
-                    <Text text="5" id="black_qty_149203"></Text>
-                    <Slider id="black_slider_149203"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Giant Snowball"></Text>
-                    <Text text="5" id="black_qty_149204"></Text>
-                    <Slider id="black_slider_149204"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Remove Resources"></Text>
-                    <Text text="5" id="black_qty_149206"></Text>
-                    <Slider id="black_slider_149206"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Reward Workers"></Text>
-                    <Text text="5" id="black_qty_149207"></Text>
-                    <Slider id="black_slider_149207"></Slider>
-                </VerticalLayout>
-            </Cell>
-            <Cell>
-                <VerticalLayout class="bg_gold">
-                    <Text text="Trojan Horse"></Text>
-                    <Text text="5" id="black_qty_149208"></Text>
-                    <Slider id="black_slider_149208"></Slider>
-                </VerticalLayout>
-            </Cell>
-        </Row>
-    </TableLayout>
-</Panel>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="All Bricks"></Text>
+                        <Text text="5" id="black_qty_149100"></Text>
+                        <Slider id="black_slider_149100"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Babylon"></Text>
+                        <Text text="5" id="black_qty_149101"></Text>
+                        <Slider id="black_slider_149101"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Catapult"></Text>
+                        <Text text="5" id="black_qty_149105"></Text>
+                        <Slider id="black_slider_149105"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Battering Ram"></Text>
+                        <Text text="5" id="black_qty_149102"></Text>
+                        <Slider id="black_slider_149102"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Bribe Builder"></Text>
+                        <Text text="5" id="black_qty_149103"></Text>
+                        <Slider id="black_slider_149103"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Builder"></Text>
+                        <Text text="5" id="black_qty_149104"></Text>
+                        <Slider id="black_slider_149104"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Fence"></Text>
+                        <Text text="5" id="black_qty_149106"></Text>
+                        <Slider id="black_slider_149106"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="House"></Text>
+                        <Text text="5" id="black_qty_149107"></Text>
+                        <Slider id="black_slider_149107"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Large Wall"></Text>
+                        <Text text="5" id="black_qty_149108"></Text>
+                        <Slider id="black_slider_149108"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Reverse"></Text>
+                        <Text text="5" id="black_qty_149109"></Text>
+                        <Slider id="black_slider_149109"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="School"></Text>
+                        <Text text="5" id="black_qty_149110"></Text>
+                        <Slider id="black_slider_149110"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Tavern"></Text>
+                        <Text text="5" id="black_qty_149111"></Text>
+                        <Slider id="black_slider_149111"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Tower"></Text>
+                        <Text text="5" id="black_qty_149112"></Text>
+                        <Slider id="black_slider_149112"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Wain"></Text>
+                        <Text text="5" id="black_qty_149113"></Text>
+                        <Slider id="black_slider_149113"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_green">
+                        <Text text="Wall"></Text>
+                        <Text text="5" id="black_qty_149114"></Text>
+                        <Slider id="black_slider_149114"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="All Weapons"></Text>
+                        <Text text="5" id="black_qty_149000"></Text>
+                        <Slider id="black_slider_149000"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Ambush"></Text>
+                        <Text text="5" id="black_qty_149001"></Text>
+                        <Slider id="black_slider_149001"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Archer"></Text>
+                        <Text text="5" id="black_qty_149002"></Text>
+                        <Slider id="black_slider_149002"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Cannon"></Text>
+                        <Text text="5" id="black_qty_149005"></Text>
+                        <Slider id="black_slider_149005"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Bomb"></Text>
+                        <Text text="5" id="black_qty_149003"></Text>
+                        <Slider id="black_slider_149003"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Bribe Soldier"></Text>
+                        <Text text="5" id="black_qty_149004"></Text>
+                        <Slider id="black_slider_149004"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Fire Archer"></Text>
+                        <Text text="5" id="black_qty_149006"></Text>
+                        <Slider id="black_slider_149006"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Guards"></Text>
+                        <Text text="5" id="black_qty_149007"></Text>
+                        <Slider id="black_slider_149007"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Knight"></Text>
+                        <Text text="5" id="black_qty_149008"></Text>
+                        <Slider id="black_slider_149008"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Platoon"></Text>
+                        <Text text="5" id="black_qty_149009"></Text>
+                        <Slider id="black_slider_149009"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Protect Resources"></Text>
+                        <Text text="5" id="black_qty_149010"></Text>
+                        <Slider id="black_slider_149010"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Recruit"></Text>
+                        <Text text="5" id="black_qty_149011"></Text>
+                        <Slider id="black_slider_149011"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Roadblock"></Text>
+                        <Text text="5" id="black_qty_149012"></Text>
+                        <Slider id="black_slider_149012"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Sabotage"></Text>
+                        <Text text="5" id="black_qty_149013"></Text>
+                        <Slider id="black_slider_149013"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_red">
+                        <Text text="Thief"></Text>
+                        <Text text="5" id="black_qty_149014"></Text>
+                        <Slider id="black_slider_149014"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Curse"></Text>
+                        <Text text="5" id="black_qty_149201"></Text>
+                        <Slider id="black_slider_149201"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Ballista"></Text>
+                        <Text text="5" id="black_qty_149205"></Text>
+                        <Slider id="black_slider_149205"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Comet Strike"></Text>
+                        <Text text="5" id="black_qty_149200"></Text>
+                        <Slider id="black_slider_149200"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Dispel"></Text>
+                        <Text text="5" id="black_qty_149202"></Text>
+                        <Slider id="black_slider_149202"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Dragon"></Text>
+                        <Text text="5" id="black_qty_149203"></Text>
+                        <Slider id="black_slider_149203"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Giant Snowball"></Text>
+                        <Text text="5" id="black_qty_149204"></Text>
+                        <Slider id="black_slider_149204"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Remove Resources"></Text>
+                        <Text text="5" id="black_qty_149206"></Text>
+                        <Slider id="black_slider_149206"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Reward Workers"></Text>
+                        <Text text="5" id="black_qty_149207"></Text>
+                        <Slider id="black_slider_149207"></Slider>
+                    </VerticalLayout>
+                </Cell>
+                <Cell>
+                    <VerticalLayout class="bg_gold">
+                        <Text text="Trojan Horse"></Text>
+                        <Text text="5" id="black_qty_149208"></Text>
+                        <Slider id="black_slider_149208"></Slider>
+                    </VerticalLayout>
+                </Cell>
+            </Row>
+        </TableLayout>
+    </Panel>
+</Mask>

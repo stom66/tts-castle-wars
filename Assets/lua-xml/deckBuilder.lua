@@ -81,6 +81,8 @@ function xml_db_spawnDeck(player, value, id)
         log(card_count)
     end
 
-    deck_spawnDeck(0, player_color, card_count)
+    deck_spawnDeck(0, player.color, card_count)
+
+    xml_toggle_deckBuilder(player)
 end
 

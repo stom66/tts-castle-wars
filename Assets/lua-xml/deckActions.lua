@@ -160,6 +160,16 @@ function deck_spawnDeck(i, player_color, card_count)
             })
         end
     end
+
+    --move the player's camera to look at the deck
+    if Player[player_color].seated then
+        Player[player_color].lookAt({
+            distance = 20,
+            pitch    = 45,
+            position = deck.getPosition():setAt("y", 1),
+            yaw      = Player[player_color].getPointerRotation()+180
+        })
+    end
 end
 
 

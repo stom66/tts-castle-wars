@@ -67,15 +67,16 @@
 <!-- Tooltip styles -->
 
 <!-- Deck Builder -->
-<Mask class      = "deck_builder"
+<Mask class       = "deck_builder"
     rectAlignment = "MiddleCenter"
     width         = "1000"
     height        = "600"
     allowDragging = "true"
+    image         = "img_deck_builder"
     returnToOriginalPositionWhenReleased = "false"
     />
     <Panel class="deck_builder>@Panel"
-        color         = "#cccccc"
+        color         = "none"
         padding       = "20 20 20 20"
         outline       = "#666666"
         outlineSize   = "6 6"
@@ -83,7 +84,7 @@
 
 
     <Button class       = "btn_deckBuilder_close"
-        onClick         = "xml_hidedeckBuilder"
+        onClick         = "xml_toggle_deckBuilder"
         width           = "28"
         preferredWidth  = "28"
         height          = "28"
