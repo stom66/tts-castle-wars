@@ -1,11 +1,24 @@
+<!-- Style defaults -->
 <Include src="tts-castle-wars/Assets/lua-xml/xml/defaults.xml"/>
 
+<!-- The splash screen/info shortcut panel -->
 <Include src="tts-castle-wars/Assets/lua-xml/xml/info.xml"/>
 
-<Include src="tts-castle-wars/Assets/lua-xml/xml/playerPanels.xml"/>
+<!-- Include both Player Panels
+    The first  UI is visible to everyone except RED
+    The second UI is mirrored and *only* visible to RED
+-->
+<Include src="tts-castle-wars/Assets/lua-xml/xml/panels_ui1.xml"/>
+<Include src="tts-castle-wars/Assets/lua-xml/xml/panels_ui2.xml"/>
 
+<!-- The CW Icon which brings up the Info window-->
 <Include src="tts-castle-wars/Assets/lua-xml/xml/icon.xml"/>
 
+<!-- The Win and Lose screens-->
 <Include src="tts-castle-wars/Assets/lua-xml/xml/win_lose.xml"/>
 
-<Include src="tts-castle-wars/Assets/lua-xml/xml/deck_builder.xml"/>
+<!-- Deck Builder - 4 copies for the (almost) identical deck builder panels-->
+<Include src="tts-castle-wars/Assets/lua-xml/xml/deck_builder_black.xml"/>
+<Include src="tts-castle-wars/Assets/lua-xml/xml/deck_builder_blue.xml"/>
+<Include src="tts-castle-wars/Assets/lua-xml/xml/deck_builder_red.xml"/>
+<Include src="tts-castle-wars/Assets/lua-xml/xml/deck_builder_white.xml"/>

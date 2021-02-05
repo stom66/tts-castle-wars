@@ -178,6 +178,7 @@ function xml_hideLoser(player, value, id) xml_hideElement("loser", player.color)
 
 
 function xml_toggleElement(id, player_color)
+    player_color = player_color:lower()
     if table.contains(data.xml_visibility[id], player_color) then
         xml_hideElement(id, player_color)
     else
@@ -189,6 +190,8 @@ function xml_hideElement(id, player_color)
     if data.debug then
         log("xml_hideElement("..id..", "..player_color..")")
     end
+    
+    player_color = player_color:lower()
 
     local contains = table.contains(data.xml_visibility[id], player_color)
     if contains then
@@ -202,6 +205,7 @@ function xml_showElement(id, player_color)
         log("xml_showElement("..id..", "..player_color..")")
     end
 
+    player_color = player_color:lower()
     if not table.contains(data.xml_visibility[id], player_color) then
         table.insert(data.xml_visibility[id], player_color)
     end

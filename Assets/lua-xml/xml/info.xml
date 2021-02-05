@@ -2,7 +2,7 @@
     This is the info panel which shows when a player first joins the game
 -->
 
-<Mask id="info" class="mask_info" visibility="Red|Blue|White|Black">
+<Mask id="info" class="mask_info" visibility="red|blue|white|black">
     <Panel class="panel_info">
         
         <Image image="img_info"></Image>

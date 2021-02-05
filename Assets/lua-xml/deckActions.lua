@@ -85,28 +85,56 @@ function deck_unlockDeck(obj, player_color, alt_click)
 end
 
 
-function deck_spawnDeck(i, player_color)
+function deck_spawnDeck(i, player_color, card_count)
     --[[
         Spawns a new deck for the player by first cloning the stock deck hidden under the table
         Then we cycle through that cloned deck and remove the cards needed to match the requested deck
     --]]
 
     if data.debug then
-        log("deck_spawnDeck("..decks.names[i]..", "..player_color..")", nil, player_color)
+        log("deck_spawnDeck("..i..", "..player_color..")", nil, player_color)
     end
 
-    --get a reference to the deckpad obj
-    local obj = data[player_color].deckzone_obj
+    --make a local table of the card quantities we want to end up with
+    local cardCounts = {}
+    if i > 0 then
+        --if we specified an index/id then copy the quantities from the prefab decks
+        for k,v in pairs(decks.cards) do
+            cardCounts[k] = v[i]
+        end
+    else
+        --otherwise if index = 0 then use the supplied card_count, or bug out
+        if not card_count then return false end
+        cardCounts = card_count
+        if data.debug then log(card_count) end
+    end
+
+    --make a local table of cardIDs with the number to be removed from the stock deck
+    local toRemove = {}
+    for cardID,v in pairs(cardCounts) do
+        toRemove[cardID] = 5 - v
+    end
 
     --get reference to the stock deck
     local stock_deck = getObjectFromGUID("deck01")
 
-    --work out position and rotation of the clone deck
-    local deck_position = obj.getPosition():add(obj.getTransformUp() * 15)
-    if not data.debug then
-        deck_position:add(obj.getTransformRight() * -4)
+    --work out intended position and rotation of the clone deck
+    local deck_position, deck_rotation
+
+    --check if we're spawning for one of the seated players, or by white/black
+    if player_isValid(player_color) then
+        --get a reference to the deckpad obj
+        local obj = data[player_color].deckzone_obj
+
+        deck_position = obj.getPosition():add(obj.getTransformUp() * 15)
+        if not data.debug then
+            deck_position:add(obj.getTransformRight() * -4)
+        end
+        deck_rotation    = obj.getRotation():add(Vector(0, 0, 180))
+    else
+        deck_position = Vector(0, 4, 32)
+        deck_rotation = Vector(0, 0, 180)
     end
-    local deck_rotation    = obj.getRotation():add(Vector(0, 0, 180))
 
     --spawn a copy of the full deck
     local deck             = stock_deck.clone({
@@ -117,12 +145,6 @@ function deck_spawnDeck(i, player_color)
 
     --unlock the cloned deck
     deck.setLock(false)
-
-    --make a new table of cardIDs with the number to be removed
-    local toRemove = {}
-    for k,v in pairs(decks.cards) do
-        toRemove[k] = 5 - v[i]
-    end
 
     --remove the cards above from the new deck
     for _,v in ipairs(deck.getData().ContainedObjects) do

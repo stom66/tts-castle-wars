@@ -6,6 +6,7 @@ function table.count(t)
 end
 
 function table.contains(table, value)
+    if not table or not value then return false end
     for k,v in pairs(table) do
         if value==v then return k end
     end

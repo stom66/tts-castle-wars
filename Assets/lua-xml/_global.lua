@@ -11,10 +11,13 @@ function onLoad(saved_data)
         turn_count           = 0,         --primarily used to determine if resources should be increased
         loading              = false,     --loading flag to let game know when to continue with setup
         xml_visibility       = {
-            deck_builder     = {},
-            info             = {"Red", "Blue", "Black", "White"},
-            winner           = {},
-            loser            = {},
+            black_deckBuilder = {},
+            blue_deckBuilder  = {},
+            red_deckBuilder   = {},
+            white_deckBuilder = {},
+            info              = {"red", "blue", "black", "white"},
+            winner            = {},
+            loser             = {},
         }
     }
 
@@ -28,12 +31,6 @@ function onLoad(saved_data)
     for _,player in ipairs(players) do
         data[player] = player_defaultData(player)
     end
-
-    --check to see if save_data was provided
-    --if saved_data then
-    --    data.loading = true
-    --    loadSave(saved_data)
-    --end
 
     --wait for save_data to load and parse before triggering the XML update
     Wait.condition(

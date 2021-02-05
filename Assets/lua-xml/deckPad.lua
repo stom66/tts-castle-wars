@@ -14,13 +14,13 @@ function deckpad_drawButtons(player_color)
     --remove the existing buttons
     obj.clearButtons()
 
-    --setup a default button
+    --setup a New Deck button
     local btn = {
         function_owner = Global,
-        click_function = "deckpad_findDeck",
-        label          = "Lock",
-        position       = {-0.775, 0.075, 1.775},
-        width          = 520,
+        click_function = "deckpad_toggleXmlDeckBuilder",
+        label          = "New Deck",
+        position       = {0.55, 0.075, 1.775},
+        width          = 780,
         height         = 220,
         font_size      = 150,
         color          = {0.3, 0.3, 0.3},
@@ -28,52 +28,34 @@ function deckpad_drawButtons(player_color)
         alignment      = 2,
     }
 
-    --flip the font and button colours if the deck is locked
+    --Create the new deck button
+    obj.createButton(btn)
+
+    --Next create the Lock/Unlock button, depending on current state
+    btn.width          = 520
+    btn.position[1]    = -0.775
+
     if data[player_color].deck_locked then
         btn.font_color, btn.color = btn.color, btn.font_color
         btn.label          = "Unlock"
         btn.click_function = "deck_unlockDeck"
+    else
+        btn.label          = "Lock"
+        btn.click_function = "deckpad_findDeck"
     end
 
     --create the Lock/Unlock button
     obj.createButton(btn)
-
-    --setup the "New Deck" button
-    btn.label          = "New Deck"
-    btn.width          = 780
-    btn.position[1]    = 0.55
-    btn.click_function = "deckpad_newDeckMenu"
-    if data[player_color].deck_locked then
-        btn.font_color, btn.color = btn.color, btn.font_color
-    end
-    obj.createButton(btn)
-
-    --create the buttons for spawning the various decks
-    if data[player_color].show_deck_menu then
-        btn.position[1] = 2.75
-        btn.width       = 900
-        for i,v in ipairs(decks.names) do
-            btn.position[3]    = 2.3 - (i*0.5)
-            btn.click_function = "deck_spawnDeck_"..player_color..i
-            btn.label          = v
-            obj.createButton(btn)
-
-            _G["deck_spawnDeck_"..player_color..i] = function(obj, clickee, id)
-                data[player_color].show_deck_menu = false
-                deckpad_drawButtons(player_color)
-                deck_spawnDeck(i, player_color)
-            end
-        end
-    end
 end
 
-function deckpad_newDeckMenu(obj, player_color, alt_click)
-    -- Toggles the "New Deck" menu which shows the decks possible to spawn
-    local owner = obj_getOwner(obj)
-    data[owner].show_deck_menu = not data[owner].show_deck_menu
-    deckpad_drawButtons(owner)
+function deckpad_toggleXmlDeckBuilder(obj, player_color, alt_click)
+    --[[
+        Triggerd by the Lua buttons on the deckpad_obj
+        Toggles the XML Deck Builder
+    --]]
+    local pc = player_color:lower()
+    xml_toggleElement(pc.."_deckBuilder", pc)
 end
-
 
 function deckpad_findDeck(obj, clickee)
     --[[

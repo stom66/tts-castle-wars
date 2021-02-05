@@ -1,4 +1,4 @@
-<Panel class="player_panel float_left" visibility="Blue|White|Black|Grey">
+<Panel class="player_panel float_left" visibility="blue|white|black|grey">
     <!-- Panel background image -->
     <Image 
         image    = "panel_blue"

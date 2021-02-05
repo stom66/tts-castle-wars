@@ -67,17 +67,20 @@
 <!-- Tooltip styles -->
 
 <!-- Deck Builder -->
-<Panel class      = "deck_builder"
+<Mask class      = "deck_builder"
     rectAlignment = "MiddleCenter"
     width         = "1000"
     height        = "600"
     allowDragging = "true"
-    color         = "#cccccc"
-    padding       = "20 20 20 20"
-    outline       = "#666666"
-    outlineSize   = "2 2"
     returnToOriginalPositionWhenReleased = "false"
     />
+    <Panel class="deck_builder>@Panel"
+        color         = "#cccccc"
+        padding       = "20 20 20 20"
+        outline       = "#666666"
+        outlineSize   = "6 6"
+        />
+
 
     <Button class       = "btn_deckBuilder_close"
         onClick         = "xml_hidedeckBuilder"
@@ -90,25 +93,51 @@
         colors          = "#00000000|#cce7ffdd|#ddddddcc|#333333"
         />
 
-    <Slider class="deck_builder:@Slider"
-        minValue = "0"
-        maxValue = "5"
-        value    = "2"
-        wholeNumbers = "true"
-        onValueChanged = "xml_db_sliderChange"
+    <Slider class       = "deck_builder:@Slider"
+        minValue        = "0"
+        maxValue        = "5"
+        value           = "5"
+        wholeNumbers    = "true"
+        onValueChanged  = "xml_db_sliderChange"
+        minHeight       = "20"
+        maxHeight       = "20"
         />
+        <Slider class       = "deck_builder:bg_blue:@Slider"
+            fillColor       = "#397FBF"
+            backgroundColor = "#295B8A"
+            handleColor     = "#0054A3"
+            />
+        <Slider class       = "deck_builder:bg_red:@Slider"
+            fillColor       = "#E56574"
+            backgroundColor = "#7D190B"
+            handleColor     = "#FC7462"
+            />
+        <Slider class       = "deck_builder:bg_green:@Slider"
+            fillColor       = "#009C5B"
+            backgroundColor = "#1F694A"
+            handleColor     = "#00E887"
+            />
+        <Slider class       = "deck_builder:bg_gold:@Slider"
+            fillColor       = "#E6B345"
+            backgroundColor = "#AD7600"
+            handleColor     = "#E09900"
+            />
 
-    <TableLayout class="deck_builder>@TableLayout"
+
+    <TableLayout class      = "deck_builder:@TableLayout"
         cellBackgroundColor = "none"
-            padding = "5 5 5 5"
-            cellSpacing = "5"
+            padding         = "5 5 5 5"
+            cellSpacing     = "5"
         />
         
         <Cell class = "deck_builder:@Cell"
             padding = "5 5 5 5"
             />
-            <Text class   = "deck_builder:@Cell:@Text"
-                color     = "#ffffff" 
+            <Text class              = "deck_builder:@VerticalLayout>@Text"
+                color                = "#dedede" 
+                resizeTextForBestFit = "true"
+                resizeTextMaxSize    = "16"
+                resizeTextMinSize    = "8"
                 />
         <Cell class                    = "deck_builder:bg_blue"
             dontUseTableCellBackground = "true"

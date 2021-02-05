@@ -3,7 +3,7 @@
     same as UI2, except the scorePanels have been moved to the opposite
     sides to account for the reversal of the UI
 -->
-<Panel class="player_panel float_right" visibility="Red">
+<Panel class="player_panel float_right" visibility="red">
     <!-- Panel background image -->
     <Image 
         image    = "panel_blue"
