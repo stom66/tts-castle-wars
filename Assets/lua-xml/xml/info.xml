@@ -5,7 +5,7 @@
 <Mask id="info" class="mask_info" visibility="red|blue|white|black">
     <Panel class="panel_info">
         
-        <Image image="img_info"></Image>
+        <Image image="bg_info"></Image>
         <Button class="btn_info_close"><!--nothing--></Button>
 
         <HorizontalLayout id="info_links" active="false">
