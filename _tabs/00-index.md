@@ -14,6 +14,7 @@ Welcome to the TTS Castle Wars Wiki! This site contains everything you need to k
 
 * **[Installing the mod](installation)**
 * **[Quick-start guide](quickstart)** - a brief introduction to playing your first game
+* **[Video tutorial](https://youtu.be/UaxvaV5BoTI)**
 
 ### Further reading
 
