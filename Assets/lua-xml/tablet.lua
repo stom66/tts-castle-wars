@@ -43,7 +43,7 @@ function tablet_goToPage(page, player_color)
     local pages  = {
         wiki     = "https://stom66.github.io/tts-castle-wars/",
         workshop = "https://steamcommunity.com/id/st0m/myworkshopfiles/",
-        tutorial = "https://github.com/stom66/tts-castle-wars/wiki/quickstart"
+        tutorial = "https://youtu.be/UaxvaV5BoTI"
     }
     page = page or "wiki"
     if not pages[page] then return false end
