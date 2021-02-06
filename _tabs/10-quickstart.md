@@ -11,6 +11,10 @@ permalink: quickstart
 
 Castle Wars is a *two-person game*, no more, no less. Players must occupy the Blue and Red seats. 
 
+If you prefer watching things to reading them you can check out our **[Video tutorial](https://youtu.be/UaxvaV5BoTI)**.
+
+---
+
 ### Objective
 
 A player is considered the Winner when either of the following conditions are met:

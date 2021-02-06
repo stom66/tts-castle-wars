@@ -8,13 +8,13 @@ permalink: index.html
 
 # TTS Castle Wars Wiki
 
-Welcome to the TTS Castle Wars Wiki! This site contains everything you need to know about the Castle Wars mod for Tabletop Simulator. You can find a Quickstart Guide, the Game Rules, information on the Cards, UT and Components.
+Welcome to the TTS Castle Wars Wiki! This site contains everything you need to know about the Castle Wars mod for Tabletop Simulator. You can find a Quick-start Guide, the Game Rules, information on the Cards, UI and all the Game Components.
 
 ### Getting started
 
-* **[Installing the mod](installation)**
-* **[Quick-start guide](quickstart)** - a brief introduction to playing your first game
+* **[Quick-start guide](quickstart)** - a written introduction to playing your first game
 * **[Video tutorial](https://youtu.be/UaxvaV5BoTI)**
+* **[Installation](installation)**
 
 ### Further reading
 
