@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://stom66.github.io/tts-castle-wars/sitemap.xml
