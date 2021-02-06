@@ -167,7 +167,7 @@ function deck_spawnDeck(i, player_color, card_count)
             distance = 20,
             pitch    = 45,
             position = deck.getPosition():setAt("y", 1),
-            yaw      = Player[player_color].getPointerRotation()+180
+            yaw      = (Player[player_color].getPointerRotation() or 0)+180
         })
     end
 end
