@@ -56,7 +56,7 @@ function onLoad(saved_data)
     )
 
     --check to see if data.debug should be automatically enabled
-    checkForDebug()
+    --checkForDebug()
 
     --outline the player hands
     --outlinePlayerHands()
