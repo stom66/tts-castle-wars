@@ -247,11 +247,12 @@ function card_sabotage(player_color, value)
         --add a reference to the card GUID in the player data
         table.insert(data[player_color].discard_obj_guids, card.getGUID())
 
-        --move the card to the other side of the table and rotate it
+        --move the card to the other side of the table and rotate it and lock it
         local pos = card.getPosition()
         pos:setAt("x", pos.x * -1.16):setAt("z", pos.z * -1)
         card.setPosition(pos)
         card.setRotation(card.getRotation():add(Vector(0, 180, 0)))
+        card.setLock(true)
 
         --create a button on the card to trigger a discard
         card.createButton({
@@ -303,6 +304,9 @@ end
 
             --remove the buttons from it
             card.clearButtons()
+
+            --unlock the card
+            card.setLock(true)
 
             --if the card is the one that was clicked then return it to the target players deck
             if g == obj.getGUID() then
