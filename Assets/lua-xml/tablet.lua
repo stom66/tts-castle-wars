@@ -42,7 +42,7 @@ function tablet_goToPage(page, player_color)
 
     local pages  = {
         wiki     = "https://stom66.github.io/tts-castle-wars/",
-        workshop = "https://steamcommunity.com/id/st0m/myworkshopfiles/",
+        workshop = "https://steamcommunity.com/sharedfiles/filedetails/?id=2386624320",
         tutorial = "https://youtu.be/UaxvaV5BoTI"
     }
     page = page or "wiki"
