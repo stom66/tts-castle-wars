@@ -72,7 +72,7 @@
     width         = "1000"
     height        = "600"
     allowDragging = "true"
-    image         = "img_deck_builder"
+    image         = "bg_deck_builder"
     returnToOriginalPositionWhenReleased = "false"
     />
     <Panel class="deck_builder>@Panel"
@@ -82,15 +82,20 @@
         outlineSize   = "6 6"
         />
 
+    <Button class      = "btn_spawnDeck"
+        onClick        = "xml_db_spawnDeck"
+        colors         = "#618c2d|#73A23B|#578223|#444444"
+        icon           = "btn_spawn_deck"
+        />
 
     <Button class       = "btn_deckBuilder_close"
         onClick         = "xml_toggle_deckBuilder"
-        width           = "28"
-        preferredWidth  = "28"
-        height          = "28"
-        preferredHeight = "28"
+        width           = "29"
+        preferredWidth  = "29"
+        height          = "29"
+        preferredHeight = "29"
         rectAlignment   = "UpperRight"
-        offsetXY        = "-26 -26"
+        offsetXY        = "-25 -25"
         colors          = "#00000000|#cce7ffdd|#ddddddcc|#333333"
         />
 
@@ -127,13 +132,15 @@
 
     <TableLayout class      = "deck_builder:@TableLayout"
         cellBackgroundColor = "none"
-            padding         = "5 5 5 5"
-            cellSpacing     = "5"
+        padding             = "5 5 5 5"
+        cellSpacing         = "4"
         />
-        
         <Cell class = "deck_builder:@Cell"
             padding = "5 5 5 5"
             />
+            <VerticalLayout class    ="deck_builder:@VerticalLayout"
+                padding = "5 5 5 5"
+                />
             <Text class              = "deck_builder:@VerticalLayout>@Text"
                 color                = "#dedede" 
                 resizeTextForBestFit = "true"

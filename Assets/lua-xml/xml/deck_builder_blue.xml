@@ -1,9 +1,7 @@
 <!-- Deck builder panel - Blue -->
 <Mask id="blue_deckBuilder" class="deck_builder" active="false">
-    <Button class="btn_deckBuilder_close">
-        <Text text="Close"></Text>
-    </Button>
     <Image image="bg_deck_builder"></Image>
+    <Button class="btn_deckBuilder_close"></Button>
     <Panel>
         <TableLayout>
             <Row preferredHeight="34">
@@ -15,11 +13,9 @@
                         <Option>Empty</Option>
                     </Dropdown>
                 </Cell>
-                <Cell columnSpan="4"></Cell>
-                <Cell>
-                    <Button onClick="xml_db_spawnDeck">
-                        <Text text="Spawn Deck"></Text>
-                    </Button>
+                <Cell columnSpan="3"></Cell>
+                <Cell columnSpan="2">
+                    <Button class="btn_spawnDeck"></Button>
                 </Cell>
             </Row>
             <Row>
