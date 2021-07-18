@@ -84,6 +84,13 @@ function trigger_discardCard(player_color)
     --check we're not going to exceed the max number of discards per turn
     if #objs > data.max_discard_per_turn
     or (data[player_color].discards + #objs) > data.max_discard_per_turn then
+        
+        --alert the user to how many cards they've already played, if the 
+        --amount they're currently trying to discard would normally work
+        if #objs <= data.max_discard_per_turn then
+            bToColor(lang.already_discarded_cards(data[player_color].discards), player_color)
+        end
+
         bToColor(lang.max_discards_reached, player_color, "Red")
         return false
     end

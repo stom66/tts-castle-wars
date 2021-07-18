@@ -27,20 +27,42 @@ function player_discardCard(card, player_color)
     end
 
     --reject non-card objects
-    if card.tag~="Card" then
+    if card.tag~="Card" and card.tag~="Deck" then
         bToColor(lang.cant_play_non_card, player_color, "Red")
         return false
     end
 
-    --check we're below the round limit for discarding cards
-    if data[player_color].discards < data.max_discard_per_turn then
-        data[player_color].discards = data[player_color].discards + 1
-        card_addToDeck(card, data[player_color].deck_obj)
+    if card.tag == "Card" then
+        --check we're below the round limit for discarding cards
+        if data[player_color].discards < data.max_discard_per_turn then
+            data[player_color].discards = data[player_color].discards + 1
+            card_addToDeck(card, data[player_color].deck_obj)
+        end
+    elseif card.tag == "Deck" then
+        local deck_count = #card.getObjects()
+        --check we're below the round limit for discarding cards
+        if data[player_color].discards < data.max_discard_per_turn and
+           data[player_color].discards + deck_count <= data.max_discard_per_turn then
+            data[player_color].discards = data[player_color].discards + deck_count
+            card_addToDeck(card, data[player_color].deck_obj)
+        else
+            --discarding these cards would put them voer the limit, do return them to their hand
+            if deck_count <= data.max_discard_per_turn then
+                bToColor(lang.already_discarded_cards(data[player_color].discards), player_color)
+            end
+
+            bToColor(lang.max_discards_reached, player_color)
+            card.deal(deck_count, player_color)
+            return
+        end
     end
 
     --check if we've reached the max number of discards, if so then we can trigger the next turn
     if data[player_color].discards >= data.max_discard_per_turn then
         turn_next()
+    else
+        local count = data.max_discard_per_turn - data[player_color].discards
+        bToColor(lang.may_discard_x_more(count), player_color)
     end
 end
 
@@ -97,7 +119,7 @@ function player_playCard(card, player_color)
     end
 
     -- Player played a valid card
-    bToAll(lang.card_played(Player[player_color].steam_name, cards[cardId].name), player_color)
+    bToAll("Turn "..(data.turn_count)..": "..lang.card_played(Player[player_color].steam_name, cards[cardId].name), player_color)
 
     -- Trigger the animation for the card
     triggerEffect(player_color, cards[cardId].name)
@@ -113,7 +135,11 @@ function player_playCard(card, player_color)
 
     -- Trigger the next player's turn, unless the sabotage card was played
     if cards[cardId].action ~= "sabotage" then
-        Wait.time(turn_next, (delay + 1.5))
+        Wait.time(function()
+            if Turns.turn_color == player_color then
+                turn_next()
+            end
+        end, (delay + 1.5))
     end
 end
 

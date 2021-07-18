@@ -106,7 +106,6 @@ function deck_spawnDeck(i, player_color, card_count)
         --otherwise if index = 0 then use the supplied card_count, or bug out
         if not card_count then return false end
         cardCounts = card_count
-        if data.debug then log(card_count) end
     end
 
     --make a local table of cardIDs with the number to be removed from the stock deck
@@ -145,6 +144,9 @@ function deck_spawnDeck(i, player_color, card_count)
 
     --unlock the cloned deck
     deck.setLock(false)
+
+    --enable to tooltip/card count
+    deck.tooltip = true
 
     --remove the cards above from the new deck
     for _,v in ipairs(deck.getData().ContainedObjects) do

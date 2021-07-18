@@ -129,7 +129,11 @@ function game_start()
 
     --Setup the player turns
     Turns.type   = 2
-    Turns.order  = {"Blue", "Red"}
+    if math.random(10) > 5 then
+        Turns.order  = {"Blue", "Red"}
+    else
+        Turns.order  = {"Red", "Blue"}
+    end
     Turns.enable = true
 
     --for both Blue and Red:

@@ -68,7 +68,7 @@ function cards_updateScales(player_color)
     end
 
     --alert the player if they cannot afford to play any cards
-    if c == 0 then
+    if c == 0 and Turns.turn_color == player_color then
         bToColor(lang.cant_afford_any_cards, player_color)
     end
 end
@@ -306,14 +306,15 @@ end
             card.clearButtons()
 
             --unlock the card
-            card.setLock(true)
-
-            --if the card is the one that was clicked then return it to the target players deck
-            if g == obj.getGUID() then
-               card_addToDeck(card, data[target].deck_obj)
-            else --otherwise return it to their hand
-                card.deal(1, target)
-            end
+            card.setLock(false)
+            Wait.frames(function()
+                --if the card is the one that was clicked then return it to the target players deck
+                if g == obj.getGUID() then
+                    card_addToDeck(card, data[target].deck_obj)
+                else --otherwise return it to their hand
+                    card.deal(1, target)
+                end
+            end, 1)
         end
 
         --reset the table of discard_obj_guids

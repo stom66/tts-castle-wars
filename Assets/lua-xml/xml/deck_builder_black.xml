@@ -1,4 +1,4 @@
-<!-- Deck builder panel - Black -->
+<!-- Deck builder panel - White -->
 <Mask id="black_deckBuilder" class="deck_builder" active="false">
     <Image image="bg_deck_builder"></Image>
     <Button class="btn_deckBuilder_close"></Button>
@@ -11,9 +11,17 @@
                         <Option>Stock</Option>
                         <Option selected="true">Complete</Option>
                         <Option>Empty</Option>
+                        <Option>Rush</Option>
+                        <Option>Turtle</Option>
+                        <Option>Burn</Option>
                     </Dropdown>
                 </Cell>
-                <Cell columnSpan="3"></Cell>
+                <Cell>
+                    <Button interactable="false" colors="#fff|#fff|#fff|#555555">
+                        <Text class="count" id="black_deckCount" text="280"></Text>
+                    </Button>
+                </Cell>
+                <Cell columnSpan="2"></Cell>
                 <Cell columnSpan="2">
                     <Button class="btn_spawnDeck"></Button>
                 </Cell>
@@ -22,7 +30,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Add Bricks"></Text>
+                            <Text text="Add Bricks" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148900"></Text>
                             <Slider id="black_slider_148900"></Slider>
                         </VerticalLayout>
@@ -31,7 +39,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Add Crystals"></Text>
+                            <Text text="Add Crystals" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148901"></Text>
                             <Slider id="black_slider_148901"></Slider>
                         </VerticalLayout>
@@ -40,7 +48,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Add Weapons"></Text>
+                            <Text text="Add Weapons" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148902"></Text>
                             <Slider id="black_slider_148902"></Slider>
                         </VerticalLayout>
@@ -49,7 +57,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="All Crystals"></Text>
+                            <Text text="All Crystals" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;1&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148903"></Text>
                             <Slider id="black_slider_148903"></Slider>
                         </VerticalLayout>
@@ -58,7 +66,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Bribe Mage"></Text>
+                            <Text text="Bribe Mage" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;22&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148904"></Text>
                             <Slider id="black_slider_148904"></Slider>
                         </VerticalLayout>
@@ -67,7 +75,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Conjure Wall"></Text>
+                            <Text text="Conjure Wall" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;14&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148905"></Text>
                             <Slider id="black_slider_148905"></Slider>
                         </VerticalLayout>
@@ -76,7 +84,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Hail Storm"></Text>
+                            <Text text="Hail Storm" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;14&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148906"></Text>
                             <Slider id="black_slider_148906"></Slider>
                         </VerticalLayout>
@@ -85,7 +93,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Lightning"></Text>
+                            <Text text="Lightning" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;20&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148907"></Text>
                             <Slider id="black_slider_148907"></Slider>
                         </VerticalLayout>
@@ -96,7 +104,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Mage"></Text>
+                            <Text text="Mage" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;8&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148908"></Text>
                             <Slider id="black_slider_148908"></Slider>
                         </VerticalLayout>
@@ -105,7 +113,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Magic Bricks"></Text>
+                            <Text text="Magic Bricks" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;16&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148909"></Text>
                             <Slider id="black_slider_148909"></Slider>
                         </VerticalLayout>
@@ -114,7 +122,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Magic Defence"></Text>
+                            <Text text="Magic Defence" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;10&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148910"></Text>
                             <Slider id="black_slider_148910"></Slider>
                         </VerticalLayout>
@@ -123,7 +131,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Magic Weapons"></Text>
+                            <Text text="Magic Weapons" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;15&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148911"></Text>
                             <Slider id="black_slider_148911"></Slider>
                         </VerticalLayout>
@@ -132,7 +140,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Pixies"></Text>
+                            <Text text="Pixies" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;18&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148912"></Text>
                             <Slider id="black_slider_148912"></Slider>
                         </VerticalLayout>
@@ -141,7 +149,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Quake"></Text>
+                            <Text text="Quake" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;24&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148913"></Text>
                             <Slider id="black_slider_148913"></Slider>
                         </VerticalLayout>
@@ -150,7 +158,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Remove Bricks"></Text>
+                            <Text text="Remove Bricks" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148914"></Text>
                             <Slider id="black_slider_148914"></Slider>
                         </VerticalLayout>
@@ -159,7 +167,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Remove Crystals"></Text>
+                            <Text text="Remove Crystals" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148915"></Text>
                             <Slider id="black_slider_148915"></Slider>
                         </VerticalLayout>
@@ -170,7 +178,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_blue">
-                            <Text text="Remove Weapons"></Text>
+                            <Text text="Remove Weapons" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_148916"></Text>
                             <Slider id="black_slider_148916"></Slider>
                         </VerticalLayout>
@@ -180,7 +188,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="All Bricks"></Text>
+                            <Text text="All Bricks" tooltip="&lt;color=#5c862c&gt;1&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149100"></Text>
                             <Slider id="black_slider_149100"></Slider>
                         </VerticalLayout>
@@ -189,7 +197,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Babylon"></Text>
+                            <Text text="Babylon" tooltip="&lt;color=#5c862c&gt;28&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149101"></Text>
                             <Slider id="black_slider_149101"></Slider>
                         </VerticalLayout>
@@ -198,16 +206,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Catapult"></Text>
-                            <Text text="5" id="black_qty_149105"></Text>
-                            <Slider id="black_slider_149105"></Slider>
-                        </VerticalLayout>
-                    </Mask>
-                </Cell>
-                <Cell>
-                    <Mask image="mask_deck_builder_section">
-                        <VerticalLayout class="bg_green">
-                            <Text text="Battering Ram"></Text>
+                            <Text text="Battering Ram" tooltip="&lt;color=#5c862c&gt;7&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149102"></Text>
                             <Slider id="black_slider_149102"></Slider>
                         </VerticalLayout>
@@ -216,7 +215,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Bribe Builder"></Text>
+                            <Text text="Bribe Builder" tooltip="&lt;color=#5c862c&gt;22&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149103"></Text>
                             <Slider id="black_slider_149103"></Slider>
                         </VerticalLayout>
@@ -225,7 +224,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Builder"></Text>
+                            <Text text="Builder" tooltip="&lt;color=#5c862c&gt;8&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149104"></Text>
                             <Slider id="black_slider_149104"></Slider>
                         </VerticalLayout>
@@ -234,7 +233,16 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Fence"></Text>
+                            <Text text="Catapult" tooltip="&lt;color=#5c862c&gt;10&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
+                            <Text text="5" id="black_qty_149105"></Text>
+                            <Slider id="black_slider_149105"></Slider>
+                        </VerticalLayout>
+                    </Mask>
+                </Cell>
+                <Cell>
+                    <Mask image="mask_deck_builder_section">
+                        <VerticalLayout class="bg_green">
+                            <Text text="Fence" tooltip="&lt;color=#5c862c&gt;5&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149106"></Text>
                             <Slider id="black_slider_149106"></Slider>
                         </VerticalLayout>
@@ -245,7 +253,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="House"></Text>
+                            <Text text="House" tooltip="&lt;color=#5c862c&gt;5&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149107"></Text>
                             <Slider id="black_slider_149107"></Slider>
                         </VerticalLayout>
@@ -254,7 +262,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Large Wall"></Text>
+                            <Text text="Large Wall" tooltip="&lt;color=#5c862c&gt;14&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149108"></Text>
                             <Slider id="black_slider_149108"></Slider>
                         </VerticalLayout>
@@ -263,7 +271,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Reverse"></Text>
+                            <Text text="Reverse" tooltip="&lt;color=#5c862c&gt;3&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149109"></Text>
                             <Slider id="black_slider_149109"></Slider>
                         </VerticalLayout>
@@ -272,7 +280,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="School"></Text>
+                            <Text text="School" tooltip="&lt;color=#5c862c&gt;30&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149110"></Text>
                             <Slider id="black_slider_149110"></Slider>
                         </VerticalLayout>
@@ -281,7 +289,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Tavern"></Text>
+                            <Text text="Tavern" tooltip="&lt;color=#5c862c&gt;12&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149111"></Text>
                             <Slider id="black_slider_149111"></Slider>
                         </VerticalLayout>
@@ -290,7 +298,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Tower"></Text>
+                            <Text text="Tower" tooltip="&lt;color=#5c862c&gt;10&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149112"></Text>
                             <Slider id="black_slider_149112"></Slider>
                         </VerticalLayout>
@@ -299,7 +307,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Wain"></Text>
+                            <Text text="Wain" tooltip="&lt;color=#5c862c&gt;10&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149113"></Text>
                             <Slider id="black_slider_149113"></Slider>
                         </VerticalLayout>
@@ -308,7 +316,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_green">
-                            <Text text="Wall"></Text>
+                            <Text text="Wall" tooltip="&lt;color=#5c862c&gt;4&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149114"></Text>
                             <Slider id="black_slider_149114"></Slider>
                         </VerticalLayout>
@@ -319,7 +327,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="All Weapons"></Text>
+                            <Text text="All Weapons" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;1&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149000"></Text>
                             <Slider id="black_slider_149000"></Slider>
                         </VerticalLayout>
@@ -328,7 +336,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Ambush"></Text>
+                            <Text text="Ambush" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;20&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149001"></Text>
                             <Slider id="black_slider_149001"></Slider>
                         </VerticalLayout>
@@ -337,7 +345,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Archer"></Text>
+                            <Text text="Archer" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;1&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149002"></Text>
                             <Slider id="black_slider_149002"></Slider>
                         </VerticalLayout>
@@ -346,16 +354,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Cannon"></Text>
-                            <Text text="5" id="black_qty_149005"></Text>
-                            <Slider id="black_slider_149005"></Slider>
-                        </VerticalLayout>
-                    </Mask>
-                </Cell>
-                <Cell>
-                    <Mask image="mask_deck_builder_section">
-                        <VerticalLayout class="bg_red">
-                            <Text text="Bomb"></Text>
+                            <Text text="Bomb" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;14&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149003"></Text>
                             <Slider id="black_slider_149003"></Slider>
                         </VerticalLayout>
@@ -364,7 +363,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Bribe Soldier"></Text>
+                            <Text text="Bribe Soldier" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;22&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149004"></Text>
                             <Slider id="black_slider_149004"></Slider>
                         </VerticalLayout>
@@ -373,7 +372,16 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Fire Archer"></Text>
+                            <Text text="Cannon" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;16&lt;/color&gt;"></Text>
+                            <Text text="5" id="black_qty_149005"></Text>
+                            <Slider id="black_slider_149005"></Slider>
+                        </VerticalLayout>
+                    </Mask>
+                </Cell>
+                <Cell>
+                    <Mask image="mask_deck_builder_section">
+                        <VerticalLayout class="bg_red">
+                            <Text text="Fire Archer" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;3&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149006"></Text>
                             <Slider id="black_slider_149006"></Slider>
                         </VerticalLayout>
@@ -382,7 +390,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Guards"></Text>
+                            <Text text="Guards" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;7&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149007"></Text>
                             <Slider id="black_slider_149007"></Slider>
                         </VerticalLayout>
@@ -393,7 +401,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Knight"></Text>
+                            <Text text="Knight" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;10&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149008"></Text>
                             <Slider id="black_slider_149008"></Slider>
                         </VerticalLayout>
@@ -402,7 +410,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Platoon"></Text>
+                            <Text text="Platoon" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;7&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149009"></Text>
                             <Slider id="black_slider_149009"></Slider>
                         </VerticalLayout>
@@ -411,7 +419,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Protect Resources"></Text>
+                            <Text text="Protect Resources" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;4&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149010"></Text>
                             <Slider id="black_slider_149010"></Slider>
                         </VerticalLayout>
@@ -420,7 +428,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Recruit"></Text>
+                            <Text text="Recruit" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;8&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149011"></Text>
                             <Slider id="black_slider_149011"></Slider>
                         </VerticalLayout>
@@ -429,7 +437,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Roadblock"></Text>
+                            <Text text="Roadblock" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;8&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149012"></Text>
                             <Slider id="black_slider_149012"></Slider>
                         </VerticalLayout>
@@ -438,7 +446,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Sabotage"></Text>
+                            <Text text="Sabotage" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;10&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149013"></Text>
                             <Slider id="black_slider_149013"></Slider>
                         </VerticalLayout>
@@ -447,7 +455,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_red">
-                            <Text text="Thief"></Text>
+                            <Text text="Thief" tooltip="&lt;color=#5c862c&gt;0&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;17&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149014"></Text>
                             <Slider id="black_slider_149014"></Slider>
                         </VerticalLayout>
@@ -456,9 +464,9 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Curse"></Text>
-                            <Text text="5" id="black_qty_149201"></Text>
-                            <Slider id="black_slider_149201"></Slider>
+                            <Text text="Ballista" tooltip="&lt;color=#5c862c&gt;4&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;4&lt;/color&gt;"></Text>
+                            <Text text="5" id="black_qty_149205"></Text>
+                            <Slider id="black_slider_149205"></Slider>
                         </VerticalLayout>
                     </Mask>
                 </Cell>
@@ -467,16 +475,16 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Ballista"></Text>
-                            <Text text="5" id="black_qty_149205"></Text>
-                            <Slider id="black_slider_149205"></Slider>
+                            <Text text="Curse" tooltip="&lt;color=#5c862c&gt;18&lt;/color&gt; &lt;color=#387fbf&gt;18&lt;/color&gt; &lt;color=red&gt;18&lt;/color&gt;"></Text>
+                            <Text text="5" id="black_qty_149201"></Text>
+                            <Slider id="black_slider_149201"></Slider>
                         </VerticalLayout>
                     </Mask>
                 </Cell>
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Comet Strike"></Text>
+                            <Text text="Comet Strike" tooltip="&lt;color=#5c862c&gt;20&lt;/color&gt; &lt;color=#387fbf&gt;10&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149200"></Text>
                             <Slider id="black_slider_149200"></Slider>
                         </VerticalLayout>
@@ -485,7 +493,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Dispel"></Text>
+                            <Text text="Dispel" tooltip="&lt;color=#5c862c&gt;2&lt;/color&gt; &lt;color=#387fbf&gt;2&lt;/color&gt; &lt;color=red&gt;2&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149202"></Text>
                             <Slider id="black_slider_149202"></Slider>
                         </VerticalLayout>
@@ -494,7 +502,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Dragon"></Text>
+                            <Text text="Dragon" tooltip="&lt;color=#5c862c&gt;20&lt;/color&gt; &lt;color=#387fbf&gt;20&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149203"></Text>
                             <Slider id="black_slider_149203"></Slider>
                         </VerticalLayout>
@@ -503,7 +511,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Giant Snowball"></Text>
+                            <Text text="Giant Snowball" tooltip="&lt;color=#5c862c&gt;6&lt;/color&gt; &lt;color=#387fbf&gt;6&lt;/color&gt; &lt;color=red&gt;0&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149204"></Text>
                             <Slider id="black_slider_149204"></Slider>
                         </VerticalLayout>
@@ -512,7 +520,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Remove Resources"></Text>
+                            <Text text="Remove Resources" tooltip="&lt;color=#5c862c&gt;5&lt;/color&gt; &lt;color=#387fbf&gt;5&lt;/color&gt; &lt;color=red&gt;5&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149206"></Text>
                             <Slider id="black_slider_149206"></Slider>
                         </VerticalLayout>
@@ -521,7 +529,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Reward Workers"></Text>
+                            <Text text="Reward Workers" tooltip="&lt;color=#5c862c&gt;1&lt;/color&gt; &lt;color=#387fbf&gt;1&lt;/color&gt; &lt;color=red&gt;1&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149207"></Text>
                             <Slider id="black_slider_149207"></Slider>
                         </VerticalLayout>
@@ -530,7 +538,7 @@
                 <Cell>
                     <Mask image="mask_deck_builder_section">
                         <VerticalLayout class="bg_gold">
-                            <Text text="Trojan Horse"></Text>
+                            <Text text="Trojan Horse" tooltip="&lt;color=#5c862c&gt;14&lt;/color&gt; &lt;color=#387fbf&gt;0&lt;/color&gt; &lt;color=red&gt;20&lt;/color&gt;"></Text>
                             <Text text="5" id="black_qty_149208"></Text>
                             <Slider id="black_slider_149208"></Slider>
                         </VerticalLayout>

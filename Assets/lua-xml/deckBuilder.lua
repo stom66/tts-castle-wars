@@ -21,9 +21,27 @@ function xml_db_sliderChange(player, value, id)
     UI.setAttribute(card_qty_element, "text", value)
     UI.setAttribute(id, "value", value)
 
+    Wait.frames(function()
+        xml_db_updateDeckCount(player.color)
+    end, 1)
+
     if data.debug then
         log("xml_db_sliderChange(): Updating "..card_qty_element.." to value "..value)
     end
+end
+
+function xml_db_updateDeckCount(player_color)
+    --updates the deck count indicator in the players deck builder
+    player_color = player_color:lower()
+    local total_cards = 0
+
+    for cardID, _ in pairs(decks.cards) do
+        local count = tonumber(UI.getAttribute(player_color.."_slider_"..cardID, "value"))
+        total_cards = total_cards + count
+    end
+
+    UI.setAttribute(player_color.."_deckCount", "text", tostring(total_cards))
+    if data.debug then log("xml_db_updateDeckCount("..player_color..", "..total_cards..")") end
 end
 
 function xml_db_loadDeck_dropdown(player, value, id)
@@ -48,12 +66,20 @@ function xml_db_loadDeck_dropdown(player, value, id)
         log("xml_db_loadDeck(): chose deck "..value.." with index "..index)
     end
 
+    --format the player_color
     local player_color = player.color:lower()
+
+    --start a card count
+    local count = 0
 
     for cardID, value in pairs(decks.cards) do
         UI.setAttribute(player_color.."_qty_"..cardID, "text", value[index])
         UI.setAttribute(player_color.."_slider_"..cardID, "value", value[index])
+        count = count + value[index]
     end
+
+    --update the deck count
+    UI.setAttribute(player_color.."_deckCount", "text", tostring(count))
 end
 
 function xml_db_spawnDeck(player, value, id)

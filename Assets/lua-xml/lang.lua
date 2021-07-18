@@ -1,5 +1,6 @@
 function lang_getStrings()
     return {
+        already_discarded_cards  = function(n) return "You have already discarded "..n.." cards" end,
         cant_afford_card         = "You cannot afford to use that card!",
         cant_afford_any_cards    = "You can't afford to play any cards! Consider discarding some",
         cant_play_after_discard  = "You can't play a card in the same turn as discarding cards",
@@ -26,6 +27,7 @@ function lang_getStrings()
         game_won                 = "Congratulations! You have won the game!",
         invalid_player_color     = "You must be either Blue or Red to play. Please change color.",
         max_discards_reached     = "You can only discard "..data.max_discard_per_turn.." cards per turn",
+        may_discard_x_more       = function(x) return "You can discard "..x.." more cards or end your turn" end,
         not_your_turn            = "It is not your turn! Wait for the other player to finish their turn",
         player_discarded_cards   = function(p, i) return Player[p].steam_name.." discarded "..i.." cards" end,
         too_many_duplicate_cards = function(s) return "You have too many '"..s.."' cards. The maximum is "..data.max_card_duplicates end,

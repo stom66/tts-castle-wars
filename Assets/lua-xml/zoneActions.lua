@@ -12,8 +12,8 @@ function onObjectEnterScriptingZone(zone, obj)
     if not owner then return false end
 
     --ignore anything that isn't a card
-    if obj and obj.tag=="Card" then
-        if zone==data[owner].playzone_zone then
+    if zone==data[owner].playzone_zone then
+        if obj and obj.tag=="Card" then
             zoneWaits[wait_id] = Wait.condition(
                 function()
                     player_playCard(obj, owner)
@@ -22,7 +22,9 @@ function onObjectEnterScriptingZone(zone, obj)
                     return (obj.resting and not obj.held_by_color)
                 end
             )
-        elseif zone==data[owner].discardzone_zone then
+        end
+    elseif zone==data[owner].discardzone_zone then
+        if obj and (obj.tag=="Card" or obj.tag=="Deck") then
             zoneWaits[wait_id] = Wait.condition(
                 function()
                     player_discardCard(obj, owner)

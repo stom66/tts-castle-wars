@@ -139,7 +139,7 @@ function turn_end(player_color)
 
     --if the previous turn ended because player discarded cards then broadcast that
     if data[player_color].discards > 0 then
-        bToAll(lang.player_discarded_cards(player_color, data[player_color].discards), player_color)
+        bToAll("Turn "..(data.turn_count - 1)..": "..lang.player_discarded_cards(player_color, data[player_color].discards), player_color)
     end
 
     --reset discard count and action_taken flag
